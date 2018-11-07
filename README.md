@@ -10,10 +10,12 @@ git cms-init
 
 # This repository
 git clone https://github.com/HephyAnalysisSW/Samples.git
+cd $CMSSW_BASE/src
 
 # RootTools (needed for nanoAOD sample handling. If you just plan to produce nanoAOD tuples from miniAOD, this is not needed)
 git clone https://github.com/HephyAnalysisSW/RootTools.git
 
+cd $CMSSW_BASE/src
 scram b -j 8
 
 ```
