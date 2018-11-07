@@ -10,15 +10,17 @@ git cms-init
 
 # This repository
 git clone https://github.com/HephyAnalysisSW/Samples.git
+cd $CMSSW_BASE/src
 
 # RootTools (needed for nanoAOD sample handling. If you just plan to produce nanoAOD tuples from miniAOD, this is not needed)
 git clone https://github.com/HephyAnalysisSW/RootTools.git
 
+cd $CMSSW_BASE/src
 scram b -j 8
 
 ```
 
-Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt. sumPt is needed to recompute MET significance.
+Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt as well as FastSim support. sumPt is needed to recompute MET significance.
 
 ```
 cd $CMSSW_BASE/src
