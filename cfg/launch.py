@@ -2,9 +2,10 @@ import imp, os, sys
 from optparse import OptionParser
 import re
 
-from Samples.miniAOD.Summer16_miniAODv3 import allSamples as samples_miniAOD_Summer16_miniAODv3
+from Samples.miniAOD.Summer16_miniAODv3 import allSamples as Summer16_miniAODv3
+from Samples.miniAOD.Summer16_miniAODv2 import allSamples as Summer16_miniAODv2
 
-allSamples = samples_miniAOD_Summer16_miniAODv3
+allSamples = Summer16_miniAODv3 + Summer16_miniAODv2
 
 parser = OptionParser(usage="python launch.py [options] component1 [ component2 ...]", \
                           description="Launch heppy jobs with CRAB3. Components correspond to the variables defined in heppy_samples.py (their name attributes)")
@@ -49,6 +50,10 @@ print "### Publication is set to", os.environ["CRAB_PUBLISH"]
 
 if options.era == '94X_mc':
     os.environ["CMSRUN_CFG"] = "test94X_NANO.py"
+elif options.era == '80X_mc':
+    os.environ["CMSRUN_CFG"] = "test80X_NANO.py"
+elif options.era == '80X_mc_fast':
+    os.environ["CMSRUN_CFG"] = "test80X_fast_NANO.py"
 else:
     raise NotImplementedError
 
