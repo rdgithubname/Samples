@@ -1,5 +1,5 @@
 '''
-Some definitions
+Some definitions.
 To avoid changes of the file being pushed to github, e.g. when you define a different dbDir, use:
 git update-index --skip-worktree config.py
 '''
