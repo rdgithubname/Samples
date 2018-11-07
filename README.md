@@ -18,7 +18,7 @@ scram b -j 8
 
 ```
 
-Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt. sumPt is needed to recompute MET significance.
+Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt as well as FastSim support. sumPt is needed to recompute MET significance.
 
 ```
 cd $CMSSW_BASE/src
