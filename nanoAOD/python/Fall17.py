@@ -12,11 +12,8 @@ else:
     import logging
     logger = logging.getLogger(__name__)
 
-## these should go somewhere else
-dbFile = '/afs/hephy.at/data/rschoefbeck01/nanoAOD/DB_Fall17.sql'
-
-redirector        = 'root://hephyse.oeaw.ac.at/'
-redirector_global = 'root://cms-xrd-global.cern.ch/'
+from Samples.Tools.config import dbDir, redirector, redirector_global
+dbFile = dbDir+'DB_Fall17.sql'
 
 # specify a local directory if you want to create (and afterwards automatically use) a local copy of the sample, otherwise use the grid.
 

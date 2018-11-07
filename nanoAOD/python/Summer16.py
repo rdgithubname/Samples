@@ -12,10 +12,8 @@ else:
     import logging
     logger = logging.getLogger(__name__)
 
-## these should go somewhere else
-dbFile = '/afs/hephy.at/data/rschoefbeck01/nanoAOD/DB_Summer16.sql'
-redirector        = 'root://hephyse.oeaw.ac.at/'
-redirector_global = 'root://cms-xrd-global.cern.ch/'
+from Samples.Tools.config import dbDir, redirector, redirector_global
+dbFile = dbDir+'DB_Summer16.sql'
 
 ## DY
 DYJetsToLL_M50_LO_ext1   = Sample.nanoAODfromDAS('DYJetsToLL_M50_LO_ext1', '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2_ext1-v1/NANOAODSIM', dbFile=dbFile, redirector=redirector, xSection=2008.*3)
