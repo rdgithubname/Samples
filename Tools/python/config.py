@@ -1,5 +1,7 @@
 '''
 Some definitions
+To avoid changes of the file being pushed to github, e.g. when you define a different dbDir, use:
+git update-index --skip-worktree config.py
 '''
 import os
 
@@ -9,5 +11,4 @@ redirector          = 'root://hephyse.oeaw.ac.at/'
 redirector_global   = 'root://cms-xrd-global.cern.ch/'
 
 if not os.path.isdir(dbDir): os.makedirs(dbDir)
-
 
