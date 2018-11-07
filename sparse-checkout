@@ -1,0 +1,9 @@
+/.gitignore
+/.clang-tidy
+/.clang-format
+/Configuration/Applications/
+/Configuration/Eras/
+/Configuration/StandardSequences/
+/DQM/Integration/
+/HLTrigger/Configuration/
+/PhysicsTools/NanoAOD/
