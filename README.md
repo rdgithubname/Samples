@@ -3,8 +3,8 @@
 Preliminary recipe
 
 ```
-cmsrel CMSSW_9_4_9
-cd CMSSW_9_4_9/src
+cmsrel CMSSW_9_4_10
+cd CMSSW_9_4_10/src
 cmsenv
 git cms-init
 
