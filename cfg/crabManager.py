@@ -23,6 +23,8 @@ nFailed     = 0
 nUnknown    = 0
 nRunning    = 0
 
+datasets = []
+
 for d in fullDirs:
     print "------------------------"
     print "- Working on directory -"
@@ -32,7 +34,14 @@ for d in fullDirs:
     except HTTPException:
         print "CRAB service issue"
         continue
-    if res['status'] == 'FAILED':
+
+    # look for failed jobs
+    failed = False
+    for j in res['jobList']:
+        if 'failed' in j:
+            failed = True
+    
+    if res['status'] == 'FAILED' or (res['status'] == 'SUBMITTED' and failed):
         nFailed += 1
         if args.resubmit:
             try:
@@ -54,12 +63,20 @@ for d in fullDirs:
                 print "Publication resubmitted"
             except HTTPException:
                 print "Couldn't resubmit the publication."
-            
 
+
+    datasets.append({'input':res['inputDataset'], 'output':res['outdatasets']})
+            
+print
+print
 print "######### SUMMARY ##########"
 print "Successfull jobs:", nSuccess
 print "Failed jobs:", nFailed
 print "Running jobs:", nRunning
 print "Unknonw status:", nUnknown
 
+print
+print "These datasets have been processed:"
+for d in datasets:
+    print d['input'], '   ---->    ', d['output'][0]
 
