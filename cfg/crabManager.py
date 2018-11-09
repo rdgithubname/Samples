@@ -78,5 +78,5 @@ print "Unknonw status:", nUnknown
 print
 print "These datasets have been processed:"
 for d in datasets:
-    print d['input'], '   ---->    ', d['output'][0]
+    print d['input'], '   ---->    ', eval(d['output'])[0]
 
