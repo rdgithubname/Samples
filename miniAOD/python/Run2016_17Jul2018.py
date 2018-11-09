@@ -1,3 +1,4 @@
+from Samples.Tools.Sample import Sample
 
 # DoubleMuon
 
