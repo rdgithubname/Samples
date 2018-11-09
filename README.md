@@ -1,6 +1,6 @@
 # Samples
 
-Preliminary recipe
+Preliminary recipe for 94X (also works with 80X samples)
 
 ```
 cmsrel CMSSW_9_4_10
@@ -19,6 +19,8 @@ cd $CMSSW_BASE/src
 scram b -j 8
 
 ```
+
+Do the same thing in CMSSW_10_2_5 for 2018 data.
 
 Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt as well as FastSim support. sumPt is needed to recompute MET significance.
 
