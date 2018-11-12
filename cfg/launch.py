@@ -2,11 +2,13 @@ import imp, os, sys
 from optparse import OptionParser
 import re
 
+from Samples.miniAOD.Spring16_miniAODv2 import allSamples as Spring16_miniAODv2
 from Samples.miniAOD.Summer16_miniAODv3 import allSamples as Summer16_miniAODv3
 from Samples.miniAOD.Summer16_miniAODv2 import allSamples as Summer16_miniAODv2
 from Samples.miniAOD.Run2016_17Jul2018 import allSamples as Run2016_17Jul2018
+from Samples.miniAOD.Run2018_26Sep2018 import allSamples as Run2018_26Sep2018
 
-allSamples = Summer16_miniAODv3 + Summer16_miniAODv2 + Run2016_17Jul2018
+allSamples = Spring16_miniAODv2 + Summer16_miniAODv3 + Summer16_miniAODv2 + Run2016_17Jul2018 + Run2018_26Sep2018
 
 parser = OptionParser(usage="python launch.py [options] component1 [ component2 ...]", \
                           description="Launch heppy jobs with CRAB3. Components correspond to the variables defined in heppy_samples.py (their name attributes)")
@@ -57,6 +59,8 @@ elif options.era == '80X_mc_fast':
     os.environ["CMSRUN_CFG"] = "test80X_fast_NANO.py"
 elif options.era == '94X_data':
     os.environ["CMSRUN_CFG"] = "test_data_94X_NANO.py"
+elif options.era == '102X_data':
+    os.environ["CMSRUN_CFG"] = "test_data_102X_NANO.py"
 else:
     raise NotImplementedError
 
