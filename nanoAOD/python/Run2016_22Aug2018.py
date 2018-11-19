@@ -20,13 +20,12 @@ dbFile = dbDir+'DB_Run2016.sql'
 ## DoubleMuon
 DoubleMuon_Run2016B_22Aug2018_ver1  = Sample.nanoAODfromDAS('DoubleMuon_Run2016B_22Aug2018_ver1',   '/DoubleMuon/Run2016B-22Aug2018_ver1-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
 DoubleMuon_Run2016B_22Aug2018_ver2  = Sample.nanoAODfromDAS('DoubleMuon_Run2016B_22Aug2018_ver2',   '/DoubleMuon/Run2016B-22Aug2018_ver2-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016C_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016C_22Aug2018',        '/DoubleMuon/Run2016C-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016D_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016D_22Aug2018',        '/DoubleMuon/Run2016D-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016E_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016E_22Aug2018',        '/DoubleMuon/Run2016E-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016F_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016F_22Aug2018',        '/DoubleMuon/Run2016F-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016G_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016G_22Aug2018',        '/DoubleMuon/Run2016G-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016H_22Aug2018_ver2  = Sample.nanoAODfromDAS('DoubleMuon_Run2016H_22Aug2018_ver2',   '/DoubleMuon/Run2016H-22Aug2018_ver2-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleMuon_Run2016H_22Aug2018_ver3  = Sample.nanoAODfromDAS('DoubleMuon_Run2016H_22Aug2018_ver3',   '/DoubleMuon/Run2016H-22Aug2018_ver3-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
+DoubleMuon_Run2016C_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016C_22Aug2018',        '/DoubleMuon/Run2016C-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleMuon_Run2016D_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016D_22Aug2018',        '/DoubleMuon/Run2016D-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleMuon_Run2016E_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016E_22Aug2018',        '/DoubleMuon/Run2016E-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleMuon_Run2016F_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016F_22Aug2018',        '/DoubleMuon/Run2016F-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleMuon_Run2016G_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016G_22Aug2018',        '/DoubleMuon/Run2016G-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleMuon_Run2016H_22Aug2018       = Sample.nanoAODfromDAS('DoubleMuon_Run2016H_22Aug2018',        '/DoubleMuon/Run2016H-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
 
 DoubleMuon_Run2016 = [\
     DoubleMuon_Run2016B_22Aug2018_ver1,
@@ -36,43 +35,39 @@ DoubleMuon_Run2016 = [\
     DoubleMuon_Run2016E_22Aug2018,
     DoubleMuon_Run2016F_22Aug2018,
     DoubleMuon_Run2016G_22Aug2018,
-    DoubleMuon_Run2016H_22Aug2018_ver2,
-    DoubleMuon_Run2016H_22Aug2018_ver3,
+    DoubleMuon_Run2016H_22Aug2018,
     ]
 
 ## MuonEG
 MuonEG_Run2016B_22Aug2018_ver1  = Sample.nanoAODfromDAS('MuonEG_Run2016B_22Aug2018_ver1',   '/MuonEG/Run2016B-22Aug2018_ver1-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
 MuonEG_Run2016B_22Aug2018_ver2  = Sample.nanoAODfromDAS('MuonEG_Run2016B_22Aug2018_ver2',   '/MuonEG/Run2016B-22Aug2018_ver2-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016C_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016C_22Aug2018',        '/MuonEG/Run2016C-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016D_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016D_22Aug2018',        '/MuonEG/Run2016D-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016E_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016E_22Aug2018',        '/MuonEG/Run2016E-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016F_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016F_22Aug2018',        '/MuonEG/Run2016F-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016G_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016G_22Aug2018',        '/MuonEG/Run2016G-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016H_22Aug2018_ver2  = Sample.nanoAODfromDAS('MuonEG_Run2016H_22Aug2018_ver2',   '/MuonEG/Run2016H-22Aug2018_ver2-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-MuonEG_Run2016H_22Aug2018_ver3  = Sample.nanoAODfromDAS('MuonEG_Run2016H_22Aug2018_ver3',   '/MuonEG/Run2016H-22Aug2018_ver3-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
+MuonEG_Run2016C_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016C_22Aug2018',        '/MuonEG/Run2016C-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+MuonEG_Run2016D_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016D_22Aug2018',        '/MuonEG/Run2016D-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+#MuonEG_Run2016E_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016E_22Aug2018',        '/MuonEG/Run2016E-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+MuonEG_Run2016F_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016F_22Aug2018',        '/MuonEG/Run2016F-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+MuonEG_Run2016G_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016G_22Aug2018',        '/MuonEG/Run2016G-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+MuonEG_Run2016H_22Aug2018       = Sample.nanoAODfromDAS('MuonEG_Run2016H_22Aug2018',        '/MuonEG/Run2016H-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
 
 MuonEG_Run2016 = [\
     MuonEG_Run2016B_22Aug2018_ver1,
     MuonEG_Run2016B_22Aug2018_ver2,
     MuonEG_Run2016C_22Aug2018,
     MuonEG_Run2016D_22Aug2018,
-    MuonEG_Run2016E_22Aug2018,
+#    MuonEG_Run2016E_22Aug2018,
     MuonEG_Run2016F_22Aug2018,
     MuonEG_Run2016G_22Aug2018,
-    MuonEG_Run2016H_22Aug2018_ver2,
-    MuonEG_Run2016H_22Aug2018_ver3,
+    MuonEG_Run2016H_22Aug2018,
     ]
 
 ## DoubleEG
 DoubleEG_Run2016B_22Aug2018_ver1    = Sample.nanoAODfromDAS('DoubleEG_Run2016B_22Aug2018_ver1', '/DoubleEG/Run2016B-22Aug2018_ver1-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
 DoubleEG_Run2016B_22Aug2018_ver2    = Sample.nanoAODfromDAS('DoubleEG_Run2016B_22Aug2018_ver2', '/DoubleEG/Run2016B-22Aug2018_ver2-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016C_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016C_22Aug2018',      '/DoubleEG/Run2016C-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016D_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016D_22Aug2018',      '/DoubleEG/Run2016D-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016E_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016E_22Aug2018',      '/DoubleEG/Run2016E-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016F_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016F_22Aug2018',      '/DoubleEG/Run2016F-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016G_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016G_22Aug2018',      '/DoubleEG/Run2016G-22Aug2018-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016H_22Aug2018_ver2    = Sample.nanoAODfromDAS('DoubleEG_Run2016H_22Aug2018_ver2', '/DoubleEG/Run2016H-22Aug2018_ver2-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
-DoubleEG_Run2016H_22Aug2018_ver3    = Sample.nanoAODfromDAS('DoubleEG_Run2016H_22Aug2018_ver3', '/DoubleEG/Run2016H-22Aug2018_ver3-v1/NANOAOD', dbFile=dbFile,redirector=redirector)
+DoubleEG_Run2016C_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016C_22Aug2018',      '/DoubleEG/Run2016C-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleEG_Run2016D_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016D_22Aug2018',      '/DoubleEG/Run2016D-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleEG_Run2016E_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016E_22Aug2018',      '/DoubleEG/Run2016E-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleEG_Run2016F_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016F_22Aug2018',      '/DoubleEG/Run2016F-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleEG_Run2016G_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016G_22Aug2018',      '/DoubleEG/Run2016G-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
+DoubleEG_Run2016H_22Aug2018         = Sample.nanoAODfromDAS('DoubleEG_Run2016H_22Aug2018',      '/DoubleEG/Run2016H-22Aug2018-v1/NANOAOD',      dbFile=dbFile,redirector=redirector)
 
 DoubleEG_Run2016 = [\
     DoubleEG_Run2016B_22Aug2018_ver1,
@@ -82,8 +77,7 @@ DoubleEG_Run2016 = [\
     DoubleEG_Run2016E_22Aug2018,
     DoubleEG_Run2016F_22Aug2018,
     DoubleEG_Run2016G_22Aug2018,
-    DoubleEG_Run2016H_22Aug2018_ver2,
-    DoubleEG_Run2016H_22Aug2018_ver3,
+    DoubleEG_Run2016H_22Aug2018,
     ]
     
 allSamples = DoubleMuon_Run2016 + MuonEG_Run2016 + DoubleEG_Run2016
