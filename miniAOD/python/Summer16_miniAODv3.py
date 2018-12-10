@@ -73,8 +73,6 @@ DY = [
 #TTJets_MLM_FS_S16_94X   = Sample("TTJets_MLM_FS_S16_94X",   "")
 #TTJets_MLM_S16_94X      = Sample("TTJets_MLM_S16_94X",      "")
 
-TTTo2L2Nu_pow_S16_94X       = Sample("TTTo2L2Nu_pow_S16_94X",       "/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_94X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM")
-
 TTTo2L2Nu_noSC_pow_S16_94X  = Sample("TTTo2L2Nu_noSC_pow_S16_94X",  "/TTTo2L2Nu_noSC_TuneCUETP8M2T4_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM")
 TTTo2L2Nu_pow_S16_94X       = Sample("TTTo2L2Nu_pow_S16_94X",       "/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
 TTToSemilepton_pow_S16_94X  = Sample("TTToSemilepton_pow_S16_94X",  "/TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
@@ -106,7 +104,6 @@ ttHToNonbb_S16_94X          = Sample("ttHToNonbb_S16_94X",              "/ttHToN
 ttHTobb_S16_94X             = Sample("ttHTobb_S16_94X",                 "/ttHTobb_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
 
 top = [
-    TTTo2L2Nu_pow_S16_94X,
     TTTo2L2Nu_noSC_pow_S16_94X,
     TTTo2L2Nu_pow_S16_94X,
     TTToSemilepton_pow_S16_94X,
