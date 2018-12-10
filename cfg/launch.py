@@ -5,10 +5,12 @@ import re
 from Samples.miniAOD.Spring16_miniAODv2 import allSamples as Spring16_miniAODv2
 from Samples.miniAOD.Summer16_miniAODv3 import allSamples as Summer16_miniAODv3
 from Samples.miniAOD.Summer16_miniAODv2 import allSamples as Summer16_miniAODv2
+from Samples.miniAOD.Autumn18_miniAODv1 import allSamples as Autumn18_miniAODv1
 from Samples.miniAOD.Run2016_17Jul2018 import allSamples as Run2016_17Jul2018
 from Samples.miniAOD.Run2018_26Sep2018 import allSamples as Run2018_26Sep2018
 
-allSamples = Spring16_miniAODv2 + Summer16_miniAODv3 + Summer16_miniAODv2 + Run2016_17Jul2018 + Run2018_26Sep2018
+allSamples  = Spring16_miniAODv2 + Summer16_miniAODv3 + Summer16_miniAODv2 + Autumn18_miniAODv1
+allSamples += Run2016_17Jul2018 + Run2018_26Sep2018
 
 parser = OptionParser(usage="python launch.py [options] component1 [ component2 ...]", \
                           description="Launch heppy jobs with CRAB3. Components correspond to the variables defined in heppy_samples.py (their name attributes)")
@@ -51,16 +53,20 @@ os.environ["CRAB_DATASET"]      = dataset
 
 print "### Publication is set to", os.environ["CRAB_PUBLISH"]
 
-if options.era == '94X_mc':
-    os.environ["CMSRUN_CFG"] = "test94X_NANO.py"
-elif options.era == '80X_mc':
-    os.environ["CMSRUN_CFG"] = "test80X_NANO.py"
-elif options.era == '80X_mc_fast':
-    os.environ["CMSRUN_CFG"] = "test80X_fast_NANO.py"
-elif options.era == '94X_data':
-    os.environ["CMSRUN_CFG"] = "test_data_94X_NANO.py"
-elif options.era == '102X_data':
-    os.environ["CMSRUN_CFG"] = "test_data_102X_NANO.py"
+if options.era == 'mc_94X_Summer16_miniAODv3':
+    os.environ["CMSRUN_CFG"] = "nano_mc_94X_Summer16_miniAODv3.py"
+elif options.era == 'mc_94X_Fall17_miniAODv1':
+    os.environ["CMSRUN_CFG"] = "nano_mc_94X_Fall17_miniAODv1.py"
+elif options.era == 'mc_80X_Summer16':
+    os.environ["CMSRUN_CFG"] = "nano_mc_80X_Summer16.py"
+elif options.era == 'mc_80X_fast':
+    os.environ["CMSRUN_CFG"] = "nano_mc_fast_80X_Summer16.py"
+elif options.era == 'mc_102X_Autumn18_miniAODv1':
+    os.environ["CMSRUN_CFG"] = "nano_mc_102X_Autumn18_miniAODv1.py"
+elif options.era == 'data_94X_Run2016':
+    os.environ["CMSRUN_CFG"] = "nano_data_94X_Run2016.py"
+elif options.era == 'data_102X_Run2018':
+    os.environ["CMSRUN_CFG"] = "nano_data_102X_Run2018.py"
 else:
     raise NotImplementedError
 
