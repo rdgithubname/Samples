@@ -8,9 +8,10 @@ from Samples.miniAOD.Summer16_miniAODv2 import allSamples as Summer16_miniAODv2
 from Samples.miniAOD.Autumn18_miniAODv1 import allSamples as Autumn18_miniAODv1
 from Samples.miniAOD.Run2016_17Jul2018 import allSamples as Run2016_17Jul2018
 from Samples.miniAOD.Run2018_26Sep2018 import allSamples as Run2018_26Sep2018
+from Samples.miniAOD.Run2018_promptReco import allSamples as Run2018_promptReco
 
 allSamples  = Spring16_miniAODv2 + Summer16_miniAODv3 + Summer16_miniAODv2 + Autumn18_miniAODv1
-allSamples += Run2016_17Jul2018 + Run2018_26Sep2018
+allSamples += Run2016_17Jul2018 + Run2018_26Sep2018 + Run2018_promptReco
 
 parser = OptionParser(usage="python launch.py [options] component1 [ component2 ...]", \
                           description="Launch heppy jobs with CRAB3. Components correspond to the variables defined in heppy_samples.py (their name attributes)")
