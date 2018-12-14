@@ -1,3 +1,8 @@
+'''
+dasgoclient -query="dataset=/*/Run2018*PromptReco*/MINIAOD"
+'''
+
+
 from Samples.Tools.Sample import Sample
 
 
@@ -68,6 +73,29 @@ MuonEG = [
     MuonEG_Run2018D_promptReco_v2,
 ]
 
+SingleMuon_Run2018A_promptReco_v1 = Sample("SingleMuon_Run2018A_promptReco_v1", "/SingleMuon/Run2018A-PromptReco-v1/MINIAOD")
+SingleMuon_Run2018A_promptReco_v2 = Sample("SingleMuon_Run2018A_promptReco_v2", "/SingleMuon/Run2018A-PromptReco-v2/MINIAOD")
+SingleMuon_Run2018A_promptReco_v3 = Sample("SingleMuon_Run2018A_promptReco_v3", "/SingleMuon/Run2018A-PromptReco-v3/MINIAOD")
+SingleMuon_Run2018B_promptReco_v1 = Sample("SingleMuon_Run2018B_promptReco_v1", "/SingleMuon/Run2018B-PromptReco-v1/MINIAOD")
+SingleMuon_Run2018B_promptReco_v2 = Sample("SingleMuon_Run2018B_promptReco_v2", "/SingleMuon/Run2018B-PromptReco-v2/MINIAOD")
+SingleMuon_Run2018C_promptReco_v1 = Sample("SingleMuon_Run2018C_promptReco_v1", "/SingleMuon/Run2018C-PromptReco-v1/MINIAOD")
+SingleMuon_Run2018C_promptReco_v2 = Sample("SingleMuon_Run2018C_promptReco_v2", "/SingleMuon/Run2018C-PromptReco-v2/MINIAOD")
+SingleMuon_Run2018C_promptReco_v3 = Sample("SingleMuon_Run2018C_promptReco_v3", "/SingleMuon/Run2018C-PromptReco-v3/MINIAOD")
+SingleMuon_Run2018D_promptReco_v2 = Sample("SingleMuon_Run2018D_promptReco_v2", "/SingleMuon/Run2018D-PromptReco-v2/MINIAOD")
+
+SingleMuon = [
+    SingleMuon_Run2018A_promptReco_v1,
+    SingleMuon_Run2018A_promptReco_v2,
+    SingleMuon_Run2018A_promptReco_v3,
+    SingleMuon_Run2018B_promptReco_v1,
+    SingleMuon_Run2018B_promptReco_v2,
+    SingleMuon_Run2018C_promptReco_v1,
+    SingleMuon_Run2018C_promptReco_v2,
+    SingleMuon_Run2018C_promptReco_v3,
+    SingleMuon_Run2018D_promptReco_v2,
+]
+
+
 ## sum up
-allSamples = DoubleMuon + MuonEG + EGamma
+allSamples = DoubleMuon + MuonEG + EGamma + SingleMuon
 
