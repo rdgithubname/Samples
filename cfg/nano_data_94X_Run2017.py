@@ -2,12 +2,12 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: test_data_102X -s NANO --data --eventcontent NANOAOD --datatier NANOAOD --filein /store/data/Run2018B/DoubleMuon/MINIAOD/26Sep2018_HEMmitigation-v1/270000/3C707CC4-770A-1B4A-9E33-B6DAFD1E9FC6.root --conditions 102X_dataRun2_Prompt_v6 -n 100 --era Run2_2018
+# with command line options: test94X -s NANO --data --eventcontent NANOAOD --datatier NANOAOD --filein /store/data/Run2017B/DoubleMuon/MINIAOD/31Mar2018-v1/90000/50FD1E34-1B37-E811-B6D4-141877410B85.root --no_exec --conditions 94X_dataRun2_v11 --era Run2_2017,run2_nanoAOD_94XMiniAODv2
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('NANO',eras.Run2_2018)
+process = cms.Process('NANO',eras.Run2_2017,eras.run2_nanoAOD_94XMiniAODv2)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -26,9 +26,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    #fileNames = cms.untracked.vstring('/store/data/Run2018B/DoubleMuon/MINIAOD/26Sep2018_HEMmitigation-v1/270000/3C707CC4-770A-1B4A-9E33-B6DAFD1E9FC6.root'),
-    #fileNames = cms.untracked.vstring('/store/data/Run2018B/EGamma/MINIAOD/26Sep2018-v1/00000/28B96E28-CAE3-7348-9BDD-A0CE24015884.root'),
-    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/320/569/00000/54C814A5-1C96-E811-AAD0-FA163ECB6866.root'),
+    fileNames = cms.untracked.vstring('/store/data/Run2017B/DoubleMuon/MINIAOD/31Mar2018-v1/90000/50FD1E34-1B37-E811-B6D4-141877410B85.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -38,7 +36,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('test_data_102X nevts:100'),
+    annotation = cms.untracked.string('test94X nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -48,12 +46,12 @@ process.configurationMetadata = cms.untracked.PSet(
 process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
     compressionAlgorithm = cms.untracked.string('LZMA'),
     compressionLevel = cms.untracked.int32(9),
+    fakeNameForCrab =cms.untracked.bool(True),
     dataset = cms.untracked.PSet(
         dataTier = cms.untracked.string('NANOAOD'),
         filterName = cms.untracked.string('')
     ),
     fileName = cms.untracked.string('nanoAOD.root'),
-    fakeNameForCrab =cms.untracked.bool(True),
     outputCommands = process.NANOAODEventContent.outputCommands
 )
 
@@ -61,7 +59,7 @@ process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v11', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '94X_dataRun2_v11', '')
 
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequence)

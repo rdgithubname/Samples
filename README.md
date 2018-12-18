@@ -3,8 +3,8 @@
 Preliminary recipe for 102X (should work with all kind of samples)
 
 ```
-cmsrel CMSSW_10_2_5
-cd CMSSW_10_2_5/src
+cmsrel CMSSW_10_2_9
+cd CMSSW_10_2_9/src
 cmsenv
 git cms-init
 
@@ -27,6 +27,6 @@ cd $CMSSW_BASE/src
 cp Samples/sparse-checkout .git/info/sparse-checkout
 git remote add ownFork https://github.com/danbarto/cmssw.git
 git fetch ownFork
-git checkout ownFork/sumPtForMETSig
+git checkout ownFork/sumPtForMETSig_102Xv2
 scram b -j 8
 ```

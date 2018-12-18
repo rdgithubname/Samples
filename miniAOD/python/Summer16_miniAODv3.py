@@ -142,6 +142,46 @@ top = [
     ttHTobb_S16_94X,
 ]
 
+## W+jets
+WJetsToLNu_MLM_S16_94X                  = Sample("WJetsToLNu_MLM_S16_94X",                      "/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_MLM_S16_94X_ext2             = Sample("WJetsToLNu_MLM_S16_94X_ext2",                 "/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM")
+
+WJetsToLNu_HT70To100_S16_94X            = Sample("WJetsToLNu_HT70To100_S16_94X",            "/WJetsToLNu_HT-70To100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT100To200_S16_94X           = Sample("WJetsToLNu_HT100To200_S16_94X",           "/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT200To400_S16_94X           = Sample("WJetsToLNu_HT200To400_S16_94X",           "/WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT200To400_S16_94X_ext1      = Sample("WJetsToLNu_HT200To400_S16_94X_ext1",      "/WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
+WJetsToLNu_HT200To400_S16_94X_ext2      = Sample("WJetsToLNu_HT200To400_S16_94X_ext2",      "/WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM")
+WJetsToLNu_HT400To600_S16_94X           = Sample("WJetsToLNu_HT400To600_S16_94X",           "/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT400To600_S16_94X_ext1      = Sample("WJetsToLNu_HT400To600_S16_94X_ext1",      "/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
+WJetsToLNu_HT600To800_S16_94X           = Sample("WJetsToLNu_HT600To800_S16_94X",           "/WJetsToLNu_HT-600To800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT600To800_S16_94X_ext1      = Sample("WJetsToLNu_HT600To800_S16_94X_ext1",      "/WJetsToLNu_HT-600To800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
+WJetsToLNu_HT800To1200_S16_94X          = Sample("WJetsToLNu_HT800To1200_S16_94X",          "/WJetsToLNu_HT-800To1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT800To1200_S16_94X_ext1     = Sample("WJetsToLNu_HT800To1200_S16_94X_ext1",     "/WJetsToLNu_HT-800To1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
+WJetsToLNu_HT1200To2500_S16_94X         = Sample("WJetsToLNu_HT1200To2500_S16_94X",         "/WJetsToLNu_HT-1200To2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT1200To2500_S16_94X_ext1    = Sample("WJetsToLNu_HT1200To2500_S16_94X_ext1",    "/WJetsToLNu_HT-1200To2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
+WJetsToLNu_HT2500ToInf_S16_94X          = Sample("WJetsToLNu_HT2500ToInf_S16_94X",          "/WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+WJetsToLNu_HT2500ToInf_S16_94X_ext1     = Sample("WJetsToLNu_HT2500ToInf_S16_94X_ext1",     "/WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
+
+wjets = [
+    WJetsToLNu_HT70To100_S16_94X,
+    WJetsToLNu_HT100To200_S16_94X,
+    WJetsToLNu_HT200To400_S16_94X,
+    WJetsToLNu_HT200To400_S16_94X_ext1,
+    WJetsToLNu_HT200To400_S16_94X_ext2,
+    WJetsToLNu_HT400To600_S16_94X,
+    WJetsToLNu_HT400To600_S16_94X_ext1,
+    WJetsToLNu_HT600To800_S16_94X,
+    WJetsToLNu_HT600To800_S16_94X_ext1,
+    WJetsToLNu_HT800To1200_S16_94X,
+    WJetsToLNu_HT800To1200_S16_94X_ext1,
+    WJetsToLNu_HT1200To2500_S16_94X,
+    WJetsToLNu_HT1200To2500_S16_94X_ext1,
+    WJetsToLNu_HT2500ToInf_S16_94X,
+    WJetsToLNu_HT2500ToInf_S16_94X_ext1,
+    WJetsToLNu_MLM_S16_94X,
+    WJetsToLNu_MLM_S16_94X_ext2,
+]
+
 ## diboson samples
 
 VVTo2L2Nu_S16_94X       = Sample("VVTo2L2Nu_S16_94X",       "/VVTo2L2Nu_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
@@ -200,5 +240,5 @@ multiboson = [
     ZZZ_S16_94X,
 ]
 
-allSamples = DY + top + diboson + multiboson
+allSamples = DY + top + diboson + multiboson + wjets
 
