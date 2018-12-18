@@ -26,7 +26,7 @@ MuonEG_Run2016B_17Jul2018_ver1  =   Sample("MuonEG_Run2016B_17Jul2018_ver1",    
 MuonEG_Run2016B_17Jul2018_ver2  =   Sample("MuonEG_Run2016B_17Jul2018_ver2",    "/MuonEG/Run2016B-17Jul2018_ver2-v1/MINIAOD")
 MuonEG_Run2016C_17Jul2018       =   Sample("MuonEG_Run2016C_17Jul2018",         "/MuonEG/Run2016C-17Jul2018-v1/MINIAOD")
 MuonEG_Run2016D_17Jul2018       =   Sample("MuonEG_Run2016D_17Jul2018",         "/MuonEG/Run2016D-17Jul2018-v1/MINIAOD")
-MuonEG_Run2016E_17Jul2018       =   Sample("MuonEG_Run2016E_17Jul2018",         "/MuonEG/Run2016E-17Jul2018-v1/MINIAOD")
+MuonEG_Run2016E_17Jul2018       =   Sample("MuonEG_Run2016E_17Jul2018",         "/MuonEG/Run2016E-17Jul2018-v2/MINIAOD")
 MuonEG_Run2016F_17Jul2018       =   Sample("MuonEG_Run2016F_17Jul2018",         "/MuonEG/Run2016F-17Jul2018-v1/MINIAOD")
 MuonEG_Run2016G_17Jul2018       =   Sample("MuonEG_Run2016G_17Jul2018",         "/MuonEG/Run2016G-17Jul2018-v1/MINIAOD")
 MuonEG_Run2016H_17Jul2018       =   Sample("MuonEG_Run2016H_17Jul2018",         "/MuonEG/Run2016H-17Jul2018-v1/MINIAOD")
@@ -104,6 +104,29 @@ SingleMuon = [\
     SingleMuon_Run2016G_17Jul2018,
     SingleMuon_Run2016H_17Jul2018,
     ]
+
+# MET
+MET_Run2016B_17Jul2018_ver1  =   Sample("MET_Run2016B_17Jul2018_ver1",    "/MET/Run2016B-17Jul2018_ver1-v1/MINIAOD")
+MET_Run2016B_17Jul2018_ver2  =   Sample("MET_Run2016B_17Jul2018_ver2",    "/MET/Run2016B-17Jul2018_ver2-v1/MINIAOD")
+MET_Run2016C_17Jul2018       =   Sample("MET_Run2016C_17Jul2018",         "/MET/Run2016C-17Jul2018-v1/MINIAOD")
+MET_Run2016D_17Jul2018       =   Sample("MET_Run2016D_17Jul2018",         "/MET/Run2016D-17Jul2018-v1/MINIAOD")
+MET_Run2016E_17Jul2018       =   Sample("MET_Run2016E_17Jul2018",         "/MET/Run2016E-17Jul2018-v1/MINIAOD")
+MET_Run2016F_17Jul2018       =   Sample("MET_Run2016F_17Jul2018",         "/MET/Run2016F-17Jul2018-v1/MINIAOD")
+MET_Run2016G_17Jul2018       =   Sample("MET_Run2016G_17Jul2018",         "/MET/Run2016G-17Jul2018-v1/MINIAOD")
+MET_Run2016H_17Jul2018       =   Sample("MET_Run2016H_17Jul2018",         "/MET/Run2016H-17Jul2018-v2/MINIAOD")
+
+MET = [\
+    MET_Run2016B_17Jul2018_ver1,
+    MET_Run2016B_17Jul2018_ver2,
+    MET_Run2016C_17Jul2018,
+    MET_Run2016D_17Jul2018,
+    MET_Run2016E_17Jul2018,
+    MET_Run2016F_17Jul2018,
+    MET_Run2016G_17Jul2018,
+    MET_Run2016H_17Jul2018,
+    ]
+
+
 
 ## add up all samples
 allSamples = DoubleMuon + MuonEG + DoubleEG + SingleElectron + SingleMuon
