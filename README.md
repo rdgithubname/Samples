@@ -3,8 +3,8 @@
 Preliminary recipe for 102X (should work with all kind of samples)
 
 ```
-cmsrel CMSSW_10_2_5
-cd CMSSW_10_2_5/src
+cmsrel CMSSW_10_2_6
+cd CMSSW_10_2_6/src
 cmsenv
 git cms-init
 
