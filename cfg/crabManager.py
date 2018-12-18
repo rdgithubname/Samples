@@ -79,7 +79,10 @@ print
 print "These datasets have been processed:"
 for d in datasets:
     if d.has_key('output'):
-        print d['input'], '   ---->    ', eval(d['output'])[0]
+        try:
+            print d['input'], '   ---->    ', eval(d['output'])[0]
+        except TypeError:
+            print "No output yet"
     else:
         print d['input'], '   ---->    ', 'No output yet'
 
