@@ -7,8 +7,8 @@ def getFilterCut( year, isData=False, ignoreJSON=False ):
         filters            += [ "Flag_HBHENoiseFilter" ]                      # HBHE noise filter
         filters            += [ "Flag_HBHENoiseIsoFilter" ]                   # HBHEiso noise filter
         filters            += [ "Flag_EcalDeadCellTriggerPrimitiveFilter" ]   # ECAL TP filter
-#        filters            += [ "Flag_BadPFMuonFilter" ]                      # Bad PF Muon Filter
-#        filters            += [ "Flag_BadChargedCandidateFilter" ]            # Bad Charged Hadron Filter
+#        filters            += [ "Flag_BadPFMuonFilter" ]                      # Bad PF Muon Filter (re-run nanoAOD processing)
+#        filters            += [ "Flag_BadChargedCandidateFilter" ]            # Bad Charged Hadron Filter (re-run nanoAOD processing)
         if isData:
             filters        += [ "Flag_eeBadScFilter" ]                        # ee badSC noise filter (data only)
 
@@ -20,7 +20,7 @@ def getFilterCut( year, isData=False, ignoreJSON=False ):
         filters            += [ "Flag_EcalDeadCellTriggerPrimitiveFilter" ]   # ECAL TP filter
         filters            += [ "Flag_BadPFMuonFilter" ]                      # Bad PF Muon Filter
         filters            += [ "Flag_BadChargedCandidateFilter" ]            # Bad Charged Hadron Filter
-        filters            += [ "ecalBadCalibReducedMINIAODFilter" ]          # ECAL bad calibration filter update (neeeds to be re-run on miniAOD)
+        filters            += [ "ecalBadCalibReducedMINIAODFilter" ]          # ECAL bad calibration filter update (needs to be re-run on miniAOD)
         if isData:
             filters        += [ "Flag_eeBadScFilter" ]                        # ee badSC noise filter (data only)
 
@@ -32,9 +32,12 @@ def getFilterCut( year, isData=False, ignoreJSON=False ):
         filters            += [ "Flag_EcalDeadCellTriggerPrimitiveFilter" ]   # ECAL TP filter
         filters            += [ "Flag_BadPFMuonFilter" ]                      # Bad PF Muon Filter
         filters            += [ "Flag_BadChargedCandidateFilter" ]            # Bad Charged Hadron Filter
-        filters            += [ "ecalBadCalibReducedMINIAODFilter" ]          # ECAL bad calibration filter update (neeeds to be re-run on miniAOD)
+        filters            += [ "ecalBadCalibReducedMINIAODFilter" ]          # ECAL bad calibration filter update (needs to be re-run on miniAOD)
         if isData:
             filters        += [ "Flag_eeBadScFilter" ]                        # ee badSC noise filter (data only)
+
+    else:
+        raise NotImplementedError( "No MET filter found for year %i" %year )
 
     if isData:
         filters            += [ "weight>0" ]
@@ -42,3 +45,4 @@ def getFilterCut( year, isData=False, ignoreJSON=False ):
             filters        += [ "jsonPassed>0" ]
 
     return "&&".join(filters)
+
