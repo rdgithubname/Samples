@@ -24,7 +24,7 @@ Checkout your custom modules to nanoAOD. This is just an example, adding the not
 
 ```
 cd $CMSSW_BASE/src
-cp sparse-checkout Samples/.git/info/sparse-checkout
+cp Samples/sparse-checkout .git/info/sparse-checkout
 git remote add ownFork https://github.com/danbarto/cmssw.git
 git fetch ownFork
 git checkout ownFork/sumPtForMETSig
