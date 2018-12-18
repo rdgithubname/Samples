@@ -12,8 +12,8 @@ from Samples.Tools.Sample import Sample
 # low mass
 DYJetsToLL_M10to50_MLM_F17_94X              = Sample("DYJetsToLL_M10to50_MLM_F17_94X",              "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 
-DYJetsToLL_M10to50_HT100to200_F17_94X       = Sample("DYJetsToLL_M4to50_HT100to200_F17_94X",        "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
-DYJetsToLL_M10to50_HT100to200_F17_94X_ext1  = Sample("DYJetsToLL_M4to50_HT100to200_F17_94X_ext1",   "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
+DYJetsToLL_M10to50_HT100to200_F17_94X       = Sample("DYJetsToLL_M10to50_HT100to200_F17_94X",        "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+DYJetsToLL_M10to50_HT100to200_F17_94X_ext1  = Sample("DYJetsToLL_M10to50_HT100to200_F17_94X_ext1",   "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
 DYJetsToLL_M10to50_HT200to400_F17_94X       = Sample("DYJetsToLL_M10to50_HT200to400_F17_94X",       "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 DYJetsToLL_M10to50_HT200to400_F17_94X_ext1  = Sample("DYJetsToLL_M10to50_HT200to400_F17_94X_ext1",  "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
 DYJetsToLL_M10to50_HT400to600_F17_94X       = Sample("DYJetsToLL_M10to50_HT400to600_F17_94X",       "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")

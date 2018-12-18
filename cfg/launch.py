@@ -34,7 +34,10 @@ parser.add_option("--totalUnits",       dest="totalUnits",              help="To
 parser.add_option("--era",              dest="era",                     help="Which era?")
 parser.add_option("--sample",           dest="sample",                  help="Which sample?")
 parser.add_option("--publish",          action='store_true',            help="Publish on dbs?", default=False)
+parser.add_option("--dryrun",           action='store_true',            help="Test script?", default=False)
 ( options, args ) = parser.parse_args()
+
+print "## Starting submission to crab for sample %s"%options.sample
 
 dataset = None
 for sample in allSamples:
@@ -43,6 +46,8 @@ for sample in allSamples:
 
 if dataset is None:
     raise NotImplementedError
+
+print "## Found dataset: %s"%dataset
 
 os.system("scram runtime -sh")
 os.system("source /cvmfs/cms.cern.ch/crab3/crab.sh")
@@ -64,7 +69,7 @@ os.environ["MAOD_SAMPLE_NAME"]  = m.group(1)+"_"+m.group(2)
 os.environ["CRAB_PUBLISH"]      = 'True' if options.publish else 'False'
 os.environ["CRAB_DATASET"]      = dataset
 
-print "### Publication is set to", os.environ["CRAB_PUBLISH"]
+print "## Publication is set to", os.environ["CRAB_PUBLISH"]
 
 ## Config selection
 
@@ -93,6 +98,13 @@ elif options.era == 'data_102X_Run2018_17Sep2018':
 else:
     raise NotImplementedError
 
+print "## Will use the following config: %s"%os.environ["CMSRUN_CFG"]
+
 os.system("which crab")
+
+if options.dryrun:
+    print "## Dryrun, exiting..."
+    exit()
+
 os.system("crab submit -c crabConfig.py")
 
