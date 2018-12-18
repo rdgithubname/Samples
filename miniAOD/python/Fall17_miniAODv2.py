@@ -228,6 +228,7 @@ WJets = [
     WJetsToLNu_MLM_F17_94X_ext1,
 ]
 
+VVTo2L2Nu_FXFX_F17_94X                          = Sample("VVTo2L2Nu_FXFX_F17_94X",              "/VVTo2L2Nu_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 WW_DoubleScattering_F17_94X                     = Sample("WW_DoubleScattering_F17_94X",         "/WW_DoubleScattering_13TeV-pythia8_TuneCP5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 WW_F17_94X                                      = Sample("WW_F17_94X",                          "/WW_TuneCP5_13TeV-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 WZ_F17_94X                                      = Sample("WZ_F17_94X",                          "/WZ_TuneCP5_13TeV-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
