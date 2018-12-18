@@ -18,7 +18,7 @@ relvals = [
 
 
 DYJetsToLL_M50_FXFX_A18_102X    = Sample("DYJetsToLL_M50_FXFX_A18_102X", "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM")
-DYJetsToLL_M50_MLM_A18_102X     = Sample("DYJetsToLL_M50_MLM_S16_94X_ext1", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM")
+DYJetsToLL_M50_MLM_A18_102X     = Sample("DYJetsToLL_M50_MLM_A18_102X", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM")
 
 DY = [
     DYJetsToLL_M50_FXFX_A18_102X,
