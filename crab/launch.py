@@ -75,28 +75,30 @@ print "## Publication is set to", os.environ["CRAB_PUBLISH"]
 
 # fullsim configs
 if options.era == 'mc_80X_Summer16':
-    os.environ["CMSRUN_CFG"] = "nano_mc_80X_Summer16.py"
+    CMSRUN_CFG = "nano_mc_80X_Summer16"
 elif options.era == 'mc_94X_Summer16_miniAODv3':
-    os.environ["CMSRUN_CFG"] = "nano_mc_94X_Summer16_miniAODv3.py"
+    CMSRUN_CFG = "nano_mc_94X_Summer16_miniAODv3"
 elif options.era == 'mc_94X_Fall17_miniAODv2':
-    os.environ["CMSRUN_CFG"] = "nano_mc_94X_Fall17_miniAODv2.py"
+    CMSRUN_CFG = "nano_mc_94X_Fall17_miniAODv2"
 elif options.era == 'mc_102X_Autumn18_miniAODv1':
-    os.environ["CMSRUN_CFG"] = "nano_mc_102X_Autumn18_miniAODv1.py"
+    CMSRUN_CFG = "nano_mc_102X_Autumn18_miniAODv1"
 # fastsim configs
 elif options.era == 'mc_80X_fast':
-    os.environ["CMSRUN_CFG"] = "nano_mc_fast_80X_Summer16.py"
+    CMSRUN_CFG = "nano_mc_fast_80X_Summer16"
 # data configs
 elif options.era == 'data_94X_Run2016':
-    os.environ["CMSRUN_CFG"] = "nano_data_94X_Run2016.py"
+    CMSRUN_CFG = "nano_data_94X_Run2016"
 elif options.era == 'data_94X_Run2017':
-    os.environ["CMSRUN_CFG"] = "nano_data_94X_Run2017.py"
+    CMSRUN_CFG = "nano_data_94X_Run2017"
 elif options.era == 'data_102X_Run2018_promptReco':
-    os.environ["CMSRUN_CFG"] = "nano_data_102X_Run2018_promptReco.py"
+    CMSRUN_CFG = "nano_data_102X_Run2018_promptReco"
 elif options.era == 'data_102X_Run2018_17Sep2018':
-    os.environ["CMSRUN_CFG"] = "nano_data_102X_Run2018_17Sep2018.py"
+    CMSRUN_CFG = "nano_data_102X_Run2018_17Sep2018"
 
 else:
     raise NotImplementedError
+
+os.environ["CMSRUN_CFG"] = os.path.expandvars( "$CMSSW_BASE/src/Samples/cfg/%s.py" % CMSRUN_CFG )
 
 print "## Will use the following config: %s"%os.environ["CMSRUN_CFG"]
 
