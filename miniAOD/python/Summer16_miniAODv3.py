@@ -240,5 +240,23 @@ multiboson = [
     ZZZ_S16_94X,
 ]
 
-allSamples = DY + top + diboson + multiboson + wjets
+## gluglu
+
+GluGluToContinToZZTo2e2mu   = Sample("GluGluToContinToZZTo2e2mu",   "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+GluGluToContinToZZTo2e2tau  = Sample("GluGluToContinToZZTo2e2tau",  "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+GluGluToContinToZZTo2mu2tau = Sample("GluGluToContinToZZTo2mu2tau", "/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+GluGluToContinToZZTo4e      = Sample("GluGluToContinToZZTo4e",      "/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+GluGluToContinToZZTo4mu     = Sample("GluGluToContinToZZTo4mu",     "/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+GluGluToContinToZZTo4tau    = Sample("GluGluToContinToZZTo4tau",    "/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+
+gluglu = [
+    GluGluToContinToZZTo2e2mu,
+    GluGluToContinToZZTo2e2tau,
+    GluGluToContinToZZTo2mu2tau,
+    GluGluToContinToZZTo4e,
+    GluGluToContinToZZTo4mu,
+    GluGluToContinToZZTo4tau,
+]
+
+allSamples = DY + top + diboson + multiboson + wjets + gluglu
 

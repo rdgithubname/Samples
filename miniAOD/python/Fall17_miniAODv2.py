@@ -94,7 +94,6 @@ TTJets_MLM_F17_94X                              = Sample("TTJets_MLM_F17_94X",  
 TTJets_semilepFromT_MLM_F17_94X                 = Sample("TTJets_semilepFromT_MLM_F17_94X",     "/TTJets_SingleLeptFromT_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 TTJets_semilepFromTbar_MLM_F17_94X              = Sample("TTJets_semilepFromTbar_MLM_F17_94X",  "/TTJets_SingleLeptFromTbar_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 TTJets_dilep_MLM_F17_94X                        = Sample("TTJets_dilep_MLM_F17_94X",            "/TTJets_DiLept_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
-
 TTJets_semilepFromT_genMET150_MLM_F17_94X       = Sample("TTJets_semilepFromT_genMET150_MLM_F17_94X",     "/TTJets_SingleLeptFromT_genMET-150_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 TTJets_semilepFromTbar_genMET150_MLM_F17_94X    = Sample("TTJets_semilepFromTbar_genMET150_MLM_F17_94X",  "/TTJets_SingleLeptFromTbar_genMET-150_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
 TTJets_dilep_genMET150_MLM_F17_94X              = Sample("TTJets_dilep_genMET150_MLM_F17_94X",            "/TTJets_DiLept_genMET-150_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
@@ -127,6 +126,9 @@ TTZJets_MLM_F17_94X_ext1                        = Sample("TTZJets_MLM_F17_94X_ex
 TZQ_Zhad_Wlept_4f_amc_F17_94X                   = Sample("TZQ_Zhad_Wlept_4f_amc_F17_94X",       "/tZq_Zhad_Wlept_4f_ckm_NLO_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 TZQ_ll_4f_amc_F17_94X                           = Sample("TZQ_ll_4f_amc_F17_94X ",              "/tZq_ll_4f_ckm_NLO_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM")
 TZQ_nunu_4f_amc_F17_94X                         = Sample("TZQ_nunu_4f_amc_F17_94X",             "/tZq_nunu_4f_ckm_NLO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+THQ_Hincl_F17_94X                               = Sample("THQ_Hincl_F17_94X",                   "/THQ_4f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+THW_Hincl_F17_94X                               = Sample("THW_Hincl_F17_94X",                   "/THW_5f_Hincl_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+
 ttHToNonbb_pow_F17_94X                          = Sample("ttHToNonbb_pow_F17_94X",              "/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 ttHTobb_pow_F17_94X                             = Sample("ttHTobb_pow_F17_94X",                 "/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 ttH_pow_F17_94X                                 = Sample("ttH_pow_F17_94X",                     "/ttH_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
@@ -195,6 +197,7 @@ top=[
     TZQ_ll_4f_amc_F17_94X,
     TZQ_nunu_4f_amc_F17_94X,
     ttHToNonbb_pow_F17_94X,
+    ttHToNonbb_pow_F17_94X,
     ttHTobb_pow_F17_94X,
     ttH_pow_F17_94X,
     TTHH_F17_94X,
@@ -235,8 +238,18 @@ WZ_F17_94X                                      = Sample("WZ_F17_94X",          
 ZZ_F17_94X                                      = Sample("ZZ_F17_94X",                          "/ZZ_TuneCP5_13TeV-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 WWTo2L2Nu_pow_PS_F17_94X                        = Sample("WWTo2L2Nu_pow_PS_F17_94X",            "/WWTo2L2Nu_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
 WWToLNuQQ_pow_PS_F17_94X                        = Sample("WWToLNuQQ_pow_PS_F17_94X",            "/WWToLNuQQ_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
+WWTo4Q_pow_PS_F17_94X                           = Sample("WWTo4Q_pow_PS_F17_94X",               "/WWTo4Q_NNPDF31_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
+WWTo1L1Nu2Q_FXFX_F17_94X                        = Sample("WWTo1L1Nu2Q_pow_PS_F17_94X",          "/WWTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 WZTo3LNu_FXFX_F17_94X                           = Sample("WZTo3LNu_FXFX_F17_94X",               "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+WZTo2L2Q_FXFX_F17_94X                           = Sample("WZTo2L2Q_FXFX_F17_94X",               "/WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+WZTo1L3Nu_FXFX_F17_94X                          = Sample("WZTo1L3Nu_FXFX_F17_94X",              "/WZTo1L3Nu_13TeV_amcatnloFXFX_madspin_pythia8_v2/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+WZTo1L1Nu2Q_FXFX_F17_94X                        = Sample("WZTo1L1Nu2Q_FXFX_F17_94X",            "/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
 ZZTo2Q2Nu_FXFX_F17_94X                          = Sample("ZZTo2Q2Nu_FXFX_F17_94X",              "/ZZTo2Q2Nu_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+ZZTo4l_pow_F17_94X                              = Sample("ZZTo4l_FXFX_F17_94X",                 "/ZZTo4L_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+ZZTo4l_pow_F17_94X_ext1                         = Sample("ZZTo4l_FXFX_F17_94X_ext1",            "/ZZTo4L_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM")
+ZZTo2L2Q_FXFX_F17_94X                           = Sample("ZZTo2L2Q_FXFX_F17_94X",               "/ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+ZZTo2L2Nu_pow_F17_94X                           = Sample("ZZTo2L2Nu_FXFX_F17_94X",              "/ZZTo2L2Nu_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+WGToLNuG_F17_94X                                = Sample("WGToLNuG_F17_94X",                    "/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 
 diboson = [
     WW_DoubleScattering_F17_94X,
@@ -245,8 +258,18 @@ diboson = [
     ZZ_F17_94X,
     WWTo2L2Nu_pow_PS_F17_94X,
     WWToLNuQQ_pow_PS_F17_94X,
+    WWTo4Q_pow_PS_F17_94X,
+    WWTo1L1Nu2Q_FXFX_F17_94X,
     WZTo3LNu_FXFX_F17_94X,
+    WZTo2L2Q_FXFX_F17_94X,
+    WZTo1L3Nu_FXFX_F17_94X,
+    WZTo1L1Nu2Q_FXFX_F17_94X,
     ZZTo2Q2Nu_FXFX_F17_94X,
+    ZZTo4l_pow_F17_94X,
+    ZZTo4l_pow_F17_94X_ext1,
+    ZZTo2L2Q_FXFX_F17_94X,
+    ZZTo2L2Nu_pow_F17_94X,
+    WGToLNuG_F17_94X,
 ]
 
 
@@ -266,6 +289,33 @@ multiboson = [
     WZG_amc_F17_94X,
 ]
 
+
+WWW_amc_F17_94X                                 = Sample("WWW_amc_F17_94X",                     "/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+WWZ_amc_F17_94X                                 = Sample("WWZ_amc_F17_94X",                     "/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+WZZ_amc_F17_94X                                 = Sample("WZZ_amc_F17_94X",                     "/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+ZZZ_amc_F17_94X                                 = Sample("ZZZ_amc_F17_94X",                     "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+WWG_amc_F17_94X                                 = Sample("WWG_amc_F17_94X",                     "/WWG_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+WZG_amc_F17_94X                                 = Sample("WZG_amc_F17_94X",                     "/WZG_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+
+GluGluToContinToZZTo4e_F17_94X      = Sample("GluGluToContinToZZTo4e_F17_94X",     "/GluGluToContinToZZTo4e_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+GluGluToContinToZZTo2e2mu_F17_94X   = Sample("GluGluToContinToZZTo2e2mu_F17_94X",  "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+GluGluToContinToZZTo2e2tau_F17_94X  = Sample("GluGluToContinToZZTo2e2tau_F17_94X", "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+GluGluToContinToZZTo4mu_F17_94X     = Sample("GluGluToContinToZZTo2e2mu_F17_94X",  "/GluGluToContinToZZTo4mu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+GluGluToContinToZZTo2mu2tau_F17_94X = Sample("GluGluToContinToZZTo2e2mu_F17_94X",  "/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+GluGluToContinToZZTo2e2nu_F17_94X   = Sample("GluGluToContinToZZTo2e2nu_F17_94X",  "/GluGluToContinToZZTo2e2nu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+GluGluToContinToZZTo2mu2nu_F17_94X  = Sample("GluGluToContinToZZTo2mu2nu_F17_94X", "/GluGluToContinToZZTo2mu2nu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM")
+
+gluglu = [
+    GluGluToContinToZZTo4e_F17_94X,
+    GluGluToContinToZZTo2e2mu_F17_94X,
+    GluGluToContinToZZTo2e2tau_F17_94X,
+    GluGluToContinToZZTo4mu_F17_94X,
+    GluGluToContinToZZTo2mu2tau_F17_94X,
+    GluGluToContinToZZTo2e2nu_F17_94X,
+    GluGluToContinToZZTo2mu2nu_F17_94X,
+]
+
 ## sum up
-allSamples = DY + top + WJets + diboson + multiboson
+allSamples = DY + top + WJets + diboson + multiboson + gluglu
+
 
