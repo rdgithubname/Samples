@@ -45,7 +45,8 @@ DY = [
     DYJetsToLL_M50_FXFX_S16_94X_ext2,
     DYJetsToLL_M10to50_FXFX_S16_94X,
     DYJetsToLL_M10to50_FXFX_S16_94X_ext1,
-
+]
+DY_HT = [
     DYJetsToLL_M50_HT70to100_MLM_S16_94X,
     DYJetsToLL_M50_HT100to200_MLM_S16_94X_ext1,
     DYJetsToLL_M50_HT200to400_MLM_S16_94X,
@@ -258,5 +259,5 @@ gluglu = [
     GluGluToContinToZZTo4tau,
 ]
 
-allSamples = DY + top + diboson + multiboson + wjets + gluglu
+allSamples = DY + DY_HT + top + diboson + multiboson + wjets + gluglu
 
