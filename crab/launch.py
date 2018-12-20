@@ -22,8 +22,8 @@ from Samples.miniAOD.Run2018_promptReco import allSamples as Run2018_promptReco
 # 2018 rereco Data (for A->C)
 from Samples.miniAOD.Run2018_17Sep2018  import allSamples as Run2018_17Sep2018
 
-all_modules = [ "Spring16_miniAODv2", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1"]
-all_modules +=[ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018"]
+all_modules  = [ "Spring16_miniAODv2", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" ]
+all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018" ]
 
 allSamples  = Spring16_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 + Autumn18_miniAODv1
 allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018
@@ -50,8 +50,7 @@ try:
 except:
     raise RuntimeError( "Not found: Sample: %s, Module: %s, module_file: %s" % (options.sample, options.module, module_file) ) 
 
-if type(datasets)!=type([]):
-    datasets = [datasets]
+if type(datasets) != type([]): datasets = [datasets]
 
 print "## Will process from module %s the following samples: %s"%(options.module,  ",".join( d.name for d in datasets ) )
 
