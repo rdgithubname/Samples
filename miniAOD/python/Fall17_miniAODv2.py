@@ -99,9 +99,9 @@ TTJets_semilepFromTbar_genMET150_MLM_F17_94X    = Sample("TTJets_semilepFromTbar
 TTJets_dilep_genMET150_MLM_F17_94X              = Sample("TTJets_dilep_genMET150_MLM_F17_94X",            "/TTJets_DiLept_genMET-150_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 
 TTJets_HT600to800_F17_94X                       = Sample("TTJets_HT600to800_F17_94X",           "/TTJets_HT-600to800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
-TTJets_HT600to800_F17_94X                       = Sample("TTJets_HT600to800_F17_94X",           "/TTJets_HT-800to1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
-TTJets_HT600to800_F17_94X                       = Sample("TTJets_HT600to800_F17_94X",           "/TTJets_HT-1200to2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
-TTJets_HT600to800_F17_94X                       = Sample("TTJets_HT600to800_F17_94X",           "/TTJets_HT-2500toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM")
+TTJets_HT800to1200_F17_94X                      = Sample("TTJets_HT800to1200_F17_94X",          "/TTJets_HT-800to1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+TTJets_HT1200to2500_F17_94X                     = Sample("TTJets_HT1200to2500_F17_94X",         "/TTJets_HT-1200to2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+TTJets_HT2500toInf_F17_94X                      = Sample("TTJets_HT2500toInf_F17_94X",          "/TTJets_HT-2500toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM")
 TTTo2L2Nu_pow_F17_94X                           = Sample("TTTo2L2Nu_pow_F17_94X",               "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM")
 TTTo2L2Nu_pow_PS_F17_94X                        = Sample("TTTo2L2Nu_pow_PS_F17_94X",            "/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM")
 TTToHadronic_pow_F17_94X                        = Sample("TTToHadronic_pow_F17_94X",            "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM")
@@ -169,9 +169,9 @@ top=[
     TTJets_semilepFromTbar_genMET150_MLM_F17_94X,
     TTJets_dilep_genMET150_MLM_F17_94X,
     TTJets_HT600to800_F17_94X,
-    TTJets_HT600to800_F17_94X,
-    TTJets_HT600to800_F17_94X,
-    TTJets_HT600to800_F17_94X,
+    TTJets_HT800to1200_F17_94X,
+    TTJets_HT1200to2500_F17_94X,
+    TTJets_HT2500toInf_F17_94X,
     TTTo2L2Nu_pow_F17_94X,
     TTTo2L2Nu_pow_PS_F17_94X,
     TTToHadronic_pow_F17_94X,
