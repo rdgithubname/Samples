@@ -196,7 +196,7 @@ top=[
     TZQ_ll_4f_amc_F17_94X,
     TZQ_nunu_4f_amc_F17_94X,
     THQ_Hincl_F17_94X,
-    THW_Hincl_F17_94X
+    THW_Hincl_F17_94X,
     ttHToNonbb_pow_F17_94X,
     ttHTobb_pow_F17_94X,
     ttH_pow_F17_94X,
