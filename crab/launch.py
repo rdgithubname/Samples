@@ -38,6 +38,7 @@ parser.add_option("--config",           dest="config",                     help=
 parser.add_option("--module",           dest="module",                  choices = all_modules, help="Which module X in Samples.miniAOD.X?")
 parser.add_option("--sample",           dest="sample",                  help="Which sample?")
 parser.add_option("--publish",          action='store_true',            help="Publish on dbs?", default=False)
+parser.add_option("--runOnNonValid",    action='store_true',            help="Allow running on invalid samples/samples still in production?", default=False)
 parser.add_option("--dryrun",           action='store_true',            help="Test script?", default=False)
 ( options, args ) = parser.parse_args()
 
@@ -83,6 +84,9 @@ elif options.config == 'data_102X_Run2018_17Sep2018':
 
 else:
     raise NotImplementedError
+
+os.environ['CRAB_RUNONNONVALID'] = 'True' if options.runOnNonValid else 'False'
+print "## Running on non-valid input dataset is set to: %s"%os.environ['CRAB_RUNONNONVALID']
 
 os.environ["CRAB_PUBLISH"]      = 'True' if options.publish else 'False'
 print "## Publication is set to", os.environ["CRAB_PUBLISH"]
