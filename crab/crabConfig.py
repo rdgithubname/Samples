@@ -9,7 +9,7 @@ dataset             = os.environ["CRAB_DATASET"]
 cfgFile             = os.environ["CMSRUN_CFG"]
 unitsPerJob         = int(os.environ["CRAB_UNITS_PER_JOB"])
 publish             = True if os.environ["CRAB_PUBLISH"] == 'True' else False
-runOnNonValid       = True if os.environ['CRAB_RUNONNONVALID'] == ='True' else False
+runOnNonValid       = True if os.environ['CRAB_RUNONNONVALID'] == 'True' else False
 if "CRAB_TOTAL_UNITS" in os.environ: totalUnits = os.environ["CRAB_TOTAL_UNITS"]
 
 config.section_("General")
