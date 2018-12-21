@@ -3,31 +3,31 @@ from RootTools.core.Sample import Sample
 import ROOT
 
 # Logging
-if __name__=='__main__':
+if __name__=="__main__":
     import Samples.Tools.logger as logger
-    logger = logger.get_logger('DEBUG', logFile = None )
+    logger = logger.get_logger("INFO", logFile = None )
     import RootTools.core.logger as logger_rt
-    logger_rt = logger_rt.get_logger('DEBUG', logFile = None )
+    logger_rt = logger_rt.get_logger("INFO", logFile = None )
 else:
     import logging
     logger = logging.getLogger(__name__)
 
 from Samples.Tools.config import dbDir, redirector, redirector_global
-dbFile = dbDir+'DB_Summer16_private.sql'
+dbFile = dbDir+"DB_Summer16_private.sql"
 
 logger.info("Using db file: %s", dbFile)
 
 ## DY
-DYJetsToLL_M50_MLM_FS_S16_80X_priv  = Sample.nanoAODfromDAS('DYJetsToLL_M50_MLM_FS_S16_80X_priv', '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-LHE_PUSummer16Fast_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER', dbFile=dbFile, redirector=redirector, instance='phys03', xSection=2008.*3)
-DYJetsToLL_M50_MLM_S16_80X_priv     = Sample.nanoAODfromDAS('DYJetsToLL_M50_MLM_S16_80X_priv', '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v2_METSig_v1-95163dc1655e9579f2e671fa6cceb399/USER', dbFile=dbFile, redirector=redirector, instance='phys03', xSection=2008.*3)
+DYJetsToLL_M50_MLM_FS_S16_80X_priv  = Sample.nanoAODfromDAS("DYJetsToLL_M50_MLM_FS_S16_80X_priv", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-LHE_PUSummer16Fast_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER", dbFile=dbFile, redirector=redirector, instance="phys03", xSection=2008.*3)
+DYJetsToLL_M50_MLM_S16_80X_priv     = Sample.nanoAODfromDAS("DYJetsToLL_M50_MLM_S16_80X_priv", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v2_METSig_v1-95163dc1655e9579f2e671fa6cceb399/USER", dbFile=dbFile, redirector=redirector, instance="phys03", xSection=2008.*3)
 
 DY = [
     DYJetsToLL_M50_MLM_FS_S16_80X_priv,
     DYJetsToLL_M50_MLM_S16_80X_priv,
     ]
 
-TTJets_MLM_FS_S16_80X_priv  = Sample.nanoAODfromDAS('TTJets_MLM_FS_S16_80X_priv', '/TTJets_13TeV-madgraphMLM/dspitzba-crab_RunIISummer16MiniAODv2-LHE_PUSummer16Fast_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER', dbFile=dbFile, redirector=redirector, instance='phys03', xSection=831.76)
-TTJets_MLM_S16_80X_priv     = Sample.nanoAODfromDAS('TTJets_MLM_S16_80X_priv', '/TTJets_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER', dbFile=dbFile, redirector=redirector, instance='phys03', xSection=831.76)
+TTJets_MLM_FS_S16_80X_priv  = Sample.nanoAODfromDAS("TTJets_MLM_FS_S16_80X_priv", "/TTJets_13TeV-madgraphMLM/dspitzba-crab_RunIISummer16MiniAODv2-LHE_PUSummer16Fast_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER", dbFile=dbFile, redirector=redirector, instance="phys03", xSection=831.76)
+TTJets_MLM_S16_80X_priv     = Sample.nanoAODfromDAS("TTJets_MLM_S16_80X_priv", "/TTJets_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER", dbFile=dbFile, redirector=redirector, instance="phys03", xSection=831.76)
 
 top = [
     TTJets_MLM_FS_S16_80X_priv,
