@@ -115,6 +115,7 @@ TTJets = [
 # t(t)g(g)
 THQ_LO_S16_94X                  = Sample("THQ_LO_S16_94X",                  "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
 THW_LO_S16_94X                  = Sample("THW_LO_S16_94X",                  "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+tZq_ll_NLO_S16_94X              = Sample("tZq_ll_NLO_S16_94X",              "/tZq_ll_4f_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM")
 TTTT_NLO_S16_94X                = Sample("TTTT_NLO_S16_94X",                "/TTTT_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM")
 TTWJetsToLNu_NLO_S16_94X        = Sample("TTWJetsToLNu_NLO_S16_94X",        "/TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM")
 TTWJetsToQQ_NLO_S16_94X         = Sample("TTWJetsToQQ_NLO_S16_94X",         "/TTWJetsToQQ_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
@@ -134,6 +135,7 @@ TTGamma_had_LO_S16_94X             = Sample("TTGamma_had_LO_S16_94X",     "/TTGa
 TTX = [
     THQ_LO_S16_94X,
     THW_LO_S16_94X,
+    tZq_ll_NLO_S16_94X,
     TTTT_NLO_S16_94X,
     TTWJetsToLNu_NLO_S16_94X,
     TTWJetsToQQ_NLO_S16_94X,
@@ -210,6 +212,7 @@ WZTo3LNu_pow_S16_94X_ext1   = Sample("WZTo3LNu_pow_S16_94X_ext1",   "/WZTo3LNu_T
 ZZTo2L2Nu_pow_S16_94X       = Sample("ZZTo2L2Nu_pow_S16_94X",       "/ZZTo2L2Nu_13TeV_powheg_pythia8_ext1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
 ZZTo2L2Q_pow_S16_94X        = Sample("ZZTo2L2Q_pow_S16_94X",        "/ZZTo2L2Q_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
 ZZTo2Q2Nu_NLO_S16_94X       = Sample("ZZTo2Q2Nu_NLO_S16_94X",       "/ZZTo2Q2Nu_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
+ZZTo4L_pow_S16_94X          = Sample("ZZTo4L_pow_S16_94X",          "/ZZTo4L_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM")
 
 WW_S16_94X                  = Sample("WW_S16_94X",                  "/WW_TuneCUETP8M1_13TeV-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM")
 WW_S16_94X_ext1             = Sample("WW_S16_94X_ext1",             "/WW_TuneCUETP8M1_13TeV-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM")
@@ -232,6 +235,7 @@ diboson = [
     ZZTo2L2Nu_pow_S16_94X,
     ZZTo2L2Q_pow_S16_94X,
     ZZTo2Q2Nu_NLO_S16_94X,
+    ZZTo4L_pow_S16_94X,
     WW_S16_94X,
     WW_S16_94X_ext1,
     WZ_S16_94X,
