@@ -76,7 +76,7 @@ DY = [
 
 ## ttbar
 TTLep_pow       = Sample.nanoAODfromDAS("TTLep_pow",            "/TTTo2L2Nu_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",           dbFile=dbFile, redirector=redirector, instance="phys03", xSection=831.76*((3*0.108)**2))
-TTLep_pow_noSC  = Sample.nanoAODfromDAS("TTLep_pow",            "/TTTo2L2Nu_noSC_TuneCUETP8M2T4_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                dbFile=dbFile, redirector=redirector, instance="phys03", xSection=831.76*((3*0.108)**2))
+TTLep_pow_noSC  = Sample.nanoAODfromDAS("TTLep_pow_noSC",       "/TTTo2L2Nu_noSC_TuneCUETP8M2T4_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                dbFile=dbFile, redirector=redirector, instance="phys03", xSection=831.76*((3*0.108)**2))
 TTSingleLep_pow = Sample.nanoAODfromDAS("TTSingleLep_pow",      "/TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",      dbFile=dbFile, redirector=redirector, instance="phys03", xSection=831.76*(3*0.108)*(1-3*0.108)) # pls check x-sec!
 #TTbar           = Sample.nanoAODfromDAS("TTbar",        "/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM",                                                                    dbFile=dbFile, redirector=redirector, xSection=831.76)
 
