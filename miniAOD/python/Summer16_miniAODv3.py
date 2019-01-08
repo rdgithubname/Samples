@@ -87,11 +87,11 @@ ST_tWnunu_5f_LO_S16_94X                    = Sample("ST_tWnunu_5f_LO_S16_94X",  
 
 ST_5f = [
     ST_tW_antitop_NoFullyHad_5f_pow_S16_94X,
-    ST_tW_antitop_5f_pow_S16_94X_ext1,
-    ST_tW_antitop_5f_pow_S16_94X,
+    #ST_tW_antitop_5f_pow_S16_94X_ext1,
+    #ST_tW_antitop_5f_pow_S16_94X,
     ST_tW_top_NoFullyHad_5f_pow_S16_94X,
-    ST_tW_top_5f_pow_S16_94X_ext1,
-    ST_tW_top_5f_pow_S16_94X,
+    #ST_tW_top_5f_pow_S16_94X_ext1,
+    #ST_tW_top_5f_pow_S16_94X,
     ST_tWll_5f_LO_S16_94X,
     ST_tWnunu_5f_LO_S16_94X,
 ]
@@ -109,7 +109,7 @@ TTJets = [
     TTTo2L2Nu_noSC_pow_S16_94X,
     TTTo2L2Nu_pow_S16_94X,
     TTToSemilepton_pow_S16_94X,
-    TT_pow_S16_94X,
+    #TT_pow_S16_94X,
 ]
 
 # t(t)g(g)
