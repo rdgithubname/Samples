@@ -21,13 +21,13 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(-1)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/data/Run2017B/DoubleMuon/MINIAOD/31Mar2018-v1/90000/50FD1E34-1B37-E811-B6D4-141877410B85.root'),
-    secondaryFileNames = cms.untracked.vstring()
+    fileNames = cms.untracked.vstring('root://hephyse.oeaw.ac.at//dpm/oeaw.ac.at/home/cms/store/data/Run2017C/SingleElectron/MINIAOD/31Mar2018-v1/00000/0247CA36-4937-E811-9966-B499BAAC3786.root'),
+    secondaryFileNames = cms.untracked.vstring(),
 )
 
 process.options = cms.untracked.PSet(
@@ -72,6 +72,7 @@ from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
 # customisation of the process.
+process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 
 # Automatic addition of the customisation function from PhysicsTools.NanoAOD.nano_cff
 from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeData 
