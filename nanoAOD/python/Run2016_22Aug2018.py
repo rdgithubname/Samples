@@ -13,7 +13,7 @@ else:
     logger = logging.getLogger(__name__)
 
 from Samples.Tools.config import dbDir, redirector, redirector_global
-dbFile = dbDir+"DB_Run2016.sql"
+dbFile = dbDir+"DB_Run2016_22Aug2018.sql"
 
 # specify a local directory if you want to create (and afterwards automatically use) a local copy of the sample, otherwise use the grid.
 
