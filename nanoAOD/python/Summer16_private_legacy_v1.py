@@ -16,6 +16,7 @@ if __name__=="__main__":
     logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
     ov = options.overwrite
+
 else:
     import logging
     logger = logging.getLogger(__name__)
@@ -23,6 +24,8 @@ else:
 
 from Samples.Tools.config import dbDir, redirector, redirector_global
 dbFile = dbDir+"DB_Summer16_private_legacy.sql"
+
+logger.info("Using db file: %s", dbFile)
 
 ## DY
 DYJetsToLL_M50_LO_ext1   = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO_ext1",  "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2008.*3)
@@ -218,6 +221,7 @@ boson = [
     ZZTo2L2Q,
     ZZTo2Q2Nu,
     ZZTo4L,
+    WZTo1L3Nu,
     WZTo1L1Nu2Q,
     WZTo2L2Q,
     WZTo3LNu_ext,

@@ -16,6 +16,7 @@ if __name__=="__main__":
     logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
     ov = options.overwrite
+
 else:
     import logging
     logger = logging.getLogger(__name__)
