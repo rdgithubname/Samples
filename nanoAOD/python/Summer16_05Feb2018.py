@@ -13,7 +13,7 @@ else:
     logger = logging.getLogger(__name__)
 
 from Samples.Tools.config import dbDir, redirector, redirector_global
-dbFile = dbDir+"DB_Summer16.sql"
+dbFile = dbDir+"DB_Summer16_05Feb2018.sql"
 
 ## DY
 DYJetsToLL_M50_LO_ext1   = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO_ext1", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2_ext1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2008.*3)
