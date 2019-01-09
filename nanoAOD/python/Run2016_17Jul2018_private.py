@@ -63,4 +63,5 @@ DoubleEG = [
 allSamples = DoubleMuon + MuonEG + DoubleEG
 
 for s in allSamples:
-    s.isData = True
+    s.json      = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt")
+    s.isData    = True
