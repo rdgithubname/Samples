@@ -108,4 +108,5 @@ SingleElectron_Run2017 = [\
 allSamples = DoubleMuon_Run2017 + MuonEG_Run2017 + DoubleEG_Run2017 + SingleMuon_Run2017 + SingleElectron_Run2017
 
 for s in allSamples:
+    s.json   = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt")
     s.isData = True

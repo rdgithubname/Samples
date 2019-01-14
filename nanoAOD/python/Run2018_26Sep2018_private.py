@@ -63,5 +63,6 @@ EGamma = [
 allSamples = DoubleMuon + MuonEG + EGamma
 
 for s in allSamples:
-    s.isData = True
+    s.json = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt")
+    s.isData  = True
 

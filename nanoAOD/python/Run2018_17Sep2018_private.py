@@ -31,13 +31,13 @@ logger.info("Using db file: %s", dbFile)
 DoubleMuon_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018A_17Sep2018", "/DoubleMuon/llechner-crab_Run2018A-17Sep2018-v2_legacy_nano_v3-64dd1b7ffa8685539eecf5892de8b932/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 DoubleMuon_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018B_17Sep2018", "/DoubleMuon/llechner-crab_Run2018B-17Sep2018-v1_legacy_nano_v3-64dd1b7ffa8685539eecf5892de8b932/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 DoubleMuon_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018C_17Sep2018", "/DoubleMuon/llechner-crab_Run2018C-17Sep2018-v1_legacy_nano_v3-64dd1b7ffa8685539eecf5892de8b932/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#DoubleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018D_17Sep2018", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018D_17Sep2018", "/DoubleMuon/llechner-crab_Run2018D-PromptReco-v2_legacy_nano_v3-9584527b655981757f752982f8020420/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 DoubleMuon = [
     DoubleMuon_Run2018A_17Sep2018,
     DoubleMuon_Run2018B_17Sep2018,
     DoubleMuon_Run2018C_17Sep2018,
-#    DoubleMuon_Run2018D_17Sep2018,
+    DoubleMuon_Run2018D_17Sep2018,
 ]
 
 # MuonEG
@@ -54,14 +54,14 @@ MuonEG = [
 ]
 
 # EGamma
-#EGamma_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018A_17Sep2018", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#EGamma_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018B_17Sep2018", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+EGamma_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018A_17Sep2018", "/EGamma/llechner-crab_Run2018A-17Sep2018-v2_legacy_nano_v3-64dd1b7ffa8685539eecf5892de8b932/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+EGamma_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018B_17Sep2018", "/EGamma/llechner-crab_Run2018B-17Sep2018-v1_legacy_nano_v3-64dd1b7ffa8685539eecf5892de8b932/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 EGamma_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018C_17Sep2018", "/EGamma/llechner-crab_Run2018C-17Sep2018-v1_legacy_nano_v3-64dd1b7ffa8685539eecf5892de8b932/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 EGamma_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018D_17Sep2018", "/EGamma/llechner-crab_Run2018D-PromptReco-v2_legacy_nano_v3-9584527b655981757f752982f8020420/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 EGamma = [
-#    EGamma_Run2018A_17Sep2018,
-#    EGamma_Run2018B_17Sep2018,
+    EGamma_Run2018A_17Sep2018,
+    EGamma_Run2018B_17Sep2018,
     EGamma_Run2018C_17Sep2018,
     EGamma_Run2018D_17Sep2018,
 ]
