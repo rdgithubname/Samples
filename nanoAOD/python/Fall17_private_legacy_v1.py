@@ -7,6 +7,7 @@ def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite', action='store_true', help="Overwrite current entry in db?")
+    argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
     return argParser
 
 # Logging
@@ -17,6 +18,8 @@ if __name__=="__main__":
     logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
     ov = options.overwrite
+    if options.update:
+        ov = 'update'
 
 else:
     import logging
@@ -306,6 +309,12 @@ gluglu = [
 
 
 other = [
+    ]
+
+SMS_T2tt_mStop_400to1200    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",     "/SMS-T2tt_mStop-400to1200_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v3-eac24e9939368177973140c118f0ff9f/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+SUSY = [
+    SMS_T2tt_mStop_400to1200,
     ]
 
 allSamples = DY + top + boson + wjets + rare + other + signals + gluglu

@@ -6,6 +6,7 @@ def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
+    argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
     return argParser
     
 # Logging
@@ -16,6 +17,8 @@ if __name__=="__main__":
     logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
     ov = options.overwrite
+    if options.update:
+        ov = 'update'
 
 else:
     import logging
