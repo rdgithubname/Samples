@@ -58,6 +58,8 @@ TTJets = [
 TTGamma_Dilept_LO_A18_102X              = Sample("TTGamma_Dilept_LO_A18_102X",              "/TTGamma_Dilept_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM")
 TTGamma_SingleLeptFromT_LO_A18_102X     = Sample("TTGamma_SingleLeptFromT_LO_A18_102X",     "/TTGamma_SingleLeptFromT_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM")
 TTGamma_SingleLeptFromTbar_LO_A18_102X  = Sample("TTGamma_SingleLeptFromTbar_LO_A18_102X",  "/TTGamma_SingleLeptFromTbar_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM")
+TTGamma_Hadronic_LO_A18_102X            = Sample("TTGamma_Hadronic_LO_A18_102X",            "/TTGamma_Hadronic_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM")
+
 
 TTWJetsToLNu_NLO_A18_102X   = Sample("TTWJetsToLNu_NLO_A18_102X",   "/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM")
 TTWJetsToQQ_NLO_A18_102X    = Sample("TTWJetsToQQ_NLO_A18_102X",    "/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM")
@@ -79,6 +81,7 @@ TTX = [
     TTGamma_Dilept_LO_A18_102X,
     TTGamma_SingleLeptFromT_LO_A18_102X,
     TTGamma_SingleLeptFromTbar_LO_A18_102X,
+    TTGamma_Hadronic_LO_A18_102X,
     TTWJetsToLNu_NLO_A18_102X,
     TTWJetsToQQ_NLO_A18_102X,
     TTZToLLNuNu_M10_NLO_A18_102X,
