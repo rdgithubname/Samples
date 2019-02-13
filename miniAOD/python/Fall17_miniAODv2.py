@@ -361,3 +361,6 @@ gluglu = [
 
 ## sum up
 allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets_HT + TTJets + TTX + TTVV + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu
+
+for sample in allSamples:
+    sample.isData = False

@@ -304,3 +304,5 @@ gluglu = [
 
 allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu
 
+for sample in allSamples:
+    sample.isData = False

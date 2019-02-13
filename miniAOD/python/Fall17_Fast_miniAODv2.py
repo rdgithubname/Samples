@@ -25,3 +25,6 @@ T2tt = [
 ## sum up
 allSamples = T2tt
 
+for sample in allSamples:
+    sample.isData = False
+

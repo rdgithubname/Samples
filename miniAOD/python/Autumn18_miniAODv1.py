@@ -157,3 +157,6 @@ gluglu = [
 
 
 allSamples = relvals + DY + singleTop + TTJets + TTX + diboson + multiboson + gluglu
+
+for sample in allSamples:
+    sample.isData = False

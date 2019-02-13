@@ -148,3 +148,5 @@ HTMHT = [
 ## sum up
 allSamples = DoubleMuon + DoubleEG + MuonEG + SingleMuon + SingleElectron + MET + HTMHT + JetHT
 
+for sample in allSamples:
+    sample.isData = True

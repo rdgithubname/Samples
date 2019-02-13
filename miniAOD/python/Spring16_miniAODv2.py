@@ -43,3 +43,5 @@ signals = [
 
 allSamples = signals
 
+for sample in allSamples:
+    sample.isData = False

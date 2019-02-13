@@ -45,3 +45,5 @@ FSQJet = [
 ## sum up
 allSamples = FSQJet 
 
+for sample in allSamples:
+    sample.isData = True

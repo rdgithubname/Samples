@@ -64,3 +64,5 @@ EGamma = [
 ## sum up
 allSamples = DoubleMuon + MuonEG + EGamma
 
+for sample in allSamples:
+    sample.isData = True

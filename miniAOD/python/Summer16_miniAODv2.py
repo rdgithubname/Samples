@@ -84,3 +84,5 @@ multiboson = [
 
 allSamples = DY + top + multiboson
 
+for sample in allSamples:
+    sample.isData = False
