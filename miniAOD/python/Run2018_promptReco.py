@@ -2,20 +2,45 @@
 dasgoclient -query="dataset=/*/Run2018*PromptReco*/MINIAOD"
 Only for Run2018D!
 '''
+import copy, os, sys
+from RootTools.fwlite.FWLiteSample import FWLiteSample
+import ROOT
+
+def get_parser():
+    import argparse
+    argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
+    argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
+    return argParser
+
+# Logging
+if __name__=="__main__":
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger("INFO", logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger("INFO", logFile = None )
+    options = get_parser().parse_args()
+    ov = options.overwrite
+
+else:
+    import logging
+    logger = logging.getLogger(__name__)
+    ov = False
+
+from Samples.Tools.config import dbDir, redirector, redirector_global
+dbFile = dbDir+"Run2018_promptReco.sql"
+
+logger.info("Using db file: %s", dbFile)
 
 
-from Samples.Tools.Sample import Sample
-
-
-DoubleMuon_Run2018A_promptReco_v1 = Sample("DoubleMuon_Run2018A_promptReco_v1", "/DoubleMuon/Run2018A-PromptReco-v1/MINIAOD")
-DoubleMuon_Run2018A_promptReco_v2 = Sample("DoubleMuon_Run2018A_promptReco_v2", "/DoubleMuon/Run2018A-PromptReco-v2/MINIAOD")
-DoubleMuon_Run2018A_promptReco_v3 = Sample("DoubleMuon_Run2018A_promptReco_v3", "/DoubleMuon/Run2018A-PromptReco-v3/MINIAOD")
-DoubleMuon_Run2018B_promptReco_v1 = Sample("DoubleMuon_Run2018B_promptReco_v1", "/DoubleMuon/Run2018B-PromptReco-v1/MINIAOD")
-DoubleMuon_Run2018B_promptReco_v2 = Sample("DoubleMuon_Run2018B_promptReco_v2", "/DoubleMuon/Run2018B-PromptReco-v2/MINIAOD")
-DoubleMuon_Run2018C_promptReco_v1 = Sample("DoubleMuon_Run2018C_promptReco_v1", "/DoubleMuon/Run2018C-PromptReco-v1/MINIAOD")
-DoubleMuon_Run2018C_promptReco_v2 = Sample("DoubleMuon_Run2018C_promptReco_v2", "/DoubleMuon/Run2018C-PromptReco-v2/MINIAOD")
-DoubleMuon_Run2018C_promptReco_v3 = Sample("DoubleMuon_Run2018C_promptReco_v3", "/DoubleMuon/Run2018C-PromptReco-v3/MINIAOD")
-DoubleMuon_Run2018D_promptReco_v2 = Sample("DoubleMuon_Run2018D_promptReco_v2", "/DoubleMuon/Run2018D-PromptReco-v2/MINIAOD")
+DoubleMuon_Run2018A_promptReco_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018A_promptReco_v1", "/DoubleMuon/Run2018A-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018A_promptReco_v2 = FWLiteSample.fromDAS("DoubleMuon_Run2018A_promptReco_v2", "/DoubleMuon/Run2018A-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018A_promptReco_v3 = FWLiteSample.fromDAS("DoubleMuon_Run2018A_promptReco_v3", "/DoubleMuon/Run2018A-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018B_promptReco_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018B_promptReco_v1", "/DoubleMuon/Run2018B-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018B_promptReco_v2 = FWLiteSample.fromDAS("DoubleMuon_Run2018B_promptReco_v2", "/DoubleMuon/Run2018B-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018C_promptReco_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018C_promptReco_v1", "/DoubleMuon/Run2018C-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018C_promptReco_v2 = FWLiteSample.fromDAS("DoubleMuon_Run2018C_promptReco_v2", "/DoubleMuon/Run2018C-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018C_promptReco_v3 = FWLiteSample.fromDAS("DoubleMuon_Run2018C_promptReco_v3", "/DoubleMuon/Run2018C-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018D_promptReco_v2 = FWLiteSample.fromDAS("DoubleMuon_Run2018D_promptReco_v2", "/DoubleMuon/Run2018D-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 DoubleMuon = [
     DoubleMuon_Run2018A_promptReco_v1,
@@ -29,16 +54,16 @@ DoubleMuon = [
     DoubleMuon_Run2018D_promptReco_v2,
 ]
 
-EGamma_Run2018A_promptReco_v1 = Sample("EGamma_Run2018A_promptReco_v1", "/EGamma/Run2018A-PromptReco-v1/MINIAOD")
-EGamma_Run2018A_promptReco_v2 = Sample("EGamma_Run2018A_promptReco_v2", "/EGamma/Run2018A-PromptReco-v2/MINIAOD")
-EGamma_Run2018A_promptReco_v3 = Sample("EGamma_Run2018A_promptReco_v3", "/EGamma/Run2018A-PromptReco-v3/MINIAOD")
-EGamma_Run2018B_promptReco_v1 = Sample("EGamma_Run2018B_promptReco_v1", "/EGamma/Run2018B-PromptReco-v1/MINIAOD")
-EGamma_Run2018B_promptReco_v2 = Sample("EGamma_Run2018B_promptReco_v2", "/EGamma/Run2018B-PromptReco-v2/MINIAOD")
-EGamma_Run2018C_promptReco_v1 = Sample("EGamma_Run2018C_promptReco_v1", "/EGamma/Run2018C-PromptReco-v1/MINIAOD")
-EGamma_Run2018C_promptReco_v2 = Sample("EGamma_Run2018C_promptReco_v2", "/EGamma/Run2018C-PromptReco-v2/MINIAOD")
-EGamma_Run2018C_promptReco_v3 = Sample("EGamma_Run2018C_promptReco_v3", "/EGamma/Run2018C-PromptReco-v3/MINIAOD")
-EGamma_Run2018D_promptReco_v1 = Sample("EGamma_Run2018D_promptReco_v1", "/EGamma/Run2018D-PromptReco-v1/MINIAOD")
-EGamma_Run2018D_promptReco_v2 = Sample("EGamma_Run2018D_promptReco_v2", "/EGamma/Run2018D-PromptReco-v2/MINIAOD")
+EGamma_Run2018A_promptReco_v1 = FWLiteSample.fromDAS("EGamma_Run2018A_promptReco_v1", "/EGamma/Run2018A-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018A_promptReco_v2 = FWLiteSample.fromDAS("EGamma_Run2018A_promptReco_v2", "/EGamma/Run2018A-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018A_promptReco_v3 = FWLiteSample.fromDAS("EGamma_Run2018A_promptReco_v3", "/EGamma/Run2018A-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018B_promptReco_v1 = FWLiteSample.fromDAS("EGamma_Run2018B_promptReco_v1", "/EGamma/Run2018B-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018B_promptReco_v2 = FWLiteSample.fromDAS("EGamma_Run2018B_promptReco_v2", "/EGamma/Run2018B-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018C_promptReco_v1 = FWLiteSample.fromDAS("EGamma_Run2018C_promptReco_v1", "/EGamma/Run2018C-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018C_promptReco_v2 = FWLiteSample.fromDAS("EGamma_Run2018C_promptReco_v2", "/EGamma/Run2018C-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018C_promptReco_v3 = FWLiteSample.fromDAS("EGamma_Run2018C_promptReco_v3", "/EGamma/Run2018C-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018D_promptReco_v1 = FWLiteSample.fromDAS("EGamma_Run2018D_promptReco_v1", "/EGamma/Run2018D-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018D_promptReco_v2 = FWLiteSample.fromDAS("EGamma_Run2018D_promptReco_v2", "/EGamma/Run2018D-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 EGamma = [
     EGamma_Run2018A_promptReco_v1,
@@ -54,15 +79,15 @@ EGamma = [
 ]
 
 
-MuonEG_Run2018A_promptReco_v1 = Sample("MuonEG_Run2018A_promptReco_v1", "/MuonEG/Run2018A-PromptReco-v1/MINIAOD")
-MuonEG_Run2018A_promptReco_v2 = Sample("MuonEG_Run2018A_promptReco_v2", "/MuonEG/Run2018A-PromptReco-v2/MINIAOD")
-MuonEG_Run2018A_promptReco_v3 = Sample("MuonEG_Run2018A_promptReco_v3", "/MuonEG/Run2018A-PromptReco-v3/MINIAOD")
-MuonEG_Run2018B_promptReco_v1 = Sample("MuonEG_Run2018B_promptReco_v1", "/MuonEG/Run2018B-PromptReco-v1/MINIAOD")
-MuonEG_Run2018B_promptReco_v2 = Sample("MuonEG_Run2018B_promptReco_v2", "/MuonEG/Run2018B-PromptReco-v2/MINIAOD")
-MuonEG_Run2018C_promptReco_v1 = Sample("MuonEG_Run2018C_promptReco_v1", "/MuonEG/Run2018C-PromptReco-v1/MINIAOD")
-MuonEG_Run2018C_promptReco_v2 = Sample("MuonEG_Run2018C_promptReco_v2", "/MuonEG/Run2018C-PromptReco-v2/MINIAOD")
-MuonEG_Run2018C_promptReco_v3 = Sample("MuonEG_Run2018C_promptReco_v3", "/MuonEG/Run2018C-PromptReco-v3/MINIAOD")
-MuonEG_Run2018D_promptReco_v2 = Sample("MuonEG_Run2018D_promptReco_v2", "/MuonEG/Run2018D-PromptReco-v2/MINIAOD")
+MuonEG_Run2018A_promptReco_v1 = FWLiteSample.fromDAS("MuonEG_Run2018A_promptReco_v1", "/MuonEG/Run2018A-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018A_promptReco_v2 = FWLiteSample.fromDAS("MuonEG_Run2018A_promptReco_v2", "/MuonEG/Run2018A-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018A_promptReco_v3 = FWLiteSample.fromDAS("MuonEG_Run2018A_promptReco_v3", "/MuonEG/Run2018A-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018B_promptReco_v1 = FWLiteSample.fromDAS("MuonEG_Run2018B_promptReco_v1", "/MuonEG/Run2018B-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018B_promptReco_v2 = FWLiteSample.fromDAS("MuonEG_Run2018B_promptReco_v2", "/MuonEG/Run2018B-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018C_promptReco_v1 = FWLiteSample.fromDAS("MuonEG_Run2018C_promptReco_v1", "/MuonEG/Run2018C-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018C_promptReco_v2 = FWLiteSample.fromDAS("MuonEG_Run2018C_promptReco_v2", "/MuonEG/Run2018C-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018C_promptReco_v3 = FWLiteSample.fromDAS("MuonEG_Run2018C_promptReco_v3", "/MuonEG/Run2018C-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018D_promptReco_v2 = FWLiteSample.fromDAS("MuonEG_Run2018D_promptReco_v2", "/MuonEG/Run2018D-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 MuonEG = [
     MuonEG_Run2018A_promptReco_v1,
@@ -76,15 +101,15 @@ MuonEG = [
     MuonEG_Run2018D_promptReco_v2,
 ]
 
-SingleMuon_Run2018A_promptReco_v1 = Sample("SingleMuon_Run2018A_promptReco_v1", "/SingleMuon/Run2018A-PromptReco-v1/MINIAOD")
-SingleMuon_Run2018A_promptReco_v2 = Sample("SingleMuon_Run2018A_promptReco_v2", "/SingleMuon/Run2018A-PromptReco-v2/MINIAOD")
-SingleMuon_Run2018A_promptReco_v3 = Sample("SingleMuon_Run2018A_promptReco_v3", "/SingleMuon/Run2018A-PromptReco-v3/MINIAOD")
-SingleMuon_Run2018B_promptReco_v1 = Sample("SingleMuon_Run2018B_promptReco_v1", "/SingleMuon/Run2018B-PromptReco-v1/MINIAOD")
-SingleMuon_Run2018B_promptReco_v2 = Sample("SingleMuon_Run2018B_promptReco_v2", "/SingleMuon/Run2018B-PromptReco-v2/MINIAOD")
-SingleMuon_Run2018C_promptReco_v1 = Sample("SingleMuon_Run2018C_promptReco_v1", "/SingleMuon/Run2018C-PromptReco-v1/MINIAOD")
-SingleMuon_Run2018C_promptReco_v2 = Sample("SingleMuon_Run2018C_promptReco_v2", "/SingleMuon/Run2018C-PromptReco-v2/MINIAOD")
-SingleMuon_Run2018C_promptReco_v3 = Sample("SingleMuon_Run2018C_promptReco_v3", "/SingleMuon/Run2018C-PromptReco-v3/MINIAOD")
-SingleMuon_Run2018D_promptReco_v2 = Sample("SingleMuon_Run2018D_promptReco_v2", "/SingleMuon/Run2018D-PromptReco-v2/MINIAOD")
+SingleMuon_Run2018A_promptReco_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018A_promptReco_v1", "/SingleMuon/Run2018A-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018A_promptReco_v2 = FWLiteSample.fromDAS("SingleMuon_Run2018A_promptReco_v2", "/SingleMuon/Run2018A-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018A_promptReco_v3 = FWLiteSample.fromDAS("SingleMuon_Run2018A_promptReco_v3", "/SingleMuon/Run2018A-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018B_promptReco_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018B_promptReco_v1", "/SingleMuon/Run2018B-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018B_promptReco_v2 = FWLiteSample.fromDAS("SingleMuon_Run2018B_promptReco_v2", "/SingleMuon/Run2018B-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018C_promptReco_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018C_promptReco_v1", "/SingleMuon/Run2018C-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018C_promptReco_v2 = FWLiteSample.fromDAS("SingleMuon_Run2018C_promptReco_v2", "/SingleMuon/Run2018C-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018C_promptReco_v3 = FWLiteSample.fromDAS("SingleMuon_Run2018C_promptReco_v3", "/SingleMuon/Run2018C-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018D_promptReco_v2 = FWLiteSample.fromDAS("SingleMuon_Run2018D_promptReco_v2", "/SingleMuon/Run2018D-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 SingleMuon = [
     SingleMuon_Run2018A_promptReco_v1,
@@ -98,16 +123,16 @@ SingleMuon = [
     SingleMuon_Run2018D_promptReco_v2,
 ]
 
-JetHT_Run2018A_promptReco_v1 = Sample("JetHT_Run2018A_promptReco_v1", "/JetHT/Run2018A-PromptReco-v1/MINIAOD")
-JetHT_Run2018A_promptReco_v2 = Sample("JetHT_Run2018A_promptReco_v2", "/JetHT/Run2018A-PromptReco-v2/MINIAOD")
-JetHT_Run2018A_promptReco_v3 = Sample("JetHT_Run2018A_promptReco_v3", "/JetHT/Run2018A-PromptReco-v3/MINIAOD")
-JetHT_Run2018B_promptReco_v1 = Sample("JetHT_Run2018B_promptReco_v1", "/JetHT/Run2018B-PromptReco-v1/MINIAOD")
-JetHT_Run2018B_promptReco_v2 = Sample("JetHT_Run2018B_promptReco_v2", "/JetHT/Run2018B-PromptReco-v2/MINIAOD")
-JetHT_Run2018C_promptReco_v1 = Sample("JetHT_Run2018C_promptReco_v1", "/JetHT/Run2018C-PromptReco-v1/MINIAOD")
-JetHT_Run2018C_promptReco_v2 = Sample("JetHT_Run2018C_promptReco_v2", "/JetHT/Run2018C-PromptReco-v2/MINIAOD")
-JetHT_Run2018C_promptReco_v3 = Sample("JetHT_Run2018C_promptReco_v3", "/JetHT/Run2018C-PromptReco-v3/MINIAOD")
-JetHT_Run2018D_promptReco_v1 = Sample("JetHT_Run2018D_promptReco_v1", "/JetHT/Run2018D-PromptReco-v1/MINIAOD")
-JetHT_Run2018D_promptReco_v2 = Sample("JetHT_Run2018D_promptReco_v2", "/JetHT/Run2018D-PromptReco-v2/MINIAOD")
+JetHT_Run2018A_promptReco_v1 = FWLiteSample.fromDAS("JetHT_Run2018A_promptReco_v1", "/JetHT/Run2018A-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018A_promptReco_v2 = FWLiteSample.fromDAS("JetHT_Run2018A_promptReco_v2", "/JetHT/Run2018A-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018A_promptReco_v3 = FWLiteSample.fromDAS("JetHT_Run2018A_promptReco_v3", "/JetHT/Run2018A-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018B_promptReco_v1 = FWLiteSample.fromDAS("JetHT_Run2018B_promptReco_v1", "/JetHT/Run2018B-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018B_promptReco_v2 = FWLiteSample.fromDAS("JetHT_Run2018B_promptReco_v2", "/JetHT/Run2018B-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018C_promptReco_v1 = FWLiteSample.fromDAS("JetHT_Run2018C_promptReco_v1", "/JetHT/Run2018C-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018C_promptReco_v2 = FWLiteSample.fromDAS("JetHT_Run2018C_promptReco_v2", "/JetHT/Run2018C-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018C_promptReco_v3 = FWLiteSample.fromDAS("JetHT_Run2018C_promptReco_v3", "/JetHT/Run2018C-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018D_promptReco_v1 = FWLiteSample.fromDAS("JetHT_Run2018D_promptReco_v1", "/JetHT/Run2018D-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018D_promptReco_v2 = FWLiteSample.fromDAS("JetHT_Run2018D_promptReco_v2", "/JetHT/Run2018D-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 JetHT = [
     JetHT_Run2018A_promptReco_v1,
@@ -122,16 +147,16 @@ JetHT = [
     JetHT_Run2018D_promptReco_v2,
 ]
 
-MET_Run2018A_promptReco_v1 = Sample("MET_Run2018A_promptReco_v1", "/MET/Run2018A-PromptReco-v1/MINIAOD")
-MET_Run2018A_promptReco_v2 = Sample("MET_Run2018A_promptReco_v2", "/MET/Run2018A-PromptReco-v2/MINIAOD")
-MET_Run2018A_promptReco_v3 = Sample("MET_Run2018A_promptReco_v3", "/MET/Run2018A-PromptReco-v3/MINIAOD")
-MET_Run2018B_promptReco_v1 = Sample("MET_Run2018B_promptReco_v1", "/MET/Run2018B-PromptReco-v1/MINIAOD")
-MET_Run2018B_promptReco_v2 = Sample("MET_Run2018B_promptReco_v2", "/MET/Run2018B-PromptReco-v2/MINIAOD")
-MET_Run2018C_promptReco_v1 = Sample("MET_Run2018C_promptReco_v1", "/MET/Run2018C-PromptReco-v1/MINIAOD")
-MET_Run2018C_promptReco_v2 = Sample("MET_Run2018C_promptReco_v2", "/MET/Run2018C-PromptReco-v2/MINIAOD")
-MET_Run2018C_promptReco_v3 = Sample("MET_Run2018C_promptReco_v3", "/MET/Run2018C-PromptReco-v3/MINIAOD")
-MET_Run2018D_promptReco_v1 = Sample("MET_Run2018D_promptReco_v1", "/MET/Run2018D-PromptReco-v1/MINIAOD")
-MET_Run2018D_promptReco_v2 = Sample("MET_Run2018D_promptReco_v2", "/MET/Run2018D-PromptReco-v2/MINIAOD")
+MET_Run2018A_promptReco_v1 = FWLiteSample.fromDAS("MET_Run2018A_promptReco_v1", "/MET/Run2018A-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018A_promptReco_v2 = FWLiteSample.fromDAS("MET_Run2018A_promptReco_v2", "/MET/Run2018A-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018A_promptReco_v3 = FWLiteSample.fromDAS("MET_Run2018A_promptReco_v3", "/MET/Run2018A-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018B_promptReco_v1 = FWLiteSample.fromDAS("MET_Run2018B_promptReco_v1", "/MET/Run2018B-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018B_promptReco_v2 = FWLiteSample.fromDAS("MET_Run2018B_promptReco_v2", "/MET/Run2018B-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018C_promptReco_v1 = FWLiteSample.fromDAS("MET_Run2018C_promptReco_v1", "/MET/Run2018C-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018C_promptReco_v2 = FWLiteSample.fromDAS("MET_Run2018C_promptReco_v2", "/MET/Run2018C-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018C_promptReco_v3 = FWLiteSample.fromDAS("MET_Run2018C_promptReco_v3", "/MET/Run2018C-PromptReco-v3/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018D_promptReco_v1 = FWLiteSample.fromDAS("MET_Run2018D_promptReco_v1", "/MET/Run2018D-PromptReco-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018D_promptReco_v2 = FWLiteSample.fromDAS("MET_Run2018D_promptReco_v2", "/MET/Run2018D-PromptReco-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 MET = [
     MET_Run2018A_promptReco_v1,
