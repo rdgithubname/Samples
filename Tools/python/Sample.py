@@ -6,4 +6,3 @@ class Sample:
     def __init__(self, name, DASname=None):
         self.name       = name
         self.DASname    = DASname
-

@@ -1,7 +1,5 @@
 '''
-miniAOD samples of Summer16 campaign, miniAODv2 (80X)
-Get the full list of samples with
-dasgoclient -query="dataset=/*/RunIISummer16*80X*/MINIAODSIM"
+dasgoclient -query="dataset=/SingleMuon/Run2017*17Nov2017*/MINIAOD"
 '''
 
 import copy, os, sys
@@ -29,19 +27,23 @@ else:
     ov = False
 
 from Samples.Tools.config import dbDir, redirector, redirector_global
-dbFile = dbDir+"Spring16_miniAODv2.sql"
+dbFile = dbDir+"DB_Run2017_17Nov2017.sql"
 
 logger.info("Using db file: %s", dbFile)
 
-## DY
-SMS_T2tt_mStop400to1200_FS_S16_80X       = FWLiteSample.fromDAS("SMS_T2tt_mStop400to1200_FS_S16_80X", "/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2-PUSpring16Fast_80X_mcRun2_asymptotic_2016_miniAODv2_v0-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
+## FSQJet1
+FSQJet1_Run2017H_17Nov2017   = FWLiteSample.fromDAS("FSQJet1_Run2017H_17Nov2017", "/FSQJet1/Run2017H-17Nov2017-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+FSQJet2_Run2017H_17Nov2017   = FWLiteSample.fromDAS("FSQJet2_Run2017H_17Nov2017", "/FSQJet2/Run2017H-17Nov2017-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
-signals = [
-    SMS_T2tt_mStop400to1200_FS_S16_80X,
+FSQJet = [
+    FSQJet1_Run2017H_17Nov2017,
+    FSQJet2_Run2017H_17Nov2017,
 ]
 
-allSamples = signals
+
+## sum up
+allSamples = FSQJet 
 
 for sample in allSamples:
-    sample.isData = False
+    sample.isData = True
