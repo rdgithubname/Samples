@@ -26,7 +26,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('root://hephyse.oeaw.ac.at//dpm/oeaw.ac.at/home/cms/store/data/Run2017C/SingleElectron/MINIAOD/31Mar2018-v1/00000/0247CA36-4937-E811-9966-B499BAAC3786.root'),
+    fileNames = cms.untracked.vstring('root://cms-xrd-global.cern.ch//store/data/Run2017H/FSQJet2/MINIAOD/17Nov2017-v1/90000/FA82776D-923A-E811-8811-842B2B019EE3.root'),
     secondaryFileNames = cms.untracked.vstring(),
 )
 
