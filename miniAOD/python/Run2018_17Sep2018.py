@@ -32,9 +32,9 @@ dbFile = dbDir+"Run2018_17Sep2018.sql"
 logger.info("Using db file: %s", dbFile)
 
 
-DoubleMuon_Run2018A_17Sep2018_v2 = FWLiteSample.fromDAS("DoubleMuon_Run2018A_17Sep2018_v2", "/DoubleMuon/Run2018A-17Sep2018-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-DoubleMuon_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018B_17Sep2018_v1", "/DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-DoubleMuon_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018C_17Sep2018_v1", "/DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DoubleMuon_Run2018A_17Sep2018_v2 = FWLiteSample.fromDAS("DoubleMuon_Run2018A_17Sep2018_v2", "/DoubleMuon/Run2018A-17Sep2018-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DoubleMuon_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018B_17Sep2018_v1", "/DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DoubleMuon_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("DoubleMuon_Run2018C_17Sep2018_v1", "/DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 DoubleMuon = [
     DoubleMuon_Run2018A_17Sep2018_v2,
@@ -42,9 +42,9 @@ DoubleMuon = [
     DoubleMuon_Run2018C_17Sep2018_v1,
 ]
 
-MuonEG_Run2018A_17Sep2018_v1 = FWLiteSample.fromDAS("MuonEG_Run2018A_17Sep2018_v1", "/MuonEG/Run2018A-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-MuonEG_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("MuonEG_Run2018B_17Sep2018_v1", "/MuonEG/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-MuonEG_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("MuonEG_Run2018C_17Sep2018_v1", "/MuonEG/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MuonEG_Run2018A_17Sep2018_v1 = FWLiteSample.fromDAS("MuonEG_Run2018A_17Sep2018_v1", "/MuonEG/Run2018A-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+MuonEG_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("MuonEG_Run2018B_17Sep2018_v1", "/MuonEG/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+MuonEG_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("MuonEG_Run2018C_17Sep2018_v1", "/MuonEG/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 MuonEG = [
     MuonEG_Run2018A_17Sep2018_v1,
@@ -52,9 +52,9 @@ MuonEG = [
     MuonEG_Run2018C_17Sep2018_v1,
 ]
 
-EGamma_Run2018A_17Sep2018_v2 = FWLiteSample.fromDAS("EGamma_Run2018A_17Sep2018_v2", "/EGamma/Run2018A-17Sep2018-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-EGamma_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("EGamma_Run2018B_17Sep2018_v1", "/EGamma/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-EGamma_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("EGamma_Run2018C_17Sep2018_v1", "/EGamma/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+EGamma_Run2018A_17Sep2018_v2 = FWLiteSample.fromDAS("EGamma_Run2018A_17Sep2018_v2", "/EGamma/Run2018A-17Sep2018-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+EGamma_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("EGamma_Run2018B_17Sep2018_v1", "/EGamma/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+EGamma_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("EGamma_Run2018C_17Sep2018_v1", "/EGamma/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 EGamma = [
     EGamma_Run2018A_17Sep2018_v2,
@@ -62,9 +62,9 @@ EGamma = [
     EGamma_Run2018C_17Sep2018_v1,
 ]
 
-SingleMuon_Run2018A_17Sep2018_v2 = FWLiteSample.fromDAS("SingleMuon_Run2018A_17Sep2018_v2", "/SingleMuon/Run2018A-17Sep2018-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-SingleMuon_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018B_17Sep2018_v1", "/SingleMuon/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-SingleMuon_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018C_17Sep2018_v1", "/SingleMuon/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SingleMuon_Run2018A_17Sep2018_v2 = FWLiteSample.fromDAS("SingleMuon_Run2018A_17Sep2018_v2", "/SingleMuon/Run2018A-17Sep2018-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SingleMuon_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018B_17Sep2018_v1", "/SingleMuon/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SingleMuon_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("SingleMuon_Run2018C_17Sep2018_v1", "/SingleMuon/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 SingleMuon = [
     SingleMuon_Run2018A_17Sep2018_v2,
@@ -72,9 +72,9 @@ SingleMuon = [
     SingleMuon_Run2018C_17Sep2018_v1,
 ]
 
-MET_Run2018A_17Sep2018_v1 = FWLiteSample.fromDAS("MET_Run2018A_17Sep2018_v1", "/MET/Run2018A-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-MET_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("MET_Run2018B_17Sep2018_v1", "/MET/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-MET_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("MET_Run2018C_17Sep2018_v1", "/MET/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+MET_Run2018A_17Sep2018_v1 = FWLiteSample.fromDAS("MET_Run2018A_17Sep2018_v1", "/MET/Run2018A-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+MET_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("MET_Run2018B_17Sep2018_v1", "/MET/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+MET_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("MET_Run2018C_17Sep2018_v1", "/MET/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 MET = [
     MET_Run2018A_17Sep2018_v1,
@@ -82,9 +82,9 @@ MET = [
     MET_Run2018C_17Sep2018_v1,
 ]
 
-JetHT_Run2018A_17Sep2018_v1 = FWLiteSample.fromDAS("JetHT_Run2018A_17Sep2018_v1", "/JetHT/Run2018A-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-JetHT_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("JetHT_Run2018B_17Sep2018_v1", "/JetHT/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-JetHT_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("JetHT_Run2018C_17Sep2018_v1", "/JetHT/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+JetHT_Run2018A_17Sep2018_v1 = FWLiteSample.fromDAS("JetHT_Run2018A_17Sep2018_v1", "/JetHT/Run2018A-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+JetHT_Run2018B_17Sep2018_v1 = FWLiteSample.fromDAS("JetHT_Run2018B_17Sep2018_v1", "/JetHT/Run2018B-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+JetHT_Run2018C_17Sep2018_v1 = FWLiteSample.fromDAS("JetHT_Run2018C_17Sep2018_v1", "/JetHT/Run2018C-17Sep2018-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 JetHT = [
     JetHT_Run2018A_17Sep2018_v1,

@@ -31,10 +31,9 @@ dbFile = dbDir+"DB_Run2017_17Nov2017.sql"
 
 logger.info("Using db file: %s", dbFile)
 
-
 ## FSQJet1
-FSQJet1_Run2017H_17Nov2017   = FWLiteSample.fromDAS("FSQJet1_Run2017H_17Nov2017", "/FSQJet1/Run2017H-17Nov2017-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
-FSQJet2_Run2017H_17Nov2017   = FWLiteSample.fromDAS("FSQJet2_Run2017H_17Nov2017", "/FSQJet2/Run2017H-17Nov2017-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+FSQJet1_Run2017H_17Nov2017   = FWLiteSample.fromDAS("FSQJet1_Run2017H_17Nov2017", "/FSQJet1/Run2017H-17Nov2017-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+FSQJet2_Run2017H_17Nov2017   = FWLiteSample.fromDAS("FSQJet2_Run2017H_17Nov2017", "/FSQJet2/Run2017H-17Nov2017-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 FSQJet = [
     FSQJet1_Run2017H_17Nov2017,

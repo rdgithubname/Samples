@@ -34,7 +34,7 @@ dbFile = dbDir+"Spring16_miniAODv2.sql"
 logger.info("Using db file: %s", dbFile)
 
 ## DY
-SMS_T2tt_mStop400to1200_FS_S16_80X       = FWLiteSample.fromDAS("SMS_T2tt_mStop400to1200_FS_S16_80X", "/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2-PUSpring16Fast_80X_mcRun2_asymptotic_2016_miniAODv2_v0-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+SMS_T2tt_mStop400to1200_FS_S16_80X       = FWLiteSample.fromDAS("SMS_T2tt_mStop400to1200_FS_S16_80X", "/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2-PUSpring16Fast_80X_mcRun2_asymptotic_2016_miniAODv2_v0-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 
 signals = [
