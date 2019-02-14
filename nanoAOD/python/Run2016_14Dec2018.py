@@ -19,7 +19,6 @@ if __name__=="__main__":
     ov = options.overwrite
     if options.update:
         ov = 'update'
-
 else:
     import logging
     logger = logging.getLogger(__name__)
