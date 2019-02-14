@@ -6,6 +6,31 @@ dasgoclient -query="dataset=/*/RunIIFall17MiniAODv2*Fast*/MINIAODSIM"
 
 from RootTools.fwlite.FWLiteSample import FWLiteSample
 
+def get_parser():
+    import argparse
+    argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
+    argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
+    return argParser
+
+# Logging
+if __name__=="__main__":
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger("INFO", logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger("INFO", logFile = None )
+    options = get_parser().parse_args()
+    ov = options.overwrite
+
+else:
+    import logging
+    logger = logging.getLogger(__name__)
+    ov = False
+
+from Samples.Tools.config import dbDir, redirector, redirector_global
+dbFile = dbDir+"DB_Fall17_Fast_miniAODv2.sql"
+
+logger.info("Using db file: %s", dbFile)
+
 ## T2tt
 SMS_T2tt_mStop_150to250     = FWLiteSample.fromDAS("SMS_T2tt_mStop_150to250"  , "/SMS-T2tt_mStop-150to250_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 SMS_T2tt_mStop_250to350     = FWLiteSample.fromDAS("SMS_T2tt_mStop_250to350"  , "/SMS-T2tt_mStop-250to350_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
