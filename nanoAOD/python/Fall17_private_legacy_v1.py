@@ -1,12 +1,11 @@
 import copy, os, sys
-import ROOT
-
 from RootTools.core.Sample import Sample
+import ROOT
 
 def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
-    argParser.add_argument('--overwrite', action='store_true', help="Overwrite current entry in db?")
+    argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
     return argParser
 
@@ -25,7 +24,14 @@ else:
     logger = logging.getLogger(__name__)
     ov = False
 
-from Samples.Tools.config import dbDir, redirector, redirector_global
+# Redirector
+try:
+    redirector = sys.modules['__main__'].redirector
+except:
+    from Samples.Tools.config import  redirector as redirector
+
+# DB
+from Samples.Tools.config import dbDir
 dbFile = dbDir+"DB_Fall17_private_legacy.sql"
 
 logger.info("Using db file: %s", dbFile)

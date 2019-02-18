@@ -24,7 +24,14 @@ else:
     logger = logging.getLogger(__name__)
     ov = False
 
-from Samples.Tools.config import dbDir, redirector, redirector_global
+# Redirector
+try:
+    redirector = sys.modules['__main__'].redirector
+except:
+    from Samples.Tools.config import  redirector as redirector
+
+# DB
+from Samples.Tools.config import dbDir
 dbFile = dbDir+"DB_Run2018_14Dec2018.sql"
 
 logger.info("Using db file: %s", dbFile)

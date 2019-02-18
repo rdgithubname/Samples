@@ -24,8 +24,17 @@ else:
     logger = logging.getLogger(__name__)
     ov = False
 
-from Samples.Tools.config import dbDir, redirector, redirector_global
+# Redirector
+try:
+    redirector = sys.modules['__main__'].redirector
+except:
+    from Samples.Tools.config import  redirector as redirector
+
+# DB
+from Samples.Tools.config import dbDir
 dbFile = dbDir+"DB_Autumn18_private_legacy.sql"
+
+logger.info("Using db file: %s", dbFile)
 
 ## DY
 DYJetsToLL_M50_LO        = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO",       "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v1-1a762c888624ed9dff74191bdeed5e1a/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2008.*3)
