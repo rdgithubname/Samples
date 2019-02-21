@@ -124,12 +124,15 @@ TTX = [
     TTZZ_LO_A18_102X,
 ]
 
+VVTo2L2Nu_NLO_A18_102X      = FWLiteSample.fromDAS("VVTo2L2Nu_NLO_A18_102X", "/VVTo2L2Nu_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
 WW_A18_102X                 = FWLiteSample.fromDAS("WW_A18_102X", "/WW_TuneCP5_13TeV-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 WZ_A18_102X                 = FWLiteSample.fromDAS("WZ_A18_102X", "/WZ_TuneCP5_13TeV-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ZZ_A18_102X                 = FWLiteSample.fromDAS("ZZ_A18_102X", "/ZZ_TuneCP5_13TeV-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ZH_HToBB_ZToLL_pow_A18_102X = FWLiteSample.fromDAS("ZH_HToBB_ZToLL_pow_A18_102X", "/ZH_HToBB_ZToLL_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 diboson = [
+    VVTo2L2Nu_NLO_A18_102X,
     WW_A18_102X,
     ZZ_A18_102X,
     ZH_HToBB_ZToLL_pow_A18_102X,
