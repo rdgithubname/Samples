@@ -6,6 +6,8 @@ import os
 ## This definition might not work for everybody. Update with whatever you like.
 if os.environ['USER'] in ['llechner']:
     dbDir = '/afs/hephy.at/data/llechner01/TTGammaEFT/cache/samples/'
+elif os.environ['USER'] in ['dspitzba', 'dspitzbart']:
+    dbDir = '/afs/hephy.at/data/dspitzbart01/nanoAOD/'
 else:
     dbDir = '/afs/hephy.at/data/%s01/nanoAOD/'%os.environ['USER']
 
