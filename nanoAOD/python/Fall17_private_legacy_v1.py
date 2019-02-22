@@ -10,9 +10,10 @@ def get_parser():
     return argParser
 
 # Logging
+import Samples.Tools.logger as logger_samples
+logger_samples = logger_samples.get_logger("INFO", logFile = None )
+
 if __name__=="__main__":
-    import Samples.Tools.logger as logger
-    logger = logger.get_logger("INFO", logFile = None )
     import RootTools.core.logger as logger_rt
     logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
@@ -21,7 +22,7 @@ if __name__=="__main__":
         ov = 'update'
 else:
     import logging
-    logger = logging.getLogger(__name__)
+    logger_samples = logging.getLogger(__name__)
     ov = False
 
 # Redirector
@@ -34,7 +35,7 @@ except:
 from Samples.Tools.config import dbDir
 dbFile = dbDir+"DB_Fall17_private_legacy.sql"
 
-logger.info("Using db file: %s", dbFile)
+logger_samples.info("Using db file: %s", dbFile)
 
 ## DY
 DYJetsToLL_M50_LO      = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO",      "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2008.*3)
@@ -322,7 +323,19 @@ SUSY = [
     SMS_T2tt_mStop_400to1200,
     ]
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu
+## combined samples (needed for proper PUProfileCache)
+DYJetsToLL_M50_LO_comb  = Sample.combine("DYJetsToLL_M50_LO_comb",  [DYJetsToLL_M50_LO, DYJetsToLL_M50_LO_ext1])
+TTW_LO_comb             = Sample.combine("TTW_LO_comb",             [TTW_LO, TTW_LO_ext1])
+WJetsToLNu_comb         = Sample.combine("WJetsToLNu_comb",         [WJetsToLNu, WJetsToLNu_ext1])
+
+combinedSamples = [
+    DYJetsToLL_M50_LO_comb,
+    TTW_LO_comb,
+    WJetsToLNu_comb,
+]
+
+
+allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combinedSamples
 
 for s in allSamples:
     s.isData = False
