@@ -7,8 +7,8 @@ def getFilterCut( year, isData=False, ignoreJSON=False ):
         filters            += [ "Flag_HBHENoiseFilter" ]                      # HBHE noise filter
         filters            += [ "Flag_HBHENoiseIsoFilter" ]                   # HBHEiso noise filter
         filters            += [ "Flag_EcalDeadCellTriggerPrimitiveFilter" ]   # ECAL TP filter
-#        filters            += [ "Flag_BadPFMuonFilter" ]                      # Bad PF Muon Filter (re-run nanoAOD processing)
-#        filters            += [ "Flag_BadChargedCandidateFilter" ]            # Bad Charged Hadron Filter (re-run nanoAOD processing)
+        filters            += [ "Flag_BadPFMuonFilter" ]                      # Bad PF Muon Filter
+        filters            += [ "Flag_BadChargedCandidateFilter" ]            # Bad Charged Hadron Filter
         if isData:
             filters        += [ "Flag_eeBadScFilter" ]                        # ee badSC noise filter (data only)
 

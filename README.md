@@ -1,10 +1,10 @@
 # Samples
 
-Preliminary recipe for 94X (also works with 80X samples)
+Preliminary recipe for 102X (should work with all kind of samples)
 
 ```
-cmsrel CMSSW_9_4_10
-cd CMSSW_9_4_10/src
+cmsrel CMSSW_10_2_9
+cd CMSSW_10_2_9/src
 cmsenv
 git cms-init
 
@@ -20,15 +20,12 @@ scram b -j 8
 
 ```
 
-Do the same thing in CMSSW_10_2_5 for 2018 data.
-
 Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt as well as FastSim support. sumPt is needed to recompute MET significance.
 
 ```
 cd $CMSSW_BASE/src
-cp sparse-checkout .git/info/sparse-checkout
-git remote add ownFork https://github.com/danbarto/cmssw.git
-git fetch ownFork
-git checkout ownFork/sumPtForMETSig
+cp Samples/sparse-checkout .git/info/sparse-checkout
+git remote add METSig https://github.com/danbarto/cmssw.git -f -t sumPtForMETSig_102Xv2
+git checkout -b sumPtForMETSig_102Xv2 METSig/sumPtForMETSig_102Xv2
 scram b -j 8
 ```

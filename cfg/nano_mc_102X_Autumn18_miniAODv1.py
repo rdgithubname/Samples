@@ -2,12 +2,12 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: myNanoProdMc -s NANO --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --no_exec --conditions 102X_upgrade2018_realistic_v12 --era Run2_2018
+# with command line options: myNanoProdMc -s NANO --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --no_exec --conditions 102X_upgrade2018_realistic_v12 --era Run2_2018,run2_nanoAOD_102Xv1
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('NANO',eras.Run2_2018)
+process = cms.Process('NANO',eras.Run2_2018,eras.run2_nanoAOD_102Xv1)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -22,14 +22,12 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(9000)
+    input = cms.untracked.int32(100)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/relval/CMSSW_10_2_4/RelValTTbar_13/MINIAODSIM/PU25ns_102X_upgrade2018_realistic_v12-v1/20000/EB67E894-1B22-0C4F-940B-B1A113F84B92.root'),
-    #fileNames = cms.untracked.vstring('/store/relval/CMSSW_10_2_4/RelValTTbar_13/MINIAODSIM/PU25ns_102X_upgrade2018_realistic_v12HEfail_v1-v1/20000/372CDF57-D0F3-2747-814B-F9AF657C4BE0.root'),
-    #fileNames = cms.untracked.vstring('/store/relval/CMSSW_10_2_4/RelValTTbar_13/MINIAODSIM/PU25ns_102X_upgrade2018_realistic_v12HEfail_v1_badHcalMitig-v1/20000/2D65B536-E613-1546-9DED-7FC86BF38F9B.root'),
+    fileNames = cms.untracked.vstring('/store/mc/RunIIAutumn18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/80000/AC241C46-3823-344E-86C4-DC76A98F32A0.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -39,7 +37,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('myNanoProdMc nevts:9000'),
+    annotation = cms.untracked.string('myNanoProdMc nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -62,7 +60,7 @@ process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '102X_upgrade2018_realistic_v15', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_upgrade2018_realistic_v12', '')
 
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequenceMC)
@@ -75,6 +73,7 @@ from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
 # customisation of the process.
+process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 
 # Automatic addition of the customisation function from PhysicsTools.NanoAOD.nano_cff
 from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeMC 

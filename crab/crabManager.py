@@ -78,5 +78,11 @@ print "Unknonw status:", nUnknown
 print
 print "These datasets have been processed:"
 for d in datasets:
-    print d['input'], '   ---->    ', eval(d['output'])[0]
+    if d.has_key('output'):
+        try:
+            print d['input'], '   ---->    ', eval(d['output'])[0]
+        except TypeError:
+            print "No output yet"
+    else:
+        print d['input'], '   ---->    ', 'No output yet'
 
