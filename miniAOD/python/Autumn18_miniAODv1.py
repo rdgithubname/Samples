@@ -33,7 +33,6 @@ dbFile = dbDir+"DB_Autumn18_miniAODv1.sql"
 
 logger.info("Using db file: %s", dbFile)
 
-
 RelValTTbar                 = FWLiteSample.fromDAS("RelValTTbar", "/RelValTTbar_13/CMSSW_10_2_4-PU25ns_102X_upgrade2018_realistic_v12-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 RelValTTbar_HEM             = FWLiteSample.fromDAS("RelValTTbar_HEM", "/RelValTTbar_13/CMSSW_10_2_4-PU25ns_102X_upgrade2018_realistic_v12HEfail_v1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 RelValTTbar_HEMmitigation   = FWLiteSample.fromDAS("RelValTTbar_HEMmitigation", "/RelValTTbar_13/CMSSW_10_2_4-PU25ns_102X_upgrade2018_realistic_v12HEfail_v1_badHcalMitig-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -56,19 +55,26 @@ DY = [
 ]
 
 # single top
-ST_schannel_LO_A18_102X         = FWLiteSample.fromDAS("ST_schannel_LO_A18_102X", "/ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ST_schannel_LO_A18_102X             = FWLiteSample.fromDAS("ST_schannel_LO_A18_102X", "/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v4/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-ST_tW_antitop_pow_A18_102X      = FWLiteSample.fromDAS("ST_tW_antitop_pow_A18_102X", "/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-ST_tW_top_pow_A18_102X          = FWLiteSample.fromDAS("ST_tW_top_pow_A18_102X", "/ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ST_tchannel_antitop_4f_pow_A18_102X = FWLiteSample.fromDAS("ST_tchannel_antitop_4f_pow_A18_102X", "/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ST_tchannel_top_4f_pow_A18_102X     = FWLiteSample.fromDAS("ST_tchannel_top_4f_pow_A18_102X", "/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-ST_tWll_LO_A18_102X             = FWLiteSample.fromDAS("ST_tWll_LO_A18_102X", "/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ST_tW_antitop_pow_A18_102X          = FWLiteSample.fromDAS("ST_tW_antitop_pow_A18_102X", "/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ST_tW_top_pow_A18_102X              = FWLiteSample.fromDAS("ST_tW_top_pow_A18_102X", "/ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+ST_tWll_LO_A18_102X                 = FWLiteSample.fromDAS("ST_tWll_LO_A18_102X", "/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+TGJets_lep_NLO_A18_102X            = FWLiteSample.fromDAS("TGJets_lep_NLO_A18_102X", "/TGJets_leptonDecays_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 singleTop = [
     ST_schannel_LO_A18_102X,
+    ST_tchannel_antitop_4f_pow_A18_102X,
+    ST_tchannel_top_4f_pow_A18_102X,
     ST_tW_antitop_pow_A18_102X,
     ST_tW_top_pow_A18_102X,
     ST_tWll_LO_A18_102X,
+    TGJets_lep_NLO_A18_102X,
 ]
 
 TT_dilep_NLO_A18_102X         = FWLiteSample.fromDAS("TT_dilep_NLO_A18_102X", "/TT_DiLept_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -137,6 +143,8 @@ ZZTo2L2Nu_A18_102X          = FWLiteSample.fromDAS("ZZTo2L2Nu_A18_102X", "/ZZTo2
 ZZTo2L2Q_A18_102X           = FWLiteSample.fromDAS("ZZTo2L2Q_A18_102X",  "/ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM",      dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ZZTo4L_A18_102X             = FWLiteSample.fromDAS("ZZTo4L_A18_102X",    "/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM",         dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+ZGTo2LG_NLO_A18_102X_ext1    = FWLiteSample.fromDAS("ZGTo2LG_NLO_A18_102X_ext1", "/ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WGToLNuG_LO_A18_102X         = FWLiteSample.fromDAS("WGToLNuG_LO_A18_102X", "/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 diboson = [
     VVTo2L2Nu_NLO_A18_102X,
@@ -149,6 +157,14 @@ diboson = [
     ZZTo2L2Nu_A18_102X,
     ZZTo2L2Q_A18_102X,
     ZZTo4L_A18_102X,
+    ZGTo2LG_NLO_A18_102X_ext1,
+    WGToLNuG_LO_A18_102X,
+]
+
+WJetsToLNu_LO_A18_102X       = FWLiteSample.fromDAS("WJetsToLNu_LO_A18_102X", "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+WJets = [
+    WJetsToLNu_LO_A18_102X,
 ]
 
 WWZ_NLO_A18_102X            = FWLiteSample.fromDAS("WWZ_NLO_A18_102X", "/WWZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -172,7 +188,7 @@ gluglu = [
 ]
 
 
-allSamples = relvals + DY + singleTop + TTJets + TTX + diboson + multiboson + gluglu
+allSamples = relvals + DY + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets
 
 for sample in allSamples:
     sample.isData = False
