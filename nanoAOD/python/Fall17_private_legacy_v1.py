@@ -335,7 +335,7 @@ combinedSamples = [
 ]
 
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combinedSamples
+allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combinedSamples + SUSY
 
 for s in allSamples:
     s.isData = False
