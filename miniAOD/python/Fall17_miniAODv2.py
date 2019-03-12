@@ -117,6 +117,8 @@ ST_tW_top_NoFullyHad_5f_pow_PS_F17_94X          = FWLiteSample.fromDAS("ST_tW_to
 ST_tW_top_incl_5f_pow_F17_94X                   = FWLiteSample.fromDAS("ST_tW_top_incl_5f_pow_F17_94X", "/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ST_tW_top_incl_5f_pow_PS_F17_94X                = FWLiteSample.fromDAS("ST_tW_top_incl_5f_pow_PS_F17_94X", "/ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+ST_tWll_5f_LO_S16_94X                           = FWLiteSample.fromDAS("ST_tWll_5f_LO_S16_94X", "/ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
 ST_5f = [
     ST_tchannel_antitop_5f_pow_PS_F17_94X,
     ST_tchannel_top_5f_pow_F17_94X,
@@ -127,6 +129,8 @@ ST_5f = [
     ST_tW_top_NoFullyHad_5f_pow_PS_F17_94X,
     ST_tW_top_incl_5f_pow_F17_94X,
     ST_tW_top_incl_5f_pow_PS_F17_94X,
+    ST_tWll_5f_LO_S16_94X,
+
 ]
 
 TTJets_NLO_F17_94X                              = FWLiteSample.fromDAS("TTJets_NLO_F17_94X", "/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
