@@ -325,8 +325,11 @@ SUSY = [
 
 ## combined samples (needed for proper PUProfileCache)
 DYJetsToLL_M50_LO_comb  = Sample.combine("DYJetsToLL_M50_LO_comb",  [DYJetsToLL_M50_LO, DYJetsToLL_M50_LO_ext1])
+DYJetsToLL_M50_LO_comb.nEvents = DYJetsToLL_M50_LO.nEvents + DYJetsToLL_M50_LO_ext1.nEvents
 TTW_LO_comb             = Sample.combine("TTW_LO_comb",             [TTW_LO, TTW_LO_ext1])
+TTW_LO_comb.nEvents = TTW_LO.nEvents + TTW_LO_ext1.nEvents
 WJetsToLNu_comb         = Sample.combine("WJetsToLNu_comb",         [WJetsToLNu, WJetsToLNu_ext1])
+WJetsToLNu_comb.nEvents = WJetsToLNu.nEvents + WJetsToLNu_ext1.nEvents
 
 combinedSamples = [
     DYJetsToLL_M50_LO_comb,

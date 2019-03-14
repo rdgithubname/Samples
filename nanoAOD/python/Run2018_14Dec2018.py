@@ -118,6 +118,6 @@ JetHT_Run2018 = [\
 allSamples = DoubleMuon_Run2018 + MuonEG_Run2018 + EGamma_Run2018 + SingleMuon_Run2018 + MET_Run2018 + JetHT_Run2018
 
 for s in allSamples:
-    s.json = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt")
+    s.json = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt")
     s.isData  = True
 
