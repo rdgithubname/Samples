@@ -30,6 +30,9 @@ try:
 except:
     from Samples.Tools.config import  redirector as redirector
 
+from Samples.Tools.config import  redirector_global
+
+
 # DB
 from Samples.Tools.config import dbDir
 dbFile = dbDir+"DB_Summer16_private_legacy.sql"
@@ -138,6 +141,7 @@ TTGSemiTbar         = Sample.nanoAODfromDAS("TTGSemiTbar",      "/TTGamma_Single
 TTGSemiT            = Sample.nanoAODfromDAS("TTGSemiT",         "/TTGamma_SingleLeptFromT_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v3-b9659cf3bef5e21efe24288a402778f7/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.769*2.028673602) # MadGraph LO xsec * k factor estimated in TOPAZ (TOP-18-010)
 TTGLep              = Sample.nanoAODfromDAS("TTGLep",           "/TTGamma_Dilept_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",              dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.607*1.574299835) # MadGraph LO xsec * k factor estimated in TOPAZ (TOP-18-010)
 
+
 TTV = [
     TGJets,
 #    TGJets_ext,
@@ -157,8 +161,18 @@ TTV = [
 #    TTZToLLNuNu_m1to10,
     TTZ_LO,
     TTGJets,
-    TTGJets_ext
+    TTGJets_ext,
 ]
+
+TTGG                 = Sample.nanoAODfromDAS("TTGLep",          "/TTGG_0Jets_TuneCUETP8M1_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector_global, overwrite=ov, xSection=0.01731)
+TTWZ                 = Sample.nanoAODfromDAS("TTWZ",            "/TTWZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector_global, overwrite=ov, xSection=0.002938)
+TTZZ                 = Sample.nanoAODfromDAS("TTZZ",            "/TTZZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM" ,              dbFile=dbFile, redirector=redirector_global, overwrite=ov, xSection=0.001563)
+
+TTVV = [
+    TTGG,
+    TTWZ,
+    TTZZ
+    ]
 
 top = [
     TTLep_pow,
@@ -175,7 +189,7 @@ top = [
 #    TTHnobb_mWCutfix_ext,
     THQ,
     THW,
-    ] + TTV
+    ] + TTV + TTVV
 
 ## di/multiboson
 #WWTo2L2Nu           = Sample.nanoAODfromDAS("WWTo2L2Nu",        "/WWTo2L2Nu_13TeV-powheg/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=10.481 )
