@@ -32,7 +32,7 @@ except:
 
 # DB
 from Samples.Tools.config import dbDir
-dbFile = dbDir+"DB_Autumn18_private_legacy.sql"
+dbFile = dbDir+"/DB_Autumn18_private_legacy.sql"
 
 logger.info("Using db file: %s", dbFile)
 
