@@ -48,8 +48,8 @@ DYJetsToLL_M50_LO_A18_102X     = FWLiteSample.fromDAS("DYJetsToLL_M50_LO_A18_102
 
 DYJetsToLL_M10to50_LO_A18_102X = FWLiteSample.fromDAS("DYJetsToLL_M10to50_LO_A18_102X", "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-#DYJetsToLL_M4to50_HT70to100_LO_A18_102X      = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT70to100_LO_A18_102X",      "/DYJetsToLL_M-4to50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # https://cms-pdmv.cern.ch/pmp/historical?r=HIG-RunIIAutumn18MiniAOD-01083
-#DYJetsToLL_M4to50_HT100to200_LO_A18_102X     = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT100to200_LO_A18_102X",     "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # basically done https://cms-pdmv.cern.ch/pmp/historical?r=HIG-RunIIAutumn18MiniAOD-01079
+DYJetsToLL_M4to50_HT70to100_LO_A18_102X      = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT70to100_LO_A18_102X",      "/DYJetsToLL_M-4to50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # https://cms-pdmv.cern.ch/pmp/historical?r=HIG-RunIIAutumn18MiniAOD-01083
+DYJetsToLL_M4to50_HT100to200_LO_A18_102X     = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT100to200_LO_A18_102X",     "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M4to50_HT200to400_LO_A18_102X     = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT200to400_LO_A18_102X",     "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M4to50_HT400to600_LO_A18_102X     = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT400to600_LO_A18_102X",     "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M4to50_HT600toInf_LO_A18_102X     = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT600toInf_LO_A18_102X",     "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -61,17 +61,12 @@ DYJetsToLL_M50_HT400to600_LO_A18_102X        = FWLiteSample.fromDAS("DYJetsToLL_
 DYJetsToLL_M50_HT400to600_LO_A18_102X_ext2   = FWLiteSample.fromDAS("DYJetsToLL_M50_HT400to600_LO_A18_102X_ext2",   "/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M50_HT600to800_LO_A18_102X        = FWLiteSample.fromDAS("DYJetsToLL_M50_HT600to800_LO_A18_102X",        "/DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M50_HT800to1200_LO_A18_102X       = FWLiteSample.fromDAS("DYJetsToLL_M50_HT800to1200_LO_A18_102X",       "/DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#DYJetsToLL_M50_HT1200to2500_LO_A18_102X      = FWLiteSample.fromDAS("DYJetsToLL_M50_HT1200to2500_LO_A18_102X",      "/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # https://cms-pdmv.cern.ch/pmp/historical?r=B2G-RunIIAutumn18MiniAOD-00051
+DYJetsToLL_M50_HT1200to2500_LO_A18_102X      = FWLiteSample.fromDAS("DYJetsToLL_M50_HT1200to2500_LO_A18_102X",      "/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # https://cms-pdmv.cern.ch/pmp/historical?r=B2G-RunIIAutumn18MiniAOD-00051
 DYJetsToLL_M50_HT2500toInf_LO_A18_102X       = FWLiteSample.fromDAS("DYJetsToLL_M50_HT2500toInf_LO_A18_102X",       "/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-
-DY = [
-    DYJetsToLL_M50_NLO_A18_102X,
-    DYJetsToLL_M50_LO_A18_102X,
-    DYJetsToLL_M10to50_LO_A18_102X,
-
-    #DYJetsToLL_M4to50_HT70to100_LO_A18_102X,
-    #DYJetsToLL_M4to50_HT100to200_LO_A18_102X,
+DY_HT = [
+    DYJetsToLL_M4to50_HT70to100_LO_A18_102X,
+    DYJetsToLL_M4to50_HT100to200_LO_A18_102X,
     DYJetsToLL_M4to50_HT200to400_LO_A18_102X,
     DYJetsToLL_M4to50_HT400to600_LO_A18_102X,
     DYJetsToLL_M4to50_HT600toInf_LO_A18_102X,
@@ -83,8 +78,14 @@ DY = [
     DYJetsToLL_M50_HT400to600_LO_A18_102X_ext2,
     DYJetsToLL_M50_HT600to800_LO_A18_102X,
     DYJetsToLL_M50_HT800to1200_LO_A18_102X,
-    #DYJetsToLL_M50_HT1200to2500_LO_A18_102X,
+    DYJetsToLL_M50_HT1200to2500_LO_A18_102X,
     DYJetsToLL_M50_HT2500toInf_LO_A18_102X,
+]
+
+DY = [
+    DYJetsToLL_M50_NLO_A18_102X,
+    DYJetsToLL_M50_LO_A18_102X,
+    DYJetsToLL_M10to50_LO_A18_102X,
 ]
 
 # single top
@@ -238,7 +239,7 @@ gluglu = [
 ]
 
 
-allSamples = relvals + DY + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets
+allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets
 
 for sample in allSamples:
     sample.isData = False
