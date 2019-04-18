@@ -39,18 +39,18 @@ logger.info("Using db file: %s", dbFile)
 # low mass
 DYJetsToLL_M10to50_LO_F17_94X                  = FWLiteSample.fromDAS("DYJetsToLL_M10to50_LO_F17_94X", "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-DYJetsToLL_M10to50_HT100to200_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT100to200_LO_F17_94X", "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT100to200_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT100to200_LO_F17_94X_ext1", "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT200to400_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT200to400_LO_F17_94X", "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT200to400_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT200to400_LO_F17_94X_ext1", "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT400to600_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT400to600_LO_F17_94X", "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT400to600_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT400to600_LO_F17_94X_ext1", "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT600toInf_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT600toInf_LO_F17_94X", "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M10to50_HT600toInf_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M10to50_HT600toInf_LO_F17_94X_ext1", "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M4to50_HT100to200_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT100to200_LO_F17_94X",         "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # card says M5-50
+DYJetsToLL_M4to50_HT100to200_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT100to200_LO_F17_94X_ext1",    "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # card says M5-50
+DYJetsToLL_M4to50_HT200to400_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT200to400_LO_F17_94X",         "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) 
+DYJetsToLL_M4to50_HT200to400_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT200to400_LO_F17_94X_ext1",    "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M4to50_HT400to600_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT400to600_LO_F17_94X",         "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M4to50_HT400to600_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT400to600_LO_F17_94X_ext1",    "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M4to50_HT600toInf_LO_F17_94X       = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT600toInf_LO_F17_94X",         "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M4to50_HT600toInf_LO_F17_94X_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT600toInf_LO_F17_94X_ext1",    "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 # high mass
-DYJetsToLL_M50_NLO_F17_94X                     = FWLiteSample.fromDAS("DYJetsToLL_M50_NLO_F17_94X", "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-DYJetsToLL_M50_LO_F17_94X                      = FWLiteSample.fromDAS("DYJetsToLL_M50_LO_F17_94X", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M50_NLO_F17_94X                     = FWLiteSample.fromDAS("DYJetsToLL_M50_NLO_F17_94X",     "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+DYJetsToLL_M50_LO_F17_94X                      = FWLiteSample.fromDAS("DYJetsToLL_M50_LO_F17_94X",      "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M50_LO_F17_94X_ext1                 = FWLiteSample.fromDAS("DYJetsToLL_M50_LO_F17_94X_ext1", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 DYJetsToLL_M50_HT70to100_LO_F17_94X            = FWLiteSample.fromDAS("DYJetsToLL_M50_HT70to100_LO_F17_94X", "/DYJetsToLL_M-50_HT-70to100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -73,14 +73,14 @@ DY = [
 ]
 
 DY_HT = [
-    DYJetsToLL_M10to50_HT100to200_LO_F17_94X,
-    DYJetsToLL_M10to50_HT100to200_LO_F17_94X_ext1,
-    DYJetsToLL_M10to50_HT200to400_LO_F17_94X,
-    DYJetsToLL_M10to50_HT200to400_LO_F17_94X_ext1,
-    DYJetsToLL_M10to50_HT400to600_LO_F17_94X,
-    DYJetsToLL_M10to50_HT400to600_LO_F17_94X_ext1,
-    DYJetsToLL_M10to50_HT600toInf_LO_F17_94X,
-    DYJetsToLL_M10to50_HT600toInf_LO_F17_94X_ext1,
+    DYJetsToLL_M4to50_HT100to200_LO_F17_94X,
+    DYJetsToLL_M4to50_HT100to200_LO_F17_94X_ext1,
+    DYJetsToLL_M4to50_HT200to400_LO_F17_94X,
+    DYJetsToLL_M4to50_HT200to400_LO_F17_94X_ext1,
+    DYJetsToLL_M4to50_HT400to600_LO_F17_94X,
+    DYJetsToLL_M4to50_HT400to600_LO_F17_94X_ext1,
+    DYJetsToLL_M4to50_HT600toInf_LO_F17_94X,
+    DYJetsToLL_M4to50_HT600toInf_LO_F17_94X_ext1,
     DYJetsToLL_M50_HT70to100_LO_F17_94X,
     DYJetsToLL_M50_HT100to200_LO_F17_94X,
     DYJetsToLL_M50_HT100to200_LO_F17_94X_ext1,
