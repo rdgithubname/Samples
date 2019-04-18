@@ -151,8 +151,3 @@ dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/SM/ttGamma_1Line_noFully
 gridpack="ttGamma_ttbarMod_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
 label="ttGamma_1Line_noFullyHad_TTBarrunCard_modified"
 python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
-
-
-
-
-

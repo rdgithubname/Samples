@@ -89,9 +89,35 @@ SingleMuon_Run2018 = [\
     SingleMuon_Run2018D_14Dec2018,
     ]
 
-allSamples = DoubleMuon_Run2018 + MuonEG_Run2018 + EGamma_Run2018 + SingleMuon_Run2018
+## MET
+MET_Run2018A_14Dec2018  = Sample.nanoAODfromDAS("MET_Run2018A_14Dec2018",   "/MET/Run2018A-Nano14Dec2018-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+#MET_Run2018B_14Dec2018  = Sample.nanoAODfromDAS("MET_Run2018B_14Dec2018",   "/MET/Run2018B-Nano14Dec2018-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+MET_Run2018C_14Dec2018  = Sample.nanoAODfromDAS("MET_Run2018C_14Dec2018",   "/MET/Run2018C-Nano14Dec2018-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+MET_Run2018D_14Dec2018  = Sample.nanoAODfromDAS("MET_Run2018D_14Dec2018",   "/MET/Run2018D-Nano14Dec2018_ver2-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+
+MET_Run2018 = [\
+    MET_Run2018A_14Dec2018,
+#    MET_Run2018B_14Dec2018,
+    MET_Run2018C_14Dec2018,
+    MET_Run2018D_14Dec2018,
+    ]
+
+## JetHT
+JetHT_Run2018A_14Dec2018  = Sample.nanoAODfromDAS("JetHT_Run2018A_14Dec2018",   "/JetHT/Run2018A-Nano14Dec2018-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+JetHT_Run2018B_14Dec2018  = Sample.nanoAODfromDAS("JetHT_Run2018B_14Dec2018",   "/JetHT/Run2018B-Nano14Dec2018-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+JetHT_Run2018C_14Dec2018  = Sample.nanoAODfromDAS("JetHT_Run2018C_14Dec2018",   "/JetHT/Run2018C-Nano14Dec2018-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+JetHT_Run2018D_14Dec2018  = Sample.nanoAODfromDAS("JetHT_Run2018D_14Dec2018",   "/JetHT/Run2018D-Nano14Dec2018_ver2-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+
+JetHT_Run2018 = [\
+    JetHT_Run2018A_14Dec2018,
+    JetHT_Run2018B_14Dec2018,
+    JetHT_Run2018C_14Dec2018,
+    JetHT_Run2018D_14Dec2018,
+    ]
+
+allSamples = DoubleMuon_Run2018 + MuonEG_Run2018 + EGamma_Run2018 + SingleMuon_Run2018 + MET_Run2018 + JetHT_Run2018
 
 for s in allSamples:
-    s.json = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt")
+    s.json = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt")
     s.isData  = True
 
