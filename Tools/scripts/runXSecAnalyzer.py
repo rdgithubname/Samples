@@ -1,5 +1,6 @@
 '''
 Get x-secs for miniAOD samples from the GenXSec analyzer
+Tested in CMSSW 10_2_9
 '''
 
 import imp, os, sys
