@@ -42,49 +42,42 @@ DYJetsToLL_M50_LO        = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO",       "/DY
 DYJetsToLL_M50           = Sample.nanoAODfromDAS("DYJetsToLL_M50",          "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v1-1a762c888624ed9dff74191bdeed5e1a/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2008.*3)
 DYJetsToLL_M10to50_LO    = Sample.nanoAODfromDAS("DYJetsToLL_M10to50_LO",   "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=18610)
 
-
-#DYJetsToLL_M50_HT70to100      =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT70to100"    ,     "/DYJetsToLL_M-50_HT-70to100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=170.4*1.23)
-#DYJetsToLL_M50_HT100to200_ext =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT100to200_ext",    "/DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=147.4*1.23)
-#DYJetsToLL_M50_HT200to400     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT200to400",        "/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=40.99*1.23)
-#DYJetsToLL_M50_HT200to400_ext =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT200to400_ext",    "/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=40.99*1.23)
-#DYJetsToLL_M50_HT400to600     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT400to600",        "/DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=5.678*1.23)
-#DYJetsToLL_M50_HT400to600_ext =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT400to600_ext",    "/DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=5.678*1.23)
-#DYJetsToLL_M50_HT600to800     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT600to800"   ,     "/DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.367*1.23 )
-#DYJetsToLL_M50_HT800to1200    =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT800to1200"  ,     "/DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",       dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.6304*1.23 )
-#DYJetsToLL_M50_HT1200to2500   =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT1200to2500" ,     "/DYJetsToLL_M-50_HT-1200to2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",      dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.1514*1.23 )
-#DYJetsToLL_M50_HT2500toInf    =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT2500toInf"  ,     "/DYJetsToLL_M-50_HT-2500toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",       dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003565*1.23 )
+# x-secs using runXSecAnalyzer
+DYJetsToLL_M50_HT70to100      =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT70to100"    ,     "/DYJetsToLL_M-50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=146.5*1.23)
+DYJetsToLL_M50_HT100to200     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT100to200",        "/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",       dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=160.1*1.23)
+DYJetsToLL_M50_HT200to400     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT200to400",        "/DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",       dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=49.22*1.23)
+DYJetsToLL_M50_HT400to600     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT400to600",        "/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v7_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",       dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=6.996*1.23)
+DYJetsToLL_M50_HT400to600_ext =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT400to600_ext",    "/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=6.996*1.23)
+DYJetsToLL_M50_HT600to800     =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT600to800"   ,     "/DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",       dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.754*1.23 )
+DYJetsToLL_M50_HT800to1200    =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT800to1200"  ,     "/DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",      dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.8718*1.23 )
+DYJetsToLL_M50_HT1200to2500   =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT1200to2500" ,     "/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.1938*1.23 )
+DYJetsToLL_M50_HT2500toInf    =   Sample.nanoAODfromDAS("DYJetsToLL_M50_HT2500toInf"  ,     "/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",      dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003511*1.23 )
 
 DYJetsM50HT = [
-#    DYJetsToLL_M50_HT70to100   , 
-#   DYJetsToLL_M50_HT100to200_ext,
-#   DYJetsToLL_M50_HT200to400,
-#   DYJetsToLL_M50_HT200to400_ext,
-#   DYJetsToLL_M50_HT400to600,
-#   DYJetsToLL_M50_HT400to600_ext,
-#   DYJetsToLL_M50_HT600to800  ,
-#   DYJetsToLL_M50_HT800to1200 ,
-#   DYJetsToLL_M50_HT1200to2500,
-#   DYJetsToLL_M50_HT2500toInf ,
+    DYJetsToLL_M50_HT70to100, 
+    DYJetsToLL_M50_HT100to200,
+    DYJetsToLL_M50_HT200to400,
+    DYJetsToLL_M50_HT400to600,
+    DYJetsToLL_M50_HT400to600_ext,
+    DYJetsToLL_M50_HT600to800  ,
+    DYJetsToLL_M50_HT800to1200 ,
+    DYJetsToLL_M50_HT1200to2500,
+    DYJetsToLL_M50_HT2500toInf ,
 ]
 
-#DYJetsToLL_M5to50_HT70to100      = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT70to100"     , "/DYJetsToLL_M-5to50_HT-70to100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=303.4) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT100to200     = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT100to200"    , "/DYJetsToLL_M-5to50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=224.2) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT100to200_ext = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT100to200_ext", "/DYJetsToLL_M-5to50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=224.2) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT200to400     = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT200to400"    , "/DYJetsToLL_M-5to50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=37.2) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT200to400_ext = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT200to400_ext", "/DYJetsToLL_M-5to50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=37.2) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT400to600     = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT400to600"    , "/DYJetsToLL_M-5to50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3.581) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT400to600_ext = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT400to600_ext", "/DYJetsToLL_M-5to50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3.581) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT600toInf     = Sample.nanoAODfromDAS("DYJetsToLL_M5to50_HT600toInf"    , "/DYJetsToLL_M-5to50_HT-600toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.124) #LO without 1.23 k-factor
+# x-secs using runXSecAnalyzer
+DYJetsToLL_M4to50_HT70to100      = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT70to100"     , "/DYJetsToLL_M-4to50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=147.7) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT100to200     = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT100to200"    , "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=203.2) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT200to400     = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT200to400"    , "/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=54.06) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT400to600     = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT400to600"    , "/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=5.696) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT600toInf     = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT600toInf"    , "/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.843) #LO without 1.23 k-factor
 
-DYJetsM5to50HT = [
-#   DYJetsToLL_M5to50_HT70to100,
-#   DYJetsToLL_M5to50_HT100to200,
-#   DYJetsToLL_M5to50_HT100to200_ext,
-#   DYJetsToLL_M5to50_HT200to400,
-#   DYJetsToLL_M5to50_HT200to400_ext,
-#   DYJetsToLL_M5to50_HT400to600,
-#   DYJetsToLL_M5to50_HT400to600_ext,
-#   DYJetsToLL_M5to50_HT600toInf,
+DYJetsM4to50HT = [
+   DYJetsToLL_M4to50_HT70to100,
+   DYJetsToLL_M4to50_HT100to200,
+   DYJetsToLL_M4to50_HT200to400,
+   DYJetsToLL_M4to50_HT400to600,
+   DYJetsToLL_M4to50_HT600toInf,
 ]
 
 
@@ -93,7 +86,7 @@ DY = [
 #    DYJetsToLL_M50_LO_ext2,
     DYJetsToLL_M10to50_LO,
     DYJetsToLL_M50,
-] + DYJetsM50HT + DYJetsM5to50HT
+] + DYJetsM50HT + DYJetsM4to50HT
 
 ## ttbar
 TTLep_pow       = Sample.nanoAODfromDAS("TTLep_pow",       "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v1-1a762c888624ed9dff74191bdeed5e1a/USER",           dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.76*((3*0.108)**2))
@@ -112,8 +105,9 @@ T_tWch              = Sample.nanoAODfromDAS("T_tWch",           "/ST_tW_top_5f_N
 TBar_tWch           = Sample.nanoAODfromDAS("TBar_tWch",        "/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",   dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=35.6)
 
 ## ttH
-#TTHbb               = Sample.nanoAODfromDAS("TTHbb",            "/ttHTobb_M125_13TeV_powheg_pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                                 dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(0.577))
-#TTHnobb_pow         = Sample.nanoAODfromDAS("TTHnobb_pow",      "/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(1-0.577))
+TTHbbSemiLep        = Sample.nanoAODfromDAS("TTHbbSemiLep",     "/ttHTobb_ttToSemiLep_M125_TuneCP5_13TeV-powheg-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",                                 dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(0.577)*(3*0.108)*(1-3*0.108)*2)
+TTHbbLep            = Sample.nanoAODfromDAS("TTHbbLep",         "/ttHTobb_ttTo2L2Nu_M125_TuneCP5_13TeV-powheg-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",                                 dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(0.577)*((3*0.108)**2))
+TTHnobb_pow         = Sample.nanoAODfromDAS("TTHnobb_pow",      "/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v2-1a762c888624ed9dff74191bdeed5e1a/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(1-0.577))
 
 #THQ                 = Sample.nanoAODfromDAS("THQ",              "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.07096)
 #THW                 = Sample.nanoAODfromDAS("THW",              "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.1472)
@@ -170,8 +164,9 @@ top = [
     TBar_tch_pow,
     T_tWch,
     TBar_tWch,
-#    TTHbb,
-#    TTHnobb_pow,
+    TTHbbLep,
+    TTHbbSemiLep,
+    TTHnobb_pow,
 #    TTHnobb_mWCutfix_ext,
 #    THQ,
 #    THW,
