@@ -32,7 +32,7 @@ except:
 
 # DB
 from Samples.Tools.config import dbDir
-dbFile = dbDir+"DB_Run2016_17Jul2018_private.sql"
+dbFile = dbDir+"/DB_Run2016_17Jul2018_private.sql"
 
 logger.info("Using db file: %s", dbFile)
 

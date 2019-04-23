@@ -220,7 +220,7 @@ diboson = [
     WGToLNuG_LO_A18_102X,
 ]
 
-WJetsToLNu_LO_A18_102X       = FWLiteSample.fromDAS("WJetsToLNu_LO_A18_102X", "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WJetsToLNu_LO_A18_102X       = FWLiteSample.fromDAS("WJetsToLNu_LO_A18_102X", "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 WJets = [
     WJetsToLNu_LO_A18_102X,
