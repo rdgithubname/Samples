@@ -23,7 +23,12 @@
 #python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample  diboson
 #python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample  multiboson
 #python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample  gluglu
-python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample  ZGToLLG_NLO_F17_94X
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample  ZGToLLG_NLO_F17_94X
+
+python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample ST_tWnunu_5f_LO_F17_94X
+python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample ST_tWll_5f_LO_F17_94X
+python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample GluGluHToZZTo4L_F17_94X
+python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample GluGluToContinToZZTo4tau_F17_94X
 
 # SUSY
 #python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_150to250
