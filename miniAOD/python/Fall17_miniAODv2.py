@@ -305,7 +305,8 @@ ZZTo4l_pow_F17_94X                             = FWLiteSample.fromDAS("ZZTo4l_po
 #ZZTo4l_pow_F17_94X_ext1                        = FWLiteSample.fromDAS("ZZTo4l_NLO_F17_94X_ext1", "/ZZTo4L_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ZZTo2L2Q_NLO_F17_94X                           = FWLiteSample.fromDAS("ZZTo2L2Q_NLO_F17_94X", "/ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ZZTo2L2Nu_pow_F17_94X                          = FWLiteSample.fromDAS("ZZTo2L2Nu_pow_F17_94X", "/ZZTo2L2Nu_13TeV_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-WGToLNuG_LO_F17_94X                            = FWLiteSample.fromDAS("WGToLNuG_LO_F17_94X", "/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WGToLNuG_LO_F17_94X                            = FWLiteSample.fromDAS("WGToLNuG_LO_F17_94X",  "/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WGToLNuG_NLO_F17_94X                           = FWLiteSample.fromDAS("WGToLNuG_NLO_F17_94X", "/WGToLNuG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 ZGToLLG_NLO_F17_94X                            = FWLiteSample.fromDAS("ZGToLLG_NLO_F17_94X", "/ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 diboson = [
@@ -328,6 +329,7 @@ diboson = [
     ZZTo2L2Q_NLO_F17_94X,
     ZZTo2L2Nu_pow_F17_94X,
     WGToLNuG_LO_F17_94X,
+    WGToLNuG_NLO_F17_94X,
     ZGToLLG_NLO_F17_94X,
 ]
 
@@ -356,7 +358,7 @@ GluGluToContinToZZTo4mu_F17_94X     = FWLiteSample.fromDAS("GluGluToContinToZZTo
 GluGluToContinToZZTo2mu2tau_F17_94X = FWLiteSample.fromDAS("GluGluToContinToZZTo2mu2tau_F17_94X", "/GluGluToContinToZZTo2mu2tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 GluGluToContinToZZTo2e2nu_F17_94X   = FWLiteSample.fromDAS("GluGluToContinToZZTo2e2nu_F17_94X",   "/GluGluToContinToZZTo2e2nu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 GluGluToContinToZZTo2mu2nu_F17_94X  = FWLiteSample.fromDAS("GluGluToContinToZZTo2mu2nu_F17_94X",  "/GluGluToContinToZZTo2mu2nu_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-GluGluToContinToZZTo4tau_F17_94X    = FWLiteSample.fromDAS("GluGluToContinToZZTo4tau_F17_94X",    "/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GluGluToContinToZZTo4tau_F17_94X    = FWLiteSample.fromDAS("GluGluToContinToZZTo4tau_F17_94X",    "/GluGluToContinToZZTo4tau_13TeV_MCFM701_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 gluglu = [
     GluGluHToZZTo4L_F17_94X,

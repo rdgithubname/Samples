@@ -137,7 +137,7 @@ TTJets = [
     TTTo2L2Nu_noSC_pow_S16_94X,
     TTTo2L2Nu_pow_S16_94X,
     TTToSemilepton_pow_S16_94X,
-    #TT_pow_S16_94X,
+    TT_pow_S16_94X,
 ]
 
 # t(t)g(g)
