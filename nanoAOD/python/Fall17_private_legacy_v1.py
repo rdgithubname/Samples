@@ -337,10 +337,24 @@ WJetsToLNu_comb         = Sample.combine("WJetsToLNu_comb",         [WJetsToLNu,
 if hasattr(WJetsToLNu, 'nEvents'):
     WJetsToLNu_comb.nEvents = WJetsToLNu.nEvents + WJetsToLNu_ext1.nEvents
 
+DYJetsToLL_M50_HT200to400_comb = Sample.combine("DYJetsToLL_M50_HT200to400_comb",         [DYJetsToLL_M50_HT200to400, DYJetsToLL_M50_HT200to400_ext])
+DYJetsToLL_M50_HT400to600_comb = Sample.combine("DYJetsToLL_M50_HT400to600_comb",         [DYJetsToLL_M50_HT400to600, DYJetsToLL_M50_HT400to600_ext])
+
+DYJetsToLL_M4to50_HT100to200_comb = Sample.combine("DYJetsToLL_M4to50_HT100to200_comb",     [DYJetsToLL_M4to50_HT100to200, DYJetsToLL_M4to50_HT100to200_ext])
+DYJetsToLL_M4to50_HT200to400_comb = Sample.combine("DYJetsToLL_M4to50_HT200to400_comb",     [DYJetsToLL_M4to50_HT200to400, DYJetsToLL_M4to50_HT200to400_ext])
+DYJetsToLL_M4to50_HT400to600_comb = Sample.combine("DYJetsToLL_M4to50_HT400to600_comb",     [DYJetsToLL_M4to50_HT400to600, DYJetsToLL_M4to50_HT400to600_ext])
+DYJetsToLL_M4to50_HT600toInf_comb = Sample.combine("DYJetsToLL_M4to50_HT600toInf_comb",     [DYJetsToLL_M4to50_HT600toInf, DYJetsToLL_M4to50_HT600toInf_ext])
+
 combinedSamples = [
     DYJetsToLL_M50_LO_comb,
     TTW_LO_comb,
     WJetsToLNu_comb,
+    DYJetsToLL_M50_HT200to400_comb,
+    DYJetsToLL_M50_HT400to600_comb,
+    DYJetsToLL_M4to50_HT100to200_comb,
+    DYJetsToLL_M4to50_HT200to400_comb,
+    DYJetsToLL_M4to50_HT400to600_comb,
+    DYJetsToLL_M4to50_HT600toInf_comb,
 ]
 
 
