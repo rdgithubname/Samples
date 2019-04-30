@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # all
-#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample allSamples
+python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample allSamples
 
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample DYJetsToLL_M10to50_LO_A18_102X
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample ST_tW_antitop_pow_A18_102X
@@ -52,13 +52,13 @@
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample THW_Hincl_LO_A18_102X
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample THQ_Hincl_LO_A18_102X
 
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample TT_LO_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample WWToLNuQQ_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample WZTo3LNu_pow_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample ZZTo2Q2Nu_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample WGToLNuG_NLO_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluHToZZTo4L_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo2mu2tau_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4e_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4mu_A18_102X
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4tau_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample TT_LO_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample WWToLNuQQ_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample WZTo3LNu_pow_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample ZZTo2Q2Nu_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample WGToLNuG_NLO_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluHToZZTo4L_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo2mu2tau_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4e_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4mu_A18_102X
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4tau_A18_102X
