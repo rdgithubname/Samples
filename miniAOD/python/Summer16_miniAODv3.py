@@ -265,6 +265,7 @@ WZ_S16_94X_ext1             = FWLiteSample.fromDAS("WZ_S16_94X_ext1", "/WZ_TuneC
 ZZ_S16_94X                  = FWLiteSample.fromDAS("ZZ_S16_94X", "/ZZ_TuneCUETP8M1_13TeV-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 ZGTo2LG_NLO_S16_94X_ext1    = FWLiteSample.fromDAS("ZGTo2LG_NLO_S16_94X_ext1", "/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ZGToLLG_NLO_S16_94X         = FWLiteSample.fromDAS("ZGToLLG_NLO_S16_94X", "/ZGToLLG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 WGToLNuG_LO_S16_94X         = FWLiteSample.fromDAS("WGToLNuG_LO_S16_94X", "/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 WGToLNuG_NLO_S16_94X        = FWLiteSample.fromDAS("WGToLNuG_NLO_S16_94X", "/WGToLNuG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
@@ -289,6 +290,7 @@ diboson = [
     WZ_S16_94X_ext1,
     ZZ_S16_94X,
     ZGTo2LG_NLO_S16_94X_ext1,
+    ZGToLLG_NLO_S16_94X,
     WGToLNuG_LO_S16_94X,
     WGToLNuG_NLO_S16_94X,
 ]
