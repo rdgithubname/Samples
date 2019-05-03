@@ -280,6 +280,48 @@ wjets = [
     WJetsToLNu_ext,
     ]
 
+## HT-binned
+WJetsToLNu_HT70to100        = Sample.nanoAODfromDAS("WJetsToLNu_HT70to100",        "/WJetsToLNu_HT-70To100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=1637.13)
+WJetsToLNu_HT100to200       = Sample.nanoAODfromDAS("WJetsToLNu_HT100to200",       "/WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=1627.45)
+#WJetsToLNu_HT100to200_ext   = Sample.nanoAODfromDAS("WJetsToLNu_HT100to200_ext",   "",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=1627.45)
+#WJetsToLNu_HT100to200_ext2  = Sample.nanoAODfromDAS("WJetsToLNu_HT100to200_ext2",  "",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=1627.45)
+WJetsToLNu_HT200to400       = Sample.nanoAODfromDAS("WJetsToLNu_HT200to400",       "/WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=435.237)
+WJetsToLNu_HT200to400_ext   = Sample.nanoAODfromDAS("WJetsToLNu_HT200to400_ext",   "/WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=435.237)
+WJetsToLNu_HT200to400_ext2  = Sample.nanoAODfromDAS("WJetsToLNu_HT200to400_ext2",  "/WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=435.237)
+WJetsToLNu_HT400to600       = Sample.nanoAODfromDAS("WJetsToLNu_HT400to600",       "/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=59.1811)
+WJetsToLNu_HT400to600_ext   = Sample.nanoAODfromDAS("WJetsToLNu_HT400to600_ext",   "/WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=59.1811)
+WJetsToLNu_HT600to800       = Sample.nanoAODfromDAS("WJetsToLNu_HT600to800",       "/WJetsToLNu_HT-600To800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=14.5805)
+WJetsToLNu_HT600to800_ext   = Sample.nanoAODfromDAS("WJetsToLNu_HT600to800_ext",   "/WJetsToLNu_HT-600To800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=14.5805)
+WJetsToLNu_HT800to1200      = Sample.nanoAODfromDAS("WJetsToLNu_HT800to1200",      "/WJetsToLNu_HT-800To1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=6.65621)
+WJetsToLNu_HT800to1200_ext  = Sample.nanoAODfromDAS("WJetsToLNu_HT800to1200_ext",  "/WJetsToLNu_HT-800To1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=6.65621)
+WJetsToLNu_HT1200to2500     = Sample.nanoAODfromDAS("WJetsToLNu_HT1200to2500",     "/WJetsToLNu_HT-1200To2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=1.60809)
+WJetsToLNu_HT1200to2500_ext = Sample.nanoAODfromDAS("WJetsToLNu_HT1200to2500_ext", "/WJetsToLNu_HT-1200To2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=1.60809)
+WJetsToLNu_HT2500toInf      = Sample.nanoAODfromDAS("WJetsToLNu_HT2500toInf",      "/WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=0.0389136)
+WJetsToLNu_HT2500toInf_ext  = Sample.nanoAODfromDAS("WJetsToLNu_HT2500toInf_ext",  "/WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",   dbFile=dbFile, instance="phys03", overwrite=ov, redirector=redirector, xSection=0.0389136)
+
+
+wjets_ht = [
+    WJetsToLNu_HT70to100,
+    WJetsToLNu_HT100to200,
+#    WJetsToLNu_HT100to200_ext,
+#    WJetsToLNu_HT100to200_ext2,
+    WJetsToLNu_HT200to400,
+    WJetsToLNu_HT200to400_ext,
+    WJetsToLNu_HT200to400_ext2,
+    WJetsToLNu_HT400to600,
+    WJetsToLNu_HT400to600_ext,
+    WJetsToLNu_HT600to800,
+    WJetsToLNu_HT600to800_ext,
+    WJetsToLNu_HT800to1200,
+    WJetsToLNu_HT800to1200_ext,
+    WJetsToLNu_HT1200to2500,
+    WJetsToLNu_HT1200to2500_ext,
+    WJetsToLNu_HT2500toInf,
+    WJetsToLNu_HT2500toInf_ext,
+    ]
+
+wjets += wjets_ht
+
 ## rare
 TTTT = Sample.nanoAODfromDAS("TTTT", "/TTTT_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER", dbFile=dbFile, redirector=redirector, instance="phys03", xSection=0.009103)
 TTWW = Sample.nanoAODfromDAS("TTWW", "/TTWW_TuneCUETP8M2T4_13TeV-madgraph-pythia8/llechner-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1_legacy_nano_v3-b9659cf3bef5e21efe24288a402778f7/USER", dbFile=dbFile, redirector=redirector, instance="phys03", xSection=0.007829)
@@ -341,3 +383,4 @@ allSamples = DY + top + boson + wjets + rare + other + signals + gluglu
 
 for s in allSamples:
     s.isData = False
+
