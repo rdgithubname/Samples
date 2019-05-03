@@ -39,10 +39,10 @@ logger.info("Using db file: %s", dbFile)
 # specify a local directory if you want to create (and afterwards automatically use) a local copy of the sample, otherwise use the grid.
 
 ## DY
-#DYJetsToLL_M50_LO       = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO",      "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17NanoAOD-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2008.*3, overwrite=ov)
-#DYJetsToLL_M50_LO_ext1  = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO_ext1", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17NanoAOD-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2008.*3, overwrite=ov)
-DYJetsToLL_M50        = Sample.nanoAODfromDAS("DYJetsToLL_M50",        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_12Apr2018_Nano14Dec2018_102X_mc2017_realistic_v6-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector, xSection=2008.*3, overwrite=ov)
-DYJetsToLL_M50_ext1   = Sample.nanoAODfromDAS("DYJetsToLL_M50_ext1",   "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_12Apr2018_Nano14Dec2018_new_pmx_102X_mc2017_realistic_v6_ext1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2008.*3, overwrite=ov)
+#DYJetsToLL_M50_LO       = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO",      "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17NanoAOD-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2075.14*3, overwrite=ov)
+#DYJetsToLL_M50_LO_ext1  = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO_ext1", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17NanoAOD-PU2017RECOSIMstep_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2075.14*3, overwrite=ov)
+DYJetsToLL_M50        = Sample.nanoAODfromDAS("DYJetsToLL_M50",        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_12Apr2018_Nano14Dec2018_102X_mc2017_realistic_v6-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector, xSection=2075.14*3, overwrite=ov)
+DYJetsToLL_M50_ext1   = Sample.nanoAODfromDAS("DYJetsToLL_M50_ext1",   "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_12Apr2018_Nano14Dec2018_new_pmx_102X_mc2017_realistic_v6_ext1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2075.14*3, overwrite=ov)
 DYJetsToLL_M10to50_LO = Sample.nanoAODfromDAS("DYJetsToLL_M10to50_LO", "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17NanoAODv4-PU2017_12Apr2018_Nano14Dec2018_102X_mc2017_realistic_v6-v1/NANOAODSIM",           dbFile=dbFile, redirector=redirector, xSection=18610,   overwrite=ov)
 
 DY = [
