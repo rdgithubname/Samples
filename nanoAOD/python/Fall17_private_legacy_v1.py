@@ -161,7 +161,7 @@ TTV = [
 #    tZq_Zhad_WLept,
     tZq_ll,
     tZq_nunu,
-#    tWll, tWnunu,
+    tWll, tWnunu,
     TTWToLNu,
     TTWToQQ,
     TTW_LO,
