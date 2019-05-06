@@ -144,10 +144,42 @@
 
 #dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/SM/ttGamma_1Line_noFullyHad_TTBarrunCard/"
 #gridpack="ttGamma_ttbar_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
-#label="ttGamma_1Line_noFullyHad_TTBarrunCard"
+#label="ttGamma_1Line_noFullyHad_TTBarrunCard_v2"
 #python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/SM/ttGamma_1Line_noFullyHad_TTBarrunCard_modified/"
-gridpack="ttGamma_ttbarMod_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
-label="ttGamma_1Line_noFullyHad_TTBarrunCard_modified"
+#dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/SM/ttGamma_1Line_noFullyHad_TTBarrunCard_modified/"
+#gridpack="ttGamma_ttbarMod_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+#label="ttGamma_1Line_noFullyHad_TTBarrunCard_modified"
+#python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/SM/ttGamma_1Line_noFullyHad_TTBarrunCard_mllOnly/"
+#gridpack="ttGamma_ttbarModmllOnly_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+#label="ttGamma_1Line_noFullyHad_TTBarrunCard_mllOnly"
+#python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+
+#dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw930/ttGamma_Dilept/"
+#gridpack="ttGamma_Dilept_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+#label="ttGamma_1Line_Dilept"
+#python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw930/ttGamma_SemiLept/"
+#gridpack="ttGamma_SemiLept_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+#label="ttGamma_1Line_SemiLept"
+#python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw930/ttGamma_Had/"
+#gridpack="ttGamma_Had_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+#label="ttGamma_1Line_Had"
+#python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw930/ttGamma_NoFullyHad/"
+#gridpack="ttGamma_NoFullyHad_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+#label="ttGamma_1Line_NoFullyHad"
+#python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw930/ttGamma_NoFullyHad_noAuto/"
+gridpack="ttGamma_NoFullyHad_5f_ckm_LO_1line_noAuto_slc6_amd64_gcc630_CMSSW_9_3_0_tarball.tar.xz"
+label="ttGamma_1Line_NoFullyHad_noAuto"
 python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
