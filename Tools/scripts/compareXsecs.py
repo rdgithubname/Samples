@@ -6,7 +6,7 @@ cmsbase = os.getenv("CMSSW_BASE")
 # user input
 relDir = "Samples/nanoAOD"
 baseFile = 'Summer16_05Feb2018' # base sample file to compare to 
-files = [] #['Fall17_14Dec2018', 'Autumn18'] # files to compare to - if left empty, all files in directory will be looped over
+files = ['Fall17_14Dec2018', 'Autumn18'] # files to compare to - if left empty, all files in directory will be looped over
 #
 
 absDir = "%s/src/%s/python"%(cmsbase, relDir)
