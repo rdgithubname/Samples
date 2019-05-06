@@ -21,12 +21,12 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(1000)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/data/Run2018B/DoubleMuon/MINIAOD/26Sep2018_HEMmitigation-v1/270000/3C707CC4-770A-1B4A-9E33-B6DAFD1E9FC6.root'),
+    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/321/813/00000/606D4ADE-8AAD-E811-831B-FA163E261FE6.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -59,7 +59,7 @@ process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v13', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v13', '')  # 102X_dataRun2_Prompt_v11 old JEC, 102X_dataRun2_Prompt_v13 new JEC
 
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequence)
