@@ -26,7 +26,8 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/321/813/00000/606D4ADE-8AAD-E811-831B-FA163E261FE6.root'),
+    #fileNames = cms.untracked.vstring('/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/320/500/00000/12411352-3A96-E811-8958-FA163EF05155.root'),
+    fileNames = cms.untracked.vstring('file:/afs/hephy.at/work/r/rschoefbeck/CMS/tmp/CMSSW_10_2_9/src/JetMET/diagnosis/python/type1MET/tail.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
