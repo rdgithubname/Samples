@@ -39,8 +39,8 @@ logger.info("Using db file: %s", dbFile)
 # specify a local directory if you want to create (and afterwards automatically use) a local copy of the sample, otherwise use the grid.
 
 ## DY
-DYJetsToLL_M50_LO       = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO", "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAOD-102X_upgrade2018_realistic_v15-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2008.*3)
-DYJetsToLL_M50          = Sample.nanoAODfromDAS("DYJetsToLL_M50", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAOD-102X_upgrade2018_realistic_v15-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2008.*3)
+DYJetsToLL_M50_LO       = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO", "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAOD-102X_upgrade2018_realistic_v15-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2075.14*3)
+DYJetsToLL_M50          = Sample.nanoAODfromDAS("DYJetsToLL_M50", "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18NanoAOD-102X_upgrade2018_realistic_v15-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2075.14*3)
 
 DY = [
     DYJetsToLL_M50_LO,
