@@ -28,6 +28,18 @@
 #python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample ZZTo4L_pow_S16_94X
 #python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample WJets
 
-python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TGJets_lep_NLO_S16_94X
-python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTGamma_semilepFromT_LO_S16_94X
-python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample WGToLNuG_LO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TGJets_lep_NLO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTGamma_semilepFromT_LO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample WGToLNuG_LO_S16_94X
+
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample ST_schannel_4f_NLO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTWZ_NLO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTWW_NLO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTZZ_NLO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTZToLL_M1to10_LO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample WWToLNuQQ_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample WGToLNuG_NLO_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample GluGluHToZZTo4L_S16_94X
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v3 --remoteDir legacy_nano_v3 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TT_pow_S16_94X
+
+python launch.py --runOnNonValid --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample ZGToLLG_NLO_S16_94X

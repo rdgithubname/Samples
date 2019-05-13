@@ -32,13 +32,13 @@ except:
 
 # DB
 from Samples.Tools.config import dbDir
-dbFile = dbDir+"DB_Summer16_private.sql"
+dbFile = dbDir+"/DB_Summer16_private.sql"
 
 logger.info("Using db file: %s", dbFile)
 
 ## DY
-DYJetsToLL_M50_MLM_FS_S16_80X_priv  = Sample.nanoAODfromDAS("DYJetsToLL_M50_MLM_FS_S16_80X_priv", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-LHE_PUSummer16Fast_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER", dbFile=dbFile, overwrite=ov, redirector=redirector, instance="phys03", xSection=2008.*3)
-DYJetsToLL_M50_MLM_S16_80X_priv     = Sample.nanoAODfromDAS("DYJetsToLL_M50_MLM_S16_80X_priv", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v2_METSig_v1-95163dc1655e9579f2e671fa6cceb399/USER", dbFile=dbFile, overwrite=ov, redirector=redirector, instance="phys03", xSection=2008.*3)
+DYJetsToLL_M50_MLM_FS_S16_80X_priv  = Sample.nanoAODfromDAS("DYJetsToLL_M50_MLM_FS_S16_80X_priv", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-LHE_PUSummer16Fast_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1_METSig_v1-874c0b83f53e95cd92fa366b95b462ff/USER", dbFile=dbFile, overwrite=ov, redirector=redirector, instance="phys03", xSection=2075.14*3)
+DYJetsToLL_M50_MLM_S16_80X_priv     = Sample.nanoAODfromDAS("DYJetsToLL_M50_MLM_S16_80X_priv", "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v2_METSig_v1-95163dc1655e9579f2e671fa6cceb399/USER", dbFile=dbFile, overwrite=ov, redirector=redirector, instance="phys03", xSection=2075.14*3)
 
 DY = [
     DYJetsToLL_M50_MLM_FS_S16_80X_priv,

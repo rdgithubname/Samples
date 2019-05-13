@@ -95,7 +95,8 @@ JetHT = [
 
 ## sum up
 allSamples = DoubleMuon + MuonEG + EGamma + SingleMuon + MET + JetHT
+lepSamples = DoubleMuon + MuonEG + EGamma + SingleMuon
 
-for sample in allSamples:
+for sample in allSamples + lepSamples:
     sample.isData = True
 
