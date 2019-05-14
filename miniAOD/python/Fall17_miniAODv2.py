@@ -12,15 +12,17 @@ def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
+    argParser.add_argument('--logLevel',    action='store', default='INFO', help="log level?", choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'TRACE', 'NOTSET'])
+
     return argParser
 
 # Logging
 if __name__=="__main__":
-    import Samples.Tools.logger as logger
-    logger = logger.get_logger("INFO", logFile = None )
-    import RootTools.core.logger as logger_rt
-    logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger(options.logLevel, logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger(options.logLevel, logFile = None )
     ov = options.overwrite
 
 else:
@@ -38,6 +40,9 @@ logger.info("Using db file: %s", dbFile)
 
 # low mass
 DYJetsToLL_M10to50_LO                  = FWLiteSample.fromDAS("DYJetsToLL_M10to50_LO", "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+#DYJetsToLL_M10to50                     = FWLiteSample.fromDAS("DYJetsToLL_M10to50", "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM")
+#DYJetsToLL_M10to50_ext                 = FWLiteSample.fromDAS("DYJetsToLL_M10to50_ext", "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v2/MINIAODSIM")
 
 DYJetsToLL_M4to50_HT100to200_LO       = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT100to200_LO",         "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # card says M5-50
 DYJetsToLL_M4to50_HT100to200_LO_ext1  = FWLiteSample.fromDAS("DYJetsToLL_M4to50_HT100to200_LO_ext1",    "/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True) # card says M5-50
@@ -66,6 +71,8 @@ DYJetsToLL_M50_HT1200to2500_LO         = FWLiteSample.fromDAS("DYJetsToLL_M50_HT
 DYJetsToLL_M50_HT2500toInf_LO          = FWLiteSample.fromDAS("DYJetsToLL_M50_HT2500toInf_LO", "/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 DY = [
+#    DYJetsToLL_M10to50,
+#    DYJetsToLL_M10to50_ext,
     DYJetsToLL_M10to50_LO,
     DYJetsToLL_M50_NLO,
     DYJetsToLL_M50_LO,
@@ -146,7 +153,7 @@ TTJets_dilep_genMET150_LO               = FWLiteSample.fromDAS("TTJets_dilep_gen
 TTTo2L2Nu_pow                           = FWLiteSample.fromDAS("TTTo2L2Nu_pow", "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTTo2L2Nu_pow_PS                        = FWLiteSample.fromDAS("TTTo2L2Nu_pow_PS", "/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTToHadronic_pow                        = FWLiteSample.fromDAS("TTToHadronic_pow", "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-TTToHadronic_pow_PS                     = FWLiteSample.fromDAS("TTToHadronic_pow_PS", "/TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+#TTToHadronic_pow_PS                     = FWLiteSample.fromDAS("TTToHadronic_pow_PS", "/TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTToSemiLeptonic_pow                    = FWLiteSample.fromDAS("TTToSemiLeptonic_pow", "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTToSemiLeptonic_pow_PS                 = FWLiteSample.fromDAS("TTToSemiLeptonic_pow_PS", "/TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
@@ -162,7 +169,7 @@ TTJets = [
     TTTo2L2Nu_pow,
     TTTo2L2Nu_pow_PS,
     TTToHadronic_pow,
-    TTToHadronic_pow_PS,
+    #TTToHadronic_pow_PS,
     TTToSemiLeptonic_pow,
     TTToSemiLeptonic_pow_PS,
 ]
