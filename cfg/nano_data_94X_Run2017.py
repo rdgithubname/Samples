@@ -21,13 +21,14 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(-1)
+    input = cms.untracked.int32(100)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('root://cms-xrd-global.cern.ch//store/data/Run2017B/DoubleMuon/MINIAOD/31Mar2018-v1/00000/E867C3FD-8137-E811-9D22-B083FED42B3A.root'),
+    #fileNames = cms.untracked.vstring('root://cms-xrd-global.cern.ch//store/data/Run2017B/DoubleMuon/MINIAOD/31Mar2018-v1/00000/E867C3FD-8137-E811-9D22-B083FED42B3A.root'),
     #fileNames = cms.untracked.vstring('file:/afs/hephy.at/work/r/rschoefbeck/CMS/tmp/CMSSW_10_2_9/src/JetMET/diagnosis/python/type1MET/dm_2017B_31Mar.root'),
+    fileNames = cms.untracked.vstring(['file:/afs/hephy.at/work/r/rschoefbeck/CMS/tmp/CMSSW_10_2_9/src/JetMET/diagnosis/python/type1MET/Fall17/mAOD_Run2017F_event_1.root', 'file:/afs/hephy.at/work/r/rschoefbeck/CMS/tmp/CMSSW_10_2_9/src/JetMET/diagnosis/python/type1MET/Fall17/mAOD_Run2017F_event_2.root']),
     secondaryFileNames = cms.untracked.vstring(),
 )
 
