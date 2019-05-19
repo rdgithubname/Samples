@@ -275,3 +275,5 @@ allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multibo
 for sample in allSamples:
     sample.isData = False
 
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

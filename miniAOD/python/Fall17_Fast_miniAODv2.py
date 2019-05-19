@@ -55,3 +55,5 @@ allSamples = T2tt
 for sample in allSamples:
     sample.isData = False
 
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

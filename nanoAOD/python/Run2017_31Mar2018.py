@@ -120,3 +120,5 @@ for s in allSamples:
     s.json   = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt")
     s.isData = True
 
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

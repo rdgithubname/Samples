@@ -334,3 +334,6 @@ allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT +
 
 for sample in allSamples:
     sample.isData = False
+
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )
