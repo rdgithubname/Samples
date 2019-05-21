@@ -367,3 +367,6 @@ allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combin
 
 for s in allSamples:
     s.isData = False
+
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

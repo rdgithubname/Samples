@@ -100,3 +100,5 @@ lepSamples = DoubleMuon + MuonEG + EGamma + SingleMuon
 for sample in allSamples + lepSamples:
     sample.isData = True
 
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

@@ -526,3 +526,6 @@ soft1LepSamples = wjets + TTJets + Zinv + QCD + DYJetsM50HT + DYJetsM5to50HT + S
 
 for s in allSamples:
     s.isData = False
+
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

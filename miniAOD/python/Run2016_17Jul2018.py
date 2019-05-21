@@ -200,3 +200,6 @@ allSamples = DoubleMuon + MuonEG + DoubleEG + SingleElectron + SingleMuon + MET 
 
 for sample in allSamples:
     sample.isData = True
+
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

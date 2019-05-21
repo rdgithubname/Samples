@@ -57,3 +57,6 @@ allSamples = top
 for s in allSamples:
     s.isData = False
 
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )
+

@@ -66,3 +66,6 @@ allSamples = DoubleMuon + MuonEG + EGamma
 
 for sample in allSamples:
     sample.isData = True
+
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )
