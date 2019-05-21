@@ -7,6 +7,15 @@ import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
+defaultInput = "/store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/120000/4E0B69CE-36DF-E811-A84D-782BCB38FF36.root"
+
+import FWCore.ParameterSet.VarParsing as VarParsing
+options = VarParsing.VarParsing ('analysis')
+options.outputFile = 'nanoAOD.root'
+options.inputFiles= defaultInput
+options.maxEvents= -1
+options.parseArguments()
+
 process = cms.Process('NANO',eras.Run2_2016,eras.run2_nanoAOD_94X2016)
 
 # import of standard configurations
@@ -22,13 +31,12 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(options.maxEvents)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-#    fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/ttZJets_13TeV_madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v1/120000/06B389FA-CFD0-E811-9B68-002590FD5A72.root'),
-    fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/120000/4E0B69CE-36DF-E811-A84D-782BCB38FF36.root'),
+    fileNames = cms.untracked.vstring(options.inputFiles),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -53,7 +61,7 @@ process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
         dataTier = cms.untracked.string('NANOAODSIM'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('nanoAOD.root'),
+    fileName = cms.untracked.string(options.outputFile),
     outputCommands = process.NANOAODSIMEventContent.outputCommands
 )
 
