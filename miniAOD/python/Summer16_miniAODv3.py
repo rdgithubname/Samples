@@ -384,7 +384,7 @@ qcd = [
         QCD_Mu_pt1000toInf,  
         QCD_Mu_pt1000toInf_ext1,
 
-        QCD_Ele_pt15to20,
+        QCD_Ele_pt20to30,
         QCD_Ele_pt30to50,
         QCD_Ele_pt30to50_ext1,
         QCD_Ele_pt50to80,
