@@ -363,7 +363,7 @@ QCD_Ele_pt120to170_ext1 = FWLiteSample.fromDAS("QCD_Ele_pt120to170_ext1", "/QCD_
 QCD_Ele_pt170to300      = FWLiteSample.fromDAS("QCD_Ele_pt170to300",      "/QCD_Pt-170to300_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 QCD_Ele_pt300toInf      = FWLiteSample.fromDAS("QCD_Ele_pt300toInf",      "/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-qcd = [
+QCD = [
         QCD_Mu_pt15to20,
         QCD_Mu_pt20to30,
         QCD_Mu_pt30to50,
@@ -397,7 +397,7 @@ qcd = [
         QCD_Ele_pt300toInf,
 ]
 
-allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + qcd
+allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + QCD
 
 for sample in allSamples:
     sample.isData = False
