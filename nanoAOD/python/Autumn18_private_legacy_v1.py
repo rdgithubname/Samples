@@ -155,7 +155,7 @@ TTV = [
 
 top = [
     TTLep_pow,
-    TTSemiLep_pow,
+    TTSingleLep_pow,
     TTHad_pow,
     TTbar,
     TTLep_NLO,
