@@ -9,6 +9,8 @@ from Samples.miniAOD.Spring16_miniAODv2         import allSamples as Spring16_mi
 from Samples.miniAOD.Summer16_Fast_miniAODv3    import allSamples as Summer16_Fast_miniAODv3
 # 2017 FastSim
 from Samples.miniAOD.Fall17_Fast_miniAODv2      import allSamples as Fall17_Fast_miniAODv2
+# 2018 FastSim
+from Samples.miniAOD.Autumn18_Fast_miniAODv1    import allSamples as Autumn18_Fast_miniAODv1
 # 2016 private
 from Samples.miniAOD.Summer16_private           import allSamples as Summer16_private
 # 2016 FullSim
@@ -33,12 +35,16 @@ from Samples.miniAOD.Run2018_promptReco         import allSamples as Run2018_pro
 # 2018 rereco Data (for A->C)
 from Samples.miniAOD.Run2018_17Sep2018          import allSamples as Run2018_17Sep2018
 
-all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" ]
+all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" ]
 all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018", "Run2017_17Nov2017" ]
 all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private" ]
 
+<<<<<<< HEAD
 allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 + Autumn18_miniAODv1
 allSamples += Summer16_private + Fall17_private + Autumn18_private
+=======
+allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Autumn18_Fast_miniAODv1 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 + Autumn18_miniAODv1
+>>>>>>> 22276c3a631b5fd00325bff586896c07a3c93bd9
 allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018
 
 cfgPath    = os.path.expandvars( "$CMSSW_BASE/src/Samples/cfg/" )

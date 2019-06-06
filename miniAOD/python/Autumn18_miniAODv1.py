@@ -138,6 +138,7 @@ TTWJetsToQQ_NLO    = FWLiteSample.fromDAS("TTWJetsToQQ_NLO", "/TTWJetsToQQ_TuneC
 
 TTZToLLNuNu_M10_NLO= FWLiteSample.fromDAS("TTZToLLNuNu_M10_NLO", "/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTZToLL_M1to10_NLO = FWLiteSample.fromDAS("TTZToLL_M1to10_NLO", "/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTZToQQ_NLO        = FWLiteSample.fromDAS("TTZToQQ_NLO", '/TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM', dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TZQ_LL_NLO         = FWLiteSample.fromDAS("TZQ_LL_NLO", "/tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 TTWJets_LO         = FWLiteSample.fromDAS("TTWJets_LO", "/ttWJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -167,6 +168,7 @@ TTX = [
     TTWJetsToQQ_NLO,
     TTZToLLNuNu_M10_NLO,
     TTZToLL_M1to10_NLO,
+    TTZToQQ_NLO,
     TZQ_LL_NLO,
     TTWJets_LO,
     TTZJets_LO,
