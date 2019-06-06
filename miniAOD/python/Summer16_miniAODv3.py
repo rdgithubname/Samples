@@ -144,6 +144,7 @@ TTJets = [
 THQ_LO                  = FWLiteSample.fromDAS("THQ_LO", "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 THW_LO                  = FWLiteSample.fromDAS("THW_LO", "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 tZq_ll_NLO              = FWLiteSample.fromDAS("tZq_ll_NLO", "/tZq_ll_4f_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+tZq_nunu_NLO            = FWLiteSample.fromDAS("tZq_nunu_NLO", '/tZq_nunu_4f_13TeV-amcatnlo-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-94X_mcRun2_asymptotic_v3-v1/MINIAODSIM', dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 TTTT_NLO                = FWLiteSample.fromDAS("TTTT_NLO", "/TTTT_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTWW_NLO                = FWLiteSample.fromDAS("TTWW_NLO", "/TTWW_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -173,6 +174,7 @@ TTX = [
     THQ_LO,
     THW_LO,
     tZq_ll_NLO,
+    tZq_nunu_NLO,
     TTTT_NLO,
     TTWZ_NLO,
     TTWW_NLO,
