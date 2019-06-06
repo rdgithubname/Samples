@@ -34,6 +34,7 @@ dbFile = dbDir+"Summer16_miniAODv3.sql"
 logger.info("Using db file: %s", dbFile) 
 
 ## DY
+DYJetsToLL_M10to50_LO          = FWLiteSample.fromDAS("DYJetsToLL_M10to50_LO",  "/DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M10to50_NLO         = FWLiteSample.fromDAS("DYJetsToLL_M10to50_NLO", "/DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DYJetsToLL_M10to50_NLO_ext1    = FWLiteSample.fromDAS("DYJetsToLL_M10to50_NLO_ext1", "/DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
@@ -67,6 +68,7 @@ DY = [
     DYJetsToLL_M50_LO_ext1,
     DYJetsToLL_M50_LO_ext2,
     DYJetsToLL_M50_NLO_ext2,
+    DYJetsToLL_M10to50_LO,
     DYJetsToLL_M10to50_NLO,
     DYJetsToLL_M10to50_NLO_ext1,
 ]
@@ -144,6 +146,7 @@ TTJets = [
 THQ_LO                  = FWLiteSample.fromDAS("THQ_LO", "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 THW_LO                  = FWLiteSample.fromDAS("THW_LO", "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 tZq_ll_NLO              = FWLiteSample.fromDAS("tZq_ll_NLO", "/tZq_ll_4f_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+tZq_nunu_NLO            = FWLiteSample.fromDAS("tZq_nunu_NLO", '/tZq_nunu_4f_13TeV-amcatnlo-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv3-94X_mcRun2_asymptotic_v3-v1/MINIAODSIM', dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 TTTT_NLO                = FWLiteSample.fromDAS("TTTT_NLO", "/TTTT_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTWW_NLO                = FWLiteSample.fromDAS("TTWW_NLO", "/TTWW_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -173,6 +176,7 @@ TTX = [
     THQ_LO,
     THW_LO,
     tZq_ll_NLO,
+    tZq_nunu_NLO,
     TTTT_NLO,
     TTWZ_NLO,
     TTWW_NLO,
@@ -310,6 +314,7 @@ multiboson = [
     ZZZ_NLO,
 ]
 
+
 ## gluglu
 
 GluGluHToZZTo4L             = FWLiteSample.fromDAS("GluGluHToZZTo4L", "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUgenV6_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -397,7 +402,32 @@ QCD = [
         QCD_Ele_pt300toInf,
 ]
 
-allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + QCD
+GJets_HT40to100        = FWLiteSample.fromDAS("GJets_HT40to100",        "/GJets_HT-40To100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT40to100_ext    = FWLiteSample.fromDAS("GJets_HT40to100_ext",    "/GJets_HT-40To100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT100to200       = FWLiteSample.fromDAS("GJets_HT100to200",       "/GJets_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT100to200_ext   = FWLiteSample.fromDAS("GJets_HT100to200_ext",   "/GJets_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT200to400       = FWLiteSample.fromDAS("GJets_HT200to400",       "/GJets_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT200to400_ext   = FWLiteSample.fromDAS("GJets_HT200to400_ext",   "/GJets_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT400to600       = FWLiteSample.fromDAS("GJets_HT400to600",       "/GJets_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT400to600_ext   = FWLiteSample.fromDAS("GJets_HT400to600_ext",   "/GJets_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT600toInf       = FWLiteSample.fromDAS("GJets_HT600toInf",       "/GJets_HT-600ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+GJets_HT600toInf_ext   = FWLiteSample.fromDAS("GJets_HT600toInf_ext",   "/GJets_HT-600ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+GJetsHT = [
+           GJets_HT40to100,
+           GJets_HT40to100_ext,
+           GJets_HT100to200,
+           GJets_HT100to200_ext,
+           GJets_HT200to400,
+           GJets_HT200to400_ext,
+           GJets_HT400to600,
+           GJets_HT400to600_ext,
+           GJets_HT600toInf,
+           GJets_HT600toInf_ext,
+]
+
+
+allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + QCD + GJetsHT
 
 for sample in allSamples:
     sample.isData = False
