@@ -98,7 +98,7 @@ DY = [
 
 ## ttbar
 TTLep_pow       = Sample.nanoAODfromDAS("TTLep_pow",       "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.762*((3*0.108)**2))
-TTSemiLep_pow   = Sample.nanoAODfromDAS("TTSemiLep_pow",   "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.762*(3*0.108)*(1-3*0.108)*2)
+TTSingleLep_pow = Sample.nanoAODfromDAS("TTSingleLep_pow",   "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.762*(3*0.108)*(1-3*0.108)*2)
 TTHad_pow       = Sample.nanoAODfromDAS("TTHad_pow",       "/TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1_legacy_nano_v4-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.762*((1-3*0.108)**2))
 #TTLep_pow_noSC  = Sample.nanoAODfromDAS("TTLep_pow_noSC",  "/TTTo2L2Nu_noSC_TuneCUETP8M2T4_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.762*((3*0.108)**2))
 #TTSingleLep_pow = Sample.nanoAODfromDAS("TTSingleLep_pow", "/TTToSemilepton_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=831.762*(3*0.108)*(1-3*0.108)) # pls check x-sec!
@@ -175,7 +175,7 @@ TTV = [
 
 top = [
     TTLep_pow,
-    TTSemiLep_pow,
+    TTSingleLep_pow,
     TTHad_pow,
 #    TTLep_pow_noSC,
 #    TTSingleLep_pow,
