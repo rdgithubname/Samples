@@ -60,6 +60,7 @@ parser.add_option("--publish",          action='store_true',                    
 parser.add_option("--runOnNonValid",    action='store_true',                                      default=False,   help="Allow running on invalid samples/samples still in production?")
 parser.add_option("--runOnLocal",       action='store_true',                                      default=False,   help="Run on local DPM files")
 parser.add_option("--dryrun",           action='store_true',                                      default=False,   help="Test script?")
+parser.add_option("--sorted",           action='store_true',                                      default=False,   help="sort filelist by ending integer (only for local processing)")
 parser.add_option('--nJobs',            action='store',          type=int,                        default=1,       help="Maximum number of simultaneous jobs.")
 parser.add_option('--job',              action='store',          type=int,                        default=0,       help="Run only job i")
 ( options, args ) = parser.parse_args()
@@ -121,6 +122,7 @@ for dataset in datasets:
             except: pass
 
         # split list of files in chunks, so that every subset contains options.unitsPerJob number of files
+        if options.sorted: dataset.files.sort(key=lambda x: int(x.split("_")[-1].rstrip(".root")))
         splittedFileList = splitList( dataset.files, options.unitsPerJob )
         fileIndex        = 0
 
@@ -142,6 +144,8 @@ for dataset in datasets:
             splittedFileList = fileList[options.job]
 
         for i, fileList in enumerate(splittedFileList):
+
+            if options.sorted: fileList.sort(key=lambda x: int(x.split("_")[-1].rstrip(".root")))
 
             index = i + fileIndex
             outFile     = "%s_%i.root"%(dataset.name,index)
