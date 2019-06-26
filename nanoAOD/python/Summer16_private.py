@@ -54,11 +54,13 @@ top = [
     ]
 
 
-TTGHad_priv  = Sample.nanoAODfromDPM("TTGHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_had_LO_S16_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
-TTGSemi_priv = Sample.nanoAODfromDPM("TTGSemi_priv", "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_semilep_LO_S16_private/",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
-TTGLep_priv  = Sample.nanoAODfromDPM("TTGLep_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_dilep_LO_S16_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
+TTGNoFullyHad_priv  = Sample.nanoAODfromDPM("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_nofullyhad_LO_S16_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616, maxN=1)
+TTGHad_priv         = Sample.nanoAODfromDPM("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_had_LO_S16_private/",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
+TTGSemi_priv        = Sample.nanoAODfromDPM("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_semilep_LO_S16_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
+TTGLep_priv         = Sample.nanoAODfromDPM("TTGLep_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_dilep_LO_S16_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
 
 TTX = [
+    TTGNoFullyHad_priv,
     TTGHad_priv,
     TTGSemi_priv,
     TTGLep_priv,

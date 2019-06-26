@@ -319,6 +319,65 @@ gluglu = [
     GluGluToContinToZZTo4tau,
 ]
 
+QCD_Mu_pt15to20     = Sample.nanoAODfromDAS("QCD_Mu_pt15to20",     "/QCD_Pt-15to20_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3629000.0)
+QCD_Mu_pt20to30     = Sample.nanoAODfromDAS("QCD_Mu_pt20to30",     "/QCD_Pt-20to30_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3168000.0)
+QCD_Mu_pt30to50     = Sample.nanoAODfromDAS("QCD_Mu_pt30to50",     "/QCD_Pt-30to50_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1649000.0)
+QCD_Mu_pt50to80     = Sample.nanoAODfromDAS("QCD_Mu_pt50to80",     "/QCD_Pt-50to80_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=445700.0)
+QCD_Mu_pt80to120    = Sample.nanoAODfromDAS("QCD_Mu_pt80to120",    "/QCD_Pt-80to120_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=105500.0)
+QCD_Mu_pt120to170   = Sample.nanoAODfromDAS("QCD_Mu_pt120to170",   "/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=25540.0)
+QCD_Mu_pt170to300   = Sample.nanoAODfromDAS("QCD_Mu_pt170to300",   "/QCD_Pt-170to300_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=8670.0)
+QCD_Mu_pt300to470   = Sample.nanoAODfromDAS("QCD_Mu_pt300to470",   "/QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=797.5)
+QCD_Mu_pt470to600   = Sample.nanoAODfromDAS("QCD_Mu_pt470to600",   "/QCD_Pt-470to600_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=78.67)
+QCD_Mu_pt600to800   = Sample.nanoAODfromDAS("QCD_Mu_pt600to800",   "/QCD_Pt-600to800_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=25.33)
+QCD_Mu_pt800to1000  = Sample.nanoAODfromDAS("QCD_Mu_pt800to1000",  "/QCD_Pt-800to1000_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=4.715)
+QCD_Mu_pt1000toInf  = Sample.nanoAODfromDAS("QCD_Mu_pt1000toInf",  "/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.605)
+
+QCD_Ele_pt20to30        = Sample.nanoAODfromDAS("QCD_Ele_pt20to30",    "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=5533000.0)
+QCD_Ele_pt30to50        = Sample.nanoAODfromDAS("QCD_Ele_pt30to50",    "/QCD_Pt-30to50_EMEnriched_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=6952000.0)
+QCD_Ele_pt50to80        = Sample.nanoAODfromDAS("QCD_Ele_pt50to80",    "/QCD_Pt-50to80_EMEnriched_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2206000.0)
+QCD_Ele_pt80to120       = Sample.nanoAODfromDAS("QCD_Ele_pt80to120",   "/QCD_Pt-80to120_EMEnriched_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v2-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=415400.0)
+QCD_Ele_pt120to170      = Sample.nanoAODfromDAS("QCD_Ele_pt120to170",  "/QCD_Pt-120to170_EMEnriched_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=75820.0)
+#QCD_Ele_pt170to300      = Sample.nanoAODfromDAS("QCD_Ele_pt170to300", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=18860.0)
+QCD_Ele_pt300toInf      = Sample.nanoAODfromDAS("QCD_Ele_pt300toInf",  "/QCD_Pt-300toInf_EMEnriched_TuneCP5_13TeV_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1210.0)
+
+QCD = [
+        QCD_Mu_pt15to20,
+        QCD_Mu_pt20to30,
+        QCD_Mu_pt30to50,
+        QCD_Mu_pt50to80,
+        QCD_Mu_pt80to120,
+        QCD_Mu_pt120to170,
+        QCD_Mu_pt170to300,
+        QCD_Mu_pt300to470,
+        QCD_Mu_pt470to600,
+        QCD_Mu_pt600to800,
+        QCD_Mu_pt800to1000,
+        QCD_Mu_pt1000toInf,
+
+        QCD_Ele_pt20to30,
+        QCD_Ele_pt30to50,
+        QCD_Ele_pt50to80,
+        QCD_Ele_pt80to120,
+        QCD_Ele_pt120to170,
+#        QCD_Ele_pt170to300,
+        QCD_Ele_pt300toInf,
+]
+
+
+GJets_HT40to100        = Sample.nanoAODfromDAS("GJets_HT40to100",    "/GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=20730)
+GJets_HT100to200       = Sample.nanoAODfromDAS("GJets_HT100to200",   "/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=9226)
+GJets_HT200to400       = Sample.nanoAODfromDAS("GJets_HT200to400",   "/GJets_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2300)
+GJets_HT400to600       = Sample.nanoAODfromDAS("GJets_HT400to600",   "/GJets_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=274.4)
+GJets_HT600toInf       = Sample.nanoAODfromDAS("GJets_HT600toInf",   "/GJets_HT-600ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v1-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=93.38)
+
+GJetsHT = [
+           GJets_HT40to100,
+           GJets_HT100to200,
+           GJets_HT200to400,
+           GJets_HT400to600,
+           GJets_HT600toInf,
+]
+
 
 other = [
     ]
@@ -369,7 +428,7 @@ combinedSamples = [
 ]
 
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combinedSamples + SUSY
+allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combinedSamples + SUSY + QCD + GJetsHT
 
 for s in allSamples:
     s.isData = False
