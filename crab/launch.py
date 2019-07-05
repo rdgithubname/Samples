@@ -10,7 +10,7 @@ from Samples.miniAOD.Summer16_Fast_miniAODv3    import allSamples as Summer16_Fa
 # 2017 FastSim
 from Samples.miniAOD.Fall17_Fast_miniAODv2      import allSamples as Fall17_Fast_miniAODv2
 # 2018 FastSim
-#from Samples.miniAOD.Autumn18_Fast_miniAODv1    import allSamples as Autumn18_Fast_miniAODv1
+from Samples.miniAOD.Autumn18_Fast_miniAODv1    import allSamples as Autumn18_Fast_miniAODv1
 # 2016 private
 from Samples.miniAOD.Summer16_private           import allSamples as Summer16_private
 # 2016 FullSim
@@ -39,8 +39,7 @@ all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_m
 all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018", "Run2017_17Nov2017" ]
 all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private" ]
 
-allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 + Autumn18_miniAODv1
-#Autumn18_Fast_miniAODv1 + 
+allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 + Autumn18_miniAODv1 + Autumn18_Fast_miniAODv1
 allSamples += Summer16_private + Fall17_private + Autumn18_private
 allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018
 
@@ -60,6 +59,7 @@ parser.add_option("--publish",          action='store_true',                    
 parser.add_option("--runOnNonValid",    action='store_true',                                      default=False,   help="Allow running on invalid samples/samples still in production?")
 parser.add_option("--runOnLocal",       action='store_true',                                      default=False,   help="Run on local DPM files")
 parser.add_option("--dryrun",           action='store_true',                                      default=False,   help="Test script?")
+parser.add_option("--sorted",           action='store_true',                                      default=False,   help="sort filelist by ending integer (only for local processing)")
 parser.add_option('--nJobs',            action='store',          type=int,                        default=1,       help="Maximum number of simultaneous jobs.")
 parser.add_option('--job',              action='store',          type=int,                        default=0,       help="Run only job i")
 ( options, args ) = parser.parse_args()
@@ -121,6 +121,7 @@ for dataset in datasets:
             except: pass
 
         # split list of files in chunks, so that every subset contains options.unitsPerJob number of files
+        if options.sorted: dataset.files.sort(key=lambda x: int(x.split("_")[-1].rstrip(".root")))
         splittedFileList = splitList( dataset.files, options.unitsPerJob )
         fileIndex        = 0
 
@@ -142,6 +143,8 @@ for dataset in datasets:
             splittedFileList = fileList[options.job]
 
         for i, fileList in enumerate(splittedFileList):
+
+            if options.sorted: fileList.sort(key=lambda x: int(x.split("_")[-1].rstrip(".root")))
 
             index = i + fileIndex
             outFile     = "%s_%i.root"%(dataset.name,index)

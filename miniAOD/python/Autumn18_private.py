@@ -32,14 +32,16 @@ dbFile = dbDir+"Autumn18_private.sql"
 logger.info("Using db file: %s", dbFile) 
 
 ## TTGamma private new samples
-TTGamma_dilep_LO_A18_private         = FWLiteSample.fromDPMDirectory("TTGamma_dilep_LO_A18_private",   "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_Dilept_5f_ckm_LO_1line",   dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
-TTGamma_semilep_LO_A18_private       = FWLiteSample.fromDPMDirectory("TTGamma_semilep_LO_A18_private", "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_SemiLept_5f_ckm_LO_1line", dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
-TTGamma_had_LO_A18_private           = FWLiteSample.fromDPMDirectory("TTGamma_had_LO_A18_private",     "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_Had_5f_ckm_LO_1line",      dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
+TTGamma_dilep_LO_A18_private         = FWLiteSample.fromDPMDirectory("TTGamma_dilep_LO_A18_private",      "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_Dilept_5f_ckm_LO_1line",     dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
+TTGamma_semilep_LO_A18_private       = FWLiteSample.fromDPMDirectory("TTGamma_semilep_LO_A18_private",    "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_SemiLept_5f_ckm_LO_1line",   dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
+TTGamma_had_LO_A18_private           = FWLiteSample.fromDPMDirectory("TTGamma_had_LO_A18_private",        "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_Had_5f_ckm_LO_1line",        dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
+TTGamma_nofullyhad_LO_A18_private    = FWLiteSample.fromDPMDirectory("TTGamma_nofullyhad_LO_A18_private", "/store/user/tomc/heavyNeutrinoMiniAOD/Autumn18/prompt/ttGamma_NoFullyHad_5f_ckm_LO_1line", dbFile=dbFile, overwrite=ov, prefix=redirector_BE, skipCheck=True)
 
 TTX = [
        TTGamma_dilep_LO_A18_private,
        TTGamma_semilep_LO_A18_private,
        TTGamma_had_LO_A18_private,
+       TTGamma_nofullyhad_LO_A18_private,
 ]
 
 allSamples = TTX
