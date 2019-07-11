@@ -87,6 +87,7 @@ DYJetsM5to50HT = [
     DYJetsToLL_M4to50_HT400to600,
     DYJetsToLL_M4to50_HT400to600_ext,
     DYJetsToLL_M4to50_HT600toInf,
+    DYJetsToLL_M4to50_HT600toInf_ext,
 ]
 
 

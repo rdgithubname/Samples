@@ -34,7 +34,20 @@
 #python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTToHadronic_pow_PS
 
 # SUSY
-python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_150to250
+#python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_150to250
 #python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_250to350
 #python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_350to400
 #python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_400to1200
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_1200to2000
+
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2bW
+
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbllnunu_XCha0p5_XSlep0p05
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbllnunu_XCha0p5_XSlep0p5
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbllnunu_XCha0p5_XSlep0p95
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5
+python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75

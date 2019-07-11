@@ -49,8 +49,27 @@ T2tt = [
     ]
 
 
+SMS_T2bW = FWLiteSample.fromDAS("SMS_T2bW", "/SMS-T2bW_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T2bW = [SMS_T2bW]
+
+SMS_T8bbllnunu_XCha0p5_XSlep0p05                      = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05"                 , "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000         = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000"    , "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5                       = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5"                  , "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300          = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300"     , "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95                      = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95"                 , "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600         = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600"    , "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T8bbllnunu = [ SMS_T8bbllnunu_XCha0p5_XSlep0p05, SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000, SMS_T8bbllnunu_XCha0p5_XSlep0p5, SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300, SMS_T8bbllnunu_XCha0p5_XSlep0p95, SMS_T8bbllnunu_XCha0p5_XSlep0p95, SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600 ]
+
+SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25     = FWLiteSample.fromDAS("SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25", "/SMS-T8bbstausnu_XCha0p5_mStop-200to1800_XStau0p25_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5      = FWLiteSample.fromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5" , "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p5_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75     = FWLiteSample.fromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75", "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p75_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T8bbstausnu = [ SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75 ]
+
 ## sum up
-allSamples = T2tt
+allSamples = T2tt + T2bW + T8bbllnunu + T8bbstausnu 
 
 for sample in allSamples:
     sample.isData = False
