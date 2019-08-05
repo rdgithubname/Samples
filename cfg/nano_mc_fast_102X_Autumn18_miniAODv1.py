@@ -2,12 +2,12 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: test_mc_94Xv3 -s NANO --fast --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --filein /store/mc/RunIISummer16MiniAODv3/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/40000/A4D63DD3-9917-E911-9A50-001E67E6F864.root --conditions 94X_mcRun2_asymptotic_v3 -n 100 --era Run2_2016,run2_nanoAOD_94X2016
+# with command line options: test94X -s NANO --mc --fast --eventcontent NANOAODSIM --datatier NANOAODSIM --filein /store/mc/RunIIFall17MiniAODv2/SMS-T2tt_mStop-1200to2000_TuneCP2_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUFall17Fast_94X_mc2017_realistic_v15-v1/30000/2E7638AA-4921-E911-82D1-5065F382A241.root --no_exec --conditions 94X_mc2017_realistic_v17 --era Run2_2017,run2_nanoAOD_94XMiniAODv2
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('NANO',eras.Run2_2016,eras.run2_nanoAOD_94X2016,eras.fastSim)
+process = cms.Process('NANO',eras.Run2_2018,eras.run2_nanoAOD_102Xv1)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -27,8 +27,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    #fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/40000/A4D63DD3-9917-E911-9A50-001E67E6F864.root'),
-    fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/280000/EC660135-4B18-E911-9443-A0369FD0B2A8.root'),
+    fileNames = cms.untracked.vstring('/store/mc/RunIIAutumn18MiniAOD/SMS-T2tt_mStop-400to1200_TuneCP2_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUFall18Fast_102X_upgrade2018_realistic_v15-v2/60000/981CF9CB-ECE4-F84E-96F7-9701EFAF3BF7.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -38,7 +37,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('test_mc_94Xv3 nevts:100'),
+    annotation = cms.untracked.string('test94X nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -61,7 +60,7 @@ process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '94X_mcRun2_asymptotic_v3', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_upgrade2018_realistic_v18', '')
 
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequenceFS)

@@ -48,10 +48,30 @@ T2tt = [
     SMS_T2tt_mStop_1200to2000,
     ]
 
+SMS_T2bW = FWLiteSample.fromDAS("SMS_T2bW", "/SMS-T2bW_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T2bW = [SMS_T2bW]
+
+SMS_T8bbllnunu_XCha0p5_XSlep0p05              = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000 = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5               = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300  = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300 ", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95              = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95", "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600 = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600", "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T8bbllnunu = [ SMS_T8bbllnunu_XCha0p5_XSlep0p05, SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000, SMS_T8bbllnunu_XCha0p5_XSlep0p5, SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300, SMS_T8bbllnunu_XCha0p5_XSlep0p95, SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600 ]
+
+SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25   = FWLiteSample.fromDAS("SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25", "/SMS-T8bbstausnu_XCha0p5_mStop-200to1800_XStau0p25_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5    = FWLiteSample.fromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5", "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p5_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75   = FWLiteSample.fromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75", "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p75_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T8bbstausnu = [SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75 ]
 
 ## sum up
-allSamples = T2tt
+allSamples = T2tt + T2bW + T8bbllnunu + T8bbstausnu
 
 for sample in allSamples:
     sample.isData = False
 
+from Samples.Tools.AutoClass import AutoClass
+samples = AutoClass( allSamples )

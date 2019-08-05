@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import imp, os, sys
 from optparse import OptionParser
 import re
