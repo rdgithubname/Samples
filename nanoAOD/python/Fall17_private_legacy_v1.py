@@ -388,11 +388,20 @@ SMS_T2tt_mStop_250to350    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_250to350",   
 SMS_T2tt_mStop_350to400    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350to400",     "/SMS-T2tt_mStop-350to400_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v3-eac24e9939368177973140c118f0ff9f/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 SMS_T2tt_mStop_400to1200   = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",    "/SMS-T2tt_mStop-400to1200_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v3-eac24e9939368177973140c118f0ff9f/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
+SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25",     "/SMS-T8bbstausnu_XCha0p5_mStop-200to1800_XStau0p25_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5",     "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p5_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75",     "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p75_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
 SUSY = [
     SMS_T2tt_mStop_150to250,
     SMS_T2tt_mStop_250to350,
     SMS_T2tt_mStop_350to400,
     SMS_T2tt_mStop_400to1200,
+    SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25,
+    SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5,
+    SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75
     ]
 
 ## combined samples (needed for proper PUProfileCache)
