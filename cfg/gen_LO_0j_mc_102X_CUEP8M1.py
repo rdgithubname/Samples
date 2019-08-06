@@ -1,9 +1,4 @@
-# Auto generated configuration file
-# using: 
-# Revision: 1.19 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/HIG-RunIIFall17wmLHEGS-00041-fragment.py --datatier GEN --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN --era Run2_2017 --python_filename GEN.py --no_exec -n 10
-import FWCore.ParameterSet.Config as cms
+# Header for gen production configs
 
 import os
 
@@ -14,18 +9,27 @@ options.register('gridpack',  '$CMSSW_BASE/src/Samples/cfg/gridpack.tar.xz',  Va
 options.register('outputDir', './',                 VarParsing.VarParsing.multiplicity.singleton, VarParsing.VarParsing.varType.string,  "Where to store the output root file?")
 options.maxEvents=1000 # maxEvents is a registered option. 
 
-options.outputDir = os.path.expandvars( options.outputDir ) 
+options.outputDir = os.path.expandvars( options.outputDir )
 options.gridpack  = os.path.expandvars( options.gridpack )
- 
+
 if not 'ipython' in VarParsing.sys.argv[0]: options.parseArguments()
 else: print "No parsing of arguments!"
 
 if not os.path.isdir(options.outputDir):
     os.makedirs(options.outputDir)
 
+
+
+# Auto generated configuration file
+# using: 
+# Revision: 1.19 
+# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
+# with command line options: Configuration/GenProduction/python/pythiaFragmentCUEP8M1_LO_0j.py --fileout GEN_LO_0j_102X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 102X_upgrade2018_realistic_v11 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --python_filename tmp.py --no_exec -n options.maxEvents
+import FWCore.ParameterSet.Config as cms
+
 from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('GEN',eras.Run2_2017)
+process = cms.Process('GEN',eras.Run2_2018)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -36,7 +40,7 @@ process.load('SimGeneral.MixingModule.mixNoPU_cfi')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
 process.load('Configuration.StandardSequences.Generator_cff')
-process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic25ns13TeVEarly2017Collision_cfi')
+process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic25ns13TeVEarly2018Collision_cfi')
 process.load('GeneratorInterface.Core.genFilterSummary_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
@@ -54,24 +58,24 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('Configuration/GenProduction/python/HIG-RunIIFall17wmLHEGS-00041-fragment.py nevts:%i'%options.maxEvents),
-    name       = cms.untracked.string('Applications'),
-    version    = cms.untracked.string('$Revision: 1.19 $')
+    annotation = cms.untracked.string('Configuration/GenProduction/python/pythiaFragmentCUEP8M1_LO_0j.py nevts:%i'%options.maxEvents),
+    name = cms.untracked.string('Applications'),
+    version = cms.untracked.string('$Revision: 1.19 $')
 )
 
 # Output definition
 
 process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
-    SelectEvents      = cms.untracked.PSet(
-        SelectEvents  = cms.vstring('generation_step')
+    SelectEvents = cms.untracked.PSet(
+        SelectEvents = cms.vstring('generation_step')
     ),
     dataset = cms.untracked.PSet(
-        dataTier   = cms.untracked.string('GEN'),
+        dataTier = cms.untracked.string('GEN'),
         filterName = cms.untracked.string('')
     ),
-    fileName       = cms.untracked.string('GEN_LO_0j_93X.root'),
+    fileName = cms.untracked.string('GEN_LO_0j_102X.root'),
     outputCommands = process.RECOSIMEventContent.outputCommands,
-    splitLevel     = cms.untracked.int32(0)
+    splitLevel = cms.untracked.int32(0)
 )
 
 # Additional output definition
@@ -79,36 +83,23 @@ process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
 # Other statements
 process.genstepfilter.triggerConditions=cms.vstring("generation_step")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '93X_mc2017_realistic_v3', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_upgrade2018_realistic_v11', '')
 
 process.generator = cms.EDFilter("Pythia8HadronizerFilter",
-                         maxEventsToPrint = cms.untracked.int32(1),
-                         pythiaPylistVerbosity = cms.untracked.int32(1),
-                         filterEfficiency = cms.untracked.double(1.0),
-                         pythiaHepMCVerbosity = cms.untracked.bool(False),
-                         comEnergy = cms.double(13000.),
-                         PythiaParameters = cms.PSet(
-        parameterSets = cms.vstring('pythia8CommonSettings', 
-            'pythia8CP5Settings'), 
-        pythia8CP5Settings = cms.vstring('Tune:pp 14', 
+    PythiaParameters = cms.PSet(
+        parameterSets = cms.vstring(
+            'pythia8CommonSettings', 
+            'pythia8CUEP8M1Settings'
+        ),
+        pythia8CUEP8M1Settings = cms.vstring(
+            'Tune:pp 14', 
             'Tune:ee 7', 
-            'MultipartonInteractions:ecmPow=0.03344', 
-            'PDF:pSet=20', 
-            'MultipartonInteractions:bProfile=2', 
-            'MultipartonInteractions:pT0Ref=1.41', 
-            'MultipartonInteractions:coreRadius=0.7634', 
-            'MultipartonInteractions:coreFraction=0.63', 
-            'ColourReconnection:range=5.176', 
-            'SigmaTotal:zeroAXB=off', 
-            'SpaceShower:alphaSorder=2', 
-            'SpaceShower:alphaSvalue=0.118', 
-            'SigmaProcess:alphaSvalue=0.118', 
-            'SigmaProcess:alphaSorder=2', 
-            'MultipartonInteractions:alphaSvalue=0.118', 
-            'MultipartonInteractions:alphaSorder=2', 
-            'TimeShower:alphaSorder=2', 
-            'TimeShower:alphaSvalue=0.118'),
-        pythia8CommonSettings = cms.vstring('Tune:preferLHAPDF = 2', 
+            'MultipartonInteractions:pT0Ref=2.4024', 
+            'MultipartonInteractions:ecmPow=0.25208', 
+            'MultipartonInteractions:expPow=1.6'
+        ),
+        pythia8CommonSettings = cms.vstring(
+            'Tune:preferLHAPDF = 2', 
             'Main:timesAllowErrors = 10000', 
             'Check:epTolErr = 0.01', 
             'Beams:setProductionScalesFromLHEF = off', 
@@ -116,36 +107,43 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
             'SLHA:minMassSM = 1000.', 
             'ParticleDecays:limitTau0 = on', 
             'ParticleDecays:tau0Max = 10', 
-            'ParticleDecays:allowPhotonRadiation = on')
+            'ParticleDecays:allowPhotonRadiation = on'
+        )
     ),
+    comEnergy = cms.double(13000.0),
+    filterEfficiency = cms.untracked.double(1.0),
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    pythiaPylistVerbosity = cms.untracked.int32(1)
 )
+
 
 process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args               = cms.vstring(options.gridpack),
-    nEvents            = cms.untracked.uint32(options.maxEvents),
+    args = cms.vstring(options.gridpack),
+    nEvents = cms.untracked.uint32(options.maxEvents),
     numberOfParameters = cms.uint32(1),
-    outputFile         = cms.string('cmsgrid_final.lhe'),
-    scriptName         = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
 )
 
 
+process.ProductionFilterSequence = cms.Sequence(process.generator)
+
 # Path and EndPath definitions
-process.lhe_step              = cms.Path(process.externalLHEProducer)
-process.generation_step       = cms.Path(process.pgen)
+process.lhe_step = cms.Path(process.externalLHEProducer)
+process.generation_step = cms.Path(process.pgen)
 process.genfiltersummary_step = cms.EndPath(process.genFilterSummary)
-process.endjob_step           = cms.EndPath(process.endOfProcess)
-process.RECOSIMoutput_step    = cms.EndPath(process.RECOSIMoutput)
+process.endjob_step = cms.EndPath(process.endOfProcess)
+process.RECOSIMoutput_step = cms.EndPath(process.RECOSIMoutput)
 
 # Schedule definition
 process.schedule = cms.Schedule(process.lhe_step,process.generation_step,process.genfiltersummary_step,process.endjob_step,process.RECOSIMoutput_step)
-
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
-
 # filter all path with the production filter sequence
 for path in process.paths:
-    if path in ['lhe_step']: continue
-    getattr(process,path)._seq = process.generator * getattr(process,path)._seq 
+	if path in ['lhe_step']: continue
+	getattr(process,path)._seq = process.ProductionFilterSequence * getattr(process,path)._seq 
 
 
 # Customisation from command line

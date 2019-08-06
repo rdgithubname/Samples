@@ -24,12 +24,12 @@ if not os.path.isdir(options.outputDir):
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/herwigppFragment_LO_0j.py --fileout GEN_LO_0j_93X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n options.maxEvents
+# with command line options: Configuration/GenProduction/python/herwigppFragment_LO_0j.py --fileout GEN_LO_0j_102X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 102X_upgrade2018_realistic_v11 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --python_filename tmp.py --no_exec -n options.maxEvents
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('GEN',eras.Run2_2017)
+process = cms.Process('GEN',eras.Run2_2018)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -40,7 +40,7 @@ process.load('SimGeneral.MixingModule.mixNoPU_cfi')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
 process.load('Configuration.StandardSequences.Generator_cff')
-process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic25ns13TeVEarly2017Collision_cfi')
+process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic25ns13TeVEarly2018Collision_cfi')
 process.load('GeneratorInterface.Core.genFilterSummary_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
@@ -73,7 +73,7 @@ process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
         dataTier = cms.untracked.string('GEN'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('GEN_LO_0j_93X.root'),
+    fileName = cms.untracked.string('GEN_LO_0j_102X.root'),
     outputCommands = process.RECOSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -83,7 +83,7 @@ process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
 # Other statements
 process.genstepfilter.triggerConditions=cms.vstring("generation_step")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '93X_mc2017_realistic_v3', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_upgrade2018_realistic_v11', '')
 
 process.generator = cms.EDFilter("ThePEGHadronizerFilter",
     configFiles = cms.vstring(),
@@ -92,7 +92,8 @@ process.generator = cms.EDFilter("ThePEGHadronizerFilter",
     eventHandlers = cms.string('/Herwig/EventHandlers'),
     filterEfficiency = cms.untracked.double(1.0),
     generatorModule = cms.string('/Herwig/Generators/LHCGenerator'),
-    hwpp_LHE_Common = cms.vstring('create ThePEG::Cuts /Herwig/Cuts/NoCuts', 
+    hwpp_LHE_Common = cms.vstring(
+        'create ThePEG::Cuts /Herwig/Cuts/NoCuts', 
         'create ThePEG::LesHouchesInterface /Herwig/EventHandlers/LHEReader', 
         'set /Herwig/EventHandlers/LHEReader:Cuts /Herwig/Cuts/NoCuts', 
         'set /Herwig/EventHandlers/LHEReader:MomentumTreatment RescaleEnergy', 
@@ -111,65 +112,103 @@ process.generator = cms.EDFilter("ThePEGHadronizerFilter",
         'set /Herwig/Shower/Evolver:HardVetoScaleSource Read', 
         'set /Herwig/Shower/KinematicsReconstructor:ReconstructionOption General', 
         'set /Herwig/Shower/KinematicsReconstructor:InitialInitialBoostOption LongTransBoost', 
-        '+hwpp_MECorr_Common'),
-    hwpp_LHE_MadGraph = cms.vstring('+hwpp_LHE_Common', 
+        '+hwpp_MECorr_Common'
+    ),
+    hwpp_LHE_MadGraph = cms.vstring(
+        '+hwpp_LHE_Common', 
         'set /Herwig/EventHandlers/LHEReader:PDFA /Herwig/Partons/cmsPDFSet', 
-        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsPDFSet'),
-    hwpp_LHE_MadGraph_DifferentPDFs = cms.vstring('+hwpp_LHE_Common', 
+        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsPDFSet'
+    ),
+    hwpp_LHE_MadGraph_DifferentPDFs = cms.vstring(
+        '+hwpp_LHE_Common', 
         'set /Herwig/EventHandlers/LHEReader:PDFA /Herwig/Partons/cmsHardPDFSet', 
-        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsHardPDFSet'),
-    hwpp_LHE_Powheg = cms.vstring('+hwpp_LHE_Powheg_Common', 
+        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsHardPDFSet'
+    ),
+    hwpp_LHE_Powheg = cms.vstring(
+        '+hwpp_LHE_Powheg_Common', 
         'set /Herwig/EventHandlers/LHEReader:PDFA /Herwig/Partons/cmsPDFSet', 
-        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsPDFSet'),
-    hwpp_LHE_Powheg_Common = cms.vstring('+hwpp_LHE_Common', 
+        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsPDFSet'
+    ),
+    hwpp_LHE_Powheg_Common = cms.vstring(
+        '+hwpp_LHE_Common', 
         'set /Herwig/Shower/Evolver:HardVetoMode Yes', 
-        'set /Herwig/Shower/Evolver:HardVetoReadOption PrimaryCollision'),
-    hwpp_LHE_Powheg_DifferentPDFs = cms.vstring('+hwpp_LHE_Powheg_Common', 
+        'set /Herwig/Shower/Evolver:HardVetoReadOption PrimaryCollision'
+    ),
+    hwpp_LHE_Powheg_DifferentPDFs = cms.vstring(
+        '+hwpp_LHE_Powheg_Common', 
         'set /Herwig/EventHandlers/LHEReader:PDFA /Herwig/Partons/cmsHardPDFSet', 
-        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsHardPDFSet'),
+        'set /Herwig/EventHandlers/LHEReader:PDFB /Herwig/Partons/cmsHardPDFSet'
+    ),
     hwpp_MECorr_Common = cms.vstring('set /Herwig/Shower/Evolver:MECorrMode No'),
-    hwpp_MECorr_HardOn = cms.vstring('+hwpp_MECorr_Common', 
-        'set /Herwig/Shower/Evolver:MECorrMode Hard'),
+    hwpp_MECorr_HardOn = cms.vstring(
+        '+hwpp_MECorr_Common', 
+        'set /Herwig/Shower/Evolver:MECorrMode Hard'
+    ),
     hwpp_MECorr_Off = cms.vstring('+hwpp_MECorr_Common'),
-    hwpp_MECorr_On = cms.vstring('+hwpp_MECorr_Common', 
-        'set /Herwig/Shower/Evolver:MECorrMode Yes'),
-    hwpp_MECorr_SoftOn = cms.vstring('+hwpp_MECorr_Common', 
-        'set /Herwig/Shower/Evolver:MECorrMode Soft'),
-    hwpp_basicSetup = cms.vstring('create ThePEG::RandomEngineGlue /Herwig/RandomGlue', 
+    hwpp_MECorr_On = cms.vstring(
+        '+hwpp_MECorr_Common', 
+        'set /Herwig/Shower/Evolver:MECorrMode Yes'
+    ),
+    hwpp_MECorr_SoftOn = cms.vstring(
+        '+hwpp_MECorr_Common', 
+        'set /Herwig/Shower/Evolver:MECorrMode Soft'
+    ),
+    hwpp_basicSetup = cms.vstring(
+        'create ThePEG::RandomEngineGlue /Herwig/RandomGlue', 
         'set /Herwig/Generators/LHCGenerator:RandomNumberGenerator /Herwig/RandomGlue', 
         'set /Herwig/Generators/LHCGenerator:NumberOfEvents 10000000', 
         'set /Herwig/Generators/LHCGenerator:DebugLevel 1', 
         'set /Herwig/Generators/LHCGenerator:UseStdout 0', 
         'set /Herwig/Generators/LHCGenerator:PrintEvent 0', 
-        'set /Herwig/Generators/LHCGenerator:MaxErrors 10000'),
-    hwpp_cm_13TeV = cms.vstring('set /Herwig/Generators/LHCGenerator:EventHandler:LuminosityFunction:Energy 13000.0', 
-        'set /Herwig/Shower/Evolver:IntrinsicPtGaussian 2.2*GeV'),
-    hwpp_cmsDefaults = cms.vstring('+hwpp_basicSetup', 
-        '+hwpp_setParticlesStableForDetector'),
-    hwpp_pdf_CTEQ6L1 = cms.vstring('+hwpp_pdf_CTEQ6L1_Common', 
-        '+hwpp_ue_EE5C'),
-    hwpp_pdf_CTEQ6L1_CUETHS1 = cms.vstring('+hwpp_pdf_CTEQ6L1_Common', 
-        '+hwpp_ue_CUETHS1'),
-    hwpp_pdf_CTEQ6L1_Common = cms.vstring('create ThePEG::LHAPDF /Herwig/Partons/cmsPDFSet ThePEGLHAPDF.so', 
+        'set /Herwig/Generators/LHCGenerator:MaxErrors 10000'
+    ),
+    hwpp_cm_13TeV = cms.vstring(
+        'set /Herwig/Generators/LHCGenerator:EventHandler:LuminosityFunction:Energy 13000.0', 
+        'set /Herwig/Shower/Evolver:IntrinsicPtGaussian 2.2*GeV'
+    ),
+    hwpp_cmsDefaults = cms.vstring(
+        '+hwpp_basicSetup', 
+        '+hwpp_setParticlesStableForDetector'
+    ),
+    hwpp_pdf_CTEQ6L1 = cms.vstring(
+        '+hwpp_pdf_CTEQ6L1_Common', 
+        '+hwpp_ue_EE5C'
+    ),
+    hwpp_pdf_CTEQ6L1_CUETHS1 = cms.vstring(
+        '+hwpp_pdf_CTEQ6L1_Common', 
+        '+hwpp_ue_CUETHS1'
+    ),
+    hwpp_pdf_CTEQ6L1_Common = cms.vstring(
+        'create ThePEG::LHAPDF /Herwig/Partons/cmsPDFSet ThePEGLHAPDF.so', 
         'set /Herwig/Partons/cmsPDFSet:PDFName cteq6ll.LHpdf', 
         'set /Herwig/Partons/cmsPDFSet:RemnantHandler /Herwig/Partons/HadronRemnants', 
         'set /Herwig/Particles/p+:PDF /Herwig/Partons/cmsPDFSet', 
-        'set /Herwig/Particles/pbar-:PDF /Herwig/Partons/cmsPDFSet'),
-    hwpp_pdf_CTEQ6L1_Hard = cms.vstring('+hwpp_pdf_CTEQ6L1_Hard_Common', 
-        '+hwpp_ue_EE5C'),
-    hwpp_pdf_CTEQ6L1_Hard_CUETHS1 = cms.vstring('+hwpp_pdf_CTEQ6L1_Hard_Common', 
-        '+hwpp_ue_CUETHS1'),
-    hwpp_pdf_CTEQ6L1_Hard_Common = cms.vstring('create ThePEG::LHAPDF /Herwig/Partons/cmsHardPDFSet ThePEGLHAPDF.so', 
+        'set /Herwig/Particles/pbar-:PDF /Herwig/Partons/cmsPDFSet'
+    ),
+    hwpp_pdf_CTEQ6L1_Hard = cms.vstring(
+        '+hwpp_pdf_CTEQ6L1_Hard_Common', 
+        '+hwpp_ue_EE5C'
+    ),
+    hwpp_pdf_CTEQ6L1_Hard_CUETHS1 = cms.vstring(
+        '+hwpp_pdf_CTEQ6L1_Hard_Common', 
+        '+hwpp_ue_CUETHS1'
+    ),
+    hwpp_pdf_CTEQ6L1_Hard_Common = cms.vstring(
+        'create ThePEG::LHAPDF /Herwig/Partons/cmsHardPDFSet ThePEGLHAPDF.so', 
         'set /Herwig/Partons/cmsHardPDFSet:PDFName cteq6ll.LHpdf', 
-        'set /Herwig/Partons/cmsHardPDFSet:RemnantHandler /Herwig/Partons/HadronRemnants'),
+        'set /Herwig/Partons/cmsHardPDFSet:RemnantHandler /Herwig/Partons/HadronRemnants'
+    ),
     hwpp_pdf_CTEQ6LL = cms.vstring('+hwpp_pdf_CTEQ6L1'),
     hwpp_pdf_CTEQ6LL_CUETHS1 = cms.vstring('+hwpp_pdf_CTEQ6L1_CUETHS1'),
     hwpp_pdf_CTEQ6LL_Hard = cms.vstring('+hwpp_pdf_CTEQ6L1_Hard'),
     hwpp_pdf_CTEQ6LL_Hard_CUETHS1 = cms.vstring('+hwpp_pdf_CTEQ6L1_Hard_CUETHS1'),
-    hwpp_pdf_NNPDF30NNLO_Hard = cms.vstring('create ThePEG::LHAPDF /Herwig/Partons/cmsHardPDFSet ThePEGLHAPDF.so', 
+    hwpp_pdf_NNPDF30NNLO_Hard = cms.vstring(
+        'create ThePEG::LHAPDF /Herwig/Partons/cmsHardPDFSet ThePEGLHAPDF.so', 
         'set /Herwig/Partons/cmsHardPDFSet:PDFName NNPDF30_nnlo_as_0118.LHgrid', 
-        'set /Herwig/Partons/cmsHardPDFSet:RemnantHandler /Herwig/Partons/HadronRemnants'),
-    hwpp_setParticlesStableForDetector = cms.vstring('set /Herwig/Particles/mu-:Stable Stable', 
+        'set /Herwig/Partons/cmsHardPDFSet:RemnantHandler /Herwig/Partons/HadronRemnants'
+    ),
+    hwpp_setParticlesStableForDetector = cms.vstring(
+        'set /Herwig/Particles/mu-:Stable Stable', 
         'set /Herwig/Particles/mu+:Stable Stable', 
         'set /Herwig/Particles/Sigma-:Stable Stable', 
         'set /Herwig/Particles/Sigmabar+:Stable Stable', 
@@ -188,26 +227,33 @@ process.generator = cms.EDFilter("ThePEGHadronizerFilter",
         'set /Herwig/Particles/K+:Stable Stable', 
         'set /Herwig/Particles/K-:Stable Stable', 
         'set /Herwig/Particles/K_S0:Stable Stable', 
-        'set /Herwig/Particles/K_L0:Stable Stable'),
-    hwpp_ue_EE5C = cms.vstring('+hwpp_ue_EE5CEnergyExtrapol', 
+        'set /Herwig/Particles/K_L0:Stable Stable'
+    ),
+    hwpp_ue_EE5C = cms.vstring(
+        '+hwpp_ue_EE5CEnergyExtrapol', 
         'set /Herwig/Hadronization/ColourReconnector:ColourReconnection Yes', 
         'set /Herwig/Hadronization/ColourReconnector:ReconnectionProbability 0.49', 
         'set /Herwig/Partons/RemnantDecayer:colourDisrupt 0.80', 
         'set /Herwig/UnderlyingEvent/MPIHandler:InvRadius 2.30', 
         'set /Herwig/UnderlyingEvent/MPIHandler:softInt Yes', 
         'set /Herwig/UnderlyingEvent/MPIHandler:twoComp Yes', 
-        'set /Herwig/UnderlyingEvent/MPIHandler:DLmode 2'),
-    hwpp_ue_EE5CEnergyExtrapol = cms.vstring('set /Herwig/UnderlyingEvent/MPIHandler:EnergyExtrapolation Power', 
+        'set /Herwig/UnderlyingEvent/MPIHandler:DLmode 2'
+    ),
+    hwpp_ue_EE5CEnergyExtrapol = cms.vstring(
+        'set /Herwig/UnderlyingEvent/MPIHandler:EnergyExtrapolation Power', 
         'set /Herwig/UnderlyingEvent/MPIHandler:ReferenceScale 7000.*GeV', 
         'set /Herwig/UnderlyingEvent/MPIHandler:Power 0.33', 
-        'set /Herwig/UnderlyingEvent/MPIHandler:pTmin0 3.91*GeV'),
-    parameterSets = cms.vstring('hwpp_cmsDefaults', 
+        'set /Herwig/UnderlyingEvent/MPIHandler:pTmin0 3.91*GeV'
+    ),
+    parameterSets = cms.vstring(
+        'hwpp_cmsDefaults', 
         'hwpp_ue_EE5C', 
         'hwpp_cm_13TeV', 
         'hwpp_pdf_CTEQ6L1', 
         'hwpp_pdf_NNPDF30NNLO_Hard', 
         'hwpp_LHE_MadGraph_DifferentPDFs', 
-        'hwpp_MECorr_Off'),
+        'hwpp_MECorr_Off'
+    ),
     repository = cms.string('HerwigDefaults.rpo'),
     run = cms.string('LHC')
 )
