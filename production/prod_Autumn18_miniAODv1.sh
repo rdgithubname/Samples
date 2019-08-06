@@ -53,7 +53,7 @@ echo "Using gridpack directory $gridpackDir"
 #
 
 # Set number of threads
-threads=4
+threads=1
 
 # Set fragment
 fragmentPath=$CMSSW_BASE/src/Samples/fragments/${fragment}.py
@@ -80,11 +80,12 @@ fi
 #
 
 tmp_dir=${gridpack}_Autumn18_miniAODv1/${productionNumber}
-cd $CMSSW_BASE/../
+mkdir -p /tmp/${USER}/
+cd /tmp/${USER}/
 
 # Quit if file already exists
 if [ -d ${tmp_dir} ]; then
-    echo "Directory still in use by other job: $CMSSW_BASE/../${tmp_dir}"
+    echo "Directory still in use by other job: /tmp/${USER}/${tmp_dir}"
     exit
 fi
 
@@ -205,8 +206,8 @@ sleep 10
 # Copy to DPM
 #
 
-xrdcp -f RunIIAutumn18_privProd_MINIAODSIM_${shortName}.root root://hephyse.oeaw.ac.at//dpm/oeaw.ac.at/home/cms/store/user/${USER}/miniAOD/RunIIAutumn18_privProd_miniAODv1/${shortName}/RunIIAutumn18_privProd_miniAODv1_${shortName}_${productionNumber}.root
-
+xrdcp -f RunIIAutumn18_privProd_MINIAODSIM_${shortName}.root root://hephyse.oeaw.ac.at//dpm/oeaw.ac.at/home/cms/store/user/${USER}/miniAOD/RunIIAutumn18_privProd_miniAODv1/${shortName}/
+echo "Copied produced sample to root://hephyse.oeaw.ac.at//dpm/oeaw.ac.at/home/cms/store/user/${USER}/miniAOD/RunIIAutumn18_privProd_miniAODv1/${shortName}/RunIIAutumn18_privProd_miniAODv1_${shortName}_${productionNumber}.root"
 
 #
 # clean up
