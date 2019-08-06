@@ -1,7 +1,8 @@
 #!/bin/bash
 # Define Variables for productionNumber, events, fragment, gridpack and gridpackDir
 # run the script with "productionNumber=NUMBER events=EVENTS gridpack=GRIDPACK gridpackDir=PATH_TO_GRIDPACK fragment=FRAGMENT ./SCRIPTNAME"
-
+# runs about 30 min for 10 events!
+# runs about 6 hours for 1000 events!
 
 #
 # Outer Settings
