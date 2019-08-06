@@ -58,15 +58,15 @@ cp ${fragmentPath} Configuration/GenProduction/python/${fragment}.py
 scram b
 
 # GEN driver command
-cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_LO_0j_93X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n 999
+cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_LO_0j_93X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n 99999
 
 
 #
 # Modify config to run with launch_GEN.py
 #
 
-sed -i "s/nevts:999'/nevts:%i'%options.maxEvents/g" tmp.py
-sed -i "s/999/options.maxEvents/g" tmp.py
+sed -i "s/nevts:99999'/nevts:%i'%options.maxEvents/g" tmp.py
+sed -i "s/99999/options.maxEvents/g" tmp.py
 sed -i "s/'GRIDPACK'/options.gridpack/g" tmp.py
 cat ${headerFile} tmp.py > ${configPath}
 
