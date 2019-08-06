@@ -32,6 +32,9 @@ fragmentPath=$CMSSW_BASE/src/Samples/fragments/${fragment}.py
 configPath=$CMSSW_BASE/src/Samples/cfg/${cfgName}.py
 headerFile=$CMSSW_BASE/src/Samples/Tools/data/header.dat
 
+mkdir -p /tmp/${USER}/GEN/
+cd /tmp/${USER}/GEN/
+
 export SCRAM_ARCH=slc6_amd64_gcc630
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
