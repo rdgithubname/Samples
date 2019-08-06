@@ -9,7 +9,7 @@ externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 )
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8aMCatNLOSettings_cfi import *
 
 generator = cms.EDFilter("Pythia8HadronizerFilter",
@@ -20,7 +20,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
     comEnergy = cms.double(13000.),
     PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8aMCatNLOSettingsBlock,
         processParameters = cms.vstring(
             'JetMatching:setMad = off',
@@ -38,7 +38,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
             'TimeShower:mMaxGamma = 4.0',
         ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8aMCatNLOSettings',
                                     'processParameters',
                                     )
@@ -46,4 +46,3 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
 )
 
 ProductionFilterSequence = cms.Sequence(generator)
-
