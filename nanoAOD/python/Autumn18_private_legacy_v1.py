@@ -192,7 +192,7 @@ WZTo3LNu_amcatnlo   = Sample.nanoAODfromDAS("WZTo3LNu_amcatnlo",    "/WZTo3LNu_T
 
 VVTo2L2Nu           = Sample.nanoAODfromDAS("VVTo2L2Nu",            "/VVTo2L2Nu_13TeV_amcatnloFXFX_madspin_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",                  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=14.00)
 
-WGToLNuG                = Sample.nanoAODfromDAS("WGToLNuG", "/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=585.8)
+WGToLNuG                = Sample.nanoAODfromDAS("WGToLNuG", "/WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=557.46) # NLO xsec from TOP-17-016 * NNLO scale factor from Tom Cornelis 489 (NLO) * 1.14
 WGToLNuG_amcatnlo_ext1  = Sample.nanoAODfromDAS("WGToLNuG_amcatnlo_ext1", "/WGToLNuG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=203.3)
 #WGToLNuG_amcatnlo_ext3  = Sample.nanoAODfromDAS("WGToLNuG_amcatnlo_ext3", "/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2_ext3-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=203.3)
 #WGJets              = Sample.nanoAODfromDAS("WGJets", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.6637)
@@ -279,11 +279,18 @@ SMS_T2tt_mStop_250to350    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_250to350",   
 SMS_T2tt_mStop_350to400    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350to400",     "/SMS-T2tt_mStop-350to400_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v3_legacy_nano_v4-36a19a6bcc34dfe82a820b9da3364231/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 SMS_T2tt_mStop_400to1200   = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",    "/SMS-T2tt_mStop-400to1200_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-36a19a6bcc34dfe82a820b9da3364231/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
+
+SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25",     "/SMS-T8bbstausnu_XCha0p5_mStop-200to1800_XStau0p25_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-2f0de5761821e09504355ecf17f526b3/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5",     "/SMS-T8bbstausnu_mStop-200to1800_XCha0p5_XStau0p5_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-2f0de5761821e09504355ecf17f526b3/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
 signals = [
     SMS_T2tt_mStop_150to250,
     SMS_T2tt_mStop_250to350,
     SMS_T2tt_mStop_350to400,
-    SMS_T2tt_mStop_400to1200
+    SMS_T2tt_mStop_400to1200,
+    SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25,
+    SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5
     ]
 
 

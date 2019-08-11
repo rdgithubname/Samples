@@ -27,8 +27,8 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    #fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/40000/A4D63DD3-9917-E911-9A50-001E67E6F864.root'),
-    fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/SMS-T2bW_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/120000/FEC6BC82-8B34-E911-B8D7-0CC47A4C8E28.root'),
+    fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/40000/A4D63DD3-9917-E911-9A50-001E67E6F864.root'),
+    #fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/280000/EC660135-4B18-E911-9443-A0369FD0B2A8.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 

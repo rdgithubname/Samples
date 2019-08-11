@@ -3,7 +3,7 @@ from optparse import OptionParser
 import re
 
 cfgPath    = os.path.expandvars( "$CMSSW_BASE/src/Samples/cfg/" )
-allConfigs = [ x.strip( ".py" ) for x in os.listdir( cfgPath ) if x.endswith(".py") ]
+allConfigs = [ x.split(".")[0] for x in os.listdir( cfgPath ) if x.endswith(".py") ]
 
 parser = OptionParser(usage="python launch.py [options] component1 [ component2 ...]", \
                           description="Launch heppy jobs with CRAB3. Components correspond to the variables defined in heppy_samples.py (their name attributes)")
