@@ -39,10 +39,10 @@ config.Data.unitsPerJob = unitsPerJob#10
 if "CRAB_TOTAL_UNITS" in os.environ: config.Data.totalUnits = int(totalUnits)#8
 
 config.section_("Site")
-#config.Site.blacklist = ['T2_US_Purdue', 'T2_US_Nebraska', 'T2_US_MIT', 'T2_US_Caltech']
+config.Site.blacklist = []
+#config.Site.whitelist = ['T2_AT_Vienna']
 config.Site.storageSite = 'T2_AT_Vienna'
 
 config.section_("User")
 
 config.section_("Debug")
-
