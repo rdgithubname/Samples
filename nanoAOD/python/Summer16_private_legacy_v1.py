@@ -457,10 +457,26 @@ other = [
     ]
 
 
-SMS_T2tt_mStop_150to250     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_150to250",     "/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-2fd0700da493b12a64ddbf2abc06aaaa/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
-SMS_T2tt_mStop_250to350     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_250to350",     "/SMS-T2tt_mStop-250to350_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-2fd0700da493b12a64ddbf2abc06aaaa/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
-SMS_T2tt_mStop_350to400     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350to400",     "/SMS-T2tt_mStop-350to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-2fd0700da493b12a64ddbf2abc06aaaa/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
-SMS_T2tt_mStop_400to1200    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",    "/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v3-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+#SMS_T2tt_mStop_150to250     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_150to250",     "/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-2fd0700da493b12a64ddbf2abc06aaaa/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+#SMS_T2tt_mStop_250to350     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_250to350",     "/SMS-T2tt_mStop-250to350_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-2fd0700da493b12a64ddbf2abc06aaaa/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+#SMS_T2tt_mStop_350to400     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350to400",     "/SMS-T2tt_mStop-350to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-2fd0700da493b12a64ddbf2abc06aaaa/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+#SMS_T2tt_mStop_400to1200    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",    "/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v3-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+
+SMS_T2tt_mStop_150to250     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_150to250",     "/SMS-T2tt_mStop-150to250_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v6-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T2tt_mStop_250to350     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_250to350",     "/SMS-T2tt_mStop-250to350_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v6-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T2tt_mStop_350to400     = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350to400",     "/SMS-T2tt_mStop-350to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v6-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T2tt_mStop_400to1200    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",    "/SMS-T2tt_mStop-400to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v6-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T2tt_mStop_1200to2000   = Sample.nanoAODfromDAS("SMS_T2tt_mStop_1200to2000",   "/SMS-T2tt_mStop-1200to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v6-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+
+SMS_T2bW                    = Sample.nanoAODfromDAS("SMS_T2bW",                        "/SMS-T2bW_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+
+SMS_T8bbllnunu_XCha0p5_XSlep0p05 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+
+SMS_T8bbllnunu_XCha0p5_XSlep0p5 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v6-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95", "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600", "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
 
 SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25",     "/SMS-T8bbstausnu_XCha0p5_mStop-200to1800_XStau0p25_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/schoef-crab_RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v4-03876b29d9629691244bd3d116a73f21/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
@@ -473,12 +489,21 @@ SUSY = [
     SMS_T2tt_mStop_250to350,
     SMS_T2tt_mStop_350to400,
     SMS_T2tt_mStop_400to1200,
+    SMS_T2tt_mStop_1200to2000,
+    SMS_T2bW,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p05,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p5,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p95,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600,
+     
     SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25,
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5,
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75
     ]
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + QCD + GJetsHT
+allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + QCD + GJetsHT + SUSY
 
 for s in allSamples:
     s.isData = False

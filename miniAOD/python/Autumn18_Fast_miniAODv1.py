@@ -52,7 +52,7 @@ SMS_T2bW = FWLiteSample.fromDAS("SMS_T2bW", "/SMS-T2bW_TuneCP2_13TeV-madgraphMLM
 
 T2bW = [SMS_T2bW]
 
-#SMS_T8bbllnunu_XCha0p5_XSlep0p05              = FWLiteSample.fromDAS("", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T8bbllnunu_XCha0p5_XSlep0p05              = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05","/SMS-T8bbllnunu_XCha0p5_XSlep0p05_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v1/MINIAODSIM",  dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000 = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 SMS_T8bbllnunu_XCha0p5_XSlep0p5               = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300  = FWLiteSample.fromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)

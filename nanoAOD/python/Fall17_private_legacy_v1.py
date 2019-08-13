@@ -297,11 +297,6 @@ rare = [
     ]
 
 
-## Signals
-
-signals = [
-    ]
-
 GluGluHToZZTo4L             = Sample.nanoAODfromDAS("GluGluHToZZTo4L",   "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/llechner-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14_ext1-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.01297)
 GluGluToContinToZZTo2e2mu   = Sample.nanoAODfromDAS("GluGluToContinToZZTo2e2mu",   "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.005423) 
 GluGluToContinToZZTo2e2tau  = Sample.nanoAODfromDAS("GluGluToContinToZZTo2e2tau",  "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.005423) 
@@ -379,7 +374,6 @@ GJetsHT = [
            GJets_HT600toInf,
 ]
 
-
 other = [
     ]
 
@@ -387,6 +381,16 @@ SMS_T2tt_mStop_150to250    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_150to250",   
 SMS_T2tt_mStop_250to350    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_250to350",     "/SMS-T2tt_mStop-250to350_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v3-eac24e9939368177973140c118f0ff9f/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 SMS_T2tt_mStop_350to400    = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350to400",     "/SMS-T2tt_mStop-350to400_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v3-eac24e9939368177973140c118f0ff9f/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 SMS_T2tt_mStop_400to1200   = Sample.nanoAODfromDAS("SMS_T2tt_mStop_400to1200",    "/SMS-T2tt_mStop-400to1200_TuneCP2_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v3-eac24e9939368177973140c118f0ff9f/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+SMS_T2tt_mStop_1200to2000  = Sample.nanoAODfromDAS("SMS_T2tt_mStop_1200to2000", "/SMS-T2tt_mStop-1200to2000_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+SMS_T2bW = Sample.nanoAODfromDAS("SMS_T2bW", "/SMS-T2bW_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+SMS_T8bbllnunu_XCha0p5_XSlep0p05 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000", "/SMS-T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300", "/SMS-T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95", "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600 = Sample.nanoAODfromDAS("SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600", "/SMS-T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
 SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25 = Sample.nanoAODfromDAS("SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25",     "/SMS-T8bbstausnu_XCha0p5_mStop-200to1800_XStau0p25_TuneCP2_13TeV-madgraphMLM-pythia8/schoef-crab_RunIIFall17MiniAODv2-PUFall17Fast_94X_mc2017_realistic_v15-v1_legacy_nano_v4-bc943940cec1ff73e0e06ee106f565cf/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
@@ -399,6 +403,14 @@ SUSY = [
     SMS_T2tt_mStop_250to350,
     SMS_T2tt_mStop_350to400,
     SMS_T2tt_mStop_400to1200,
+    SMS_T2tt_mStop_1200to2000,
+    SMS_T2bW,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p05,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p05_mN1_700_1000,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p5,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p5_mN1_700_1300,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p95,
+    SMS_T8bbllnunu_XCha0p5_XSlep0p95_mN1_700_1600,
     SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25,
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5,
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75
@@ -438,7 +450,7 @@ combinedSamples = [
 ]
 
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + combinedSamples + SUSY + QCD + GJetsHT
+allSamples = DY + top + boson + wjets + rare + other + gluglu + combinedSamples + SUSY + QCD + GJetsHT
 
 for s in allSamples:
     s.isData = False
