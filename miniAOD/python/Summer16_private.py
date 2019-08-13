@@ -45,10 +45,10 @@ TTX = [
        TTGamma_nofullyhad_LO_S16_private,
 ]
 
-ZGToLLG_LO_S16_private = FWLiteSample.fromDPMDirectory("ZGToLLG_LO_S16_private",      "/dpm/oeaw.ac.at/home/cms/store/user/llechner/miniAOD/RunIISummer16_privProd_miniAODv3/ZAToLLA0123j_5f_LO_MLM/",   dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+#ZGToLLG_LO_S16_private = FWLiteSample.fromDPMDirectory("ZGToLLG_LO_S16_private",      "/dpm/oeaw.ac.at/home/cms/store/user/llechner/miniAOD/RunIISummer16_privProd_miniAODv3/ZAToLLA0123j_5f_LO_MLM/",   dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
 
 VGamma = [
-    ZGToLLG_LO_S16_private,
+#    ZGToLLG_LO_S16_private,
 ]
 
 allSamples = TTX + VGamma
