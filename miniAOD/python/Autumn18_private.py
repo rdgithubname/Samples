@@ -26,7 +26,7 @@ else:
     logger = logging.getLogger(__name__)
     ov = False
 
-from Samples.Tools.config import dbDir, redirector_BE
+from Samples.Tools.config import dbDir, redirector_BE, redirector
 dbFile = dbDir+"Autumn18_private.sql"
 
 logger.info("Using db file: %s", dbFile) 
@@ -44,7 +44,13 @@ TTX = [
        TTGamma_nofullyhad_LO_A18_private,
 ]
 
-allSamples = TTX
+#ZGToLLG_LO_A18_private = FWLiteSample.fromDPMDirectory("ZGToLLG_LO_A18_private",      "/dpm/oeaw.ac.at/home/cms/store/user/llechner/miniAOD/RunIIAutumn18_privProd_miniAODv1/ZAToLLA0123j_5f_LO_MLM/",   dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+
+VGamma = [
+#    ZGToLLG_LO_A18_private,
+]
+
+allSamples = TTX + VGamma
 
 for sample in allSamples:
     sample.isData = False

@@ -10,15 +10,16 @@ def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
+    argParser.add_argument('--logLevel',    action='store', default='INFO', help="log level?", choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'TRACE', 'NOTSET'])
     return argParser
     
 # Logging
 if __name__=="__main__":
-    import Samples.Tools.logger as logger      
-    logger = logger.get_logger("INFO", logFile = None )
-    import RootTools.core.logger as logger_rt  
-    logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()        
+    import Samples.Tools.logger as logger      
+    logger = logger.get_logger(options.logLevel, logFile = None )
+    import RootTools.core.logger as logger_rt  
+    logger_rt = logger_rt.get_logger(options.logLevel, logFile = None )
     ov = options.overwrite
 
 else:
@@ -26,7 +27,7 @@ else:
     logger = logging.getLogger(__name__)
     ov = False
 
-from Samples.Tools.config import dbDir, redirector_BE
+from Samples.Tools.config import dbDir, redirector_BE, redirector
 dbFile = dbDir+"Summer16_private.sql"
 
 logger.info("Using db file: %s", dbFile) 
@@ -44,7 +45,13 @@ TTX = [
        TTGamma_nofullyhad_LO_S16_private,
 ]
 
-allSamples = TTX
+#ZGToLLG_LO_S16_private = FWLiteSample.fromDPMDirectory("ZGToLLG_LO_S16_private",      "/dpm/oeaw.ac.at/home/cms/store/user/llechner/miniAOD/RunIISummer16_privProd_miniAODv3/ZAToLLA0123j_5f_LO_MLM/",   dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+
+VGamma = [
+#    ZGToLLG_LO_S16_private,
+]
+
+allSamples = TTX + VGamma
 
 for sample in allSamples:
     sample.isData = False
