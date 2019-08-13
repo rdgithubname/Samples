@@ -54,17 +54,28 @@ top = [
     ]
 
 
-TTGNoFullyHad_priv  = Sample.nanoAODfromDPM("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_nofullyhad_LO_S16_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616, maxN=1)
+#TTGNoFullyHad_priv  = Sample.nanoAODfromDPM("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_nofullyhad_LO_S16_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616, maxN=1)
 TTGHad_priv         = Sample.nanoAODfromDPM("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_had_LO_S16_private/",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
 TTGSemi_priv        = Sample.nanoAODfromDPM("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_semilep_LO_S16_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
 TTGLep_priv         = Sample.nanoAODfromDPM("TTGLep_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_TTGamma_dilep_LO_S16_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
 
+TTGNoFullyHad_fnal  = Sample.nanoAODfromDPM("TTGNoFullyHad_fnal",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v6/ttgamma_noFullyHad_fnal_2016/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616)
+
 TTX = [
-    TTGNoFullyHad_priv,
+#    TTGNoFullyHad_priv,
     TTGHad_priv,
     TTGSemi_priv,
     TTGLep_priv,
+    TTGNoFullyHad_fnal,
     ]
+
+# LO xsec
+#ZGToLLG_LO_priv = Sample.nanoAODfromDPM("ZGToLLG_LO_priv", "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Summer16_private_ZGToLLG_LO_S16_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=445.8)
+
+
+VGamma = [
+#    ZGToLLG_LO_priv,
+]
 
 ## Signals
 #T2tt_mStop_850_mLSP_100 = Sample.nanoAODfromDAS("T2tt_mStop_850_mLSP_100", "/SMS-T2tt_mStop-850_mLSP-100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=1)
@@ -82,7 +93,7 @@ signals = [
 other = [
     ]
 
-allSamples = DY + other + signals + top + TTX
+allSamples = DY + other + signals + top + TTX + VGamma
 
 for s in allSamples:
     s.isData = False

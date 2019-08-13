@@ -201,6 +201,8 @@ WGToLNuG_amcatnlo_ext1  = Sample.nanoAODfromDAS("WGToLNuG_amcatnlo_ext1", "/WGTo
 
 #ZH_HtoBB_ZtoLL      = Sample.nanoAODfromDAS("ZH_HtoBB_ZtoLL", "/ZH_HToBB_ZToLL_M125_13TeV_powheg_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=)
 ZGToLLG             = Sample.nanoAODfromDAS("ZGToLLG",         "/ZGToLLG_01J_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=50.2)
+ZGToLLG_lowMLL      = Sample.nanoAODfromDAS("ZGToLLG_lowMLL",  "/ZGToLLG_01J_5f_lowMLL_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=106.1*1.06) 
+#NLO xsec * NNLO k-factor from 7TeV calculations (Tom) https://hypernews.cern.ch/HyperNews/CMS/get/generators/2772/1/1/1/1/1/1/1/1.html
 
 WW                  = Sample.nanoAODfromDAS("WW",                   "/WW_TuneCP5_13TeV-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",                         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=63.21 * 1.82)
 #WW_ext              = Sample.nanoAODfromDAS("WW_ext",               "/WW_TuneCUETP8M1_13TeV-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=63.21 * 1.82)
@@ -239,6 +241,7 @@ boson = [
 #    WGJets,
 #    ZNuNuGJets_40130,
     ZGToLLG,
+    ZGToLLG_lowMLL,
     WW,
 #    WW_ext,
     WZ,
