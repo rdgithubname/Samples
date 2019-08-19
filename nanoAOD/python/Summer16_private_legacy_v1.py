@@ -479,6 +479,8 @@ SMS_T2tt_mStop_300_mLSP_150 = Sample.nanoAODfromDAS("SMS_T2tt_mStop_300_mLSP_150
 SMS_T2tt_mStop_325_mLSP_150 = Sample.nanoAODfromDAS("SMS_T2tt_mStop_325_mLSP_150",  "/SMS-T2tt_3J_xqcut-20_mStop-325_mLSP-150_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v4-b4020277631f1d9d0f34f5be03518e3c/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
 SMS_T2tt_mStop_350_mLSP_150 = Sample.nanoAODfromDAS("SMS_T2tt_mStop_350_mLSP_150",  "/SMS-T2tt_3J_xqcut-20_mStop-350_mLSP-150_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v4-b4020277631f1d9d0f34f5be03518e3c/USER",        dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
 
+SMS_T2tt_mStop_650_mLSP_350 = Sample.nanoAODfromDAS("SMS_T2tt_mStop_650_mLSP_350", "/SMS-T2tt_mStop-650_mLSP-350_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v4-b4020277631f1d9d0f34f5be03518e3c/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
+SMS_T2tt_mStop_850_mLSP_100 = Sample.nanoAODfromDAS("SMS_T2tt_mStop_850_mLSP_100", "/SMS-T2tt_mStop-850_mLSP-100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v4-b4020277631f1d9d0f34f5be03518e3c/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.)
 
 SUSY = [
     SMS_T2tt_mStop_150to250,
@@ -496,6 +498,9 @@ SUSY = [
     SMS_T2tt_mStop_300_mLSP_150,
     SMS_T2tt_mStop_325_mLSP_150,
     SMS_T2tt_mStop_350_mLSP_150,
+    SMS_T2tt_mStop_650_mLSP_350,
+    SMS_T2tt_mStop_850_mLSP_100,
+
     # T8
     SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25,
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5,

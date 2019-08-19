@@ -430,8 +430,39 @@ GJetsHT = [
            GJets_HT600toInf_ext,
 ]
 
+## T2tt FullSim signals for corridor studies
+SMS_T2tt_mStop_650_mLSP_350             = FWLiteSample.fromDAS("SMS_T2tt_mStop_650_mLSP_350",               '/SMS-T2tt_mStop-650_mLSP-350_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM', dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_mStop_850_mLSP_100             = FWLiteSample.fromDAS("SMS_T2tt_mStop_850_mLSP_100",               '/SMS-T2tt_mStop-850_mLSP-100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM', dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_150_mLSP_50  = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_150_mLSP_50",    "/SMS-T2tt_3J_xqcut-20_mStop-150_mLSP-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_175_mLSP_1   = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_175_mLSP_1",     "/SMS-T2tt_3J_xqcut-20_mStop-175_mLSP-1_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_corridor_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_200_mLSP_50  = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_200_mLSP_50",    "/SMS-T2tt_3J_xqcut-20_mStop-200_mLSP-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_225_mLSP_50  = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_225_mLSP_50",    "/SMS-T2tt_3J_xqcut-20_mStop-225_mLSP-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_50  = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_50",    "/SMS-T2tt_3J_xqcut-20_mStop-250_mLSP-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_75  = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_75",    "/SMS-T2tt_3J_xqcut-20_mStop-250_mLSP-75_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_corridor_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_150 = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_150",   "/SMS-T2tt_3J_xqcut-20_mStop-250_mLSP-150_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_300_mLSP_150 = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_300_mLSP_150",   "/SMS-T2tt_3J_xqcut-20_mStop-300_mLSP-150_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_325_mLSP_150 = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_325_mLSP_150",   "/SMS-T2tt_3J_xqcut-20_mStop-325_mLSP-150_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_3J_xqcut_20_mStop_350_mLSP_150 = FWLiteSample.fromDAS("SMS_T2tt_3J_xqcut_20_mStop_350_mLSP_150",   "/SMS-T2tt_3J_xqcut-20_mStop-350_mLSP-150_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+    
+T2tt_FullSim = [
+    SMS_T2tt_mStop_650_mLSP_350,
+    SMS_T2tt_mStop_850_mLSP_100,
+    SMS_T2tt_3J_xqcut_20_mStop_150_mLSP_50,
+    SMS_T2tt_3J_xqcut_20_mStop_175_mLSP_1,
+    SMS_T2tt_3J_xqcut_20_mStop_200_mLSP_50,
+    SMS_T2tt_3J_xqcut_20_mStop_225_mLSP_50,
+    SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_50,
+    SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_75,
+    SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_150,
+    SMS_T2tt_3J_xqcut_20_mStop_300_mLSP_150,
+    SMS_T2tt_3J_xqcut_20_mStop_325_mLSP_150,
+    SMS_T2tt_3J_xqcut_20_mStop_350_mLSP_150,
+    ]
 
-allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + QCD + GJetsHT
+
+
+
+allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim
 
 for sample in allSamples:
     sample.isData = False
