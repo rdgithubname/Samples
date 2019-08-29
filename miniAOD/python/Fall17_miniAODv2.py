@@ -488,7 +488,7 @@ T2tt_FullSim = [
     ]
 
 ## sum up
-allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets_HT + TTJets + TTX + TTVV + WJets + WJetsToLNu_HT + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim
+allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets_HT + TTJets + TTX + TTVV + WJets + WJetsToLNu_HT + WJetsNJetBinned + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim
 
 for sample in allSamples:
     sample.isData = False
