@@ -24,7 +24,7 @@ if not os.path.isdir(options.outputDir):
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/pythiaFragmentCP5_LO_01j.py --fileout GEN_LO_01j_93X.root --mc --eventcontent RAWSIM,LHE --datatier GEN-SIM,LHE --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN,SIM --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n options.maxEvents
+# with command line options: Configuration/GenProduction/python/pythiaFragmentCP5_LO_01j.py --fileout GENSIM_LO_01j_93X.root --mc --eventcontent RAWSIM,LHE --datatier GEN-SIM,LHE --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN,SIM --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n options.maxEvents
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -78,7 +78,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(20971520),
-    fileName = cms.untracked.string('GEN_LO_01j_93X.root'),
+    fileName = cms.untracked.string('GENSIM_LO_01j_93X.root'),
     outputCommands = process.RAWSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -88,7 +88,7 @@ process.LHEoutput = cms.OutputModule("PoolOutputModule",
         dataTier = cms.untracked.string('LHE'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('GEN_LO_01j_93X_inLHE.root'),
+    fileName = cms.untracked.string('GENSIM_LO_01j_93X_inLHE.root'),
     outputCommands = process.LHEEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -115,7 +115,7 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
             'JetMatching:slowJetPower = 1', 
             'JetMatching:qCut = 30.', 
             'JetMatching:nQmatch = 5', 
-            'JetMatching:nJetMax = 3', 
+            'JetMatching:nJetMax = 1', 
             'JetMatching:doShowerKt = off', 
             'TimeShower:mMaxGamma = 4.0'),
         pythia8CP5Settings = cms.vstring('Tune:pp 14', 
