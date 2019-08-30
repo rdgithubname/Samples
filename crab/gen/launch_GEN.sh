@@ -187,5 +187,5 @@
 dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/"
 gridpack="ttW01j_rwgt_mg265_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
 label="ttW01j_rwgt_mg265_v1"
-python launch_GEN.py $@ --config gensim_LO_01j_mc_93X_CP5 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+python launch_GEN.py $@ --config gen_LO_01j_mc_93X_CP5 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
