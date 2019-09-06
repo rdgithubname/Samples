@@ -257,9 +257,31 @@ boson = [
 WJetsToLNu      = Sample.nanoAODfromDAS("WJetsToLNu",           "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3* 20508.9)
 #WJetsToLNu_ext  = Sample.nanoAODfromDAS("WJetsToLNu_ext",       "/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2_legacy_nano_v3-b9659cf3bef5e21efe24288a402778f7/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3* 20508.9)
 
+W1JetsToLNu     = Sample.nanoAODfromDAS("W1JetsToLNu",           "/W1JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=11524.) #NLO xsec from AN-2016/289
+W2JetsToLNu     = Sample.nanoAODfromDAS("W2JetsToLNu",           "/W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3788.) #NLO xsec from AN-2016/289
+W3JetsToLNu     = Sample.nanoAODfromDAS("W3JetsToLNu",           "/W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1144.) #NLO xsec from AN-2016/289
+W4JetsToLNu     = Sample.nanoAODfromDAS("W4JetsToLNu",           "/W4JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=636.) #NLO xsec from AN-2016/289
+
+W1JetsToLNu_NuPt_200 = Sample.nanoAODfromDAS("W1JetsToLNu_NuPt_200", "/W1JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2.397)
+W2JetsToLNu_NuPt_200 = Sample.nanoAODfromDAS("W2JetsToLNu_NuPt_200", "/W2JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3.897)
+W3JetsToLNu_NuPt_200 = Sample.nanoAODfromDAS("W3JetsToLNu_NuPt_200", "/W3JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3.298)
+W4JetsToLNu_NuPt_200 = Sample.nanoAODfromDAS("W4JetsToLNu_NuPt_200", "/W4JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER",         dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=4.453)
+
+#/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER
+#/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER
+#/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v4-aaebd5a242d0ea19e5cbbb3204c402e0/USER
+
 wjets = [
     WJetsToLNu,
 #    WJetsToLNu_ext,
+    W1JetsToLNu,
+    W2JetsToLNu,
+    W3JetsToLNu,
+    W4JetsToLNu,
+    W1JetsToLNu_NuPt_200,
+    W2JetsToLNu_NuPt_200,
+    W3JetsToLNu_NuPt_200,
+    W4JetsToLNu_NuPt_200,
     ]
 
 ## rare

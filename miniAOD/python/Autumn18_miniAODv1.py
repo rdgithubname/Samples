@@ -237,6 +237,35 @@ diboson = [
 
 WJetsToLNu_LO       = FWLiteSample.fromDAS("WJetsToLNu_LO", "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+W1JetsToLNu_NuPt_200        = FWLiteSample.fromDAS("W1JetsToLNu_NuPt_200", "/W1JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+W2JetsToLNu_NuPt_200        = FWLiteSample.fromDAS("W2JetsToLNu_NuPt_200", "/W2JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+W3JetsToLNu_NuPt_200        = FWLiteSample.fromDAS("W3JetsToLNu_NuPt_200", "/W3JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+W4JetsToLNu_NuPt_200        = FWLiteSample.fromDAS("W4JetsToLNu_NuPt_200", "/W4JetsToLNu_NuPt-200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+W1JetsToLNu                 = FWLiteSample.fromDAS("W1JetsToLNu", "/W1JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+W2JetsToLNu                 = FWLiteSample.fromDAS("W2JetsToLNu", "/W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+W3JetsToLNu                 = FWLiteSample.fromDAS("W3JetsToLNu", "/W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+W4JetsToLNu                 = FWLiteSample.fromDAS("W4JetsToLNu", "/W4JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+WJetsToLNu_0J_NLO           = FWLiteSample.fromDAS("WJetsToLNu_0J_NLO", "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WJetsToLNu_1J_NLO           = FWLiteSample.fromDAS("WJetsToLNu_1J_NLO", "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WJetsToLNu_2J_NLO           = FWLiteSample.fromDAS("WJetsToLNu_2J_NLO", "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+WJetsNJetBinned = [
+    W1JetsToLNu_NuPt_200,
+    W2JetsToLNu_NuPt_200,
+    W3JetsToLNu_NuPt_200,
+    W4JetsToLNu_NuPt_200,
+    W1JetsToLNu,
+    W2JetsToLNu,
+    W3JetsToLNu,
+    W4JetsToLNu,
+
+    WJetsToLNu_0J_NLO,
+    WJetsToLNu_1J_NLO,
+    WJetsToLNu_2J_NLO,
+    ]
+
 WJets = [
     WJetsToLNu_LO,
 ]
@@ -357,7 +386,7 @@ T2tt_FullSim = [
     ]
 
 
-allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets + QCD + GJetsHT + T2tt_FullSim
+allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets + QCD + GJetsHT + T2tt_FullSim + WJetsNJetBinned
 
 for sample in allSamples:
     sample.isData = False
