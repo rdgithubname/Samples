@@ -57,9 +57,8 @@ cp ${fragmentPath} Configuration/GenProduction/python/${fragment}.py
 
 scram b
 
-# GEN driver command
-cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_102X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 102X_upgrade2018_realistic_v11 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --python_filename tmp.py --no_exec -n 99999
-
+# GENSIM driver command
+cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GENSIM_102X.root --mc --eventcontent RAWSIM,LHE --datatier GEN-SIM,LHE --conditions 102X_upgrade2018_realistic_v11 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN,SIM --geometry DB:Extended --era Run2_2018 --python_filename tmp.py --no_exec -n 99999
 
 #
 # Modify config to run with launch_GEN.py

@@ -58,7 +58,7 @@ cp ${fragmentPath} Configuration/GenProduction/python/${fragment}.py
 scram b
 
 # GEN driver command
-cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_LO_0j_71X.root --mc --eventcontent RECOSIM --datatier GEN --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step LHE,GEN --magField 38T_PostLS1 --python_filename tmp.py --no_exec -n 99999
+cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_71X.root --mc --eventcontent RECOSIM --datatier GEN --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step LHE,GEN --magField 38T_PostLS1 --python_filename tmp.py --no_exec -n 99999
 
 
 #

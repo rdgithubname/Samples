@@ -35,16 +35,16 @@ headerFile=$CMSSW_BASE/src/Samples/Tools/data/header.dat
 mkdir -p /tmp/${USER}/GEN/
 cd /tmp/${USER}/GEN/
 
-export SCRAM_ARCH=slc6_amd64_gcc700
+export SCRAM_ARCH=slc6_amd64_gcc481
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
-if [ -r CMSSW_10_2_3/src ] ; then 
-    echo release CMSSW_10_2_3 already exists
+if [ -r CMSSW_7_1_41/src ] ; then 
+    echo release CMSSW_7_1_41 already exists
 else
-    scram p CMSSW CMSSW_10_2_3
+    scram p CMSSW CMSSW_7_1_41
 fi
 
-cd CMSSW_10_2_3/src
+cd CMSSW_7_1_41/src
 eval `scram runtime -sh`
 
 export X509_USER_PROXY=$HOME/private/.proxy
@@ -58,7 +58,8 @@ cp ${fragmentPath} Configuration/GenProduction/python/${fragment}.py
 scram b
 
 # GEN driver command
-cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_102X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 102X_upgrade2018_realistic_v11 --beamspot Realistic25ns13TeVEarly2018Collision --step LHE,GEN --geometry DB:Extended --era Run2_2018 --python_filename tmp.py --no_exec -n 99999
+# GEN-SIM driver command
+cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GENSIM_71X.root --mc --eventcontent RAWSIM,LHE --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM,LHE --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step LHE,GEN,SIM --magField 38T_PostLS1 --python_filename tmp.py --no_exec -n 99999
 
 
 #
@@ -76,4 +77,4 @@ cat ${headerFile} tmp.py > ${configPath}
 #
 
 cd ../../
-rm -r CMSSW_10_2_3
+rm -r CMSSW_7_1_41

@@ -58,7 +58,7 @@ cp ${fragmentPath} Configuration/GenProduction/python/${fragment}.py
 scram b
 
 # GEN driver command
-cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_LO_0j_93X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n 99999
+cmsDriver.py Configuration/GenProduction/python/${fragment}.py --fileout GEN_93X.root --mc --eventcontent RECOSIM --datatier GEN --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step LHE,GEN --geometry DB:Extended --era Run2_2017 --python_filename tmp.py --no_exec -n 99999
 
 
 #
