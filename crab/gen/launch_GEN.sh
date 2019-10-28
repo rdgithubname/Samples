@@ -184,8 +184,30 @@
 #python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
 
-dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/"
-gridpack="ttW01j_rwgt_mg265_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
-label="ttW01j_rwgt_mg265_v1"
-python launch_GEN.py $@ --config gen_LO_01j_mc_93X_CP5 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/"
+#gridpack="ttW01j_rwgt_mg265_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
+#label="ttW01j_rwgt_mg265_v1"
+#python launch_GEN.py $@ --config gen_LO_01j_mc_93X_CP5 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+
+dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_NoFullyHad_1line_noLHE/"
+gridpack="ttGamma_NoFullyHad_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
+label="ttGamma_1Line_NoFullyHad_noLHE_herwig7_Fall18_v1"
+python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_Dilept_1line_noLHE/"
+gridpack="ttGamma_Dilept_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
+label="ttGamma_1Line_Dilept_noLHE_herwig7_Fall18_v1"
+python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_SemiLept_1line_noLHE/"
+gridpack="ttGamma_SemiLept_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
+label="ttGamma_1Line_SemiLept_noLHE_herwig7_Fall18_v1"
+python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_Had_1line_noLHE/"
+gridpack="ttGamma_Had_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
+label="ttGamma_1Line_Had_noLHE_herwig7_Fall18_v1"
+python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
 
