@@ -11,7 +11,8 @@ config.General.transferLogs = True
 
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName = '../../cfg/miniAOD_mc_fast_102X_Autumn18.py'
+#config.JobType.psetName = '../../cfg/miniAOD_mc_fast_102X_Autumn18.py'
+config.JobType.psetName = '../../../../../CMSSW_10_2_11_patch1/src/miniAOD_mc_fast_102X_Autumn18.py'
 config.JobType.disableAutomaticOutputCollection = False
 
 config.section_("Data")
@@ -43,5 +44,5 @@ if __name__ == '__main__':
         config.General.requestName = input_dataset.split('/')[1] 
         config.Data.outputDatasetTag = tag 
         
-        crabCommand('submit', '--dryrun', config = config)
-        #crabCommand('submit', config = config)
+        #crabCommand('submit', '--dryrun', config = config)
+        crabCommand('submit', config = config)
