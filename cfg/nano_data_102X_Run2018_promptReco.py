@@ -21,13 +21,14 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(1000)
+    input = cms.untracked.int32(10000)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
     #fileNames = cms.untracked.vstring('/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/320/500/00000/12411352-3A96-E811-8958-FA163EF05155.root'),
-    fileNames = cms.untracked.vstring('file:/afs/hephy.at/work/r/rschoefbeck/CMS/tmp/CMSSW_10_2_9/src/JetMET/diagnosis/python/type1MET/tail.root'),
+    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/325/097/00000/8CFF78B1-C1BC-4340-9192-361AF51320D9.root'),
+    #fileNames = cms.untracked.vstring('file:/afs/hephy.at/work/r/rschoefbeck/CMS/tmp/CMSSW_10_2_9/src/JetMET/diagnosis/python/type1MET/tail.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
