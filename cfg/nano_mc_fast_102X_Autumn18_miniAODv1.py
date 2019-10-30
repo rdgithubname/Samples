@@ -22,12 +22,12 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+        input = cms.untracked.int32(-1)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/mc/RunIIAutumn18MiniAOD/SMS-T2tt_mStop-400to1200_TuneCP2_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUFall18Fast_102X_upgrade2018_realistic_v15-v2/60000/981CF9CB-ECE4-F84E-96F7-9701EFAF3BF7.root'),
+    fileNames = cms.untracked.vstring('file:/afs/hephy.at/work/p/phussain/backup/CMSSW_10_2_11_patch1/src/SUS-RunIIAutumn18MiniAOD-00142.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 

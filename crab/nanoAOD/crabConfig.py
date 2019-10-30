@@ -10,6 +10,7 @@ cfgFile             = os.environ["CMSRUN_CFG"]
 unitsPerJob         = int(os.environ["CRAB_UNITS_PER_JOB"])
 publish             = True if os.environ["CRAB_PUBLISH"] == 'True' else False
 runOnNonValid       = True if os.environ['CRAB_RUNONNONVALID'] == 'True' else False
+inputDBS            = os.environ["CRAB_input_DBS"]
 if "CRAB_TOTAL_UNITS" in os.environ: totalUnits = os.environ["CRAB_TOTAL_UNITS"]
 
 config.section_("General")
@@ -26,7 +27,7 @@ config.JobType.outputFiles = ['nanoAOD.root']
 config.section_("Data")
 config.Data.inputDataset = dataset
 
-config.Data.inputDBS = 'global'
+config.Data.inputDBS = inputDBS
 config.Data.splitting = 'FileBased'
 #if "IS_DATA" in os.environ:
 #    config.Data.lumiMask = 'json/Cert_314472-316723_13TeV_PromptReco_Collisions18_JSON.txt'
