@@ -31,7 +31,7 @@ config.Data.inputDBS = inputDBS
 config.Data.splitting = 'FileBased'
 #if "IS_DATA" in os.environ:
 #    config.Data.lumiMask = 'json/Cert_314472-316723_13TeV_PromptReco_Collisions18_JSON.txt'
-config.Data.ignoreLocality = False
+config.Data.ignoreLocality = True
 config.Data.allowNonValidInputDataset = runOnNonValid
 
 config.Data.outLFNDirBase = '/store/user/%s/nanoAOD/%s/' % (getUsernameFromSiteDB(), os.environ['ORIG_PROD_LABEL'])
@@ -41,7 +41,7 @@ if "CRAB_TOTAL_UNITS" in os.environ: config.Data.totalUnits = int(totalUnits)#8
 
 config.section_("Site")
 config.Site.blacklist = []
-#config.Site.whitelist = ['T2_AT_Vienna']
+config.Site.whitelist = ['T2_CH_CERN', 'T2_DE_DESY']
 config.Site.storageSite = 'T2_AT_Vienna'
 
 config.section_("User")
