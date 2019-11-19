@@ -64,6 +64,11 @@
 #python launch.py --runOnNonValid --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO
 #python launch.py                 --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO
 
-python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample WJetsNJetBinned
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample WJetsNJetBinned
 
+
+python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tZZ1j_4l_rwgt
+python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tWZ01j_rwgt
+python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tWW1j_rwgt
+python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample ttW01j_rwgt_dim6top
 
