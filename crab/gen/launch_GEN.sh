@@ -183,31 +183,71 @@
 #label="ttGamma_1Line_NoFullyHad_noAuto"
 #python launch_GEN.py $@ --config gen_LO_0j_mc_931 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-
 #dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/"
 #gridpack="ttW01j_rwgt_mg265_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
 #label="ttW01j_rwgt_mg265_v1"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_93X_CP5 --production_label ${label} --unitsPerJob 5000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="reduced_tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ01j_rwgt"
+#python launch_GEN.py $@ --config gensim_LO_01j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 200 --totalUnits 10000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_NoFullyHad_1line_noLHE/"
-gridpack="ttGamma_NoFullyHad_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
-label="ttGamma_1Line_NoFullyHad_noLHE_herwig7_Fall18_v1"
-python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="reduced_tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ01j_rwgt_v1"
+#python launch_GEN.py $@ --config gensim_LO_01j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_Dilept_1line_noLHE/"
-gridpack="ttGamma_Dilept_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
-label="ttGamma_1Line_Dilept_noLHE_herwig7_Fall18_v1"
-python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="tZZ1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tZZ1j_rwgt_v1"
+#python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_SemiLept_1line_noLHE/"
-gridpack="ttGamma_SemiLept_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
-label="ttGamma_1Line_SemiLept_noLHE_herwig7_Fall18_v1"
-python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="tWW1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWW1j_rwgt_v1"
+#python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/llechner01/TTGammaEFT/gridpacks/ttgamma/cmssw938/ttGamma_Had_1line_noLHE/"
-gridpack="ttGamma_Had_noLHE_5f_ckm_LO_1line_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz"
-label="ttGamma_1Line_Had_noLHE_herwig7_Fall18_v1"
-python launch_GEN.py $@ --config gen_LO_0j_mc_102X_herwig7 --production_label ${label} --unitsPerJob 5000 --totalUnits 100000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="reduced_tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ01j_rwgt_v2"
+#python launch_GEN.py $@ --config gensim_LO_01j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="reduced_tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ01j_rwgt_test"
+#python launch_GEN.py $@ --config gen_LO_01j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 200 --totalUnits 10000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+
+###############################################################################
+
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="tZZ1j_4l_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tZZ1j_4l_rwgt"
+#python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/cms04/ttschida/gridpacks/Yt/"
+#gridpack="tWW1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWW1j_rwgt"
+#python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/cms04/ttschida/gridpacks/Yt/"
+#gridpack="tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ01j_rwgt"
+#python launch_GEN.py $@ --config gensim_LO_01j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/cms04/ttschida/gridpacks/dim6top/"
+#gridpack="ttW01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="ttW01j_rwgt_dim6top"
+#python launch_GEN.py $@ --config gensim_LO_01j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+#gridpack="ttWW_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="ttWW_rwgt"
+#python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
+gridpack="tttt_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+label="tttt_rwgt"
+python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
