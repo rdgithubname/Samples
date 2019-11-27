@@ -1,0 +1,17 @@
+<library name="SamplesGenFiltersPlugins" file="*.cc">
+<use   name="FWCore/PluginManager"/>
+<use   name="FWCore/ParameterSet"/>
+<use   name="FWCore/Framework"/>
+<use   name="FWCore/Utilities"/>
+<use   name="SimDataFormats/GeneratorProducts"/>
+<use   name="GeneratorInterface/Core"/>
+<use   name="SimGeneral/HepPDTRecord"/>
+<use   name="CommonTools/UtilAlgos"/>
+<use   name="FWCore/ServiceRegistry"/>
+<use   name="DataFormats/HepMCCandidate"/>
+<use   name="DataFormats/Math"/>
+<use   name="clhep"/>
+<use   name="rootcore"/>
+<use   name="pythia8"/>
+<flags   EDM_PLUGIN="1"/>
+</library>

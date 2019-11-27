@@ -36,10 +36,10 @@ dbFile = dbDir+"/DB_Autumn18_private.sql"
 
 logger.info("Using db file: %s", dbFile)
 
-#TTGNoFullyHad_priv  = Sample.nanoAODfromDPM("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Autumn18_private_TTGamma_nofullyhad_LO_A18_private/",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616+5.125*1.994, maxN=1)
-TTGHad_priv         = Sample.nanoAODfromDPM("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Autumn18_private_TTGamma_had_LO_A18_private/",         dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
-TTGSemi_priv        = Sample.nanoAODfromDPM("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Autumn18_private_TTGamma_semilep_LO_A18_private/",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
-TTGLep_priv         = Sample.nanoAODfromDPM("TTGLep_priv",          "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Autumn18_private_TTGamma_dilep_LO_A18_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
+#TTGNoFullyHad_priv  = Sample.nanoAODfromDPM("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Autumn18_private_TTGamma_nofullyhad_LO_A18_private/",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616+5.125*1.994, maxN=1)
+TTGHad_priv         = Sample.nanoAODfromDPM("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Autumn18_private_TTGamma_had_LO_A18_private/",         dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
+TTGSemi_priv        = Sample.nanoAODfromDPM("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Autumn18_private_TTGamma_semilep_LO_A18_private/",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
+TTGLep_priv         = Sample.nanoAODfromDPM("TTGLep_priv",          "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Autumn18_private_TTGamma_dilep_LO_A18_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
 
 TTGNoFullyHad_fnal  = Sample.nanoAODfromDPM("TTGNoFullyHad_fnal",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v6/ttgamma_noFullyHad_fnal_2018/",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616+5.125*1.994)
 
