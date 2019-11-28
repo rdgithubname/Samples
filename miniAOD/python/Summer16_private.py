@@ -51,6 +51,12 @@ VGamma = [
 #    ZGToLLG_LO_S16_private,
 ]
 
+tZZ1j_4l_rwgt = FWLiteSample.fromDAS("tZZ1j_4l_rwgt", "/tZZ1j_4l_rwgt/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+tWZ01j_rwgt   = FWLiteSample.fromDAS("tWZ01j_rwgt", "/tWZ01j_rwgt/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+tWW1j_rwgt    = FWLiteSample.fromDAS("tWW1j_rwgt", "/tWW1j_rwgt/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
+ttW01j_rwgt_dim6top = FWLiteSample.fromDAS("ttW01j_rwgt_dim6top", "/ttW01j_rwgt_dim6top/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
 allSamples = TTX + VGamma
 
 for sample in allSamples:

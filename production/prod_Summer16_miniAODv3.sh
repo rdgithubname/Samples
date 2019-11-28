@@ -155,7 +155,7 @@ scram b
 cd ../../
 
 # PU mixing driver command
-cmsDriver.py step1 --filein file:RunIISummer16_privProd_GENSIM_${shortName}.root --fileout file:RunIISummer16_privProd_Premix_${shortName}.root  --pileup_input "dbs:/Neutrino_E-10_gun/RunIISpring15PrePremix-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v2-v2/GEN-SIM-DIGI-RAW" --mc --eventcontent PREMIXRAW --datatier GEN-SIM-RAW --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v6 --step DIGIPREMIX_S2,DATAMIX,L1,DIGI2RAW,HLT:@frozen2016 --nThreads ${threads} --datamix PreMix --era Run2_2016 --python_filename RunIISummer16_privProd_Premix_${shortName}_cfg.py --no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n $events || exit $? ;
+cmsDriver.py step1 --filein file:RunIISummer16_privProd_GENSIM.root --fileout file:RunIISummer16_privProd_Premix.root  --pileup_input "dbs:/Neutrino_E-10_gun/RunIISpring15PrePremix-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v2-v2/GEN-SIM-DIGI-RAW" --mc --eventcontent PREMIXRAW --datatier GEN-SIM-RAW --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v6 --step DIGIPREMIX_S2,DATAMIX,L1,DIGI2RAW,HLT:@frozen2016 --nThreads 2 --datamix PreMix --era Run2_2016 --python_filename step1_RunIISummer16_cfg.py --no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n 100
 
 # run PU mixing
 cmsRun -e -j RunIISummer16_privProd_Premix_${shortName}_rt.xml RunIISummer16_privProd_Premix_${shortName}_cfg.py || exit $? ;

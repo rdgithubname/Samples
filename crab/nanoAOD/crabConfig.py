@@ -41,7 +41,7 @@ if "CRAB_TOTAL_UNITS" in os.environ: config.Data.totalUnits = int(totalUnits)#8
 
 config.section_("Site")
 config.Site.blacklist = []
-config.Site.whitelist = ['T2_CH_CERN', 'T2_DE_DESY']
+config.Site.whitelist = ['T2_IT_Legnaro', 'T2_DE_DESY', 'T2_CH_CERN', 'T2_US_Florida', 'T2_PL_Swierk', 'T2_US_UCSD', 'T2_US_Caltech', 'T2_US_Wisconsin', 'T2_US_Nebraska', 'T2_RU_IHEP', 'T3_US_Baylor', 'T2_UK_SGrid_RALPP', 'T3_US_Colorado', 'T2_DE_RWTH', 'T2_US_MIT', 'T2_US_Vanderbilt', 'T2_UK_London_Brunel', 'T3_IT_Trieste', 'T3_UK_SGrid_Oxford', 'T3_US_UMD', 'T2_HU_Budapest', 'T2_UA_KIPT']
 config.Site.storageSite = 'T2_AT_Vienna'
 
 config.section_("User")
