@@ -63,11 +63,11 @@
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4mu
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Autumn18_miniAODv1 --sample GluGluToContinToZZTo4tau
 
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_175_mLSP_1
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_50
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_75
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_100
-python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_mStop_650_mLSP_350
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_175_mLSP_1
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_50
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_75
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_100
+#python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_mStop_650_mLSP_350
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_mStop_850_mLSP_100
 
 #python launch.py $@ --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample SMS_T2tt_mStop_150to250
@@ -85,3 +85,6 @@ python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label 
 #python launch.py $@ --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25
 #python launch.py $@ --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5
 #python launch.py $@ --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75
+
+
+python launch.py  --dryrun --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label displacedstop_ctau0p01 --remoteDir displacedstop_ctau0p01 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample DisplacedStops_mStop_250_ctau_0p01 
