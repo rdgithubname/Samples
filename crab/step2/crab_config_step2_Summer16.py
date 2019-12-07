@@ -11,7 +11,7 @@ config.General.transferLogs = True
 
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName = '../../cfg/step2_RunIISummer16_8031.py'
+config.JobType.psetName = '../../cfg/step2_RunIISummer16_8021.py'
 config.JobType.disableAutomaticOutputCollection = False
 
 config.section_("Data")
