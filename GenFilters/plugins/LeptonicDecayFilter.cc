@@ -26,23 +26,37 @@ bool LeptonicDecayFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSet
   vector<reco::GenParticle> genPars = *genParsHandle;
 
   for (uint32_t ig = 0; ig < genPars.size(); ig++) {
+
     reco::GenParticle gp = genPars.at(ig);
-    if (gp.numberOfDaughters()!=2) continue;
-    if (abs(gp.pdgId()) == 24) {
-        cout<<gp.pdgId()<<" "<<gp.numberOfDaughters()<<" "<<gp.daughter(0)<<" "<<gp.daughter(1)<<endl;
-//        if (( abs(gp.daughter(0)->pdgId())>=11 ) and ( abs(gp.daughter(0)->pdgId())<= 16)) {
-//            nleptonicWs++;
-//            continue;
-//        }
-    }
-    if (abs(gp.pdgId()) == 23) {
-        cout<<gp.pdgId()<<" "<<gp.numberOfDaughters()<<" "<<gp.daughter(0)<<" "<<gp.daughter(1)<<endl;
-//        if (( abs(gp.daughter(0)->pdgId())>=11 ) and ( abs(gp.daughter(0)->pdgId())<= 16)) {
-//            nleptonicZs++;
-//            continue;
-//        }
+
+    if (abs(gp.pdgId()) == 11 or abs(gp.pdgId()) == 13 or abs(gp.pdgId()) == 15) {
+        if (abs(gp.mother(0)->pdgId())==24) {
+            nleptonicWs++;
+            continue;
+        }
+        if (abs(gp.mother(0)->pdgId())==23 and gp.pdgId()>0) {
+            nleptonicZs++;
+            continue;
+        }
+        //cout<<gp.pdgId()<<" "<<gp.status()<<" "<<gp.numberOfMothers()<<" "<<gp.mother(0)<<" "<<gp.mother(0)->pdgId()<<endl;
     }
   }
+    //if (gp.numberOfDaughters()!=2) continue;
+//    if (abs(gp.pdgId()) == 24) {
+//        cout<<gp.pdgId()<<" "<<gp.numberOfDaughters()<<" "<<gp.daughter(0)<<" "<<gp.daughter(1)<<endl;
+////        if (( abs(gp.daughter(0)->pdgId())>=11 ) and ( abs(gp.daughter(0)->pdgId())<= 16)) {
+////            nleptonicWs++;
+////            continue;
+////        }
+//    }
+//    if (abs(gp.pdgId()) == 23) {
+//        cout<<gp.pdgId()<<" "<<gp.numberOfDaughters()<<" "<<gp.daughter(0)<<" "<<gp.daughter(1)<<endl;
+////        if (( abs(gp.daughter(0)->pdgId())>=11 ) and ( abs(gp.daughter(0)->pdgId())<= 16)) {
+////            nleptonicZs++;
+////            continue;
+////        }
+//    }
+//  }
 
 //  Handle<LHEEventProduct> lhe;
 //  iEvent.getByToken(lheEventToken_, lhe);
@@ -68,7 +82,7 @@ bool LeptonicDecayFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSet
 //  }
 
  // cout<<endl;
-  cout<<"W/Z"<<nleptonicWs<<" "<<nleptonicZs<<endl;
+  //cout<<"W/Z"<<nleptonicWs<<" "<<nleptonicZs<<endl;
 
   return ( nleptonicWs >= minLeptonicWs_ ) and (nleptonicZs >= minLeptonicZs_);
 

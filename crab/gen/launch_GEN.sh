@@ -250,4 +250,3 @@ dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/"
 gridpack="tttt_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
 label="tttt_rwgt"
 python launch_GEN.py $@ --config gensim_LO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 1000 --totalUnits 1000000  --gridpackDir ${dir} --gridpack ${gridpack} --publish
-
