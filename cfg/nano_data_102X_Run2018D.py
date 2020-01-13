@@ -60,7 +60,7 @@ process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v13', '')  # 102X_dataRun2_Prompt_v11 old JEC, 102X_dataRun2_Prompt_v13 new JEC
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v14', '')  # 102X_dataRun2_Prompt_v11 old JEC, 102X_dataRun2_Prompt_v13 new JEC
 
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequence)
