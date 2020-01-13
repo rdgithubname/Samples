@@ -1,5 +1,6 @@
 ''' class that stores all arguments as attributes
 '''
+
         
 import os
 import subprocess
@@ -30,6 +31,7 @@ def echo( job ):
 import logging
 logger = logging.getLogger(__name__)
 
+
 class AutoClass:
     def __init__( self, samples):
         for s in samples:
@@ -43,6 +45,7 @@ class AutoClass:
                 raise RuntimeError( "Sample name is not unique: %s", name )
 
     def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
+        import os
         if not path.endswith('/'): path+='/'
         jobs = []
         for sample in self.__samples:
@@ -50,7 +53,6 @@ class AutoClass:
                 _source = os.path.join( "/dpm/oeaw.ac.at/home/cms", ("".join( source.split('//')[2:])).lstrip('/') )
                 _target = os.path.join( path, ("".join( source.split('//')[2:])).lstrip('/') )
                 jobs.append( [_source, _target] )
-                #logger.info( "Copying %s to %s"%( source, target ) )
 
         pool = Pool(processes = n_processes)
         if do_it:
