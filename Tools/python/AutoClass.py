@@ -1,6 +1,5 @@
 ''' class that stores all arguments as attributes
 '''
-
         
 import os
 import subprocess
@@ -17,20 +16,19 @@ def copy( job ):
         #    pass
             
     if not os.path.exists(target):
-        logger.info( " ".join( cmd ) )
+        print ( " ".join( cmd ) )
         subprocess.call(cmd)
     else:
-        logger.info( "Found %s. Skip.", target)
+        print( "Found %s. Skip.", target)
 
 def echo( job ):
     source, target = job
     cmd = ["/usr/bin/xrdcp", source, target ]
-    logger.info( " ".join( cmd ) )
+    print (" ".join( cmd ))
 
-# Logger
-import logging
-logger = logging.getLogger(__name__)
-
+## Logger
+#import logging
+#logger = logging.getLogger(__name__)
 
 class AutoClass:
     def __init__( self, samples):
