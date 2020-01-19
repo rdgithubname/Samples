@@ -4,6 +4,17 @@ import re, subprocess
 from math import ceil
 from Samples.Tools.config import  redirector
 
+# Logging
+if __name__=="__main__":
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger("INFO", logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger("INFO", logFile = None )
+
+else:
+    import logging
+    logger = logging.getLogger(__name__)
+
 # 2016 FastSim
 from Samples.miniAOD.Spring16_miniAODv2         import allSamples as Spring16_miniAODv2
 from Samples.miniAOD.Summer16_Fast_miniAODv3    import allSamples as Summer16_Fast_miniAODv3
@@ -38,7 +49,7 @@ from Samples.miniAOD.Run2018_17Sep2018          import allSamples as Run2018_17S
 # 2018D SingleMu, EGamma
 from Samples.miniAOD.Run2018D_22Jan2019         import allSamples as Run2018D_22Jan2019
 
-all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2"]#, "Autumn18_miniAODv1" ]
+all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" ]
 all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018", "Run2017_17Nov2017" ]
 all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private", "Run2018D_22Jan2019"]
 
