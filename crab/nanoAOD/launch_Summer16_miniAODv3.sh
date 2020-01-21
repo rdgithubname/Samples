@@ -64,6 +64,7 @@
 #python launch.py --runOnNonValid --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO
 #python launch.py                 --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO
 
-python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample WJetsNJetBinned
+#python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample WJetsNJetBinned
 
 
+python launch.py  --dryrun --config nano_mc_fast_94X_Summer16_miniAODv3 --production_label v0 --remoteDir T2tt_dm10to80 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample SMS-T2tt_dM-10to80 
