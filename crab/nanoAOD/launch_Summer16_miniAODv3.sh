@@ -66,5 +66,27 @@
 
 #python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample WJetsNJetBinned
 
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_dilep_LO
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_dilep_LO_erdOn
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_dilep_LO_TuneUp
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_dilep_LO_TuneDown
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_dilep_LO_ptG100To200
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_dilep_LO_ptG200
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO_erdOn
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO_TuneUp
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO_TuneDown
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO_ptG100To200
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO_ptG200
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO_ptG100To200
+python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO_ptG200
+
+#python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tZZ1j_4l_rwgt
+#python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tWZ01j_rwgt
+#python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tWW1j_rwgt
+#python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample ttW01j_rwgt_dim6top
+
+
 
 python launch.py  --dryrun --config nano_mc_fast_94X_Summer16_miniAODv3 --production_label v0 --remoteDir T2tt_dm10to80 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample SMS-T2tt_dM-10to80 

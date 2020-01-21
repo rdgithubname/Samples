@@ -4,57 +4,58 @@ import re, subprocess
 from math import ceil
 from Samples.Tools.config import  redirector
 
+# Logging
+if __name__=="__main__":
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger("INFO", logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger("INFO", logFile = None )
+
+else:
+    import logging
+    logger = logging.getLogger(__name__)
+
 # 2016 FastSim
 from Samples.miniAOD.Spring16_miniAODv2         import allSamples as Spring16_miniAODv2
 from Samples.miniAOD.Summer16_Fast_miniAODv3    import allSamples as Summer16_Fast_miniAODv3
-print "s16 ran"
 # 2017 FastSim
 from Samples.miniAOD.Fall17_Fast_miniAODv2      import allSamples as Fall17_Fast_miniAODv2
-print "fall17 ran"
 # 2018 FastSim
 from Samples.miniAOD.Autumn18_Fast_miniAODv1    import allSamples as Autumn18_Fast_miniAODv1
-print "autumn 18 fast ran"
 # 2016 private
 from Samples.miniAOD.Summer16_private           import allSamples as Summer16_private
 # 2016 FullSim
 from Samples.miniAOD.Summer16_miniAODv2         import allSamples as Summer16_miniAODv2
 from Samples.miniAOD.Summer16_miniAODv3         import allSamples as Summer16_miniAODv3
-print "Summer16 ran"
 # 2017 private
 from Samples.miniAOD.Fall17_private             import allSamples as Fall17_private
-print "fall17 private ran"
 # 2017 FullSim
 from Samples.miniAOD.Fall17_miniAODv2           import allSamples as Fall17_miniAODv2
-print "fall17 v2 ran"
 # 2018 FullSim
 #from Samples.miniAOD.Autumn18_miniAODv1         import allSamples as Autumn18_miniAODv1
 #print "autumn18_v1 ran"
 # 2018 private
 from Samples.miniAOD.Autumn18_private           import allSamples as Autumn18_private
-print "autumn18_priv ran"
 # 2016 Data
 from Samples.miniAOD.Run2016_17Jul2018          import allSamples as Run2016_17Jul2018
-print "data16 ran"
 # 2017 Data
 from Samples.miniAOD.Run2017_31Mar2018          import allSamples as Run2017_31Mar2018
-print "data17 ran"
 # 2018 special HEM Data
 from Samples.miniAOD.Run2018_26Sep2018          import allSamples as Run2018_26Sep2018
-print "data18  ran"
 # 2018 prompt Data (in the end only for D!)
 from Samples.miniAOD.Run2018_promptReco         import allSamples as Run2018_promptReco
-print "data18_pr  ran"
 # 2018 rereco Data (for A->C)
 from Samples.miniAOD.Run2018_17Sep2018          import allSamples as Run2018_17Sep2018
-print "data18 sep ran"
+# 2018D SingleMu, EGamma
+from Samples.miniAOD.Run2018D_22Jan2019         import allSamples as Run2018D_22Jan2019
 
-all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2"]#, "Autumn18_miniAODv1" ]
+all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" ]
 all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018", "Run2017_17Nov2017" ]
-all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private" ]
+all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private", "Run2018D_22Jan2019"]
 
 allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 +  Autumn18_Fast_miniAODv1 #Autumn18_miniAODv1 +
 allSamples += Summer16_private + Fall17_private + Autumn18_private
-allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018
+allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018 + Run2018D_22Jan2019
 
 cfgPath    = os.path.expandvars( "$CMSSW_BASE/src/Samples/cfg/" )
 allConfigs = [ x.strip( ".py" ) for x in os.listdir( cfgPath ) if x.endswith(".py") ]
