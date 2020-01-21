@@ -443,8 +443,10 @@ GJetsHT = [
 
 other = [
     ]
-
-allSamples = DY + top + boson + wjets + rare + other + gluglu + QCD + GJetsHT + SUSY
+DisplacedStops_mStop_250_ctau_0p01 = Sample.nanoAODfromDAS("DisplacedStops_mStop_250_ctau_0p01", "/DisplacedStops-mstop-250-ctau-0p01/schoef-crab_prhussai-19-09-28-d1325a8a4e5845c2e07754c18f9c751d_v0-05774b17f68c744c98601843df17b36a/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov,xSection=1)
+DisplacedStops_mStop_250_ctau_0p1  = Sample.nanoAODfromDAS("DisplacedStops_mStop_250_ctau_0p1", "/DisplacedStops-mstop-250-ctau-0p1/prhussai-crab_prhussai-19-11-04-d1325a8a4e5845c2e07754c18f9c751d_v0-05774b17f68c744c98601843df17b36a/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov,xSection=1)
+displ = [DisplacedStops_mStop_250_ctau_0p01 , DisplacedStops_mStop_250_ctau_0p1]
+allSamples = DY + top + boson + wjets + rare + other + gluglu + QCD + GJetsHT + SUSY + displ 
 
 for s in allSamples:
     s.isData = False
