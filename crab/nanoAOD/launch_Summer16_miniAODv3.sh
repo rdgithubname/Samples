@@ -89,3 +89,4 @@ python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_lab
 
 
 
+python launch.py  --dryrun --config nano_mc_fast_94X_Summer16_miniAODv3 --production_label v0 --remoteDir T2tt_dm10to80 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample SMS-T2tt_dM-10to80 
