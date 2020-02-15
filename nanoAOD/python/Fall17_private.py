@@ -28,7 +28,10 @@ else:
 try:
     redirector = sys.modules['__main__'].redirector
 except:
-    from Samples.Tools.config import  redirector as redirector
+    if "clip" in os.getenv("HOSTNAME").lower():
+        from Samples.Tools.config import redirector_clip_local as redirector
+    else:
+        from Samples.Tools.config import redirector as redirector
 
 # DB
 from Samples.Tools.config import dbDir
@@ -36,12 +39,12 @@ dbFile = dbDir+"/DB_Fall17_private.sql"
 
 logger.info("Using db file: %s", dbFile)
 
-#TTGNoFullyHad_priv  = Sample.nanoAODfromDPM("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_nofullyhad_LO_F17_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616, maxN=1)
-TTGHad_priv         = Sample.nanoAODfromDPM("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_had_LO_F17_private/",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
-TTGSemi_priv        = Sample.nanoAODfromDPM("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_semilep_LO_F17_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
-TTGLep_priv         = Sample.nanoAODfromDPM("TTGLep_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_dilep_LO_F17_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
+#TTGNoFullyHad_priv  = Sample.nanoAODfromDAS("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_nofullyhad_LO_F17_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616, maxN=1)
+TTGHad_priv         = Sample.nanoAODfromDAS("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_had_LO_F17_private/",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
+TTGSemi_priv        = Sample.nanoAODfromDAS("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_semilep_LO_F17_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
+TTGLep_priv         = Sample.nanoAODfromDAS("TTGLep_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Fall17_private_TTGamma_dilep_LO_F17_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
 
-TTGNoFullyHad_fnal  = Sample.nanoAODfromDPM("TTGNoFullyHad_fnal",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v6/ttgamma_noFullyHad_fnal_2017/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616)
+TTGNoFullyHad_fnal  = Sample.nanoAODfromDAS("TTGNoFullyHad_fnal",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v6/ttgamma_noFullyHad_fnal_2017/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616)
 
 TTX = [
 #    TTGNoFullyHad_priv,
@@ -52,7 +55,7 @@ TTX = [
     ]
 
 # LO xsec
-#ZGToLLG_LO_priv = Sample.nanoAODfromDPM("ZGToLLG_LO_priv", "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Fall17_private_ZGToLLG_LO_F17_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=445.8)
+#ZGToLLG_LO_priv = Sample.nanoAODfromDAS("ZGToLLG_LO_priv", "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v3/Fall17_private_ZGToLLG_LO_F17_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=445.8)
 
 
 VGamma = [

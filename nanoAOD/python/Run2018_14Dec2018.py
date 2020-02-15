@@ -28,7 +28,10 @@ else:
 try:
     redirector = sys.modules['__main__'].redirector
 except:
-    from Samples.Tools.config import  redirector as redirector
+    if "clip" in os.getenv("HOSTNAME").lower():
+        from Samples.Tools.config import redirector_clip_local as redirector
+    else:
+        from Samples.Tools.config import redirector as redirector
 
 # DB
 from Samples.Tools.config import dbDir
@@ -80,7 +83,7 @@ EGamma_Run2018 = [\
 SingleMuon_Run2018A_14Dec2018  = Sample.nanoAODfromDAS("SingleMuon_Run2018A_14Dec2018", "/SingleMuon/Run2018A-Nano14Dec2018-v1/NANOAOD",      dbFile=dbFile, overwrite=ov, redirector=redirector)
 SingleMuon_Run2018B_14Dec2018  = Sample.nanoAODfromDAS("SingleMuon_Run2018B_14Dec2018", "/SingleMuon/Run2018B-Nano14Dec2018-v1/NANOAOD",      dbFile=dbFile, overwrite=ov, redirector=redirector)
 SingleMuon_Run2018C_14Dec2018  = Sample.nanoAODfromDAS("SingleMuon_Run2018C_14Dec2018", "/SingleMuon/Run2018C-Nano14Dec2018-v1/NANOAOD",      dbFile=dbFile, overwrite=ov, redirector=redirector)
-SingleMuon_Run2018D_14Dec2018  = Sample.nanoAODfromDAS("SingleMuon_Run2018D_14Dec2018", "/SingleMuon/Run2018D-Nano14Dec2018_ver2-v1/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
+SingleMuon_Run2018D_14Dec2018  = Sample.nanoAODfromDAS("SingleMuon_Run2018D_14Dec2018", "/SingleMuon/Run2018D-Nano14Dec2018_ver2-v2/NANOAOD", dbFile=dbFile, overwrite=ov, redirector=redirector)
 
 SingleMuon_Run2018 = [\
     SingleMuon_Run2018A_14Dec2018,
