@@ -30,7 +30,7 @@ try:
     redirector = sys.modules['__main__'].redirector
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
-        from Samples.Tools.config import redirector_clip as redirector
+        from Samples.Tools.config import redirector_clip_local as redirector
     else:
         from Samples.Tools.config import redirector as redirector
 
