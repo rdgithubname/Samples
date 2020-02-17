@@ -36,6 +36,8 @@ except:
     else:
         from Samples.Tools.config import redirector as redirector
 
+from Samples.Tools.config import redirector_global as redirector
+
 # DB
 from Samples.Tools.config import dbDir
 dbFile = dbDir+'/DB_Summer16_nanoAODv6.sql'
@@ -138,7 +140,6 @@ TGJets              = Sample.nanoAODfromDAS("TGJets",           "/TGJets_TuneCUE
 TGJets_ext          = Sample.nanoAODfromDAS("TGJets_ext",       "/TGJets_TuneCUETP8M1_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2.967)
 TGJets_lep          = Sample.nanoAODfromDAS("TGJets_lep",       "/TGJets_leptonDecays_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2.967*0.108*3)
 tZq_ll_ext          = Sample.nanoAODfromDAS("tZq_ll_ext",       "/tZq_ll_4f_13TeV-amcatnlo-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM",                             dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.09418 ) #0.0758 )
-#tZq_nunu            = Sample.nanoAODfromDAS("tZq_nunu",         "/tZq_nunu_4f_13TeV-amcatnlo-pythia8_TuneCUETP8M1/*/NANOAODSIM",                               dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.2728 ) #No nanoAODv6 found
 tWll                = Sample.nanoAODfromDAS("tWll",             "/ST_tWll_5f_LO_13TeV-MadGraph-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM",                              dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.01123)
 tWnunu              = Sample.nanoAODfromDAS("tWnunu",           "/ST_tWnunu_5f_LO_13TeV-MadGraph-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM",                            dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.01123*1.9822)
 TTWToLNu_ext2       = Sample.nanoAODfromDAS("TTWToLNu_ext2",    "/TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext2-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.2043)
@@ -190,7 +191,6 @@ TTV = [
     TTGLep_ptG100To200_LO,
     TTGLep_ptG200_LO,
     tZq_ll_ext,
-#    tZq_nunu,
     tWll,
     tWnunu,
     TTWToLNu_ext2,
@@ -204,24 +204,13 @@ TTV = [
     TTGJets_ext,
 ]
 
-
-#TTGG                 = Sample.nanoAODfromDAS("TTGG",          "/TTGG_0Jets_TuneCUETP8M1_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector_global, overwrite=ov, xSection=0.01731)
-#TTWZ                 = Sample.nanoAODfromDAS("TTWZ",            "/TTWZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector_global, overwrite=ov, xSection=0.002938)
-#TTZZ                 = Sample.nanoAODfromDAS("TTZZ",            "/TTZZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM" ,              dbFile=dbFile, redirector=redirector_global, overwrite=ov, xSection=0.001563)
-#TGG                 = Sample.nanoAODfromDAS("TGG", "/TGGJets_leptonDecays_13TeV_MadGraph_madspin_pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM",dbFile=dbFile, overwrite=ov, redirector=redirector_global, xSection=0.007793)
-
 TTVV = [
-#    TTGG,
-#    TTWZ,
-#    TTZZ,
-    #TGG
     ]
 
 top = [
     TTLep_pow,
     TTLep_pow_noSC,
     TTSingleLep_pow,
-    TTHad_pow,
     TTbar,
     TTLep_pow_CP5,
     TTSingleLep_pow_CP5,
@@ -491,7 +480,7 @@ GJets_HT40to100_ext    = Sample.nanoAODfromDAS("GJets_HT40to100_ext",  "/GJets_H
 GJets_HT100to200       = Sample.nanoAODfromDAS("GJets_HT100to200",     "/GJets_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=9226)
 GJets_HT100to200_ext   = Sample.nanoAODfromDAS("GJets_HT100to200_ext", "/GJets_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=9226)
 GJets_HT200to400       = Sample.nanoAODfromDAS("GJets_HT200to400",     "/GJets_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2300)
-GJets_HT200to400_ext   = Sample.nanoAODfromDAS("GJets_HT200to200_ext", "/GJets_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2300) #No nanoAODv6 found
+GJets_HT200to400_ext   = Sample.nanoAODfromDAS("GJets_HT200to200_ext", "/GJets_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2300)
 GJets_HT400to600       = Sample.nanoAODfromDAS("GJets_HT400to600",     "/GJets_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=274.4)
 GJets_HT400to600_ext   = Sample.nanoAODfromDAS("GJets_HT400to600_ext", "/GJets_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7_ext1-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=274.4)
 GJets_HT600toInf       = Sample.nanoAODfromDAS("GJets_HT600toInf",     "/GJets_HT-600ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16NanoAODv6-PUMoriond17_Nano25Oct2019_102X_mcRun2_asymptotic_v7-v1/NANOAODSIM",     dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=93.38)
