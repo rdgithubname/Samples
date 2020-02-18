@@ -32,7 +32,7 @@ except:
         if __name__ == "__main__":
             from Samples.Tools.config import redirector_clip as redirector
         else:
-            from Samples.Tools.config import redirector_clip_scratch as redirector
+            from Samples.Tools.config import redirector_clip_local as redirector
     else:
         from Samples.Tools.config import redirector as redirector
 
@@ -155,7 +155,7 @@ JetHT_Run2016D_17Jul2018       = Sample.nanoAODfromDAS("JetHT_Run2016D_17Jul2018
 JetHT_Run2016E_17Jul2018       = Sample.nanoAODfromDAS("JetHT_Run2016E_17Jul2018",        "/JetHT/Run2016E-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2016F_17Jul2018       = Sample.nanoAODfromDAS("JetHT_Run2016F_17Jul2018",        "/JetHT/Run2016F-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2016G_17Jul2018       = Sample.nanoAODfromDAS("JetHT_Run2016G_17Jul2018",        "/JetHT/Run2016G-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2016H_17Jul2018       = Sample.nanoAODfromDAS("JetHT_Run2016H_17Jul2018",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2016H_17Jul2018       = Sample.nanoAODfromDAS("JetHT_Run2016H_17Jul2018",        "/JetHT/Run2016H-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 JetHT = [
     JetHT_Run2016B_17Jul2018_ver1,
@@ -169,23 +169,23 @@ JetHT = [
 ]
 
 # MET
-#MET_Run2016B_17Jul2018_ver1  = Sample.nanoAODfromDAS("MET_Run2016B_17Jul2018_ver1",   "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2016B_17Jul2018_ver1  = Sample.nanoAODfromDAS("MET_Run2016B_17Jul2018_ver1",   "/MET/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 MET_Run2016B_17Jul2018_ver2  = Sample.nanoAODfromDAS("MET_Run2016B_17Jul2018_ver2",   "/MET/Run2016B_ver2-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#MET_Run2016C_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016C_17Jul2018",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2016C_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016C_17Jul2018",        "/MET/Run2016C-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 MET_Run2016D_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016D_17Jul2018",        "/MET/Run2016D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 MET_Run2016E_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016E_17Jul2018",        "/MET/Run2016E-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 MET_Run2016F_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016F_17Jul2018",        "/MET/Run2016F-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#MET_Run2016G_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016G_17Jul2018",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2016G_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016G_17Jul2018",        "/MET/Run2016G-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 MET_Run2016H_17Jul2018       = Sample.nanoAODfromDAS("MET_Run2016H_17Jul2018",        "/MET/Run2016H-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 MET = [
-#    MET_Run2016B_17Jul2018_ver1,
+    MET_Run2016B_17Jul2018_ver1,
     MET_Run2016B_17Jul2018_ver2,
-#    MET_Run2016C_17Jul2018,
+    MET_Run2016C_17Jul2018,
     MET_Run2016D_17Jul2018,
     MET_Run2016E_17Jul2018,
     MET_Run2016F_17Jul2018,
-#    MET_Run2016G_17Jul2018,
+    MET_Run2016G_17Jul2018,
     MET_Run2016H_17Jul2018,
 ]
 

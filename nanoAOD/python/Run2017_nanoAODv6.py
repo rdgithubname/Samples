@@ -121,14 +121,14 @@ SingleElectron = [
 JetHT_Run2017B_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017B_31Mar2018", "/JetHT/Run2017B-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2017C_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017C_31Mar2018", "/JetHT/Run2017C-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2017D_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017D_31Mar2018", "/JetHT/Run2017D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2017E_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017E_31Mar2018", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2017E_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017E_31Mar2018", "/JetHT/Run2017E-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2017F_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017F_31Mar2018", "/JetHT/Run2017F-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 JetHT = [
     JetHT_Run2017B_31Mar2018,
     JetHT_Run2017C_31Mar2018,
     JetHT_Run2017D_31Mar2018,
-#    JetHT_Run2017E_31Mar2018,
+    JetHT_Run2017E_31Mar2018,
     JetHT_Run2017F_31Mar2018,
 ]
 
