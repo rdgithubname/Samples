@@ -7,8 +7,8 @@ import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-#defaultInput = "/store/mc/RunIIAutumn18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/80000/AC241C46-3823-344E-86C4-DC76A98F32A0.root"
-defaultInput = "file:/afs/cern.ch/work/d/dspitzba/MET/sumPtDevel/CMSSW_10_2_15/src/Samples/cfg/MUO-RunIIAutumn18MiniAOD-00016.root"
+defaultInput = "/store/mc/RunIIAutumn18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/80000/AC241C46-3823-344E-86C4-DC76A98F32A0.root"
+#defaultInput = "file:/afs/cern.ch/work/d/dspitzba/MET/sumPtDevel/CMSSW_10_2_15/src/Samples/cfg/MUO-RunIIAutumn18MiniAOD-00016.root"
 
 process = cms.Process('NANO',eras.Run2_2018,eras.run2_nanoAOD_102Xv1)
 
@@ -25,7 +25,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10)
+    input = cms.untracked.int32(50000)
 )
 
 # Input source

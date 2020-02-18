@@ -85,6 +85,7 @@ for dataset in datasets:
     p = subprocess.Popen(['cmsRun', cfgFile], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output = p.stderr.readlines()
     for line in output:
+        #print line
         if line.startswith(identifier): result = line
 
     xsec, unc = float(result.split(identifier)[1].split('+-')[0]), float(result.split(identifier)[1].split('+-')[1].replace('pb',''))
