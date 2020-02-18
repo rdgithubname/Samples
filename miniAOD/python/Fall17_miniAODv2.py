@@ -180,14 +180,23 @@ TGJets_lep_NLO_PS                       = FWLiteSample.fromDAS("TGJets_lep_NLO_P
 TTGG_0Jets_NLO                          = FWLiteSample.fromDAS("TTGG_0Jets_NLO", "/TTGG_0Jets_TuneCP5_13TeV_amcatnlo_madspin_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTGJets_NLO                             = FWLiteSample.fromDAS("TTGJets_NLO", "/TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-TTGamma_dilep_LO                        = FWLiteSample.fromDAS("TTGamma_dilep_LO", "/TTGamma_Dilept_TuneCP5_PSweights_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-TTGamma_had_LO                          = FWLiteSample.fromDAS("TTGamma_had_LO", "/TTGamma_Hadronic_TuneCP5_PSweights_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-TTGamma_semilepFromT_LO                 = FWLiteSample.fromDAS("TTGamma_semilepFromT_LO", "/TTGamma_SingleLeptFromT_TuneCP5_PSweights_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-TTGamma_semilepFromTbar_LO              = FWLiteSample.fromDAS("TTGamma_semilepFromTbar_LO", "/TTGamma_SingleLeptFromTbar_TuneCP5_PSweights_13TeV_madgraph_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_dilep_LO                        = FWLiteSample.fromDAS("TTGamma_dilep_LO",             "/TTGamma_Dilept_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_dilep_LO_TuneUp                 = FWLiteSample.fromDAS("TTGamma_dilep_LO_TuneUp",      "/TTGamma_Dilept_TuneCP5Up_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_dilep_LO_TuneDown               = FWLiteSample.fromDAS("TTGamma_dilep_LO_TuneDown",    "/TTGamma_Dilept_TuneCP5Down_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_dilep_LO_erdOn                  = FWLiteSample.fromDAS("TTGamma_dilep_LO_erdOn",       "/TTGamma_Dilept_TuneCP5_erdON_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_dilep_LO_ptG100To200            = FWLiteSample.fromDAS("TTGamma_dilep_LO_ptG100To200", "/TTGamma_Dilept_ptGamma100-200_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_dilep_LO_ptG200                 = FWLiteSample.fromDAS("TTGamma_dilep_LO_ptG200",      "/TTGamma_Dilept_ptGamma200inf_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-#TTGamma_dilep_LO                        = FWLiteSample.fromDAS("TTGamma_dilep_LO",   "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#TTGamma_had_LO                          = FWLiteSample.fromDAS("TTGamma_had_LO",     "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#TTGamma_semilep_LO                      = FWLiteSample.fromDAS("TTGamma_semilep_LO", "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_had_LO                          = FWLiteSample.fromDAS("TTGamma_had_LO",              "/TTGamma_Hadronic_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_had_LO_ptG100To200              = FWLiteSample.fromDAS("TTGamma_had_LO_ptG100To200",  "/TTGamma_Hadronic_ptGamma100-200_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_had_LO_ptG200                   = FWLiteSample.fromDAS("TTGamma_had_LO_ptG200",       "/TTGamma_Hadronic_ptGamma200inf_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+TTGamma_semilep_LO                      = FWLiteSample.fromDAS("TTGamma_semilep_LO",             "/TTGamma_SingleLept_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_semilep_LO_TuneUp               = FWLiteSample.fromDAS("TTGamma_semilep_LO_TuneUp",      "/TTGamma_SingleLept_TuneCP5Up_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_semilep_LO_TuneDown             = FWLiteSample.fromDAS("TTGamma_semilep_LO_TuneDown",    "/TTGamma_SingleLept_TuneCP5Down_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_semilep_LO_erdOn                = FWLiteSample.fromDAS("TTGamma_semilep_LO_erdOn",       "/TTGamma_SingleLept_TuneCP5_erdON_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_semilep_LO_ptG100To200          = FWLiteSample.fromDAS("TTGamma_semilep_LO_ptG100To200", "/TTGamma_SingleLept_ptGamma100-200_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTGamma_semilep_LO_ptG200               = FWLiteSample.fromDAS("TTGamma_semilep_LO_ptG200",      "/TTGamma_SingleLept_ptGamma200inf_TuneCP5_PSweights_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 TTTJ_LO                                 = FWLiteSample.fromDAS("TTTJ_LO", "/TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTTT_NLO                                = FWLiteSample.fromDAS("TTTT_NLO", "/TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -218,12 +227,20 @@ TTX = [
     TTGG_0Jets_NLO,
     TTGJets_NLO,
     TTGamma_dilep_LO,
+    TTGamma_dilep_LO_erdOn,
+    TTGamma_dilep_LO_TuneUp,
+    TTGamma_dilep_LO_TuneDown,
+    TTGamma_dilep_LO_ptG100To200,
+    TTGamma_dilep_LO_ptG200,
+    TTGamma_semilep_LO,
+    TTGamma_semilep_LO_erdOn,
+    TTGamma_semilep_LO_TuneUp,
+    TTGamma_semilep_LO_TuneDown,
+    TTGamma_semilep_LO_ptG100To200,
+    TTGamma_semilep_LO_ptG200,
     TTGamma_had_LO,
-    TTGamma_semilepFromT_LO,
-    TTGamma_semilepFromTbar_LO,
-#    TTGamma_dilep_LO,
-#    TTGamma_had_LO,
-#    TTGamma_semilep_LO,
+    TTGamma_had_LO_ptG100To200,
+    TTGamma_had_LO_ptG200,
     TTTW_LO,
     TTWJetsToLNu_NLO,
     TTWJetsToLNu_NLO_PS,

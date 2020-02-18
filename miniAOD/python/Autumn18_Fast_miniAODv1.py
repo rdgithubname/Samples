@@ -69,8 +69,11 @@ SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75   = FWLiteSample.fromDAS("SMS_
 
 T8bbstausnu = [SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75 ]
 
+DisplacedStops_mStop_250_ctau_0p01   = FWLiteSample.fromDAS("DisplacedStops_mStop_250_ctau_0p01", "/DisplacedStops-mstop-250-ctau-0p01/prhussai-19-09-28-d1325a8a4e5845c2e07754c18f9c751d/USER",instance="phys03", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+DisplacedStops_mStop_250_ctau_0p1    = FWLiteSample.fromDAS("DisplacedStops_mStop_250_ctau_0p1","/DisplacedStops-mstop-250-ctau-0p1/prhussai-19-11-04-d1325a8a4e5845c2e07754c18f9c751d/USER",instance="phys03", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+displ = [DisplacedStops_mStop_250_ctau_0p01 , DisplacedStops_mStop_250_ctau_0p1]
 ## sum up
-allSamples = T2tt + T2bW + T8bbllnunu + T8bbstausnu + [DisplacedStops_mStop_250_ctau_0p01]
+allSamples = T2tt + T2bW + T8bbllnunu + T8bbstausnu + displ
 
 for sample in allSamples:
     sample.isData = False

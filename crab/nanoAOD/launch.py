@@ -4,6 +4,17 @@ import re, subprocess
 from math import ceil
 from Samples.Tools.config import  redirector
 
+# Logging
+if __name__=="__main__":
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger("INFO", logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger("INFO", logFile = None )
+
+else:
+    import logging
+    logger = logging.getLogger(__name__)
+
 # 2016 FastSim
 from Samples.miniAOD.Spring16_miniAODv2         import allSamples as Spring16_miniAODv2
 from Samples.miniAOD.Summer16_Fast_miniAODv3    import allSamples as Summer16_Fast_miniAODv3
@@ -21,7 +32,8 @@ from Samples.miniAOD.Fall17_private             import allSamples as Fall17_priv
 # 2017 FullSim
 from Samples.miniAOD.Fall17_miniAODv2           import allSamples as Fall17_miniAODv2
 # 2018 FullSim
-from Samples.miniAOD.Autumn18_miniAODv1         import allSamples as Autumn18_miniAODv1
+#from Samples.miniAOD.Autumn18_miniAODv1         import allSamples as Autumn18_miniAODv1
+#print "autumn18_v1 ran"
 # 2018 private
 from Samples.miniAOD.Autumn18_private           import allSamples as Autumn18_private
 # 2016 Data
@@ -34,14 +46,16 @@ from Samples.miniAOD.Run2018_26Sep2018          import allSamples as Run2018_26S
 from Samples.miniAOD.Run2018_promptReco         import allSamples as Run2018_promptReco
 # 2018 rereco Data (for A->C)
 from Samples.miniAOD.Run2018_17Sep2018          import allSamples as Run2018_17Sep2018
+# 2018D SingleMu, EGamma
+from Samples.miniAOD.Run2018D_22Jan2019         import allSamples as Run2018D_22Jan2019
 
 all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" ]
 all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018", "Run2017_17Nov2017" ]
-all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private" ]
+all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private", "Run2018D_22Jan2019"]
 
-allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 + Autumn18_miniAODv1 + Autumn18_Fast_miniAODv1
+allSamples  = Spring16_miniAODv2 + Summer16_Fast_miniAODv3 + Fall17_Fast_miniAODv2 + Summer16_miniAODv2 + Summer16_miniAODv3 + Fall17_miniAODv2 +  Autumn18_Fast_miniAODv1 #Autumn18_miniAODv1 +
 allSamples += Summer16_private + Fall17_private + Autumn18_private
-allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018
+allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018 + Run2018D_22Jan2019
 
 cfgPath    = os.path.expandvars( "$CMSSW_BASE/src/Samples/cfg/" )
 allConfigs = [ x.strip( ".py" ) for x in os.listdir( cfgPath ) if x.endswith(".py") ]
@@ -55,6 +69,7 @@ parser.add_option("--totalUnits",       dest="totalUnits",       type=int,      
 parser.add_option("--config",           dest="config",                     choices = allConfigs,                   help="Which config?")
 parser.add_option("--module",           dest="module",                     choices = all_modules,                  help="Which module X in Samples.miniAOD.X?")
 parser.add_option("--sample",           dest="sample",                                                             help="Which sample?")
+parser.add_option("--inputDBS",         dest="inputDBS",          choices = ['phys03','global'],  default="global",help="Private or global production?")
 parser.add_option("--publish",          action='store_true',                                      default=False,   help="Publish on dbs?")
 parser.add_option("--runOnNonValid",    action='store_true',                                      default=False,   help="Allow running on invalid samples/samples still in production?")
 parser.add_option("--runOnLocal",       action='store_true',                                      default=False,   help="Run on local DPM files")
@@ -172,7 +187,7 @@ for dataset in datasets:
         os.environ["MAOD_SAMPLE_NAME"]  = DASname+"_"+DAScampaign
 
         os.environ["CRAB_DATASET"]      = dataset.DASname
-
+        os.environ["CRAB_input_DBS"]    = options.inputDBS
         if options.dryrun:
             print "Processing %s %s" %( dataset.name, dataset.DASname )
             print "## Dryrun, continue..."
