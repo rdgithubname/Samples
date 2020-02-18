@@ -29,7 +29,5 @@ redirector_global     = 'root://cms-xrd-global.cern.ch/'
 #redirector_clip_local = '/mnt/hephy/cms/'
 redirector_clip_local = '/scratch-cbe/users/hephy/'
 redirector_clip       = 'root://hephyse.oeaw.ac.at:11001/'
-# tmp
-redirector_clip       = redirector_global 
 
 if not os.path.isdir(dbDir): os.makedirs(dbDir)
