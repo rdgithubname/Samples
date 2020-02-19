@@ -382,7 +382,7 @@ SUSY = [
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5
     ]
 
-ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_TuneCP5_PSweights_13TeV_powheg_pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v7-af81b0bf5fa41c6ab084712efe17a371/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5071)
+ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_TuneCP5_PSweights_13TeV_powheg_pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v7-af81b0bf5fa41c6ab084712efe17a371/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5071) # ttH x-sec from here https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWG
 
 ttH = [ ttH_HToInvisible ]
 
