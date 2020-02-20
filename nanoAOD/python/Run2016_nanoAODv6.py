@@ -39,7 +39,6 @@ except:
 # DB
 from Samples.Tools.config import dbDir
 dbFile = dbDir+'/DB_Run2016_nanoAODv6.sql'
-
 logger.info("Using db file: %s", dbFile)
 
 # DoubleMuon
@@ -165,7 +164,7 @@ JetHT = [
     JetHT_Run2016E_17Jul2018,
     JetHT_Run2016F_17Jul2018,
     JetHT_Run2016G_17Jul2018,
-#    JetHT_Run2016H_17Jul2018,
+    JetHT_Run2016H_17Jul2018,
 ]
 
 # MET
