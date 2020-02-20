@@ -33,6 +33,8 @@ dbFile = dbDir+"DB_Autumn18_Fast_miniAODv1.sql"
 
 logger.info("Using db file: %s", dbFile)
 
+DisplacedStops_mStop_250_ctau_0p01   = FWLiteSample.fromDAS("DisplacedStops_mStop_250_ctau_0p01", "/DisplacedStops-mstop-250-ctau-0p01/prhussai-19-09-28-d1325a8a4e5845c2e07754c18f9c751d/USER", instance="phys03", dbFile=dbFile, overwrite=ov, prefix=redirector, skipCheck=True)
+
 ## T2tt
 SMS_T2tt_mStop_150to250     = FWLiteSample.fromDAS("SMS_T2tt_mStop_150to250"  , "/SMS-T2tt_mStop-150to250_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 SMS_T2tt_mStop_250to350     = FWLiteSample.fromDAS("SMS_T2tt_mStop_250to350"  , "/SMS-T2tt_mStop-250to350_TuneCP2_13TeV-madgraphMLM-pythia8/RunIIAutumn18MiniAOD-PUFall18Fast_102X_upgrade2018_realistic_v15-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)

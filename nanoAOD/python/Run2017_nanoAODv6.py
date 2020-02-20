@@ -29,10 +29,7 @@ try:
     redirector = sys.modules['__main__'].redirector
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
-        if __name__ == "__main__":
-            from Samples.Tools.config import redirector_clip as redirector
-        else:
-            from Samples.Tools.config import redirector_clip_scratch as redirector
+        from Samples.Tools.config import redirector_clip_local as redirector
     else:
         from Samples.Tools.config import redirector as redirector
 
@@ -121,14 +118,14 @@ SingleElectron = [
 JetHT_Run2017B_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017B_31Mar2018", "/JetHT/Run2017B-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2017C_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017C_31Mar2018", "/JetHT/Run2017C-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2017D_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017D_31Mar2018", "/JetHT/Run2017D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2017E_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017E_31Mar2018", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2017E_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017E_31Mar2018", "/JetHT/Run2017E-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 JetHT_Run2017F_31Mar2018 = Sample.nanoAODfromDAS("JetHT_Run2017F_31Mar2018", "/JetHT/Run2017F-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 JetHT = [
     JetHT_Run2017B_31Mar2018,
     JetHT_Run2017C_31Mar2018,
     JetHT_Run2017D_31Mar2018,
-#    JetHT_Run2017E_31Mar2018,
+    JetHT_Run2017E_31Mar2018,
     JetHT_Run2017F_31Mar2018,
 ]
 

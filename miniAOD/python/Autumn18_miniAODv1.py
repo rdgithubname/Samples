@@ -409,8 +409,12 @@ T2tt_FullSim = [
     SMS_T2tt_3J_xqcut_20_mStop_250_mLSP_100,
     ]
 
+ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_TuneCP5_PSweights_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets + QCD + GJetsHT + T2tt_FullSim + WJetsNJetBinned
+ttH = [ ttH_HToInvisible ]
+
+
+allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets + QCD + GJetsHT + T2tt_FullSim + WJetsNJetBinned + ttH
 
 for sample in allSamples:
     sample.isData = False
