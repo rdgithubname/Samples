@@ -382,6 +382,10 @@ SUSY = [
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5
     ]
 
+ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_TuneCP5_PSweights_13TeV_powheg_pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v7-af81b0bf5fa41c6ab084712efe17a371/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5071) # ttH x-sec from here https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWG
+
+ttH = [ ttH_HToInvisible ]
+
 GluGluHToZZTo4L             = Sample.nanoAODfromDAS("GluGluHToZZTo4L",             "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.01297)
 GluGluToContinToZZTo2e2mu   = Sample.nanoAODfromDAS("GluGluToContinToZZTo2e2mu",   "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v6-aaebd5a242d0ea19e5cbbb3204c402e0/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.005423)
 GluGluToContinToZZTo2e2tau  = Sample.nanoAODfromDAS("GluGluToContinToZZTo2e2tau",  "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.005423)
@@ -471,10 +475,12 @@ GJetsHT = [
 
 other = [
     ]
+
 DisplacedStops_mStop_250_ctau_0p01 = Sample.nanoAODfromDAS("DisplacedStops_mStop_250_ctau_0p01", "/DisplacedStops-mstop-250-ctau-0p01/schoef-crab_prhussai-19-09-28-d1325a8a4e5845c2e07754c18f9c751d_v0-05774b17f68c744c98601843df17b36a/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov,xSection=1)
 DisplacedStops_mStop_250_ctau_0p1  = Sample.nanoAODfromDAS("DisplacedStops_mStop_250_ctau_0p1", "/DisplacedStops-mstop-250-ctau-0p1/prhussai-crab_prhussai-19-11-04-d1325a8a4e5845c2e07754c18f9c751d_v0-05774b17f68c744c98601843df17b36a/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov,xSection=1)
 displ = [DisplacedStops_mStop_250_ctau_0p01 , DisplacedStops_mStop_250_ctau_0p1]
-allSamples = DY + top + boson + wjets + rare + other + gluglu + QCD + GJetsHT + SUSY + displ 
+
+allSamples = DY + top + boson + wjets + rare + other + gluglu + QCD + GJetsHT + SUSY + displ + ttH
 
 for s in allSamples:
     s.isData = False

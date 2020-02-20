@@ -457,6 +457,26 @@ QCD = [
         QCD_Ele_pt300toInf,
 ]
 
+QCD_bEnriched_HT100to200   = FWLiteSample.fromDAS("QCD_bEnriched_HT100to200",   "/QCD_bEnriched_HT100to200_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT200to300   = FWLiteSample.fromDAS("QCD_bEnriched_HT200to300",   "/QCD_bEnriched_HT200to300_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v5/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT300to500   = FWLiteSample.fromDAS("QCD_bEnriched_HT300to500",   "/QCD_bEnriched_HT300to500_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT500to700   = FWLiteSample.fromDAS("QCD_bEnriched_HT500to700",   "/QCD_bEnriched_HT500to700_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT700to1000  = FWLiteSample.fromDAS("QCD_bEnriched_HT700to1000",  "/QCD_bEnriched_HT700to1000_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT1000to1500 = FWLiteSample.fromDAS("QCD_bEnriched_HT1000to1500", "/QCD_bEnriched_HT1000to1500_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT1500to2000 = FWLiteSample.fromDAS("QCD_bEnriched_HT1500to2000", "/QCD_bEnriched_HT1500to2000_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bEnriched_HT2000toInf  = FWLiteSample.fromDAS("QCD_bEnriched_HT2000toInf",  "/QCD_bEnriched_HT2000toInf_TuneCP5_13TeV-madgraph-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v3/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+QCD_b = [
+        QCD_bEnriched_HT100to200  ,
+        QCD_bEnriched_HT200to300  ,
+        QCD_bEnriched_HT300to500  ,
+        QCD_bEnriched_HT500to700  ,
+        QCD_bEnriched_HT700to1000 ,
+        QCD_bEnriched_HT1000to1500,
+        QCD_bEnriched_HT1500to2000,
+        QCD_bEnriched_HT2000toInf ,
+]
+
 GJets_HT40to100        = FWLiteSample.fromDAS("GJets_HT40to100",        "/GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/MINIAODSIM",  dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 GJets_HT100to200       = FWLiteSample.fromDAS("GJets_HT100to200",       "/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 GJets_HT200to400       = FWLiteSample.fromDAS("GJets_HT200to400",       "/GJets_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -512,8 +532,12 @@ T2tt_FullSim = [
 
     ]
 
+ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_13TeV_TuneCP5_powheg_pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+ttH = [ ttH_HToInvisible ]
+
 ## sum up
-allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets_HT + TTJets + TTX + TTVV + WJets + WJetsToLNu_HT + WJetsNJetBinned + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim
+allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets_HT + TTJets + TTX + TTVV + WJets + WJetsToLNu_HT + WJetsNJetBinned + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim + ttH
 
 for sample in allSamples:
     sample.isData = False

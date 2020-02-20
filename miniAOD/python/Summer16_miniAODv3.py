@@ -153,6 +153,7 @@ TTWW_NLO                = FWLiteSample.fromDAS("TTWW_NLO", "/TTWW_TuneCUETP8M2T4
 TTWZ_NLO                = FWLiteSample.fromDAS("TTWZ_NLO", "/TTWZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTZZ_NLO                = FWLiteSample.fromDAS("TTZZ_NLO", "/TTZZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+TTW_LO                  = FWLiteSample.fromDAS("TTW_LO",          "/ttWJets_13TeV_madgraphMLM/RunIISummer16MiniAODv3-94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTWJetsToLNu_NLO        = FWLiteSample.fromDAS("TTWJetsToLNu_NLO", "/TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTWJetsToQQ_NLO         = FWLiteSample.fromDAS("TTWJetsToQQ_NLO", "/TTWJetsToQQ_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 TTZToLLNuNu_NLO_ext2    = FWLiteSample.fromDAS("TTZToLLNuNu_NLO_ext2", "/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -189,6 +190,7 @@ TTGamma_had_LO_ptG200                   = FWLiteSample.fromDAS("TTGamma_had_LO_p
 
 
 TTX = [
+    TTW_LO,
     THQ_LO,
     THW_LO,
     tZq_ll_NLO,
@@ -509,10 +511,11 @@ T2tt_FullSim = [
     SMS_T2tt_3J_xqcut_20_mStop_350_mLSP_150,
     ]
 
+ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+ttH = [ ttH_HToInvisible ]
 
-
-allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + WJetsNJetBinned + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim
+allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + WJetsNJetBinned + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim + ttH
 
 for sample in allSamples:
     sample.isData = False

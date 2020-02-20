@@ -483,6 +483,10 @@ SUSY = [
     SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75
     ]
 
+ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_13TeV_TuneCP5_powheg_pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v6-c9616aae37ca5dde6948d6c7c700e4fe/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5071) # x-sec from here: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWG
+
+ttH = [ ttH_HToInvisible ]
+
 ## combined samples (needed for proper PUProfileCache)
 DYJetsToLL_M50_LO_comb  = Sample.combine("DYJetsToLL_M50_LO_comb",  [DYJetsToLL_M50_LO, DYJetsToLL_M50_LO_ext1])
 if hasattr(DYJetsToLL_M50_LO, 'nEvents'):
@@ -517,7 +521,7 @@ combinedSamples = [
 ]
 
 
-allSamples = DY + top + boson + wjets + rare + other + gluglu + combinedSamples + SUSY + QCD + GJetsHT
+allSamples = DY + top + boson + wjets + rare + other + gluglu + combinedSamples + SUSY + QCD + GJetsHT + ttH
 
 for s in allSamples:
     s.isData = False
