@@ -7,6 +7,7 @@ def get_parser():
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--check_completeness',       action='store_true',    help="Check competeness?")
     return argParser
     
 # Logging
@@ -197,3 +198,5 @@ for s in allSamples:
 
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
+if options.check_completeness:
+    samples.check_completeness() 

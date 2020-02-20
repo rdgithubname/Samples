@@ -59,3 +59,26 @@ class AutoClass:
             results = pool.map(echo, jobs)
         pool.close()
         pool.join()
+
+    def check_completeness( self ):
+        import os, sys
+        from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
+
+        failed = []
+        for sample in self.__samples:
+            print "Checking ", sample.name
+            counter=0
+            for filename in sample.files:
+                if filename.startswith('root://'):
+                    if not (checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
+                        failed.append(filename)
+                        counter+=1
+                else:
+                    if not (os.path.exists(filename) and os.stat(filename).st_size > 0 and checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
+                        failed.append(filename) 
+                        counter+=1
+            print "Found %i failed files" %counter
+        if len(failed)>0:
+            for filename in failed:
+                print filename
+            raise RuntimeError("Found %i missing files!", len(failed)) 

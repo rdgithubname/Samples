@@ -23,10 +23,11 @@ elif os.environ['USER'] in ['mzarucki']:
 else:
     dbDir = '/afs/hephy.at/data/%s01/nanoAOD/'%os.environ['USER']
 
-redirector            = 'root://hephyse.oeaw.ac.at:11001/'
 redirector_BE         = 'root://maite.iihe.ac.be/'
 redirector_global     = 'root://cms-xrd-global.cern.ch/'
 redirector_clip_local = '/mnt/hephy/cms/'
 redirector_clip       = 'root://hephyse.oeaw.ac.at:11001/'
+redirector            = 'root://hephyse.oeaw.ac.at:11001/'
+#redirector            =  redirector_global 
 
 if not os.path.isdir(dbDir): os.makedirs(dbDir)
