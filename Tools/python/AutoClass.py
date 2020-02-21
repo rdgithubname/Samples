@@ -1,7 +1,7 @@
 ''' class that stores all arguments as attributes
 '''
         
-import os
+import os, sys
 import subprocess
 from multiprocessing import Pool
 
@@ -25,6 +25,16 @@ def echo( job ):
     source, target = job
     cmd = ["/usr/bin/xrdcp", source, target ]
     print (" ".join( cmd ))
+
+def checkFile( job ):
+    from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
+    filename = job
+    if filename.startswith('root://'):
+        if not (checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
+            return str(filename)
+    else:
+        if not (os.path.exists(filename) and os.stat(filename).st_size > 0 and checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
+            return str(filename)
 
 ## Logger
 #import logging
@@ -60,25 +70,24 @@ class AutoClass:
         pool.close()
         pool.join()
 
-    def check_completeness( self ):
-        import os, sys
-        from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
+    def check_completeness( self, cores=1 ):
 
-        failed = []
+        jobs = []
         for sample in self.__samples:
-            print "Checking ", sample.name
-            counter=0
             for filename in sample.files:
-                if filename.startswith('root://'):
-                    if not (checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
-                        failed.append(filename)
-                        counter+=1
-                else:
-                    if not (os.path.exists(filename) and os.stat(filename).st_size > 0 and checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
-                        failed.append(filename) 
-                        counter+=1
-            print "Found %i failed files" %counter
+                jobs.append( filename )
+
+        if cores==1:
+            failed = map(checkFile, jobs)
+        else:
+            pool = Pool( processes=cores )
+            failed = pool.map( checkFile, jobs )
+            pool.close()
+            pool.join()
+
+        failed = filter( lambda res: res, failed )
+
         if len(failed)>0:
             for filename in failed:
                 print filename
-            raise RuntimeError("Found %i missing files!", len(failed)) 
+            raise RuntimeError("Found %i missing files!"%len(failed)) 

@@ -5,15 +5,15 @@ import ROOT
 def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
-    argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
-    argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--overwrite',          action='store_true',    help="Overwrite current entry in db?")
+    argParser.add_argument('--update',             action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
     return argParser
 
 # Logging
-import Samples.Tools.logger as logger_samples
-logger_samples = logger_samples.get_logger("INFO", logFile = None )
-
 if __name__=="__main__":
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger("INFO", logFile = None )
     import RootTools.core.logger as logger_rt
     logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
@@ -22,7 +22,7 @@ if __name__=="__main__":
         ov = 'update'
 else:
     import logging
-    logger_samples = logging.getLogger(__name__)
+    logger = logging.getLogger(__name__)
     ov = False
 
 # Redirector
@@ -30,7 +30,10 @@ try:
     redirector = sys.modules['__main__'].redirector
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
-        from Samples.Tools.config import redirector_clip_local as redirector
+        if __name__ == "__main__" and not options.check_completeness:
+            from Samples.Tools.config import redirector_clip as redirector
+        else:
+            from Samples.Tools.config import redirector_clip_local as redirector
     else:
         from Samples.Tools.config import redirector as redirector
 
@@ -38,7 +41,7 @@ except:
 from Samples.Tools.config import dbDir
 dbFile = dbDir+'/DB_Fall17_nanoAODv6.sql'
 
-logger_samples.info("Using db file: %s", dbFile)
+logger.info("Using db file: %s", dbFile)
 
 ## DY
 DYJetsToLL_M50_LO      = Sample.nanoAODfromDAS("DYJetsToLL_M50_LO",      "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17NanoAODv6-PU2017RECOSIMstep_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2075.14*3)
@@ -435,3 +438,6 @@ for s in allSamples:
 
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
+if options.check_completeness:
+    samples.check_completeness( cores=20 )
+

@@ -5,9 +5,9 @@ import ROOT
 def get_parser():
     import argparse
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
-    argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
-    argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
-    argParser.add_argument('--check_completeness',       action='store_true',    help="Check competeness?")
+    argParser.add_argument('--overwrite',          action='store_true',    help="Overwrite current entry in db?")
+    argParser.add_argument('--update',             action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
     return argParser
     
 # Logging
@@ -30,7 +30,7 @@ try:
     redirector = sys.modules['__main__'].redirector
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
-        if __name__ == "__main__":
+        if __name__ == "__main__" and not options.check_completeness:
             from Samples.Tools.config import redirector_clip as redirector
         else:
             from Samples.Tools.config import redirector_clip_local as redirector
@@ -198,4 +198,4 @@ for s in allSamples:
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
 if options.check_completeness:
-    samples.check_completeness() 
+    samples.check_completeness( cores=20 ) 
