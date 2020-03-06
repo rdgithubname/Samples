@@ -9,6 +9,7 @@ def get_parser():
     argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
     return argParser
 
+
 # Logging
 if __name__=="__main__":
     import Samples.Tools.logger as logger

@@ -7,6 +7,7 @@ def get_parser():
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
     return argParser
     
 # Logging
@@ -73,28 +74,28 @@ MuonEG = [
 EGamma_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018A_17Sep2018", "/EGamma/dspitzba-crab_Run2018A-17Sep2018-v2_legacy_nano_v4-54bc8181fe074b255f8b5cd51be6ae49/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 EGamma_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018B_17Sep2018", "/EGamma/dspitzba-crab_Run2018B-17Sep2018-v1_legacy_nano_v4-54bc8181fe074b255f8b5cd51be6ae49/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 EGamma_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018C_17Sep2018", "/EGamma/dspitzba-crab_Run2018C-17Sep2018-v1_legacy_nano_v4-54bc8181fe074b255f8b5cd51be6ae49/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#EGamma_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018D_17Sep2018", "/EGamma/dspitzba-crab_Run2018D-PromptReco-v2_legacy_nano_v4-67e33113cecc3df848e7adac0079af3d/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-EGamma_Run2018D_22Jan2019 = Sample.nanoAODfromDAS("EGamma_Run2018D_22Jan2019", "/EGamma/schoef-crab_Run2018D-22Jan2019-v2_legacy_nano_v5-fd74ba782b114ba9806803805a362d43/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+EGamma_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018D_17Sep2018", "/EGamma/dspitzba-crab_Run2018D-PromptReco-v2_legacy_nano_v4-67e33113cecc3df848e7adac0079af3d/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#EGamma_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018D_17Sep2018", "/EGamma/schoef-crab_Run2018D-22Jan2019-v2_legacy_nano_v5-fd74ba782b114ba9806803805a362d43/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 EGamma = [
     EGamma_Run2018A_17Sep2018,
     EGamma_Run2018B_17Sep2018,
     EGamma_Run2018C_17Sep2018,
-    EGamma_Run2018D_22Jan2019,
+    EGamma_Run2018D_17Sep2018,
 ]
 
 # SingleMuon
 SingleMuon_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018A_17Sep2018", "/SingleMuon/dspitzba-crab_Run2018A-17Sep2018-v2_legacy_nano_v4-54bc8181fe074b255f8b5cd51be6ae49/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 SingleMuon_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018B_17Sep2018", "/SingleMuon/dspitzba-crab_Run2018B-17Sep2018-v1_legacy_nano_v4-54bc8181fe074b255f8b5cd51be6ae49/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 SingleMuon_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018C_17Sep2018", "/SingleMuon/dspitzba-crab_Run2018C-17Sep2018-v1_legacy_nano_v4-54bc8181fe074b255f8b5cd51be6ae49/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#SingleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018D_17Sep2018", "/SingleMuon/dspitzba-crab_Run2018D-PromptReco-v2_legacy_nano_v4-67e33113cecc3df848e7adac0079af3d/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-SingleMuon_Run2018D_22Jan2019 = Sample.nanoAODfromDAS("SingleMuon_Run2018D_22Jan2019", "/SingleMuon/schoef-crab_Run2018D-22Jan2019-v2_legacy_nano_v5-fd74ba782b114ba9806803805a362d43/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018D_17Sep2018", "/SingleMuon/dspitzba-crab_Run2018D-PromptReco-v2_legacy_nano_v4-67e33113cecc3df848e7adac0079af3d/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#SingleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018D_17Sep2018", "/SingleMuon/schoef-crab_Run2018D-22Jan2019-v2_legacy_nano_v5-fd74ba782b114ba9806803805a362d43/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 SingleMuon = [
     SingleMuon_Run2018A_17Sep2018,
     SingleMuon_Run2018B_17Sep2018,
     SingleMuon_Run2018C_17Sep2018,
-    SingleMuon_Run2018D_22Jan2019,
+    SingleMuon_Run2018D_17Sep2018,
 ]
 
 # JetHT
@@ -131,3 +132,7 @@ for s in allSamples:
 
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
+if __name__=="__main__":
+    if options.check_completeness:
+        samples.check_completeness( cores=20 )
+

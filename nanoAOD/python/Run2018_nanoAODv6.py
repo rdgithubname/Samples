@@ -133,6 +133,7 @@ for s in allSamples:
 
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
-if options.check_completeness:
-    samples.check_completeness( cores=20 )
+if __name__=="__main__":
+    if options.check_completeness:
+        samples.check_completeness( cores=20 )
 
