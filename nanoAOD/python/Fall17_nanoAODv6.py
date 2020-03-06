@@ -31,7 +31,7 @@ try:
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
         if __name__ == "__main__" and not options.check_completeness:
-            from Samples.Tools.config import redirector_clip as redirector
+            from Samples.Tools.config import redirector_global as redirector
         else:
             from Samples.Tools.config import redirector_clip_local as redirector
     else:
@@ -93,11 +93,30 @@ DYJetsM5to50HT = [
 ]
 
 
+# x-secs using runXSecAnalyzer
+DYJetsToNuNu_HT100to200     = Sample.nanoAODfromDAS("DYJetsToNuNu_HT100to200",   "/ZJetsToNuNu_HT-100To200_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=280.35*1.23)
+DYJetsToNuNu_HT200to400     = Sample.nanoAODfromDAS("DYJetsToNuNu_HT200to400",   "/ZJetsToNuNu_HT-200To400_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=77.67*1.23)
+DYJetsToNuNu_HT400to600     = Sample.nanoAODfromDAS("DYJetsToNuNu_HT400to600",   "/ZJetsToNuNu_HT-400To600_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=10.73*1.23)
+DYJetsToNuNu_HT600to800     = Sample.nanoAODfromDAS("DYJetsToNuNu_HT600to800",   "/ZJetsToNuNu_HT-600To800_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2.559*1.23)
+DYJetsToNuNu_HT800to1200    = Sample.nanoAODfromDAS("DYJetsToNuNu_HT800to1200",  "/ZJetsToNuNu_HT-800To1200_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.1796*1.23)
+DYJetsToNuNu_HT1200to2500   = Sample.nanoAODfromDAS("DYJetsToNuNu_HT1200to2500", "/ZJetsToNuNu_HT-1200To2500_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.28833*1.23)
+DYJetsToNuNu_HT2500toInf    = Sample.nanoAODfromDAS("DYJetsToNuNu_HT2500toInf",  "/ZJetsToNuNu_HT-2500ToInf_13TeV-madgraph/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.006945*1.23)
+
+DYJetsNuNuHT = [
+   DYJetsToNuNu_HT100to200,
+   DYJetsToNuNu_HT200to400,
+   DYJetsToNuNu_HT400to600,
+   DYJetsToNuNu_HT600to800,
+   DYJetsToNuNu_HT800to1200,
+   DYJetsToNuNu_HT1200to2500,
+   DYJetsToNuNu_HT2500toInf,
+]
+
 DY = [
     DYJetsToLL_M50_LO,
     DYJetsToLL_M50_LO_ext1,
     DYJetsToLL_M10to50_LO,
-    DYJetsToLL_M50_ext1, ] + DYJetsM50HT + DYJetsM5to50HT
+    DYJetsToLL_M50_ext1, ] + DYJetsM50HT + DYJetsM5to50HT + DYJetsNuNuHT    
 
 ## ttbar
 TTLep_pow       = Sample.nanoAODfromDAS("TTLep_pow",       "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=831.762*((3*0.108)**2))
