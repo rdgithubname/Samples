@@ -459,5 +459,6 @@ from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
 if __name__=="__main__":
     if options.check_completeness:
-        samples.check_completeness( cores=20 )
+        samples = AutoClass( DYJetsNuNuHT )
+        samples.check_completeness( cores=1 )
 
