@@ -368,7 +368,7 @@ QCD_Mu_pt300to470       = Sample.nanoAODfromDAS("QCD_Mu_pt300to470",       "/QCD
 QCD_Mu_pt300to470_ext   = Sample.nanoAODfromDAS("QCD_Mu_pt300to470_ext",   "/QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext3-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=797.5)
 QCD_Mu_pt470to600       = Sample.nanoAODfromDAS("QCD_Mu_pt470to600",       "/QCD_Pt-470to600_MuEnrichedPt5_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=78.67)
 QCD_Mu_pt600to800       = Sample.nanoAODfromDAS("QCD_Mu_pt600to800",       "/QCD_Pt-600to800_MuEnrichedPt5_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=25.33)
-QCD_Mu_pt800to1000      = Sample.nanoAODfromDAS("QCD_Mu_pt800to1000_ext",  "/QCD_Pt-800to1000_MuEnrichedPt5_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext3-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.715)
+QCD_Mu_pt800to1000_ext  = Sample.nanoAODfromDAS("QCD_Mu_pt800to1000_ext",  "/QCD_Pt-800to1000_MuEnrichedPt5_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext3-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.715)
 QCD_Mu_pt1000toInf      = Sample.nanoAODfromDAS("QCD_Mu_pt1000toInf",      "/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.605)
 
 QCD_Ele_pt20to30     = Sample.nanoAODfromDAS("QCD_Ele_pt20to30",    "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5533000.0)
@@ -392,7 +392,7 @@ QCD = [
         QCD_Mu_pt300to470_ext,
         QCD_Mu_pt470to600,
         QCD_Mu_pt600to800,
-        QCD_Mu_pt800to1000,
+        QCD_Mu_pt800to1000_ext,
         QCD_Mu_pt1000toInf,
 
         QCD_Ele_pt20to30,
@@ -433,7 +433,6 @@ from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
 if __name__=="__main__":
     if options.check_completeness:
-        samples = AutoClass( DYJetsNuNuHT )
-        samples.check_completeness( cores=1 )
+        samples.check_completeness( cores=20 )
 
 
