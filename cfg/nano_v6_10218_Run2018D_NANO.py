@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: test_data_102X -s NANO --data --eventcontent NANOAOD --datatier NANOAOD --filein /store/data/Run2018A/JetHT/MINIAOD/17Sep2018-v1/100000/B1F933B9-A2D6-0A43-8D90-D4866C8C39D5.root --conditions 102X_dataRun2_Sep2018Rereco_v1 -n 100 --era Run2_2018,run2_nanoAOD_102Xv1
+# with command line options: nano_v6_10218_Run2018D -s NANO --nThreads 2 --data --era Run2_2018,run2_nanoAOD_102Xv1 --conditions 102X_dataRun2_Prompt_v15 --eventcontent NANOEDMAOD --datatier NANOAOD --filein /store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/325/175/00000/ACD8ED9B-F9B0-AE44-B0FD-E20DAB363018.root -n 100 --no_exec --customise_commands=process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -26,8 +26,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    #fileNames = cms.untracked.vstring('/store/data/Run2018A/JetHT/MINIAOD/17Sep2018-v1/100000/B1F933B9-A2D6-0A43-8D90-D4866C8C39D5.root'),
-    fileNames = cms.untracked.vstring('/store/data/Run2018A/JetHT/MINIAOD/17Sep2018-v1/100000/B1F933B9-A2D6-0A43-8D90-D4866C8C39D5.root'),
+    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/325/175/00000/ACD8ED9B-F9B0-AE44-B0FD-E20DAB363018.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -37,22 +36,21 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('test_data_102X nevts:100'),
+    annotation = cms.untracked.string('nano_v6_10218_Run2018D nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
 
 # Output definition
 
-process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
+process.NANOEDMAODoutput = cms.OutputModule("PoolOutputModule",
     compressionAlgorithm = cms.untracked.string('LZMA'),
     compressionLevel = cms.untracked.int32(9),
-    fakeNameForCrab =cms.untracked.bool(True),
     dataset = cms.untracked.PSet(
         dataTier = cms.untracked.string('NANOAOD'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('nanoAOD.root'),
+    fileName = cms.untracked.string('nano_v6_10218_Run2018D_NANO.root'),
     outputCommands = process.NANOAODEventContent.outputCommands
 )
 
@@ -60,20 +58,23 @@ process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_v11', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v15', '')
 
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequence)
 process.endjob_step = cms.EndPath(process.endOfProcess)
-process.NANOAODoutput_step = cms.EndPath(process.NANOAODoutput)
+process.NANOEDMAODoutput_step = cms.EndPath(process.NANOEDMAODoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.nanoAOD_step,process.endjob_step,process.NANOAODoutput_step)
+process.schedule = cms.Schedule(process.nanoAOD_step,process.endjob_step,process.NANOEDMAODoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
+#Setup FWK for multithreaded
+process.options.numberOfThreads=cms.untracked.uint32(2)
+process.options.numberOfStreams=cms.untracked.uint32(0)
+
 # customisation of the process.
-process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 
 # Automatic addition of the customisation function from PhysicsTools.NanoAOD.nano_cff
 from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeData 
@@ -85,6 +86,7 @@ process = nanoAOD_customizeData(process)
 
 # Customisation from command line
 
+process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
