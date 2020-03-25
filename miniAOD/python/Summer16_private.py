@@ -51,13 +51,42 @@ VGamma = [
 #    ZGToLLG_LO_S16_private,
 ]
 
+
+# xSec    = 5.277e-05
+# model: Yt
+# reweight_pkl = '/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/tZZ1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.pkl' 
 tZZ1j_4l_rwgt = FWLiteSample.fromDAS("tZZ1j_4l_rwgt", "/tZZ1j_4l_rwgt/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
+# xSec    = 0.2279
+# model: Yt
+# reweight_pkl = '/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/tZZ1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.pkl'#same
 tWZ01j_rwgt   = FWLiteSample.fromDAS("tWZ01j_rwgt", "/tWZ01j_rwgt/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
+# tWZ01j_filter_efficiency = (601438./(30*10**6))*(10**6/363784.)
+# xSec = 0.2279*tWZ01j_filter_efficiency
+# model: yt
+# reweight_pkl = '/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/tZZ1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.pkl'#same
+tWZ01j_rwgt_filter   = FWLiteSample.fromDAS("tWZ01j_rwgt_filter", "/tWZ01j_rwgt_filter_2/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
+# xSec    = 0.02523,
+# model: yt
+# reweight_pkl = '/afs/hephy.at/data/rschoefbeck01/gridpacks/Yt/tZZ1j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.pkl' #same
 tWW1j_rwgt    = FWLiteSample.fromDAS("tWW1j_rwgt", "/tWW1j_rwgt/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
 
+# xSec    = 0.8324,
+# model: dim6top
+# reweight_pkl = '/afs/hephy.at/data/rschoefbeck01/gridpacks/dim6top/ttW01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.pkl' 
 ttW01j_rwgt_dim6top = FWLiteSample.fromDAS("ttW01j_rwgt_dim6top", "/ttW01j_rwgt_dim6top/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
 
-allSamples = TTX + VGamma
+BSM_tVV_ttV = [
+    tZZ1j_4l_rwgt,
+    tWZ01j_rwgt,
+    tWZ01j_rwgt_filter,
+    tWW1j_rwgt,
+    ttW01j_rwgt_dim6top,
+]
+
+allSamples = TTX + VGamma + BSM_tVV_ttV
 
 for sample in allSamples:
     sample.isData = False

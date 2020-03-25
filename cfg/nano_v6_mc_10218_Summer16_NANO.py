@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: nano_v6_mc_10218_Summer16 -s NANO --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --no_exec --conditions 102X_mcRun2_asymptotic_v7 --era Run2_2016,run2_nanoAOD_94X2016 --filein /store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/100000/FA3C5CA2-BDC2-E811-9518-B496910A0290.root --customise_commands=process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
+# with command line options: nano_v6_mc_10218_Summer16 -s NANO --mc --eventcontent NANOAODSIM --datatier NANOAODSIM -n 100 --no_exec --conditions 102X_mcRun2_asymptotic_v7 --era Run2_2016,run2_nanoAOD_94X2016 --filein /store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/100000/FA3C5CA2-BDC2-E811-9518-B496910A0290.root --customise_commands=process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -27,7 +27,8 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/100000/FA3C5CA2-BDC2-E811-9518-B496910A0290.root'),
+    #fileNames = cms.untracked.vstring('/store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v1/100000/FA3C5CA2-BDC2-E811-9518-B496910A0290.root'),
+    fileNames = cms.untracked.vstring('root://hephyse.oeaw.ac.at//store/user/ttschida/tWZ01j_rwgt_filter_2/Summer16-mAOD949/191207_085303/0000/RunIISummer16_privProd_MINIAODSIM_56.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -37,7 +38,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('nano_v6_mc_10218_Summer16 nevts:1'),
+    annotation = cms.untracked.string('nano_v6_mc_10218_Summer16 nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -47,11 +48,12 @@ process.configurationMetadata = cms.untracked.PSet(
 process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
     compressionAlgorithm = cms.untracked.string('LZMA'),
     compressionLevel = cms.untracked.int32(9),
+    fakeNameForCrab =cms.untracked.bool(True),
     dataset = cms.untracked.PSet(
         dataTier = cms.untracked.string('NANOAODSIM'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('nano_v6_mc_10218_Summer16_NANO.root'),
+    fileName = cms.untracked.string('nanoAOD.root'),
     outputCommands = process.NANOAODSIMEventContent.outputCommands
 )
 

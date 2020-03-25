@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: nano_v6_10218_Run2017 -s NANO --nThreads 2 --data --era Run2_2017,run2_nanoAOD_94XMiniAODv2 --conditions 102X_dataRun2_v12 --eventcontent NANOEDMAOD --datatier NANOAOD --filein /store/data/Run2017D/DoubleMuon/MINIAOD/31Mar2018-v1/90000/F4659A94-7D37-E811-9703-3417EBE47C5E.root -n 100 --no_exec --customise_commands=process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
+# with command line options: nano_v6_10218_Run2017 -s NANO --data --era Run2_2017,run2_nanoAOD_94XMiniAODv2 --conditions 102X_dataRun2_v12 --eventcontent NANOAOD --datatier NANOAOD --filein /store/data/Run2017D/DoubleMuon/MINIAOD/31Mar2018-v1/90000/F4659A94-7D37-E811-9703-3417EBE47C5E.root -n 100 --no_exec --customise_commands=process.add_(cms.Service('InitRootHandlers', EnableIMT = cms.untracked.bool(False)))
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -43,15 +43,16 @@ process.configurationMetadata = cms.untracked.PSet(
 
 # Output definition
 
-process.NANOEDMAODoutput = cms.OutputModule("PoolOutputModule",
+process.NANOAODoutput = cms.OutputModule("NanoAODOutputModule",
     compressionAlgorithm = cms.untracked.string('LZMA'),
     compressionLevel = cms.untracked.int32(9),
+    fakeNameForCrab =cms.untracked.bool(True),
     dataset = cms.untracked.PSet(
         dataTier = cms.untracked.string('NANOAOD'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('nano_v6_10218_Run2017_NANO.root'),
-    outputCommands = process.NANOAODEventContent.outputCommands
+    fileName = cms.untracked.string('nanoAOD.root'),
+    outputCommands = process.NANOAODSIMEventContent.outputCommands
 )
 
 # Additional output definition
@@ -63,16 +64,12 @@ process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_v12', '')
 # Path and EndPath definitions
 process.nanoAOD_step = cms.Path(process.nanoSequence)
 process.endjob_step = cms.EndPath(process.endOfProcess)
-process.NANOEDMAODoutput_step = cms.EndPath(process.NANOEDMAODoutput)
+process.NANOAODoutput_step = cms.EndPath(process.NANOAODoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.nanoAOD_step,process.endjob_step,process.NANOEDMAODoutput_step)
+process.schedule = cms.Schedule(process.nanoAOD_step,process.endjob_step,process.NANOAODoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
-
-#Setup FWK for multithreaded
-process.options.numberOfThreads=cms.untracked.uint32(2)
-process.options.numberOfStreams=cms.untracked.uint32(0)
 
 # customisation of the process.
 
