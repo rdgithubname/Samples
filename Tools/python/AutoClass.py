@@ -52,6 +52,13 @@ class AutoClass:
             if names.count( name )>1:
                 raise RuntimeError( "Sample name is not unique: %s", name )
 
+    def find( self, name ):
+        for s in self.__samples:
+            if s.name == name:
+                return s.DASname
+            if s.DASname == name:
+                return s.name 
+
     def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
         import os
         if not path.endswith('/'): path+='/'

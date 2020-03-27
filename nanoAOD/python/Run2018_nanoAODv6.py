@@ -48,81 +48,81 @@ Single and double lepton PDs are generated with GTs using 2018 V8 JECs.
 '''
 
 # DoubleMuon
-DoubleMuon_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018A_17Sep2018", "/DoubleMuon/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018B_17Sep2018", "/DoubleMuon/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018C_17Sep2018", "/DoubleMuon/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("DoubleMuon_Run2018D_17Sep2018", "/DoubleMuon/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018A_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2018A_25Oct2019", "/DoubleMuon/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018B_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2018B_25Oct2019", "/DoubleMuon/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018C_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2018C_25Oct2019", "/DoubleMuon/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018D_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2018D_25Oct2019", "/DoubleMuon/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 DoubleMuon = [
-    DoubleMuon_Run2018A_17Sep2018,
-    DoubleMuon_Run2018B_17Sep2018,
-    DoubleMuon_Run2018C_17Sep2018,
-    DoubleMuon_Run2018D_17Sep2018,
+    DoubleMuon_Run2018A_25Oct2019,
+    DoubleMuon_Run2018B_25Oct2019,
+    DoubleMuon_Run2018C_25Oct2019,
+    DoubleMuon_Run2018D_25Oct2019,
 ]
 
 # MuonEG
-MuonEG_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("MuonEG_Run2018A_17Sep2018", "/MuonEG/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("MuonEG_Run2018B_17Sep2018", "/MuonEG/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("MuonEG_Run2018C_17Sep2018", "/MuonEG/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("MuonEG_Run2018D_17Sep2018", "/MuonEG/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+MuonEG_Run2018A_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2018A_25Oct2019", "/MuonEG/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+MuonEG_Run2018B_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2018B_25Oct2019", "/MuonEG/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+MuonEG_Run2018C_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2018C_25Oct2019", "/MuonEG/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+MuonEG_Run2018D_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2018D_25Oct2019", "/MuonEG/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 MuonEG = [
-    MuonEG_Run2018A_17Sep2018,
-    MuonEG_Run2018B_17Sep2018,
-    MuonEG_Run2018C_17Sep2018,
-    MuonEG_Run2018D_17Sep2018,
+    MuonEG_Run2018A_25Oct2019,
+    MuonEG_Run2018B_25Oct2019,
+    MuonEG_Run2018C_25Oct2019,
+    MuonEG_Run2018D_25Oct2019,
 ]
 
 # EGamma
-EGamma_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018A_17Sep2018", "/EGamma/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-EGamma_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018B_17Sep2018", "/EGamma/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-EGamma_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018C_17Sep2018", "/EGamma/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-EGamma_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("EGamma_Run2018D_17Sep2018", "/EGamma/Run2018D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+EGamma_Run2018A_25Oct2019 = Sample.nanoAODfromDAS("EGamma_Run2018A_25Oct2019", "/EGamma/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+EGamma_Run2018B_25Oct2019 = Sample.nanoAODfromDAS("EGamma_Run2018B_25Oct2019", "/EGamma/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+EGamma_Run2018C_25Oct2019 = Sample.nanoAODfromDAS("EGamma_Run2018C_25Oct2019", "/EGamma/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+EGamma_Run2018D_25Oct2019 = Sample.nanoAODfromDAS("EGamma_Run2018D_25Oct2019", "/EGamma/Run2018D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 EGamma = [
-    EGamma_Run2018A_17Sep2018,
-    EGamma_Run2018B_17Sep2018,
-    EGamma_Run2018C_17Sep2018,
-    EGamma_Run2018D_17Sep2018,
+    EGamma_Run2018A_25Oct2019,
+    EGamma_Run2018B_25Oct2019,
+    EGamma_Run2018C_25Oct2019,
+    EGamma_Run2018D_25Oct2019,
 ]
 
 # SingleMuon
-SingleMuon_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018A_17Sep2018", "/SingleMuon/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018B_17Sep2018", "/SingleMuon/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018C_17Sep2018", "/SingleMuon/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("SingleMuon_Run2018D_17Sep2018", "/SingleMuon/Run2018D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+SingleMuon_Run2018A_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2018A_25Oct2019", "/SingleMuon/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+SingleMuon_Run2018B_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2018B_25Oct2019", "/SingleMuon/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+SingleMuon_Run2018C_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2018C_25Oct2019", "/SingleMuon/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+SingleMuon_Run2018D_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2018D_25Oct2019", "/SingleMuon/Run2018D-Nano25Oct2019-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 SingleMuon = [
-    SingleMuon_Run2018A_17Sep2018,
-    SingleMuon_Run2018B_17Sep2018,
-    SingleMuon_Run2018C_17Sep2018,
-    SingleMuon_Run2018D_17Sep2018,
+    SingleMuon_Run2018A_25Oct2019,
+    SingleMuon_Run2018B_25Oct2019,
+    SingleMuon_Run2018C_25Oct2019,
+    SingleMuon_Run2018D_25Oct2019,
 ]
 
 # JetHT
-JetHT_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("JetHT_Run2018A_17Sep2018", "/JetHT/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-JetHT_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("JetHT_Run2018B_17Sep2018", "/JetHT/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-JetHT_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("JetHT_Run2018C_17Sep2018", "/JetHT/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-JetHT_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("JetHT_Run2018D_17Sep2018", "/JetHT/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2018A_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2018A_25Oct2019", "/JetHT/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2018B_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2018B_25Oct2019", "/JetHT/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2018C_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2018C_25Oct2019", "/JetHT/Run2018C-Nano25Oct2019-v2/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+JetHT_Run2018D_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2018D_25Oct2019", "/JetHT/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 JetHT = [
-    JetHT_Run2018A_17Sep2018,
-    JetHT_Run2018B_17Sep2018,
-    JetHT_Run2018C_17Sep2018,
-    JetHT_Run2018D_17Sep2018,
+    JetHT_Run2018A_25Oct2019,
+    JetHT_Run2018B_25Oct2019,
+    JetHT_Run2018C_25Oct2019,
+    JetHT_Run2018D_25Oct2019,
 ]
 
 # MET
-MET_Run2018A_17Sep2018 = Sample.nanoAODfromDAS("MET_Run2018A_17Sep2018", "/MET/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-MET_Run2018B_17Sep2018 = Sample.nanoAODfromDAS("MET_Run2018B_17Sep2018", "/MET/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-MET_Run2018C_17Sep2018 = Sample.nanoAODfromDAS("MET_Run2018C_17Sep2018", "/MET/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
-MET_Run2018D_17Sep2018 = Sample.nanoAODfromDAS("MET_Run2018D_17Sep2018", "/MET/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2018A_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2018A_25Oct2019", "/MET/Run2018A-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2018B_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2018B_25Oct2019", "/MET/Run2018B-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2018C_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2018C_25Oct2019", "/MET/Run2018C-Nano25Oct2019-v1/NANOAOD",  dbFile=dbFile, redirector=redirector, overwrite=ov)
+MET_Run2018D_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2018D_25Oct2019", "/MET/Run2018D-Nano25Oct2019_ver2-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
 MET = [
-    MET_Run2018A_17Sep2018,
-    MET_Run2018B_17Sep2018,
-    MET_Run2018C_17Sep2018,
-    MET_Run2018D_17Sep2018,
+    MET_Run2018A_25Oct2019,
+    MET_Run2018B_25Oct2019,
+    MET_Run2018C_25Oct2019,
+    MET_Run2018D_25Oct2019,
 ]
 
 allSamples = DoubleMuon + MuonEG + EGamma + SingleMuon + JetHT + MET
