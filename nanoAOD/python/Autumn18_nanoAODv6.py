@@ -242,7 +242,7 @@ ZZTo4L              = Sample.nanoAODfromDAS("ZZTo4L",               "/ZZTo4L_Tun
 WZTo1L3Nu             = Sample.nanoAODfromDAS("WZTo1L3Nu"  ,           "/WZTo1L3Nu_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM",          dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=(47.13)*(3*0.108)*(0.2) )
 WZTo1L1Nu2Q           = Sample.nanoAODfromDAS("WZTo1L1Nu2Q",           "/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=10.71)
 WZTo2L2Q              = Sample.nanoAODfromDAS("WZTo2L2Q"   ,           "/WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM",           dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.60)
-WZTo3LNu_ext          = Sample.nanoAODfromDAS("WZTo3LNu_ext",          "/WZTo3LNu_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM",       dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.42965)
+WZTo3LNu              = Sample.nanoAODfromDAS("WZTo3LNu",              "/WZTo3LNu_TuneCP5_13TeV-powheg-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM",       dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.42965)
 WZTo3LNu_amcatnlo     = Sample.nanoAODfromDAS("WZTo3LNu_amcatnlo",     "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20-v1/NANOAODSIM",       dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.42965)
 WZTo3LNu_amcatnlo_ext = Sample.nanoAODfromDAS("WZTo3LNu_amcatnlo_ext", "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25Oct2019_102X_upgrade2018_realistic_v20_ext1-v1/NANOAODSIM",              dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.666)
 
@@ -280,7 +280,7 @@ boson = [
     WZTo1L3Nu,
     WZTo1L1Nu2Q,
     WZTo2L2Q,
-    WZTo3LNu_ext,
+    WZTo3LNu,
     WZTo3LNu_amcatnlo,
     WZTo3LNu_amcatnlo_ext,
     VVTo2L2Nu,
