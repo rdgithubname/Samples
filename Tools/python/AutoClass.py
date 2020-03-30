@@ -52,20 +52,6 @@ class AutoClass:
             if names.count( name )>1:
                 raise RuntimeError( "Sample name is not unique: %s", name )
 
-<<<<<<< HEAD
-    def __add__( self, other ):
-        self.__samples += other.__samples
-        self.__samples = list(set(self.__samples))
-        return self
-
-    def __iadd__( self, other ):
-        self.__add__( other )
-
-    def get_all( self ):
-        return self.__samples
-
-    def get_jobs( self, path = "/data/dpm/"):
-=======
     def find( self, name ):
         for s in self.__samples:
             if s.name == name:
@@ -74,7 +60,6 @@ class AutoClass:
                 return s.name 
 
     def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
->>>>>>> 27e8c2c2bdfbda7502a3247ad900d559ca5cf2de
         import os
         if not path.endswith('/'): path+='/'
         jobs = []
@@ -83,13 +68,7 @@ class AutoClass:
                 _source = os.path.join( "/dpm/oeaw.ac.at/home/cms", ("".join( source.split('//')[2:])).lstrip('/') )
                 _target = os.path.join( path, ("".join( source.split('//')[2:])).lstrip('/') )
                 jobs.append( [_source, _target] )
-        return jobs
 
-    def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
-        jobs = self.get_jobs(path = path)
-        self.copy_jobs( jobs, n_processes = n_processes, do_it = do_it)
-
-    def copy_jobs( self, jobs, n_processes = 4, do_it = False):
         pool = Pool(processes = n_processes)
         if do_it:
             results = pool.map(copy, jobs)
@@ -98,8 +77,6 @@ class AutoClass:
         pool.close()
         pool.join()
 
-<<<<<<< HEAD
-=======
     def check_completeness( self, cores=1 ):
 
         jobs = []
@@ -121,4 +98,3 @@ class AutoClass:
             for filename in failed:
                 print filename
             raise RuntimeError("Found %i missing files!"%len(failed)) 
->>>>>>> 27e8c2c2bdfbda7502a3247ad900d559ca5cf2de
