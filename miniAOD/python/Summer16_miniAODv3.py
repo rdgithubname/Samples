@@ -509,9 +509,6 @@ T2tt_FullSim = [
     SMS_T2tt_3J_xqcut_20_mStop_350_mLSP_150,
     ]
 
-
-
-
 allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + WJetsNJetBinned + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim
 
 for sample in allSamples:

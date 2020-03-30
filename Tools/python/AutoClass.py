@@ -42,7 +42,18 @@ class AutoClass:
             if names.count( name )>1:
                 raise RuntimeError( "Sample name is not unique: %s", name )
 
-    def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
+    def __add__( self, other ):
+        self.__samples += other.__samples
+        self.__samples = list(set(self.__samples))
+        return self
+
+    def __iadd__( self, other ):
+        self.__add__( other )
+
+    def get_all( self ):
+        return self.__samples
+
+    def get_jobs( self, path = "/data/dpm/"):
         import os
         if not path.endswith('/'): path+='/'
         jobs = []
@@ -51,7 +62,13 @@ class AutoClass:
                 _source = os.path.join( "/dpm/oeaw.ac.at/home/cms", ("".join( source.split('//')[2:])).lstrip('/') )
                 _target = os.path.join( path, ("".join( source.split('//')[2:])).lstrip('/') )
                 jobs.append( [_source, _target] )
+        return jobs
 
+    def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
+        jobs = self.get_jobs(path = path)
+        self.copy_jobs( jobs, n_processes = n_processes, do_it = do_it)
+
+    def copy_jobs( self, jobs, n_processes = 4, do_it = False):
         pool = Pool(processes = n_processes)
         if do_it:
             results = pool.map(copy, jobs)
@@ -59,3 +76,4 @@ class AutoClass:
             results = pool.map(echo, jobs)
         pool.close()
         pool.join()
+
