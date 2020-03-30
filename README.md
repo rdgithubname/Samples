@@ -20,12 +20,22 @@ scram b -j 8
 
 ```
 
-Checkout your custom modules to nanoAOD. This is just an example, adding the not yet merged computation of sumPt as well as FastSim support. sumPt is needed to recompute MET significance.
+Private nanoAOD v4 (sumPt for MetSig):
 
 ```
 cd $CMSSW_BASE/src
 cp Samples/sparse-checkout .git/info/sparse-checkout
 git remote add METSig https://github.com/danbarto/cmssw.git -f -t sumPtForMETSig_102Xv2
 git checkout -b sumPtForMETSig_102Xv2 METSig/sumPtForMETSig_102Xv2
+scram b -j 8
+```
+Private nanoAOD v6 (lepton MVA TTV and lepton MVA inputs):
+
+```
+cd $CMSSW_BASE/src
+cp Samples/sparse-checkout .git/info/sparse-checkout
+git remote add hephy https://github.com/HEPHYAnalysisSW/cmssw.git -f -t CMSSW_10_2_18_lepton_MVA_TTV
+git fetch hephy 
+git checkout -b CMSSW_10_2_18_lepton_MVA_TTV hephy/CMSSW_10_2_18_lepton_MVA_TTV
 scram b -j 8
 ```

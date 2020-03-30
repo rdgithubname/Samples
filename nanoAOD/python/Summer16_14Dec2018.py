@@ -7,6 +7,7 @@ def get_parser():
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
     return argParser
 
 # Logging
@@ -28,7 +29,10 @@ else:
 try:
     redirector = sys.modules['__main__'].redirector
 except:
-    from Samples.Tools.config import  redirector as redirector
+    if "clip" in os.getenv("HOSTNAME").lower():
+        from Samples.Tools.config import redirector_clip_local as redirector
+    else:
+        from Samples.Tools.config import redirector as redirector
 
 from Samples.Tools.config import  redirector_global
 
@@ -168,7 +172,7 @@ TTZ_LO              = Sample.nanoAODfromDAS("TTZ_LO", "/ttZJets_13TeV_madgraphML
 
 #TGJets              = Sample.nanoAODfromDAS("TGJets",     "/TGJets_TuneCUETP8M1_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=2.967)
 TGJets_ext          = Sample.nanoAODfromDAS("TGJets_ext", "/TGJets_TuneCUETP8M1_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=2.967)
-tZq_ll              = Sample.nanoAODfromDAS("tZq_ll",     "/tZq_ll_4f_13TeV-amcatnlo-herwigpp/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector_global, xSection=0.09418 ) #0.0758 )
+#tZq_ll              = Sample.nanoAODfromDAS("tZq_ll",     "/tZq_ll_4f_13TeV-amcatnlo-herwigpp/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector_global, xSection=0.09418 ) #0.0758 )
 tZq_ll_ext          = Sample.nanoAODfromDAS("tZq_ll_ext", "/tZq_ll_4f_13TeV-amcatnlo-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6_ext1-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.09418 ) #0.0758 )
 tWll                = Sample.nanoAODfromDAS("tWll",       "/ST_tWll_5f_LO_13TeV-MadGraph-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.01123)
 tWnunu              = Sample.nanoAODfromDAS("tWnunu",     "/ST_tWnunu_5f_LO_13TeV-MadGraph-pythia8/RunIISummer16NanoAODv4-PUMoriond17_Nano14Dec2018_102X_mcRun2_asymptotic_v6-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.01123*1.9822 )
@@ -585,3 +589,7 @@ for s in allSamples:
 
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
+if __name__=="__main__":
+    if options.check_completeness:
+        samples.check_completeness( cores=20 )
+

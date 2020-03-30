@@ -68,8 +68,12 @@ SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75     = FWLiteSample.fromDAS("SM
 
 T8bbstausnu = [ SMS_T8bbstausnu_XCha0p5_mStop_200to1800_XStau0p25, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p5, SMS_T8bbstausnu_mStop_200to1800_XCha0p5_XStau0p75 ]
 
+SMS_T2tt_dM_10to80 = FWLiteSample.fromDAS("SMS_T2tt_dM_10to80" , "/SMS-T2tt_dM-10to80_genHT-160_genMET-80_mWMin-0p1_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUSummer16v3Fast_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+T2tt_dm10to80 = [SMS_T2tt_dM_10to80]
+
 ## sum up
-allSamples = T2tt + T2bW + T8bbllnunu + T8bbstausnu
+allSamples = T2tt + T2bW + T8bbllnunu + T8bbstausnu + T2tt_dm10to80
 
 for sample in allSamples:
     sample.isData = False

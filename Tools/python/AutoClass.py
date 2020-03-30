@@ -1,7 +1,7 @@
 ''' class that stores all arguments as attributes
 '''
         
-import os
+import os, sys
 import subprocess
 from multiprocessing import Pool
 
@@ -26,6 +26,16 @@ def echo( job ):
     cmd = ["/usr/bin/xrdcp", source, target ]
     print (" ".join( cmd ))
 
+def checkFile( job ):
+    from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
+    filename = job
+    if filename.startswith('root://'):
+        if not (checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
+            return str(filename)
+    else:
+        if not (os.path.exists(filename) and os.stat(filename).st_size > 0 and checkRootFile( filename, checkForObjects = ["Events"]) and deepCheckRootFile( filename )):
+            return str(filename)
+
 ## Logger
 #import logging
 #logger = logging.getLogger(__name__)
@@ -42,6 +52,7 @@ class AutoClass:
             if names.count( name )>1:
                 raise RuntimeError( "Sample name is not unique: %s", name )
 
+<<<<<<< HEAD
     def __add__( self, other ):
         self.__samples += other.__samples
         self.__samples = list(set(self.__samples))
@@ -54,6 +65,16 @@ class AutoClass:
         return self.__samples
 
     def get_jobs( self, path = "/data/dpm/"):
+=======
+    def find( self, name ):
+        for s in self.__samples:
+            if s.name == name:
+                return s.DASname
+            if s.DASname == name:
+                return s.name 
+
+    def copy_to_local( self, path = "/data/dpm/", n_processes = 4, do_it = False):
+>>>>>>> 27e8c2c2bdfbda7502a3247ad900d559ca5cf2de
         import os
         if not path.endswith('/'): path+='/'
         jobs = []
@@ -77,3 +98,27 @@ class AutoClass:
         pool.close()
         pool.join()
 
+<<<<<<< HEAD
+=======
+    def check_completeness( self, cores=1 ):
+
+        jobs = []
+        for sample in self.__samples:
+            for filename in sample.files:
+                jobs.append( filename )
+
+        if cores==1:
+            failed = map(checkFile, jobs)
+        else:
+            pool = Pool( processes=cores )
+            failed = pool.map( checkFile, jobs )
+            pool.close()
+            pool.join()
+
+        failed = filter( lambda res: res, failed )
+
+        if len(failed)>0:
+            for filename in failed:
+                print filename
+            raise RuntimeError("Found %i missing files!"%len(failed)) 
+>>>>>>> 27e8c2c2bdfbda7502a3247ad900d559ca5cf2de

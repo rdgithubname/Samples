@@ -5,7 +5,9 @@
 # with command line options: myNanoProdMc -s NANO --mc --eventcontent NANOAODSIM --datatier NANOAODSIM --no_exec --conditions 102X_upgrade2018_realistic_v12 --era Run2_2018,run2_nanoAOD_102Xv1
 import FWCore.ParameterSet.Config as cms
 
-defaultInput = "/store/mc/RunIIAutumn18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/80000/AC241C46-3823-344E-86C4-DC76A98F32A0.root"
+#defaultInput = "/store/mc/RunIIAutumn18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/80000/AC241C46-3823-344E-86C4-DC76A98F32A0.root"
+#defaultInput = "file:/afs/cern.ch/work/d/dspitzba/MET/sumPtDevel/CMSSW_10_2_15/src/Samples/cfg/MUO-RunIIAutumn18MiniAOD-00016.root"
+defaultInput = "/store/mc/RunIIAutumn18MiniAOD/ttH_HToInvisible_M125_TuneCP5_PSweights_13TeV_powheg_pythia8/MINIAODSIM/102X_upgrade2018_realistic_v15-v1/80000/C70D1DD0-1C4F-E14F-AFFF-1D3F9673ECB7.root"
 
 import FWCore.ParameterSet.VarParsing as VarParsing
 options = VarParsing.VarParsing ('analysis')
