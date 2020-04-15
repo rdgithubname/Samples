@@ -284,7 +284,7 @@ boson = [
     WZTo1L3Nu,
     WZTo1L1Nu2Q,
     WZTo2L2Q,
-#    WZTo3LNu_ext,
+    WZTo3LNu,
     WZTo3LNu_amcatnlo,
     VVTo2L2Nu,
     WGToLNuG,
