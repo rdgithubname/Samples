@@ -12,7 +12,7 @@ externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 # https://github.com/cms-sw/genproductions/tree/5fb3762c8be13dabb89a8580863856201d56f49c/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/TTZJets/TTZJetsToLLNuNu_5f_NLO
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
 from Configuration.Generator.Pythia8aMCatNLOSettings_cfi import *
 
 generator = cms.EDFilter("Pythia8HadronizerFilter",
@@ -23,13 +23,13 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
     comEnergy = cms.double(13000.),
     PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CP5SettingsBlock,
+        pythia8CUEP8M1SettingsBlock,
         pythia8aMCatNLOSettingsBlock,
         processParameters = cms.vstring(
             'TimeShower:nPartonsInBorn = 0', #number of coloured particles (before resonance decays) in born matrix element
         ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CP5Settings',
+                                    'pythia8CUEP8M1Settings',
                                     'pythia8aMCatNLOSettings',
                                     'processParameters',
                                     )
