@@ -149,6 +149,8 @@ process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 )
 
 
+process.ProductionFilterSequence = cms.Sequence(process.generator)
+
 # Path and EndPath definitions
 process.lhe_step = cms.Path(process.externalLHEProducer)
 process.generation_step = cms.Path(process.pgen)
@@ -163,7 +165,7 @@ associatePatAlgosToolsTask(process)
 # filter all path with the production filter sequence
 for path in process.paths:
 	if path in ['lhe_step']: continue
-	getattr(process,path)._seq = process.generator * getattr(process,path)._seq 
+	getattr(process,path)._seq = process.ProductionFilterSequence * getattr(process,path)._seq 
 
 
 # Customisation from command line

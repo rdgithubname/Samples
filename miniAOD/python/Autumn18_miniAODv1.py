@@ -413,8 +413,13 @@ ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M
 
 ttH = [ ttH_HToInvisible ]
 
+## DM signals
+TTbarDMJets_Dilepton_scalar         = FWLiteSample.fromDAS("TTbarDMJets_Dilepton_scalar", "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIIAutumn18MiniAOD-rp_102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTbarDMJets_Dilepton_pseudoscalar   = FWLiteSample.fromDAS("TTbarDMJets_Dilepton_pseudiscalar", "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIIAutumn18MiniAOD-rp_102X_upgrade2018_realistic_v15-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets + QCD + GJetsHT + T2tt_FullSim + WJetsNJetBinned + ttH
+DM = [TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar]
+
+allSamples = relvals + DY + DY_HT + singleTop + TTJets + TTX + diboson + multiboson + gluglu + WJets + QCD + GJetsHT + T2tt_FullSim + WJetsNJetBinned + ttH + DM
 
 for sample in allSamples:
     sample.isData = False
