@@ -10,5 +10,4 @@ then
 else
     flag="False"
 fi
-
-echo -e "from ${1} import samples\nsamples.copy_to_local(do_it=${flag})" | python
+echo -e "import Samples.Tools.logger as logger;logger = logger.get_logger('INFO', logFile = None);from Samples.nanoAOD.${1} import samples\nsamples.copy_to_local(do_it=${flag})" | python
