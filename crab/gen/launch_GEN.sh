@@ -266,7 +266,12 @@
 #label="tWZ0j_rwgt_filter_dim6top"
 #python launch_GEN.py $@ --config gen_LO_0j_mc_71X_CUEP8M1_twz_filter --production_label ${label} --unitsPerJob 3000 --totalUnits 30000000 --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/dim6top/"
-gridpack="tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
-label="tWZ01j_rwgt_filter_dim6top"
-python launch_GEN.py $@ --config gen_LO_01j_mc_71X_CUEP8M1_twz_filter --production_label ${label} --unitsPerJob 3000 --totalUnits 30000000 --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/rschoefbeck01/gridpacks/dim6top/"
+#gridpack="tWZ01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ01j_rwgt_filter_dim6top"
+#python launch_GEN.py $@ --config gen_LO_01j_mc_71X_CUEP8M1_twz_filter --production_label ${label} --unitsPerJob 3000 --totalUnits 30000000 --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+dir="/afs/hephy.at/data/llechner03/tWZ/"
+gridpack="tWZ_NLO_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+label="tWZ_NLO_v16_2"
+python launch_GEN.py $@ --config gen_NLO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 100 --totalUnits 100 --gridpackDir ${dir} --gridpack ${gridpack} --publish
