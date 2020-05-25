@@ -7,6 +7,7 @@ def get_parser():
     argParser = argparse.ArgumentParser(description = "Argument parser for samples file")
     argParser.add_argument('--overwrite',   action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',      action='store_true',    help="Update current entry in db?")
+    argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
     return argParser
 
 # Logging
@@ -28,7 +29,10 @@ else:
 try:
     redirector = sys.modules['__main__'].redirector
 except:
-    from Samples.Tools.config import  redirector as redirector
+    if "clip" in os.getenv("HOSTNAME").lower():
+        from Samples.Tools.config import redirector_clip_local as redirector
+    else:
+        from Samples.Tools.config import redirector as redirector
 
 # DB
 from Samples.Tools.config import dbDir
@@ -150,7 +154,7 @@ THQ = Sample.nanoAODfromDAS("THQ", "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8
 #THW = Sample.nanoAODfromDAS("THW", "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.1472)
 
 ## ttV & TVV
-TTW_LO              = Sample.nanoAODfromDAS("TTW_LO", "/ttWJets_13TeV_madgraphMLM/RunIISummer16NanoAOD-05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.6105)
+#TTW_LO              = Sample.nanoAODfromDAS("TTW_LO", "/ttWJets_13TeV_madgraphMLM/RunIISummer16NanoAOD-05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.6105)
 TTZ_LO              = Sample.nanoAODfromDAS("TTZ_LO", "/ttZJets_13TeV_madgraphMLM/RunIISummer16NanoAOD-05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.5297/0.692)
 
 #TGJets              = Sample.nanoAODfromDAS("TGJets",     "/TGJets_TuneCUETP8M1_13TeV_amcatnlo_madspin_pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=2.967)
@@ -177,7 +181,7 @@ TTGSemiT            = Sample.nanoAODfromDAS("TTGSemiT",    "/TTGamma_SingleLeptF
 TTGLep              = Sample.nanoAODfromDAS("TTGLep",      "/TTGamma_Dilept_TuneCUETP8M2T4_13TeV-amcatnlo-pythia8/RunIISummer16NanoAOD-PUMoriond17_05Feb2018_94X_mcRun2_asymptotic_v2-v1/NANOAODSIM", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.607*1.574299835) # MadGraph LO xsec * k factor estimated in TOPAZ (TOP-18-010)
 
 TTV_LO = [
-    TTW_LO,
+#    TTW_LO,
     TTZ_LO,
     ]
 
@@ -528,3 +532,7 @@ for s in allSamples:
 
 from Samples.Tools.AutoClass import AutoClass
 samples = AutoClass( allSamples )
+if __name__=="__main__":
+    if options.check_completeness:
+        samples.check_completeness( cores=20 )
+

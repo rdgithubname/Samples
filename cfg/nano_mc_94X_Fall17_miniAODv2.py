@@ -7,7 +7,9 @@ import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-defaultInput = "/store/mc/RunIIFall17MiniAODv2/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/110000/C6D737BC-8BAC-E811-9A2A-1866DA87A7E7.root"
+#defaultInput = "/store/mc/RunIIFall17MiniAODv2/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/110000/C6D737BC-8BAC-E811-9A2A-1866DA87A7E7.root"
+#defaultInput = "/store/mc/RunIIFall17MiniAODv2/ttH_HToInvisible_M125_13TeV_TuneCP5_powheg_pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/C66BEA34-D520-E911-9E67-008CFAF52264.root"
+defaultInput = "/store/mc/RunIIFall17MiniAODv2/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/MINIAODSIM/PU2017_12Apr2018_rp_94X_mc2017_realistic_v14-v1/260000/88D67FC8-8217-EA11-9DC9-0242AC1C0501.root"
 
 import FWCore.ParameterSet.VarParsing as VarParsing
 options = VarParsing.VarParsing ('analysis')

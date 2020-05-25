@@ -32,6 +32,8 @@
 
 #python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample WGToLNuG_NLO
 #python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTToHadronic_pow_PS
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Fall17_miniAODv2   --sample ttH
+python launch.py $@ --config nano_v7_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Fall17_miniAODv2   --sample DM
 
 # SUSY
 #python launch.py $@ --config nano_mc_fast_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Fall17_Fast_miniAODv2   --sample SMS_T2tt_mStop_150to250
@@ -54,4 +56,20 @@
 
 #python launch.py $@ --runOnNonValid --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample  ZGToLLG_NLO_lowMLL
 
-python launch.py --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Fall17_miniAODv2 --sample WJetsNJetBinned
+#python launch.py --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Fall17_miniAODv2 --sample WJetsNJetBinned
+
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_dilep_LO
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_dilep_LO_erdOn
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_dilep_LO_TuneUp
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_dilep_LO_TuneDown
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_dilep_LO_ptG100To200
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_dilep_LO_ptG200
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_semilep_LO
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_semilep_LO_erdOn
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_semilep_LO_TuneUp
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_semilep_LO_TuneDown
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_semilep_LO_ptG100To200
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_semilep_LO_ptG200
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_had_LO
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_had_LO_ptG100To200
+#python launch.py $@ --config nano_mc_94X_Fall17_miniAODv2  --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Fall17_miniAODv2   --sample TTGamma_had_LO_ptG200

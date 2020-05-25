@@ -1,3 +1,4 @@
+#run in CMSSW_9_4_7
 tag = 'Summer16-mAOD949'
 
 from WMCore.Configuration import Configuration
@@ -38,6 +39,7 @@ if __name__ == '__main__':
 
     for input_dataset in [
        #'/DisplacedStops-mstop-250-ctau-0p01/schoef-Stops2l-00b89d02933778e18fabfa9e3d5e723a/USER',
+       '/DisplacedStops-mstop-250-ctau-0p1/schoef-Stops2l-a19b5846e9911d7daa1e4ef4f70e9350/USER',
     ]:
         config.Data.inputDataset = input_dataset
         config.General.requestName = input_dataset.split('/')[1] 

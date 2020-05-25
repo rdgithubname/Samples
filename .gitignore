@@ -9,6 +9,8 @@ crab/crab_*
 # C extensions
 *.so
 
+crab/*/crab_*
+
 # Distribution / packaging
 .Python
 build/

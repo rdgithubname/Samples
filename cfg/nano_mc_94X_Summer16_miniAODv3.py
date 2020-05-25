@@ -8,7 +8,8 @@ import FWCore.ParameterSet.Config as cms
 from Configuration.StandardSequences.Eras import eras
 
 #defaultInput = "/store/mc/RunIISummer16MiniAODv3/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/120000/4E0B69CE-36DF-E811-A84D-782BCB38FF36.root"
-defaultInput = "/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_3J_xqcut-20_mStop-150_mLSP-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v3/40000/908378BA-8B1A-E911-B3B9-0CC47AC17470.root"
+#defaultInput = "/store/mc/RunIISummer16MiniAODv3/SMS-T2tt_3J_xqcut-20_mStop-150_mLSP-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v3/40000/908378BA-8B1A-E911-B3B9-0CC47AC17470.root"
+defaultInput = "/store/mc/RunIISummer16MiniAODv2/ttH_HToInvisible_M125_13TeV_powheg_pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/80000/349BAADF-0903-E811-B341-FA163E5B9932.root"
 
 import FWCore.ParameterSet.VarParsing as VarParsing
 options = VarParsing.VarParsing ('analysis')

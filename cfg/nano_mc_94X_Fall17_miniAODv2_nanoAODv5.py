@@ -9,7 +9,8 @@ from Configuration.StandardSequences.Eras import eras
 
 process = cms.Process('NANO',eras.Run2_2017,eras.run2_nanoAOD_94XMiniAODv2)
 
-defaultInput = "/store/mc/RunIIFall17MiniAODv2/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/110000/C6D737BC-8BAC-E811-9A2A-1866DA87A7E7.root"
+#defaultInput = "/store/mc/RunIIFall17MiniAODv2/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/110000/C6D737BC-8BAC-E811-9A2A-1866DA87A7E7.root"
+defaultInput = "file:/mnt/hephy/cms/test/tmp_files_for_tests/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_MINIAODSIM.root"
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
