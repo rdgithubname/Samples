@@ -238,7 +238,7 @@ ZZTo4L    = Sample.nanoAODfromDAS("ZZTo4L",    "/ZZTo4L_13TeV_powheg_pythia8/sch
 WZTo1L3Nu         = Sample.nanoAODfromDAS("WZTo1L3Nu",         "/WZTo1L3Nu_13TeV_amcatnloFXFX_madspin_pythia8_v2/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=(47.13)*(3*0.108)*(0.2) ) 
 WZTo1L1Nu2Q       = Sample.nanoAODfromDAS("WZTo1L1Nu2Q",       "/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=10.71) 
 WZTo2L2Q          = Sample.nanoAODfromDAS("WZTo2L2Q",          "/WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=5.60) 
-WZTo3LNu_ext      = Sample.nanoAODfromDAS("WZTo3LNu_ext",      "/WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v1_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=4.42965) 
+WZTo3LNu          = Sample.nanoAODfromDAS("WZTo3LNu",      "/WZTo3LNu_13TeV-powheg-pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2_legacy_nano_v4-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=4.42965) 
 WZTo3LNu_amcatnlo = Sample.nanoAODfromDAS("WZTo3LNu_amcatnlo", "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_new_pmx_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=4.666)
 
 VVTo2L2Nu = Sample.nanoAODfromDAS("VVTo2L2Nu", "/VVTo2L2Nu_13TeV_amcatnloFXFX_madspin_pythia8/schoef-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1_legacy_nano_v3-f82d502d908e8d321edd6873d261cf31/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=14.00)
@@ -284,7 +284,7 @@ boson = [
     WZTo1L3Nu,
     WZTo1L1Nu2Q,
     WZTo2L2Q,
-#    WZTo3LNu_ext,
+    WZTo3LNu,
     WZTo3LNu_amcatnlo,
     VVTo2L2Nu,
     WGToLNuG,
@@ -487,6 +487,16 @@ ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", "/ttH_HToInvisible_
 
 ttH = [ ttH_HToInvisible ]
 
+### v4
+#TTbarDMJets_Dilepton_scalar         = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_scalar",    "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_rp_94X_mc2017_realistic_v14-v1_legacy_nano_v6-c9616aae37ca5dde6948d6c7c700e4fe/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+#TTbarDMJets_Dilepton_pseudoscalar   = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_pseudoscalar",    "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_rp_94X_mc2017_realistic_v14-v1_legacy_nano_v6-c9616aae37ca5dde6948d6c7c700e4fe/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+### v7
+TTbarDMJets_Dilepton_scalar         = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_scalar",    "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_rp_94X_mc2017_realistic_v14-v1_legacy_nano_v7-cac0ab88e8e042f3b3d897e3d9e36274/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+TTbarDMJets_Dilepton_pseudoscalar   = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_pseudoscalar",    "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIIFall17MiniAODv2-PU2017_12Apr2018_rp_94X_mc2017_realistic_v14-v1_legacy_nano_v7-cac0ab88e8e042f3b3d897e3d9e36274/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+ttDM = [ TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar ]
+
 ## combined samples (needed for proper PUProfileCache)
 DYJetsToLL_M50_LO_comb  = Sample.combine("DYJetsToLL_M50_LO_comb",  [DYJetsToLL_M50_LO, DYJetsToLL_M50_LO_ext1])
 if hasattr(DYJetsToLL_M50_LO, 'nEvents'):
@@ -521,7 +531,7 @@ combinedSamples = [
 ]
 
 
-allSamples = DY + top + boson + wjets + rare + other + gluglu + combinedSamples + SUSY + QCD + GJetsHT + ttH
+allSamples = DY + top + boson + wjets + rare + other + gluglu + combinedSamples + SUSY + QCD + GJetsHT + ttH + ttDM
 
 for s in allSamples:
     s.isData = False

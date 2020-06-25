@@ -387,6 +387,12 @@ ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", "/ttH_HToInvisible_
 
 ttH = [ ttH_HToInvisible ]
 
+### v7
+TTbarDMJets_Dilepton_scalar         = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_scalar",    "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-rp_102X_upgrade2018_realistic_v15-v1_legacy_nano_v7-abeda1cb31fcbcff01a3aca0ccd28378/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+TTbarDMJets_Dilepton_pseudoscalar   = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_pseudoscalar",    "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIIAutumn18MiniAOD-rp_102X_upgrade2018_realistic_v15-v1_legacy_nano_v7-abeda1cb31fcbcff01a3aca0ccd28378/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
+
+ttDM = [ TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar ]
+
 GluGluHToZZTo4L             = Sample.nanoAODfromDAS("GluGluHToZZTo4L",             "/GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV7011_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",    dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.01297)
 GluGluToContinToZZTo2e2mu   = Sample.nanoAODfromDAS("GluGluToContinToZZTo2e2mu",   "/GluGluToContinToZZTo2e2mu_13TeV_MCFM701_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v6-aaebd5a242d0ea19e5cbbb3204c402e0/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.005423)
 GluGluToContinToZZTo2e2tau  = Sample.nanoAODfromDAS("GluGluToContinToZZTo2e2tau",  "/GluGluToContinToZZTo2e2tau_13TeV_MCFM701_pythia8/llechner-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_legacy_nano_v5-aaebd5a242d0ea19e5cbbb3204c402e0/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.005423)
@@ -481,7 +487,7 @@ DisplacedStops_mStop_250_ctau_0p01 = Sample.nanoAODfromDAS("DisplacedStops_mStop
 DisplacedStops_mStop_250_ctau_0p1  = Sample.nanoAODfromDAS("DisplacedStops_mStop_250_ctau_0p1", "/DisplacedStops-mstop-250-ctau-0p1/prhussai-crab_prhussai-19-11-04-d1325a8a4e5845c2e07754c18f9c751d_v0-05774b17f68c744c98601843df17b36a/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov,xSection=1)
 displ = [DisplacedStops_mStop_250_ctau_0p01 , DisplacedStops_mStop_250_ctau_0p1]
 
-allSamples = DY + top + boson + wjets + rare + other + gluglu + QCD + GJetsHT + SUSY + displ + ttH
+allSamples = DY + top + boson + wjets + rare + other + gluglu + QCD + GJetsHT + SUSY + displ + ttH + ttDM
 
 for s in allSamples:
     s.isData = False
