@@ -1,5 +1,6 @@
 #run in CMSSW_9_4_7
-tag = '19-11-02'
+from CRABAPI.RawCommand import crabCommand
+tag = '20-06-19'
 
 from WMCore.Configuration import Configuration
 config = Configuration()
@@ -26,7 +27,7 @@ config.Data.inputDBS = 'phys03'
 config.Data.publishDBS = 'phys03'
 
 #config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
-config.Data.ignoreLocality = True
+#config.Data.ignoreLocality = True
 
 config.section_("Site")
 config.Site.storageSite = 'T2_AT_Vienna'
@@ -34,13 +35,10 @@ config.Site.storageSite = 'T2_AT_Vienna'
 config.section_("User")
 
 if __name__ == '__main__':
-    from CRABAPI.RawCommand import crabCommand
 
     for input_dataset in [
-       '/ttW01j_rwgt_dim6top/ttschida-19-08-29-b1c0e8cfd394092a8ffef7662900ef17/USER',
-       '/tZZ1j_4l_rwgt/ttschida-19-08-29-b1c0e8cfd394092a8ffef7662900ef17/USER',
-       '/tWZ01j_rwgt/ttschida-19-08-29-b1c0e8cfd394092a8ffef7662900ef17/USER',
-       '/tWW1j_rwgt/ttschida-19-08-29-b1c0e8cfd394092a8ffef7662900ef17/USER',
+       '/tOrtbar_WZ01j_OLRLL_LO_ext5/schoef-20-05-25-b1c0e8cfd394092a8ffef7662900ef17/USER',
+       '/tWZ_NLO_v16_ext3/schoef-20-05-25-b1c0e8cfd394092a8ffef7662900ef17/USER',
     ]:
         config.Data.inputDataset = input_dataset
         config.General.requestName = input_dataset.split('/')[1] 
