@@ -39,7 +39,9 @@ if __name__ == '__main__':
 
     for input_dataset in [
        #'/DisplacedStops-mstop-250-ctau-0p01/schoef-Stops2l-00b89d02933778e18fabfa9e3d5e723a/USER',
-       '/DisplacedStops-mstop-250-ctau-0p1/schoef-Stops2l-a19b5846e9911d7daa1e4ef4f70e9350/USER',
+       #'/DisplacedStops-mstop-250-ctau-0p1/schoef-Stops2l-a19b5846e9911d7daa1e4ef4f70e9350/USER',
+        '/tOrtbar_WZ01j_OLRLL_LO_ext5/schoef-20-06-19-f7b11725a86c799f51ca60747917325e/USER',
+        '/tWZ_NLO_v16_ext3/schoef-20-06-19-f7b11725a86c799f51ca60747917325e/USER',
     ]:
         config.Data.inputDataset = input_dataset
         config.General.requestName = input_dataset.split('/')[1] 
