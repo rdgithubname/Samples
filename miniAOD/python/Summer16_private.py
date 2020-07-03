@@ -78,12 +78,19 @@ tWW1j_rwgt    = FWLiteSample.fromDAS("tWW1j_rwgt", "/tWW1j_rwgt/ttschida-Summer1
 # reweight_pkl = '/afs/hephy.at/data/rschoefbeck01/gridpacks/dim6top/ttW01j_rwgt_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.pkl' 
 ttW01j_rwgt_dim6top = FWLiteSample.fromDAS("ttW01j_rwgt_dim6top", "/ttW01j_rwgt_dim6top/ttschida-Summer16-mAOD949-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
 
+# tWZ NLO and LO
+tWZ_NLO = FWLiteSample.fromDAS("tWZ_NLO", "/tWZ_NLO_v16_ext3/schoef-Summer16-mAOD949-v3-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", "phys03", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
+tOrtbar_WZ01j_OLRLL_LO = FWLiteSample.fromDAS("tOrtbar_WZ01j_OLRLL_LO", "/tOrtbar_WZ01j_OLRLL_LO_ext5/schoef-Summer16-mAOD949-v3-bd3e7bcff6c9bcad356ea4ed7e4f08b4/USER", dbFile=dbFile, overwrite=ov, prefix='root://hephyse.oeaw.at/', skipCheck=True)
+
 BSM_tVV_ttV = [
     tZZ1j_4l_rwgt,
     tWZ01j_rwgt,
     tWZ01j_rwgt_filter,
     tWW1j_rwgt,
     ttW01j_rwgt_dim6top,
+    tWZ_NLO,
+    tOrtbar_WZ01j_OLRLL_LO,
 ]
 
 allSamples = TTX + VGamma + BSM_tVV_ttV
