@@ -71,7 +71,8 @@
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample SMS_T2tt_mStop_850_mLSP_100
 
 #python launch.py $@ --config nano_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample ttH
-python launch.py $@ --config nano_v7_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample DM
+python launch.py $@ --config nano_v7_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample TTbarDMJets_scalar
+python launch.py $@ --config nano_v7_mc_102X_Autumn18_miniAODv1 --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Autumn18_miniAODv1 --sample TTbarDMJets_pseudoscalar
 
 #python launch.py $@ --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample SMS_T2tt_mStop_150to250
 #python launch.py $@ --config nano_mc_fast_102X_Autumn18_miniAODv1 --production_label legacy_nano_v6 --remoteDir legacy_nano_v6 --unitsPerJob 1 --publish --module Autumn18_Fast_miniAODv1 --sample SMS_T2tt_mStop_250to350
