@@ -585,13 +585,17 @@ SUSY = [
     ]
 compSUSY = [SMS_T2tt_dM_10to80]
 
+ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", '/ttH_HToInvisible_M125_TuneCUETP8M1_13TeV_powheg_pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v7-0715d40ac32fba3ea0bb6d089cced1b5/USER', dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5071) # x-sec from here: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWG
+
+ttH = [ ttH_HToInvisible ]
+
 ### v7
 TTbarDMJets_Dilepton_scalar         = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_scalar",    "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v7-0715d40ac32fba3ea0bb6d089cced1b5/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 TTbarDMJets_Dilepton_pseudoscalar   = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_pseudoscalar",    "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v7-0715d40ac32fba3ea0bb6d089cced1b5/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
 ttDM = [ TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar ]
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + QCD + GJetsHT + SUSY + compSUSY + ttDM
+allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + QCD + GJetsHT + SUSY + compSUSY + ttH + ttDM
 
 for s in allSamples:
     s.isData = False

@@ -64,8 +64,9 @@
 #python launch.py --runOnNonValid --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO
 #python launch.py                 --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO
 
-python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTbarDMJets_scalar
-python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTbarDMJets_pseudoscalar
+#python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTbarDMJets_scalar
+#python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTbarDMJets_pseudoscalar
+python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --runOnNonValid --module Summer16_miniAODv3 --sample ttH_HToInvisible
 
 #python launch.py --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample WJetsNJetBinned
 
