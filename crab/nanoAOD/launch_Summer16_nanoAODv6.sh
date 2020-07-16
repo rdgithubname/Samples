@@ -283,7 +283,7 @@ python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label n
 python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample ttHToNonbb_pow
 python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTTo2L2Nu_noSC_pow
 python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTTo2L2Nu_pow_CP5
-python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTToHadronic_pow_CP5=
+python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTToHadronic_pow_CP5
 python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTToSemilepton_pow_CP5
 python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTToSemilepton_pow
 python launch.py $@ --config nano_v6_mc_10218_Summer16_NANO --production_label nanoAODv6_mvaPriv6 --remoteDir nanoAODv6_mvaPriv6 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTTT_NLO

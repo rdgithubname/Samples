@@ -92,9 +92,16 @@ signals = [
 #    T2tt_mStop_650_mLSP_350,
 #    T2tt_mStop_500_mLSP_325,
 #    T2tt_mStop_325_mLSP_150,
+
     ]
 
+
+tWZ_LO = Sample.nanoAODfromDAS("tWZ_LO", "/tOrtbar_WZ01j_OLRLL_LO_ext5/schoef-crab_schoef-Summer16-mAOD949-v3-bd3e7bcff6c9bcad356ea4ed7e4f08b4_nano_v6_2-88146d75cb10601530484643de5f7795/USER",  instance="phys03", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.1312)
+tWZ_NLO = Sample.nanoAODfromDAS("tWZ_NLO", "/tWZ_NLO_v16_ext3/schoef-crab_schoef-Summer16-mAOD949-v3-bd3e7bcff6c9bcad356ea4ed7e4f08b4_nano_v6_2-88146d75cb10601530484643de5f7795/USER",  instance="phys03", dbFile=dbFile, overwrite=ov, redirector=redirector, xSection=0.1312)
+
 other = [
+    tWZ_LO,
+    tWZ_NLO,
     ]
 
 allSamples = DY + other + signals + top + TTX + VGamma

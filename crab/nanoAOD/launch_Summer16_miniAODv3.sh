@@ -64,6 +64,7 @@
 #python launch.py --runOnNonValid --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_semilep_LO
 #python launch.py                 --config nano_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v5 --remoteDir legacy_nano_v5 --unitsPerJob 2 --publish --module Summer16_miniAODv3 --sample TTGamma_had_LO
 
+#python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample DM
 #python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTbarDMJets_scalar
 #python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample TTbarDMJets_pseudoscalar
 python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3        --production_label legacy_nano_v7 --remoteDir legacy_nano_v7 --unitsPerJob 1 --publish --runOnNonValid --module Summer16_miniAODv3 --sample ttH_HToInvisible
@@ -91,5 +92,8 @@ python launch.py                 --config nano_v7_mc_94X_Summer16_miniAODv3     
 #python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tWZ01j_rwgt_filter
 #python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample tWW1j_rwgt
 #python launch.py --inputDBS phys03 --config nano_mc_94X_Summer16_miniAODv3 --production_label legacy_nano_v4 --remoteDir legacy_nano_v4 --unitsPerJob 3 --publish --module Summer16_private --sample ttW01j_rwgt_dim6top
+
+python launch.py --inputDBS phys03 --config nano_v6_mc_10218_Summer16_NANO --production_label nano_v6 --remoteDir nano_v6 --unitsPerJob 3 --publish --module Summer16_private --sample ttW01j_rwgt_dim6top
+python launch.py --inputDBS phys03 --config nano_v6_mc_10218_Summer16_NANO --production_label nano_v6 --remoteDir nano_v6 --unitsPerJob 3 --publish --module Summer16_private --sample ttW01j_rwgt_dim6top
 
 #python launch.py  --dryrun --config nano_mc_fast_94X_Summer16_miniAODv3 --production_label v0 --remoteDir T2tt_dm10to80 --unitsPerJob 1 --publish --module Summer16_miniAODv3 --sample SMS-T2tt_dM-10to80 
