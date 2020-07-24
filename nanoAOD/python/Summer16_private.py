@@ -58,12 +58,12 @@ top = [
     ]
 
 
-#TTGNoFullyHad_priv  = Sample.nanoAODfromDAS("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_nofullyhad_LO_S16_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616, maxN=1)
-TTGHad_priv         = Sample.nanoAODfromDAS("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_had_LO_S16_private/",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.213*2.565)
-TTGSemi_priv        = Sample.nanoAODfromDAS("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_semilep_LO_S16_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994)
-TTGLep_priv         = Sample.nanoAODfromDAS("TTGLep_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_dilep_LO_S16_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.512*1.616)
+#TTGNoFullyHad_priv  = Sample.nanoAODfromDAS("TTGNoFullyHad_priv",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_nofullyhad_LO_S16_private/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.056*1.994+1.495*1.616, maxN=1)
+TTGHad_priv         = Sample.nanoAODfromDAS("TTGHad_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_had_LO_S16_private/",        dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.149*2.565)
+TTGSemi_priv        = Sample.nanoAODfromDAS("TTGSemi_priv",        "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_semilep_LO_S16_private/",    dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.056*1.994)
+TTGLep_priv         = Sample.nanoAODfromDAS("TTGLep_priv",         "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v4/Summer16_private_TTGamma_dilep_LO_S16_private/",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.495*1.616)
 
-TTGNoFullyHad_fnal  = Sample.nanoAODfromDAS("TTGNoFullyHad_fnal",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v6/ttgamma_noFullyHad_fnal_2016/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.125*1.994+1.512*1.616)
+TTGNoFullyHad_fnal  = Sample.nanoAODfromDAS("TTGNoFullyHad_fnal",  "/dpm/oeaw.ac.at/home/cms/store/user/llechner/nanoAOD/legacy_nano_v6/ttgamma_noFullyHad_fnal_2016/", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.056*1.994+1.495*1.616)
 
 TTX = [
 #    TTGNoFullyHad_priv,
