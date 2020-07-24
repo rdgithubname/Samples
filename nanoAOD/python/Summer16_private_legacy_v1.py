@@ -124,6 +124,7 @@ TBar_tWch_ext       = Sample.nanoAODfromDAS("TBar_tWch_ext",    "/ST_tW_antitop_
 TTHbb               = Sample.nanoAODfromDAS("TTHbb",            "/ttHTobb_M125_13TeV_powheg_pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                                 dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(0.577))
 TTHnobb_pow         = Sample.nanoAODfromDAS("TTHnobb_pow",      "/ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5085*(1-0.577))
 
+# single top Higgs x-secs from here: https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopHiggsGeneration13TeV
 THQ                 = Sample.nanoAODfromDAS("THQ",              "/THQ_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.07096)
 THW                 = Sample.nanoAODfromDAS("THW",              "/THW_Hincl_13TeV-madgraph-pythia8_TuneCUETP8M1/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2_legacy_nano_v1-b9659cf3bef5e21efe24288a402778f7/USER",                     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.1472)
 
@@ -585,13 +586,17 @@ SUSY = [
     ]
 compSUSY = [SMS_T2tt_dM_10to80]
 
+ttH_HToInvisible = Sample.nanoAODfromDAS("ttH_HToInvisible", '/ttH_HToInvisible_M125_TuneCUETP8M1_13TeV_powheg_pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v7-0715d40ac32fba3ea0bb6d089cced1b5/USER', dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.5071) # x-sec from here: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWG
+
+ttH = [ ttH_HToInvisible ]
+
 ### v7
 TTbarDMJets_Dilepton_scalar         = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_scalar",    "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v7-0715d40ac32fba3ea0bb6d089cced1b5/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 TTbarDMJets_Dilepton_pseudoscalar   = Sample.nanoAODfromDAS("TTbarDMJets_Dilepton_pseudoscalar",    "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/dspitzba-crab_RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1_legacy_nano_v7-0715d40ac32fba3ea0bb6d089cced1b5/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1)
 
 ttDM = [ TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar ]
 
-allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + QCD + GJetsHT + SUSY + compSUSY + ttDM
+allSamples = DY + top + boson + wjets + rare + other + signals + gluglu + QCD + GJetsHT + SUSY + compSUSY + ttH + ttDM
 
 for s in allSamples:
     s.isData = False

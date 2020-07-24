@@ -1,6 +1,6 @@
-#run in CMSSW_9_4_7
-tag = '19-08-29'
+tag = '20-05-25'
 
+from CRABAPI.RawCommand import crabCommand
 from WMCore.Configuration import Configuration
 config = Configuration()
 
@@ -13,13 +13,15 @@ config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = '../../cfg/step1_RunIISummer16_8031.py'
 config.JobType.disableAutomaticOutputCollection = False
+config.JobType.numCores = 1
+config.JobType.maxMemoryMB = 3000
 
 config.section_("Data")
 #config.Data.splitting = 'FileBased'
 #config.Data.splitting = 'EventBased'
 config.Data.splitting = 'EventAwareLumiBased'
 #config.Data.totalUnits  = 500000 
-config.Data.unitsPerJob = 200
+config.Data.unitsPerJob = 500
 #config.Data.totalUnits  = 50000 
 config.Data.publication = True
 config.Data.inputDBS = 'phys03'
@@ -30,14 +32,14 @@ config.Data.ignoreLocality = True
 
 config.section_("Site")
 config.Site.storageSite = 'T2_AT_Vienna'
-config.Site.whitelist = ['T2_CERN_CH', 'T1_US_FNAL_Disk'] #Run where the PU dataset is, not where the sample is
+config.Site.whitelist = ['T1_US_FNAL', 'T1_US_FNAL'] #Run where the PU dataset is, not where the sample is
 config.section_("User")
 
 if __name__ == '__main__':
-    from CRABAPI.RawCommand import crabCommand
 
     for input_dataset in [
-       'SampleName here',
+       '/tWZ_NLO_v16_ext3/schoef-tWZ_NLO_v16_ext3-a1e791adef4fc0a2f32451f12fdbd583/USER',
+       '/tOrtbar_WZ01j_OLRLL_LO_ext5/schoef-tOrtbar_WZ01j_OLRLL_LO_ext5-c88179374d61ba4483b39a09a725f437/USER',
     ]:
         config.Data.inputDataset = input_dataset
         config.General.requestName = input_dataset.split('/')[1] 

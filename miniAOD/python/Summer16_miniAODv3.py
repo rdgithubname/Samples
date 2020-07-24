@@ -575,15 +575,19 @@ T2tt_FullSim = [
     SMS_T2tt_3J_xqcut_20_mStop_350_mLSP_150,
     ]
 
-ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+#ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_13TeV_powheg_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+ttH_HToInvisible = FWLiteSample.fromDAS("ttH_HToInvisible", "/ttH_HToInvisible_M125_TuneCUETP8M1_13TeV_powheg_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 ttH = [ ttH_HToInvisible ]
 
 ## DM signals
 TTbarDMJets_Dilepton_scalar         = FWLiteSample.fromDAS("TTbarDMJets_Dilepton_scalar", "/TTbarDMJets_Dilepton_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-TTbarDMJets_Dilepton_pseudoscalar   = FWLiteSample.fromDAS("TTbarDMJets_Dilepton_pseudiscalar", "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTbarDMJets_Dilepton_pseudoscalar   = FWLiteSample.fromDAS("TTbarDMJets_Dilepton_pseudoscalar", "/TTbarDMJets_Dilepton_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-DM = [TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar]
+TTbarDMJets_scalar         = FWLiteSample.fromDAS("TTbarDMJets_scalar", "/TTbarDMJets_Inclusive_scalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+TTbarDMJets_pseudoscalar   = FWLiteSample.fromDAS("TTbarDMJets_pseudoscalar", "/TTbarDMJets_Inclusive_pseudoscalar_LO_TuneCP5_13TeV-madgraph-mcatnlo-pythia8/RunIISummer16MiniAODv3-PUMoriond17_rp_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+DM = [TTbarDMJets_Dilepton_scalar, TTbarDMJets_Dilepton_pseudoscalar, TTbarDMJets_scalar, TTbarDMJets_pseudoscalar]
 
 allSamples = DY + DY_HT + ST_4f + ST_5f + TTJets + TTX + WJets + WJetsToLNu_HT + WJetsNJetBinned + ZJetsToNuNu + diboson + multiboson + gluglu + QCD + GJetsHT + T2tt_FullSim + ttH + DM
 

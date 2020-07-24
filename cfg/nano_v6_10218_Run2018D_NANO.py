@@ -26,7 +26,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/325/175/00000/ACD8ED9B-F9B0-AE44-B0FD-E20DAB363018.root'),
+    fileNames = cms.untracked.vstring('/store/data/Run2018D/DoubleMuon/MINIAOD/PromptReco-v2/000/320/809/00000/DEAB968D-5599-E811-A6CB-FA163EC5BC9D.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
