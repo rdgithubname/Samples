@@ -3,7 +3,7 @@
 import os, sys
 import subprocess
 
-from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
+from Samples.Tools.config import *
 
 redirector = "root://cms-xrd-global.cern.ch/"
 
@@ -39,6 +39,7 @@ if args.noCheck:
         print "Found file %s. No check. Skip." % target
         sys.exit(0)
 else:
+    from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
     if os.path.exists(target) and checkRootFile( target, checkForObjects = ["Events"]) and deepCheckRootFile( target ):
         print "Found file %s. Checked it. Skip." % target
         sys.exit(0)
