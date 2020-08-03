@@ -134,7 +134,7 @@ T_tWch_ext              = Sample.nanoAODfromDAS("T_tWch_ext",              "/ST_
 TBar_tWch_ext           = Sample.nanoAODfromDAS("TBar_tWch_ext",           "/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=35.85*(1.-(1.-0.108*3)*(1.-0.108*3)) ) #xsec analyzer is wrong and does not take decay modes into account https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec#Single_top_Wt_channel_cross_sect
 
 T_tWch_incl             = Sample.nanoAODfromDAS("T_tWch_incl",             "/ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=35.85)
-TBar_tWch_incl          = Sample.nanoAODfromDAS("TBar_tWch_incl",          "/ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=35.85)
+TBar_tWch_incl          = Sample.nanoAODfromDAS("TBar_tWch_incl",          "/ST_tW_antitop_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_102X_mc2017_realistic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=35.85)
 
 ## ttH
 TTHbb       = Sample.nanoAODfromDAS("TTHbb",       "/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/RunIIFall17NanoAODv6-PU2017_12Apr2018_Nano25Oct2019_new_pmx_102X_mc2017_realistic_v7-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.5085*(0.577))
@@ -474,6 +474,10 @@ TTW_LO_comb             = Sample.combine("TTW_LO_comb",             [TTW_LO, TTW
 if hasattr(TTW_LO, 'nEvents'):
     TTW_LO_comb.nEvents = TTW_LO.nEvents + TTW_LO_ext1.nEvents
 
+TTZ_LO_comb             = Sample.combine("TTZ_LO_comb",             [TTZ_LO, TTZ_LO_ext1])
+if hasattr(TTZ_LO, 'nEvents'):
+    TTZ_LO_comb.nEvents = TTZ_LO.nEvents + TTZ_LO_ext1.nEvents
+
 WJetsToLNu_comb         = Sample.combine("WJetsToLNu_comb",         [WJetsToLNu, WJetsToLNu_ext1])
 if hasattr(WJetsToLNu, 'nEvents'):
     WJetsToLNu_comb.nEvents = WJetsToLNu.nEvents + WJetsToLNu_ext1.nEvents
@@ -486,6 +490,7 @@ DYJetsToLL_M4to50_HT600toInf_comb = Sample.combine("DYJetsToLL_M4to50_HT600toInf
 combinedSamples = [
     DYJetsToLL_M50_LO_comb,
     TTW_LO_comb,
+    TTZ_LO_comb,
     WJetsToLNu_comb,
     DYJetsToLL_M50_HT200to400_comb,
     DYJetsToLL_M4to50_HT200to400_comb,
@@ -504,4 +509,3 @@ samples = AutoClass( allSamples )
 if __name__=="__main__":
     if options.check_completeness:
         samples.check_completeness( cores=20 )
-
