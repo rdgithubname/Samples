@@ -44,11 +44,11 @@ dbFile = dbDir+'/DB_Run2017_private_nanoAODv6.sql'
 logger.info("Using db file: %s", dbFile)
 
 # DoubleMuon
-DoubleMuon_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017B_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017C_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017D_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017E_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleMuon_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017F_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017B_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleMuon_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017C_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleMuon_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017D_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleMuon_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017E_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleMuon_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("DoubleMuon_Run2017F_25Oct2019", "/DoubleMuon/schoef-TopNanoAODv6-1-2-4_DoubleMuon_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 DoubleMuon = [
     DoubleMuon_Run2017B_25Oct2019,
@@ -59,11 +59,11 @@ DoubleMuon = [
 ]
 
 # MuonEG
-MuonEG_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017B_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017C_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017D_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017E_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-MuonEG_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017F_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
+MuonEG_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017B_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MuonEG_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017C_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MuonEG_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017D_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MuonEG_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017E_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MuonEG_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("MuonEG_Run2017F_25Oct2019", "/MuonEG/schoef-TopNanoAODv6-1-2-4_MuonEG_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 MuonEG = [
     MuonEG_Run2017B_25Oct2019,
@@ -74,11 +74,11 @@ MuonEG = [
 ]
 
 # DoubleEG
-DoubleEG_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017B_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleEG_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017C_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleEG_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017D_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleEG_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017E_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-DoubleEG_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017F_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017B_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleEG_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017C_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleEG_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017D_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleEG_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017E_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+DoubleEG_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("DoubleEG_Run2017F_25Oct2019", "/DoubleEG/schoef-TopNanoAODv6-1-2-4_DoubleEG_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 DoubleEG = [
     DoubleEG_Run2017B_25Oct2019,
@@ -89,11 +89,11 @@ DoubleEG = [
 ]
 
 # SingleMuon
-SingleMuon_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017B_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017C_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017D_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017E_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleMuon_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017F_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
+SingleMuon_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017B_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleMuon_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017C_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleMuon_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017D_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleMuon_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017E_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleMuon_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("SingleMuon_Run2017F_25Oct2019", "/SingleMuon/schoef-TopNanoAODv6-1-2-4_SingleMuon_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 SingleMuon = [
     SingleMuon_Run2017B_25Oct2019,
@@ -104,11 +104,11 @@ SingleMuon = [
 ]
 
 # SingleElectron
-SingleElectron_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017B_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleElectron_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017C_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleElectron_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017D_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleElectron_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017E_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
-SingleElectron_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017F_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, overwrite=ov)
+SingleElectron_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017B_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleElectron_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017C_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleElectron_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017D_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleElectron_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017E_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+SingleElectron_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("SingleElectron_Run2017F_25Oct2019", "/SingleElectron/schoef-TopNanoAODv6-1-2-4_SingleElectron_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 SingleElectron = [
     SingleElectron_Run2017B_25Oct2019,
@@ -119,11 +119,11 @@ SingleElectron = [
 ]
 
 # JetHT
-#JetHT_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017B_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017C_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017D_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017E_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#JetHT_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017F_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+#JetHT_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017B_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#JetHT_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017C_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#JetHT_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017D_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#JetHT_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017E_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#JetHT_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017F_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 JetHT = [
 #    JetHT_Run2017B_25Oct2019,
@@ -134,11 +134,11 @@ JetHT = [
 ]
 
 # MET
-#MET_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017B_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#MET_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017C_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#MET_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017D_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#MET_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017E_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-#MET_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017F_25Oct2019", "", dbFile=dbFile, redirector=redirector, overwrite=ov)
+#MET_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017B_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#MET_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017C_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#MET_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017D_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#MET_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017E_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+#MET_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017F_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 MET = [
 #    MET_Run2017B_25Oct2019,
