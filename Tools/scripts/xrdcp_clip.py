@@ -36,7 +36,7 @@ args = get_parser().parse_args()
 if args.toCBEEos:
     if not args.target.startswith("/eos"):
         raise ValueError("The target path needs to start with the /eos path when using --toCBEEos!")
-    args.target = clip_redirector + "/" + args.target
+
 source =  args.redirector+ args.file
 target =  args.target+     args.file
 
@@ -52,6 +52,6 @@ else:
 
 executable = ["echo", "xrdcp"] if args.noCopy else [which("xrdcp")]
  
-cmd = executable + [ "-p", "-f", source, target]
+cmd = executable + [ "-p", "-f", source, clip_redirector + target if args.toCBEEos else target]
 
 subprocess.Popen( cmd )
