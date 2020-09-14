@@ -476,7 +476,3 @@ samples = AutoClass( allSamples )
 if __name__=="__main__":
     if options.check_completeness:
         samples.check_completeness( cores=20 )
-
-
-print TTGLep_LO.files[0]
-print len(TTGLep_LO.files)
