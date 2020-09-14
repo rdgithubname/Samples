@@ -33,7 +33,7 @@ except:
         if __name__ == "__main__" and not options.check_completeness:
             from Samples.Tools.config import redirector_global as redirector
         else:
-            from Samples.Tools.config import redirector_clip_local as redirector
+            from Samples.Tools.config import redirector_clip as redirector
     else:
         from Samples.Tools.config import redirector as redirector
 

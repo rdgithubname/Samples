@@ -30,10 +30,7 @@ try:
     redirector = sys.modules['__main__'].redirector
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
-        if __name__ == "__main__" and not options.check_completeness:
-            from Samples.Tools.config import redirector_global as redirector
-        else:
-            from Samples.Tools.config import redirector_clip_local as redirector
+        from Samples.Tools.config import redirector_clip as redirector
     else:
         from Samples.Tools.config import redirector as redirector
 
@@ -149,23 +146,23 @@ SingleElectron = [
 
 # JetHT
 #JetHT_Run2016B_25Oct2019_ver1  = Sample.nanoAODfromDAS("JetHT_Run2016B_25Oct2019_ver1",   "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016B_25Oct2019_ver2  = Sample.nanoAODfromDAS("JetHT_Run2016B_25Oct2019_ver2",   "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016C_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016C_25Oct2019",        "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016D_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016D_25Oct2019",        "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016E_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016E_25Oct2019",        "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016F_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016F_25Oct2019",        "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016G_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016G_25Oct2019",        "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2016H_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016H_25Oct2019",        "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016B_25Oct2019_ver2  = Sample.nanoAODfromDAS("JetHT_Run2016B_25Oct2019_ver2","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016B_ver2-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016C_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016C_25Oct2019","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016C-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016D_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016D_25Oct2019","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016D-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016E_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016E_25Oct2019","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016E-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016F_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016F_25Oct2019","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016F-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016G_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016G_25Oct2019","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016G-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2016H_25Oct2019       = Sample.nanoAODfromDAS("JetHT_Run2016H_25Oct2019","/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2016H-ba7e3129b1ff910ad1abce6981b33804/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 JetHT = [
     #JetHT_Run2016B_25Oct2019_ver1,
-#    JetHT_Run2016B_25Oct2019_ver2,
-#    JetHT_Run2016C_25Oct2019,
-#    JetHT_Run2016D_25Oct2019,
-#    JetHT_Run2016E_25Oct2019,
-#    JetHT_Run2016F_25Oct2019,
-#    JetHT_Run2016G_25Oct2019,
-#    JetHT_Run2016H_25Oct2019,
+    JetHT_Run2016B_25Oct2019_ver2,
+    JetHT_Run2016C_25Oct2019,
+    JetHT_Run2016D_25Oct2019,
+    JetHT_Run2016E_25Oct2019,
+    JetHT_Run2016F_25Oct2019,
+    JetHT_Run2016G_25Oct2019,
+    JetHT_Run2016H_25Oct2019,
 ]
 
 # MET

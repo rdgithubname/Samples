@@ -455,6 +455,30 @@ gluglu = [
     GluGluToContinToZZTo4tau,
 ]
 
+QCD_pt15to30         = FWLiteSample.fromDAS("QCD_pt15to30"        , "/QCD_Pt_15to30_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt30to50         = FWLiteSample.fromDAS("QCD_pt30to50"        , "/QCD_Pt_30to50_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt50to80         = FWLiteSample.fromDAS("QCD_pt50to80"        , "/QCD_Pt_50to80_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt80to120_ext    = FWLiteSample.fromDAS("QCD_pt80to120_ext"   , "/QCD_Pt_80to120_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext2-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt80to120        = FWLiteSample.fromDAS("QCD_pt80to120"       , "/QCD_Pt_80to120_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt120to170_ext   = FWLiteSample.fromDAS("QCD_pt120to170_ext"  , "/QCD_Pt_120to170_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt120to170       = FWLiteSample.fromDAS("QCD_pt120to170"      , "/QCD_Pt_120to170_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt170to300_ext   = FWLiteSample.fromDAS("QCD_pt170to300_ext"  , "/QCD_Pt_170to300_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt170to300       = FWLiteSample.fromDAS("QCD_pt170to300"      , "/QCD_Pt_170to300_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt300to470_ext   = FWLiteSample.fromDAS("QCD_pt300to470_ext"  , "/QCD_Pt_300to470_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt300to470       = FWLiteSample.fromDAS("QCD_pt300to470"      , "/QCD_Pt_300to470_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt470to600       = FWLiteSample.fromDAS("QCD_pt470to600"      , "/QCD_Pt_470to600_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt600to800_ext   = FWLiteSample.fromDAS("QCD_pt600to800_ext"  , "/QCD_Pt_600to800_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt600to800       = FWLiteSample.fromDAS("QCD_pt600to800"      , "/QCD_Pt_600to800_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt800to1000_ext  = FWLiteSample.fromDAS("QCD_pt800to1000_ext" , "/QCD_Pt_800to1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt800to1000      = FWLiteSample.fromDAS("QCD_pt800to1000"     , "/QCD_Pt_800to1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt1000to1400_ext = FWLiteSample.fromDAS("QCD_pt1000to1400_ext", "/QCD_Pt_1000to1400_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt1000to1400     = FWLiteSample.fromDAS("QCD_pt1000to1400"    , "/QCD_Pt_1000to1400_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v1/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt1400to1800_ext = FWLiteSample.fromDAS("QCD_pt1400to1800_ext"," /QCD_Pt_1400to1800_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt1400to1800     = FWLiteSample.fromDAS("QCD_pt1400to1800"    , "/QCD_Pt_1400to1800_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt1800to2400_ext = FWLiteSample.fromDAS("QCD_pt1800to2400_ext", "/QCD_Pt_1800to2400_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt1800to2400     = FWLiteSample.fromDAS("QCD_pt1800to2400"    , "/QCD_Pt_1800to2400_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt2400to3200_ext = FWLiteSample.fromDAS("QCD_pt2400to3200_ext", "/QCD_Pt_2400to3200_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_pt2400to3200     = FWLiteSample.fromDAS("QCD_pt2400to3200"    , "/QCD_Pt_2400to3200_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 QCD_Mu_pt15to20         = FWLiteSample.fromDAS("QCD_Mu_pt15to20",         "/QCD_Pt-15to20_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 QCD_Mu_pt20to30         = FWLiteSample.fromDAS("QCD_Mu_pt20to30",         "/QCD_Pt-20to30_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -476,19 +500,52 @@ QCD_Mu_pt800to1000_ext1 = FWLiteSample.fromDAS("QCD_Mu_pt800to1000_ext1", "/QCD_
 QCD_Mu_pt1000toInf      = FWLiteSample.fromDAS("QCD_Mu_pt1000toInf",      "/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 QCD_Mu_pt1000toInf_ext1 = FWLiteSample.fromDAS("QCD_Mu_pt1000toInf_ext1", "/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
-QCD_Ele_pt20to30        = FWLiteSample.fromDAS("QCD_Ele_pt20to30",        "/QCD_Pt-20to30_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt30to50        = FWLiteSample.fromDAS("QCD_Ele_pt30to50",        "/QCD_Pt-30to50_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt30to50_ext1   = FWLiteSample.fromDAS("QCD_Ele_pt30to50_ext1",   "/QCD_Pt-30to50_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt50to80        = FWLiteSample.fromDAS("QCD_Ele_pt50to80",        "/QCD_Pt-50to80_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt50to80_ext1   = FWLiteSample.fromDAS("QCD_Ele_pt50to80_ext1",   "/QCD_Pt-50to80_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt80to120       = FWLiteSample.fromDAS("QCD_Ele_pt80to120",       "/QCD_Pt-80to120_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt80to120_ext1  = FWLiteSample.fromDAS("QCD_Ele_pt80to120_ext1",  "/QCD_Pt-80to120_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt120to170      = FWLiteSample.fromDAS("QCD_Ele_pt120to170",      "/QCD_Pt-120to170_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt120to170_ext1 = FWLiteSample.fromDAS("QCD_Ele_pt120to170_ext1", "/QCD_Pt-120to170_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt170to300      = FWLiteSample.fromDAS("QCD_Ele_pt170to300",      "/QCD_Pt-170to300_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-QCD_Ele_pt300toInf      = FWLiteSample.fromDAS("QCD_Ele_pt300toInf",      "/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt20to30        = FWLiteSample.fromDAS("QCD_EMEnriched_pt20to30",        "/QCD_Pt-20to30_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt30to50        = FWLiteSample.fromDAS("QCD_EMEnriched_pt30to50",        "/QCD_Pt-30to50_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt30to50_ext1   = FWLiteSample.fromDAS("QCD_EMEnriched_pt30to50_ext1",   "/QCD_Pt-30to50_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt50to80        = FWLiteSample.fromDAS("QCD_EMEnriched_pt50to80",        "/QCD_Pt-50to80_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt50to80_ext1   = FWLiteSample.fromDAS("QCD_EMEnriched_pt50to80_ext1",   "/QCD_Pt-50to80_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt80to120       = FWLiteSample.fromDAS("QCD_EMEnriched_pt80to120",       "/QCD_Pt-80to120_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt80to120_ext1  = FWLiteSample.fromDAS("QCD_EMEnriched_pt80to120_ext1",  "/QCD_Pt-80to120_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt120to170      = FWLiteSample.fromDAS("QCD_EMEnriched_pt120to170",      "/QCD_Pt-120to170_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt120to170_ext1 = FWLiteSample.fromDAS("QCD_EMEnriched_pt120to170_ext1", "/QCD_Pt-120to170_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3_ext1-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt170to300      = FWLiteSample.fromDAS("QCD_EMEnriched_pt170to300",      "/QCD_Pt-170to300_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_EMEnriched_pt300toInf      = FWLiteSample.fromDAS("QCD_EMEnriched_pt300toInf",      "/QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+QCD_bcToE_pt15to20  = FWLiteSample.fromDAS("QCD_bcToE_pt15to20"     , "/QCD_Pt_15to20_bcToE_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM" , dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)  
+QCD_bcToE_pt20to30  = FWLiteSample.fromDAS("QCD_bcToE_pt20to30"     , "/QCD_Pt_20to30_bcToE_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"  , dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bcToE_pt30to80  = FWLiteSample.fromDAS("QCD_bcToE_pt30to80"     , "/QCD_Pt_30to80_bcToE_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM"  , dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bcToE_pt80to170 = FWLiteSample.fromDAS("QCD_bcToE_pt80to170"  , "/QCD_Pt_80to170_bcToE_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_backup_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM" , dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bcToE_pt170to250= FWLiteSample.fromDAS("QCD_bcToE_pt170to250" , "/QCD_Pt_170to250_bcToE_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+QCD_bcToE_pt250toInf= FWLiteSample.fromDAS("QCD_bcToE_pt250toInf" , "/QCD_Pt_250toInf_bcToE_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 QCD = [
+
+        QCD_pt15to30,
+        QCD_pt30to50,
+        QCD_pt50to80,
+        QCD_pt80to120_ext,
+        QCD_pt80to120,
+        QCD_pt120to170_ext,
+        QCD_pt120to170,
+        QCD_pt170to300_ext,
+        QCD_pt170to300,
+        QCD_pt300to470_ext,
+        QCD_pt300to470,
+        QCD_pt470to600,
+        QCD_pt600to800_ext,
+        QCD_pt600to800,
+        QCD_pt800to1000_ext,
+        QCD_pt800to1000,
+        QCD_pt1000to1400_ext,
+        QCD_pt1000to1400,
+        QCD_pt1400to1800_ext,
+        QCD_pt1400to1800,
+        QCD_pt1800to2400_ext,
+        QCD_pt1800to2400,
+        QCD_pt2400to3200_ext,
+        QCD_pt2400to3200,
+
         QCD_Mu_pt15to20,
         QCD_Mu_pt20to30,
         QCD_Mu_pt30to50,
@@ -509,17 +566,24 @@ QCD = [
         QCD_Mu_pt1000toInf,  
         QCD_Mu_pt1000toInf_ext1,
 
-        QCD_Ele_pt20to30,
-        QCD_Ele_pt30to50,
-        QCD_Ele_pt30to50_ext1,
-        QCD_Ele_pt50to80,
-        QCD_Ele_pt50to80_ext1,
-        QCD_Ele_pt80to120,
-        QCD_Ele_pt80to120_ext1,
-        QCD_Ele_pt120to170,
-        QCD_Ele_pt120to170_ext1,
-        QCD_Ele_pt170to300,
-        QCD_Ele_pt300toInf,
+        QCD_EMEnriched_pt20to30,
+        QCD_EMEnriched_pt30to50,
+        QCD_EMEnriched_pt30to50_ext1,
+        QCD_EMEnriched_pt50to80,
+        QCD_EMEnriched_pt50to80_ext1,
+        QCD_EMEnriched_pt80to120,
+        QCD_EMEnriched_pt80to120_ext1,
+        QCD_EMEnriched_pt120to170,
+        QCD_EMEnriched_pt120to170_ext1,
+        QCD_EMEnriched_pt170to300,
+        QCD_EMEnriched_pt300toInf,
+
+        QCD_bcToE_pt15to20,
+        QCD_bcToE_pt20to30,
+        QCD_bcToE_pt30to80,
+        QCD_bcToE_pt80to170,
+        QCD_bcToE_pt170to250,
+        QCD_bcToE_pt250toInf,
 ]
 
 GJets_HT40to100        = FWLiteSample.fromDAS("GJets_HT40to100",        "/GJets_HT-40To100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv3-PUMoriond17_94X_mcRun2_asymptotic_v3-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
