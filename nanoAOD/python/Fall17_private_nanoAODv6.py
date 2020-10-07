@@ -185,12 +185,12 @@ TTGLep_erdOn_LO             = Sample.nanoAODfromDAS("TTGLep_erdOn_LO",       "/T
 TTGLep_ptG100To200_LO       = Sample.nanoAODfromDAS("TTGLep_ptG100To200_LO", "/TTGamma_Dilept_ptGamma100-200_TuneCP5_PSweights_13TeV-madgraph-pythia8/schoef-TopNanoAODv6-1-2-3_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.03412*1.616)
 TTGLep_ptG200_LO            = Sample.nanoAODfromDAS("TTGLep_ptG200_LO",      "/TTGamma_Dilept_ptGamma200inf_TuneCP5_PSweights_13TeV-madgraph-pythia8/schoef-TopNanoAODv6-1-2-3_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.006797*1.616)
 
-#tWll_thad_Wlept_DR  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DR",  "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_thad_Wlept_DS  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DS",  "/TWZToLL_thad_Wlept_5f_DS_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_tlept_Whad_DR  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DR",  "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_tlept_Whad_DS  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DS",  "/TWZToLL_tlept_Whad_5f_DS_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_tlept_Wlept_DR = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DR", "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.001501 )
-#tWll_tlept_Wlept_DS = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DS", "/TWZToLL_tlept_Wlept_5f_DS_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.001501 )
+tWll_thad_Wlept_DR  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DR",  "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_thad_Wlept_DS  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DS",  "/TWZToLL_thad_Wlept_5f_DS_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_tlept_Whad_DR  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DR",  "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_tlept_Whad_DS  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DS",  "/TWZToLL_tlept_Whad_5f_DS_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_tlept_Wlept_DR = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DR", "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.001501 )
+tWll_tlept_Wlept_DS = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DS", "/TWZToLL_tlept_Wlept_5f_DS_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2017-a11761155c05d04d6fed5a2401fa93e8/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.001501 )
 
 TTV = [
     TGJets,
@@ -226,12 +226,12 @@ TTV = [
 ]
 
 top = [
-#    tWll_thad_Wlept_DR,
-#    tWll_thad_Wlept_DS,
-#    tWll_tlept_Whad_DR,
-#    tWll_tlept_Whad_DS,
-#    tWll_tlept_Wlept_DR,
-#    tWll_tlept_Wlept_DS,
+    tWll_thad_Wlept_DR,
+    tWll_thad_Wlept_DS,
+    tWll_tlept_Whad_DR,
+    tWll_tlept_Whad_DS,
+    tWll_tlept_Wlept_DR,
+    tWll_tlept_Wlept_DS,
     TTLep_pow,
     TTSingleLep_pow,
     TTHad_pow,
