@@ -18,13 +18,11 @@ else: print "No parsing of arguments!"
 if not os.path.isdir(options.outputDir):
     os.makedirs(options.outputDir)
 
-
-
 # Auto generated configuration file
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/SMP-RunIISummer15GS-00021-fragment.py --python_filename SMP-RunIISummer15GS-00021_1_cfg.py --eventcontent RAWSIM --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --fileout file:SMP-RunIISummer15GS-00021.root --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --filein dbs:/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIIWinter15wmLHE-MCRUN2_71_V1-v1/LHE --no_exec --mc -n 1355
+# with command line options: Configuration/GenProduction/python/SMP-RunIIWinter15wmLHE-00025-fragment.py --python_filename SMP-RunIIWinter15wmLHE-00025_1_cfg.py --eventcontent RAWSIM --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --fileout file:SMP-RunIIWinter15wmLHE-00025.root --conditions MCRUN2_71_V1::All --step LHE,GEN,SIM --magField 38T_PostLS1 --no_exec --mc -n 10
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process('SIM')
@@ -39,7 +37,7 @@ process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.Geometry.GeometrySimDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_38T_PostLS1_cff')
 process.load('Configuration.StandardSequences.Generator_cff')
-process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic50ns13TeVCollision_cfi')
+process.load('IOMC.EventVertexGenerators.VtxSmearedNominalCollision2015_cfi')
 process.load('GeneratorInterface.Core.genFilterSummary_cff')
 process.load('Configuration.StandardSequences.SimIdeal_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
@@ -50,13 +48,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 # Input source
-process.source = cms.Source("PoolSource",
-    secondaryFileNames = cms.untracked.vstring(),
-    fileNames = cms.untracked.vstring(),
-    inputCommands = cms.untracked.vstring('keep *', 
-        'drop LHEXMLStringProduct_*_*_*'),
-    dropDescendantsOfDroppedBranches = cms.untracked.bool(False)
-)
+process.source = cms.Source("EmptySource")
 
 process.options = cms.untracked.PSet(
 
@@ -65,7 +57,7 @@ process.options = cms.untracked.PSet(
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
     version = cms.untracked.string('$Revision: 1.19 $'),
-    annotation = cms.untracked.string('Configuration/GenProduction/python/SMP-RunIISummer15GS-00021-fragment.py nevts:%i'%options.maxEvents),
+    annotation = cms.untracked.string('Configuration/GenProduction/python/SMP-RunIIWinter15wmLHE-00025-fragment.py nevts:10'),
     name = cms.untracked.string('Applications')
 )
 
@@ -75,7 +67,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
     splitLevel = cms.untracked.int32(0),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
     outputCommands = process.RAWSIMEventContent.outputCommands,
-    fileName = cms.untracked.string('file:SMP-RunIISummer15GS-00021.root'),
+    fileName = cms.untracked.string('file:SMP-RunIIWinter15wmLHE-00025.root'),
     dataset = cms.untracked.PSet(
         filterName = cms.untracked.string(''),
         dataTier = cms.untracked.string('GEN-SIM')
@@ -132,7 +124,18 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
 )
 
 
+process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
+    nEvents = cms.untracked.uint32(options.maxEvents),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
+    numberOfParameters = cms.uint32(1),
+    args = cms.vstring(options.gridpack),
+
+)
+
+
 # Path and EndPath definitions
+process.lhe_step = cms.Path(process.externalLHEProducer)
 process.generation_step = cms.Path(process.pgen)
 process.simulation_step = cms.Path(process.psim)
 process.genfiltersummary_step = cms.EndPath(process.genFilterSummary)
@@ -140,10 +143,13 @@ process.endjob_step = cms.EndPath(process.endOfProcess)
 process.RAWSIMoutput_step = cms.EndPath(process.RAWSIMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.generation_step,process.genfiltersummary_step,process.simulation_step,process.endjob_step,process.RAWSIMoutput_step)
+process.schedule = cms.Schedule(process.lhe_step,process.generation_step,process.genfiltersummary_step,process.simulation_step,process.endjob_step,process.RAWSIMoutput_step)
 # filter all path with the production filter sequence
 for path in process.paths:
-    getattr(process,path)._seq = process.generator * getattr(process,path)._seq 
+	if path in ['lhe_step']: continue
+	getattr(process,path)._seq = process.generator * getattr(process,path)._seq 
+
+
 
 # customisation of the process.
 
@@ -160,4 +166,3 @@ from SLHCUpgradeSimulations.Configuration.postLS1Customs import customisePostLS1
 process = customisePostLS1(process)
 
 # End of customisation functions
-

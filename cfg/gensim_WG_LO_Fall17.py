@@ -24,7 +24,7 @@ if not os.path.isdir(options.outputDir):
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/SMP-RunIIFall17wmLHEGS-00052-fragment.py --python_filename SMP-RunIIFall17wmLHEGS-00052_1_cfg.py --eventcontent RAWSIM,LHE --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM,LHE --fileout file:SMP-RunIIFall17wmLHEGS-00052.root --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --customise_commands process.RandomNumberGeneratorService.externalLHEProducer.initialSeed=int(46) --step LHE,GEN,SIM --geometry DB:Extended --era Run2_2017 --no_exec --mc -n 1196
+# with command line options: Configuration/GenProduction/python/SMP-RunIIFall17wmLHEGS-00052-fragment.py --python_filename SMP-RunIIFall17wmLHEGS-00052_1_cfg.py --eventcontent RAWSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --fileout file:SMP-RunIIFall17wmLHEGS-00052.root --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --customise_commands process.RandomNumberGeneratorService.externalLHEProducer.initialSeed=int(46) --step LHE,GEN,SIM --geometry DB:Extended --era Run2_2017 --no_exec --mc -n 1196
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -80,16 +80,6 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
     eventAutoFlushCompressedSize = cms.untracked.int32(20971520),
     fileName = cms.untracked.string('file:SMP-RunIIFall17wmLHEGS-00052.root'),
     outputCommands = process.RAWSIMEventContent.outputCommands,
-    splitLevel = cms.untracked.int32(0)
-)
-
-process.LHEoutput = cms.OutputModule("PoolOutputModule",
-    dataset = cms.untracked.PSet(
-        dataTier = cms.untracked.string('LHE'),
-        filterName = cms.untracked.string('')
-    ),
-    fileName = cms.untracked.string('file:SMP-RunIIFall17wmLHEGS-00052_inLHE.root'),
-    outputCommands = process.LHEEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
 
@@ -172,10 +162,9 @@ process.simulation_step = cms.Path(process.psim)
 process.genfiltersummary_step = cms.EndPath(process.genFilterSummary)
 process.endjob_step = cms.EndPath(process.endOfProcess)
 process.RAWSIMoutput_step = cms.EndPath(process.RAWSIMoutput)
-process.LHEoutput_step = cms.EndPath(process.LHEoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.lhe_step,process.generation_step,process.genfiltersummary_step,process.simulation_step,process.endjob_step,process.RAWSIMoutput_step,process.LHEoutput_step)
+process.schedule = cms.Schedule(process.lhe_step,process.generation_step,process.genfiltersummary_step,process.simulation_step,process.endjob_step,process.RAWSIMoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 # filter all path with the production filter sequence

@@ -290,6 +290,6 @@ echo "python launch_GEN.py $@ --config gensim_WG_LO_Fall17 --production_label ${
 
 dir="/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc481/13TeV/madgraph/V5_2.2.2/WAToLNuA0123j_5f_LO_MLM/v1/"
 gridpack="WAToLNuA0123j_5f_LO_MLM_tarball.tar.xz"
-label="WGToLNuG_MLM_S16_LHE_test"
-echo "python launch_GEN.py $@ --config lhe_WG_LO_Summer16 --production_label ${label} --unitsPerJob 200 --totalUnits 1000  --gridpackDir ${dir} --gridpack ${gridpack} --publish"
+label="WGToLNuG_MLM_S16_test"
+echo "python launch_GEN.py $@ --config gensim_WG_LO_Summer16 --production_label ${label} --unitsPerJob 200 --totalUnits 1000  --gridpackDir ${dir} --gridpack ${gridpack} --publish"
 
