@@ -271,7 +271,25 @@
 #label="tWZ01j_rwgt_filter_dim6top"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_71X_CUEP8M1_twz_filter --production_label ${label} --unitsPerJob 3000 --totalUnits 30000000 --gridpackDir ${dir} --gridpack ${gridpack} --publish
 
-dir="/afs/hephy.at/data/llechner03/tWZ/"
-gridpack="tWZ_NLO_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
-label="tWZ_NLO_v16_2"
-python launch_GEN.py $@ --config gen_NLO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 100 --totalUnits 100 --gridpackDir ${dir} --gridpack ${gridpack} --publish
+#dir="/afs/hephy.at/data/llechner03/tWZ/"
+#gridpack="tWZ_NLO_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#label="tWZ_NLO_v16_2"
+#python launch_GEN.py $@ --config gen_NLO_0j_mc_71X_CUEP8M1 --production_label ${label} --unitsPerJob 100 --totalUnits 100 --gridpackDir ${dir} --gridpack ${gridpack} --publish
+
+
+dir="/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.4.2/WAToLNuA0123j_5f_LO_MLM/"
+gridpack="WAToLNuA0123j_5f_LO_MLM_slc6_amd64_gcc481_CMSSW_7_1_30_tarball.tar.xz"
+label="WGToLNuG_MLM_A18_test"
+echo "python launch_GEN.py $@ --config gensim_WG_LO_Autumn18 --production_label ${label} --unitsPerJob 200 --totalUnits 1000  --gridpackDir ${dir} --gridpack ${gridpack} --publish"
+
+dir="/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.4.2/WAToLNuA0123j_5f_LO_MLM/"
+gridpack="WAToLNuA0123j_5f_LO_MLM_slc6_amd64_gcc481_CMSSW_7_1_30_tarball.tar.xz"
+label="WGToLNuG_MLM_F17_test"
+echo "python launch_GEN.py $@ --config gensim_WG_LO_Fall17 --production_label ${label} --unitsPerJob 200 --totalUnits 1000  --gridpackDir ${dir} --gridpack ${gridpack} --publish"
+
+
+dir="/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc481/13TeV/madgraph/V5_2.2.2/WAToLNuA0123j_5f_LO_MLM/v1/"
+gridpack="WAToLNuA0123j_5f_LO_MLM_tarball.tar.xz"
+label="WGToLNuG_MLM_S16_LHE_test"
+echo "python launch_GEN.py $@ --config lhe_WG_LO_Summer16 --production_label ${label} --unitsPerJob 200 --totalUnits 1000  --gridpackDir ${dir} --gridpack ${gridpack} --publish"
+
