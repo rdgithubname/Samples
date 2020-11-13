@@ -8,15 +8,16 @@ def get_parser():
     argParser.add_argument('--overwrite',          action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',             action='store_true',    help="Update current entry in db?")
     argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
+    argParser.add_argument('--logLevel',           action='store',         default='INFO', nargs='?', choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'TRACE', 'NOTSET'], help="Log level for logging")
     return argParser
     
 # Logging
 if __name__=="__main__":
-    import Samples.Tools.logger as logger
-    logger = logger.get_logger("INFO", logFile = None )
-    import RootTools.core.logger as logger_rt
-    logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger(options.logLevel, logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger(options.logLevel, logFile = None )
     ov = options.overwrite
     if options.update:
         ov = 'update'
