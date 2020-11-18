@@ -1,3 +1,6 @@
+from CRABAPI.RawCommand import crabCommand
+from WMCore.Configuration import Configuration
+
 import imp, os, sys
 from optparse import OptionParser
 import re
@@ -25,7 +28,6 @@ gridpackFile = os.path.expandvars( os.path.join( options.gridpackDir, options.gr
 cfgFile      = os.path.join( cfgPath, "%s.py" % options.config )
 
 # run in CMSSW_9_3_1
-from WMCore.Configuration import Configuration
 config = Configuration()
 
 config.section_("General")
@@ -53,8 +55,6 @@ config.Site.storageSite = 'T2_AT_Vienna'
 #config.Site.whitelist = ['T2_*']
 
 config.section_("User")
-
-from CRABAPI.RawCommand import crabCommand
 
 config.Data.outputDatasetTag     = options.production_label
 config.JobType.inputFiles        = [gridpackFile]
