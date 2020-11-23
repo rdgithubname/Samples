@@ -73,6 +73,9 @@ from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
 # customisation of the process.
+#from Samples.nanoAOD.tools.addPFCands_cff import addPFCands #FIXME PF Cands!
+#addPFCands(process, runOnMC=False)
+#addSVDetails(process)
 
 # Automatic addition of the customisation function from PhysicsTools.NanoAOD.nano_cff
 from PhysicsTools.NanoAOD.nano_cff import nanoAOD_customizeMC 
