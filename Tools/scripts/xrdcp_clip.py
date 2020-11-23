@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, sys
+import os, sys, time
 import subprocess
 
 from Samples.Tools.config import *
@@ -24,6 +24,7 @@ def get_parser():
     argParser.add_argument('--logLevel',     action='store', nargs='?',  choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'TRACE', 'NOTSET'],   default='INFO', help="Log level for logging" )
     argParser.add_argument('--file',         action='store', type=str, help="Which file?" )
     argParser.add_argument('--target',       action='store', nargs='?',  default='/scratch-cbe/users/hephy/tmp/', help="Where to go." )
+    argParser.add_argument('--sleep',        action='store', nargs='?',  default=0, help="All we are saying ... is give clip a chance." )
     argParser.add_argument('--redirector',   action='store', nargs='?',  default=redirector, help="Where to go." )
     argParser.add_argument('--toCBEEos',     action='store_true',    help="Use the EOS redirector." )
     argParser.add_argument('--noCheck',      action='store_true',    help="Run the file on a small sample (for test purpose), bool flag set to True if used" )
@@ -55,3 +56,5 @@ executable = ["echo", "xrdcp"] if args.noCopy else [which("xrdcp")]
 cmd = executable + [ "-p", "-f", source, clip_redirector + target if args.toCBEEos else target]
 
 subprocess.Popen( cmd )
+
+time.sleep( float(args.sleep) )

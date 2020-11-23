@@ -8,15 +8,16 @@ def get_parser():
     argParser.add_argument('--overwrite',          action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',             action='store_true',    help="Update current entry in db?")
     argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
+    argParser.add_argument('--logLevel',           action='store',         default='INFO', nargs='?', choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'TRACE', 'NOTSET'], help="Log level for logging")
     return argParser
     
 # Logging
 if __name__=="__main__":
-    import Samples.Tools.logger as logger
-    logger = logger.get_logger("INFO", logFile = None )
-    import RootTools.core.logger as logger_rt
-    logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
+    import Samples.Tools.logger as logger
+    logger = logger.get_logger(options.logLevel, logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger(options.logLevel, logFile = None )
     ov = options.overwrite
     if options.update:
         ov = 'update'
@@ -119,33 +120,33 @@ SingleElectron = [
 ]
 
 # JetHT
-#JetHT_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017B_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017C_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017D_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017E_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#JetHT_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017F_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017B_25Oct2019", "/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017C_25Oct2019", "/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017D_25Oct2019", "/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017E_25Oct2019", "/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+JetHT_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("JetHT_Run2017F_25Oct2019", "/JetHT/schoef-TopNanoAODv6-1-2-6_JetHT_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 JetHT = [
-#    JetHT_Run2017B_25Oct2019,
-#    JetHT_Run2017C_25Oct2019,
-#    JetHT_Run2017D_25Oct2019,
-#    JetHT_Run2017E_25Oct2019,
-#    JetHT_Run2017F_25Oct2019,
+   JetHT_Run2017B_25Oct2019,
+   JetHT_Run2017C_25Oct2019,
+   JetHT_Run2017D_25Oct2019,
+   JetHT_Run2017E_25Oct2019,
+   JetHT_Run2017F_25Oct2019,
 ]
 
 # MET
-#MET_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017B_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#MET_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017C_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#MET_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017D_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#MET_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017E_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
-#MET_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017F_25Oct2019", "", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MET_Run2017B_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017B_25Oct2019", "/MET/schoef-TopNanoAODv6-1-2-6_MET_Run2017B-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MET_Run2017C_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017C_25Oct2019", "/MET/schoef-TopNanoAODv6-1-2-6_MET_Run2017C-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MET_Run2017D_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017D_25Oct2019", "/MET/schoef-TopNanoAODv6-1-2-6_MET_Run2017D-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MET_Run2017E_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017E_25Oct2019", "/MET/schoef-TopNanoAODv6-1-2-6_MET_Run2017E-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
+MET_Run2017F_25Oct2019 = Sample.nanoAODfromDAS("MET_Run2017F_25Oct2019", "/MET/schoef-TopNanoAODv6-1-2-6_MET_Run2017F-9721c24ccc7f925c513e24ff74941177/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov)
 
 MET = [
-#    MET_Run2017B_25Oct2019,
-#    MET_Run2017C_25Oct2019,
-#    MET_Run2017D_25Oct2019,
-#    MET_Run2017E_25Oct2019,
-#    MET_Run2017F_25Oct2019,
+   MET_Run2017B_25Oct2019,
+   MET_Run2017C_25Oct2019,
+   MET_Run2017D_25Oct2019,
+   MET_Run2017E_25Oct2019,
+   MET_Run2017F_25Oct2019,
 ]
 
 allSamples = DoubleMuon + MuonEG + DoubleEG + SingleMuon + SingleElectron + JetHT + MET

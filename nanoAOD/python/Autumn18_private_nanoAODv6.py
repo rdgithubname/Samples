@@ -8,15 +8,16 @@ def get_parser():
     argParser.add_argument('--overwrite',          action='store_true',    help="Overwrite current entry in db?")
     argParser.add_argument('--update',             action='store_true',    help="Update current entry in db?")
     argParser.add_argument('--check_completeness', action='store_true',    help="Check competeness?")
+    argParser.add_argument('--logLevel',           action='store',         default='INFO', nargs='?', choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'TRACE', 'NOTSET'], help="Log level for logging")
     return argParser
 
 # Logging
 if __name__=="__main__":
     import Samples.Tools.logger as logger
-    logger = logger.get_logger("INFO", logFile = None )
-    import RootTools.core.logger as logger_rt
-    logger_rt = logger_rt.get_logger("INFO", logFile = None )
     options = get_parser().parse_args()
+    logger = logger.get_logger(options.logLevel, logFile = None )
+    import RootTools.core.logger as logger_rt
+    logger_rt = logger_rt.get_logger(options.logLevel, logFile = None )
     ov = options.overwrite
     if options.update:
         ov = 'update'
@@ -31,7 +32,7 @@ try:
 except:
     if "clip" in os.getenv("HOSTNAME").lower():
         if __name__ == "__main__" and not options.check_completeness:
-            from Samples.Tools.config import redirector_global as redirector
+            from Samples.Tools.config import redirector_clip as redirector
         else:
             from Samples.Tools.config import redirector_clip as redirector
     else:
@@ -176,12 +177,12 @@ TTGLep_erdOn_LO             = Sample.nanoAODfromDAS("TTGLep_erdOn_LO",       "/T
 TTGLep_ptG100To200_LO       = Sample.nanoAODfromDAS("TTGLep_ptG100To200_LO", "/TTGamma_Dilept_ptGamma100-200_TuneCP5_13TeV-madgraph-pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.03412*1.616)
 TTGLep_ptG200_LO            = Sample.nanoAODfromDAS("TTGLep_ptG200_LO",      "/TTGamma_Dilept_ptGamma200inf_TuneCP5_13TeV-madgraph-pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.006797*1.616)
 
-#tWll_thad_Wlept_DR  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DR",  "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_thad_Wlept_DS  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DS",  "/TWZToLL_thad_Wlept_5f_DS_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_tlept_Whad_DR  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DR",  "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_tlept_Whad_DS  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DS",  "/TWZToLL_tlept_Whad_5f_DS_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003004 )
-#tWll_tlept_Wlept_DR = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DR", "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.001501 )
-#tWll_tlept_Wlept_DS = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DS", "/TWZToLL_tlept_Wlept_5f_DS_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.001501 )
+tWll_thad_Wlept_DR  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DR",  "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_thad_Wlept_DS  = Sample.nanoAODfromDAS("tWll_thad_Wlept_DS",  "/TWZToLL_thad_Wlept_5f_DS_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_tlept_Whad_DR  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DR",  "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_tlept_Whad_DS  = Sample.nanoAODfromDAS("tWll_tlept_Whad_DS",  "/TWZToLL_tlept_Whad_5f_DS_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.003004 )
+tWll_tlept_Wlept_DR = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DR", "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.001501 )
+tWll_tlept_Wlept_DS = Sample.nanoAODfromDAS("tWll_tlept_Wlept_DS", "/TWZToLL_tlept_Wlept_5f_DS_TuneCP5_13TeV-amcatnlo-pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",  dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.001501 )
 
 TTV = [
 #    TGJets,
@@ -215,12 +216,12 @@ TTV = [
 ]
 
 top = [
-#    tWll_thad_Wlept_DR,
-#    tWll_thad_Wlept_DS,
-#    tWll_tlept_Whad_DR,
-#    tWll_tlept_Whad_DS,
-#    tWll_tlept_Wlept_DR,
-#    tWll_tlept_Wlept_DS,
+    tWll_thad_Wlept_DR,
+    tWll_thad_Wlept_DS,
+    tWll_tlept_Whad_DR,
+    tWll_tlept_Whad_DS,
+    tWll_tlept_Wlept_DR,
+    tWll_tlept_Wlept_DS,
     TTLep_pow,
     TTSingleLep_pow,
     TTHad_pow,
@@ -368,28 +369,64 @@ gluglu = [
     GluGluToContinToZZTo4tau,
 ]
 
-QCD_Mu_pt15to20         = Sample.nanoAODfromDAS("QCD_Mu_pt15to20",         "/QCD_Pt-15to20_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3629000.0)
-QCD_Mu_pt20to30         = Sample.nanoAODfromDAS("QCD_Mu_pt20to30",         "/QCD_Pt-20to30_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3168000.0)
-QCD_Mu_pt30to50         = Sample.nanoAODfromDAS("QCD_Mu_pt30to50",         "/QCD_Pt-30to50_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1649000.0)
-QCD_Mu_pt50to80         = Sample.nanoAODfromDAS("QCD_Mu_pt50to80",         "/QCD_Pt-50to80_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=445700.0)
-QCD_Mu_pt80to120        = Sample.nanoAODfromDAS("QCD_Mu_pt80to120",        "/QCD_Pt-80to120_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=105500.0)
-QCD_Mu_pt120to170       = Sample.nanoAODfromDAS("QCD_Mu_pt120to170",       "/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=25540.0)
-QCD_Mu_pt120to170_ext   = Sample.nanoAODfromDAS("QCD_Mu_pt120to170_ext",   "/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=25540.0)
-QCD_Mu_pt170to300       = Sample.nanoAODfromDAS("QCD_Mu_pt170to300",       "/QCD_Pt-170to300_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=8670.0)
-QCD_Mu_pt300to470       = Sample.nanoAODfromDAS("QCD_Mu_pt300to470",       "/QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=797.5)
-QCD_Mu_pt300to470_ext   = Sample.nanoAODfromDAS("QCD_Mu_pt300to470_ext",   "/QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=797.5)
-QCD_Mu_pt470to600       = Sample.nanoAODfromDAS("QCD_Mu_pt470to600",       "/QCD_Pt-470to600_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=78.67)
-QCD_Mu_pt600to800       = Sample.nanoAODfromDAS("QCD_Mu_pt600to800",       "/QCD_Pt-600to800_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=25.33)
-QCD_Mu_pt800to1000_ext  = Sample.nanoAODfromDAS("QCD_Mu_pt800to1000_ext",  "/QCD_Pt-800to1000_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=4.715)
-QCD_Mu_pt1000toInf      = Sample.nanoAODfromDAS("QCD_Mu_pt1000toInf",      "/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1.605)
+#https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#QCD
+QCD_Mu_pt15to20         = Sample.nanoAODfromDAS("QCD_Mu_pt15to20",         "/QCD_Pt-15to20_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1273190000*0.003)
+QCD_Mu_pt20to30         = Sample.nanoAODfromDAS("QCD_Mu_pt20to30",         "/QCD_Pt-20to30_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=558528000*0.0053)
+QCD_Mu_pt30to50         = Sample.nanoAODfromDAS("QCD_Mu_pt30to50",         "/QCD_Pt-30to50_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=139803000*0.01182)
+QCD_Mu_pt50to80         = Sample.nanoAODfromDAS("QCD_Mu_pt50to80",         "/QCD_Pt-50to80_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=19222500*0.02276)
+QCD_Mu_pt80to120        = Sample.nanoAODfromDAS("QCD_Mu_pt80to120",        "/QCD_Pt-80to120_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2758420*0.03844)
+QCD_Mu_pt120to170       = Sample.nanoAODfromDAS("QCD_Mu_pt120to170",       "/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=469797*0.05362)
+QCD_Mu_pt120to170_ext   = Sample.nanoAODfromDAS("QCD_Mu_pt120to170_ext",   "/QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=469797*0.05362)
+QCD_Mu_pt170to300       = Sample.nanoAODfromDAS("QCD_Mu_pt170to300",       "/QCD_Pt-170to300_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=117989*0.07335)
+QCD_Mu_pt300to470       = Sample.nanoAODfromDAS("QCD_Mu_pt300to470",       "/QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=7820.25*0.10196)
+QCD_Mu_pt300to470_ext   = Sample.nanoAODfromDAS("QCD_Mu_pt300to470_ext",   "/QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=7820.25*0.10196)
+QCD_Mu_pt470to600       = Sample.nanoAODfromDAS("QCD_Mu_pt470to600",       "/QCD_Pt-470to600_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=645.528*0.12242)
+QCD_Mu_pt600to800       = Sample.nanoAODfromDAS("QCD_Mu_pt600to800",       "/QCD_Pt-600to800_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=187.109*0.13412)
+QCD_Mu_pt800to1000_ext  = Sample.nanoAODfromDAS("QCD_Mu_pt800to1000_ext",  "/QCD_Pt-800to1000_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=32.3486*0.14552)
+QCD_Mu_pt1000toInf      = Sample.nanoAODfromDAS("QCD_Mu_pt1000toInf",      "/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=10.4305*0.15544)
 
-QCD_Ele_pt20to30     = Sample.nanoAODfromDAS("QCD_Ele_pt20to30",    "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=5533000.0)
-QCD_Ele_pt30to50     = Sample.nanoAODfromDAS("QCD_Ele_pt30to50",    "/QCD_Pt-30to50_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=9928000.)
-QCD_Ele_pt50to80     = Sample.nanoAODfromDAS("QCD_Ele_pt50to80",    "/QCD_Pt-50to80_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2890800.0)
-QCD_Ele_pt80to120    = Sample.nanoAODfromDAS("QCD_Ele_pt80to120",   "/QCD_Pt-80to120_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=415400.0)
-QCD_Ele_pt120to170   = Sample.nanoAODfromDAS("QCD_Ele_pt120to170",  "/QCD_Pt-120to170_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=75820.0)
-QCD_Ele_pt170to300   = Sample.nanoAODfromDAS("QCD_Ele_pt170to300",  "/QCD_Pt-170to300_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=18860.0)
-QCD_Ele_pt300toInf   = Sample.nanoAODfromDAS("QCD_Ele_pt300toInf",  "/QCD_Pt-300toInf_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1210.0)
+#https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#QCD
+QCD_EMEnriched_pt20to30     = Sample.nanoAODfromDAS("QCD_EMEnriched_pt20to30",    "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=557600000*0.0096)
+QCD_EMEnriched_pt30to50     = Sample.nanoAODfromDAS("QCD_EMEnriched_pt30to50",    "/QCD_Pt-30to50_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=136000000*0.073)
+QCD_EMEnriched_pt50to80     = Sample.nanoAODfromDAS("QCD_EMEnriched_pt50to80",    "/QCD_Pt-50to80_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=19800000*0.146)
+QCD_EMEnriched_pt80to120    = Sample.nanoAODfromDAS("QCD_EMEnriched_pt80to120",   "/QCD_Pt-80to120_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2800000*0.125)
+QCD_EMEnriched_pt120to170   = Sample.nanoAODfromDAS("QCD_EMEnriched_pt120to170",  "/QCD_Pt-120to170_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=477000*0.132)
+QCD_EMEnriched_pt170to300   = Sample.nanoAODfromDAS("QCD_EMEnriched_pt170to300",  "/QCD_Pt-170to300_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=114000*0.165)
+QCD_EMEnriched_pt300toInf   = Sample.nanoAODfromDAS("QCD_EMEnriched_pt300toInf",  "/QCD_Pt-300toInf_EMEnriched_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=9000*0.15)
+
+#QCD pT-hat binned samples
+QCD_pt15to30            = Sample.nanoAODfromDAS("QCD_pt15to30",               "/QCD_Pt_15to30_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=1837410000*1.0) 
+QCD_pt30to50            = Sample.nanoAODfromDAS("QCD_pt30to50",               "/QCD_Pt_30to50_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=140932000*1.0) 
+QCD_pt50to80            = Sample.nanoAODfromDAS("QCD_pt50to80",               "/QCD_Pt_50to80_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=19204300*1.0) 
+QCD_pt50to80_ext1       = Sample.nanoAODfromDAS("QCD_pt50to80_ext1",          "/QCD_Pt_50to80_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=19204300*1.0) 
+QCD_pt80to120           = Sample.nanoAODfromDAS("QCD_pt80to120",              "/QCD_Pt_80to120_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=2762530*1.0) 
+QCD_pt120to170          = Sample.nanoAODfromDAS("QCD_pt120to170",             "/QCD_Pt_120to170_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=471100*1.0) 
+QCD_pt170to300          = Sample.nanoAODfromDAS("QCD_pt170to300",             "/QCD_Pt_170to300_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=117276*1.0) 
+QCD_pt300to470          = Sample.nanoAODfromDAS("QCD_pt300to470",             "/QCD_Pt_300to470_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=7823*1.0) 
+QCD_pt470to600          = Sample.nanoAODfromDAS("QCD_pt470to600",             "/QCD_Pt_470to600_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=648.2*1.0) 
+QCD_pt470to600_ext1     = Sample.nanoAODfromDAS("QCD_pt470to600_ext1",        "/QCD_Pt_470to600_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=648.2*1.0) 
+QCD_pt600to800          = Sample.nanoAODfromDAS("QCD_pt600to800",             "/QCD_Pt_600to800_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=186.9*1.0) 
+QCD_pt800to1000         = Sample.nanoAODfromDAS("QCD_pt800to1000",            "/QCD_Pt_800to1000_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=32.293*1.0) 
+QCD_pt1000to1400        = Sample.nanoAODfromDAS("QCD_pt1000to1400",           "/QCD_Pt_1000to1400_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=9.4183*1.0) 
+QCD_pt1400to1800        = Sample.nanoAODfromDAS("QCD_pt1400to1800",           "/QCD_Pt_1400to1800_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.84265*1.0) 
+QCD_pt1400to1800_ext1   = Sample.nanoAODfromDAS("QCD_pt1400to1800_ext1",      "/QCD_Pt_1400to1800_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.84265*1.0) 
+QCD_pt1800to2400        = Sample.nanoAODfromDAS("QCD_pt1800to2400",           "/QCD_Pt_1800to2400_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.114943*1.0) 
+QCD_pt1800to2400_ext1   = Sample.nanoAODfromDAS("QCD_pt1800to2400_ext1",      "/QCD_Pt_1800to2400_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.114943*1.0) 
+QCD_pt2400to3200        = Sample.nanoAODfromDAS("QCD_pt2400to3200",           "/QCD_Pt_2400to3200_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.00682981*1.0) 
+QCD_pt2400to3200_ext1   = Sample.nanoAODfromDAS("QCD_pt2400to3200_ext1",      "/QCD_Pt_2400to3200_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018_ext1-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.00682981*1.0) 
+QCD_pt3200toInf         = Sample.nanoAODfromDAS("QCD_pt3200toInf",            "/QCD_Pt_3200toInf_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=0.000165445*1.0) 
+
+
+
+#https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#QCD
+#QCD bcToE samples
+QCD_bcToE_pt15to20            = Sample.nanoAODfromDAS("QCD_bcToE_pt15to20",               "/QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=557627000*0.00059) 
+QCD_bcToE_pt20to30            = Sample.nanoAODfromDAS("QCD_bcToE_pt20to30",               "/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=557627000*0.00059) 
+QCD_bcToE_pt30to80            = Sample.nanoAODfromDAS("QCD_bcToE_pt30to80",               "/QCD_Pt_30to80_bcToE_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=159068000*0.00255) 
+QCD_bcToE_pt80to170           = Sample.nanoAODfromDAS("QCD_bcToE_pt80to170",              "/QCD_Pt_80to170_bcToE_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=3221000*0.01183) 
+QCD_bcToE_pt170to250          = Sample.nanoAODfromDAS("QCD_bcToE_pt170to250",             "/QCD_Pt_170to250_bcToE_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=105771*0.02492) 
+QCD_bcToE_pt250toInf          = Sample.nanoAODfromDAS("QCD_bcToE_pt250toInf",             "/QCD_Pt_250toInf_bcToE_TuneCP5_13TeV_pythia8/schoef-TopNanoAODv6-1-2-6_2018-0d1d4920f08f56d048ece029b873a2cc/USER",     dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=21094.1*0.03375) 
+
 
 QCD = [
         QCD_Mu_pt15to20,
@@ -407,13 +444,42 @@ QCD = [
         QCD_Mu_pt800to1000_ext,
         QCD_Mu_pt1000toInf,
 
-        QCD_Ele_pt20to30,
-        QCD_Ele_pt30to50,
-        QCD_Ele_pt50to80,
-        QCD_Ele_pt80to120,
-        QCD_Ele_pt120to170,
-        QCD_Ele_pt170to300,
-        QCD_Ele_pt300toInf,
+        QCD_EMEnriched_pt20to30,
+        QCD_EMEnriched_pt30to50,
+        QCD_EMEnriched_pt50to80,
+        QCD_EMEnriched_pt80to120,
+        QCD_EMEnriched_pt120to170,
+        QCD_EMEnriched_pt170to300,
+        QCD_EMEnriched_pt300toInf,
+
+        QCD_pt15to30,            
+        QCD_pt30to50,            
+        QCD_pt50to80,            
+        QCD_pt50to80_ext1,       
+        QCD_pt80to120,           
+        QCD_pt120to170,          
+        QCD_pt170to300,          
+        QCD_pt300to470,          
+        QCD_pt470to600,          
+        QCD_pt470to600_ext1,     
+        QCD_pt600to800,          
+        QCD_pt800to1000,         
+        QCD_pt1000to1400,        
+        QCD_pt1400to1800,        
+        QCD_pt1400to1800_ext1,   
+        QCD_pt1800to2400,        
+        QCD_pt1800to2400_ext1,   
+        QCD_pt2400to3200,        
+        QCD_pt2400to3200_ext1,   
+        QCD_pt3200toInf,  
+
+        QCD_bcToE_pt15to20,            
+        QCD_bcToE_pt20to30,            
+        QCD_bcToE_pt30to80,            
+        QCD_bcToE_pt80to170,            
+        QCD_bcToE_pt170to250,            
+        QCD_bcToE_pt250toInf,            
+
 ]
 
 GJets_HT40to100        = Sample.nanoAODfromDAS("GJets_HT40to100",      "/GJets_HT-40To100_TuneCP5_13TeV-madgraphMLM-pythia8/schoef-TopNanoAODv6-1-2-3_2018-0d1d4920f08f56d048ece029b873a2cc/USER", dbFile=dbFile, redirector=redirector, instance="phys03", overwrite=ov, xSection=20730)
@@ -462,4 +528,5 @@ samples = AutoClass( allSamples )
 if __name__=="__main__":
     if options.check_completeness:
         samples.check_completeness( cores=10 )
+
 
